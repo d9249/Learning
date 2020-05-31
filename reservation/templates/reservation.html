@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <style type="text/css">
-   
     .form-style-5 {
         max-width: 1000px;
         padding: 100px 200px;
@@ -106,6 +105,7 @@
         background: #109177;
     }
 </style>
+
 <head>
 
     <meta charset="utf-8">
@@ -179,7 +179,7 @@
                             href="{% url 'readboard' %}">Review</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readreservation' %}">Reservation</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="readreservation">Reservation</a>
                     </li>
                 </ul>
             </div>
@@ -195,11 +195,9 @@
 
             <!-- Blog Entries Column -->
             <div class="form-style-5">
-                
+
                 <form enctype="multipart/form-data" method="post">
-                   
                     {% csrf_token %}
-                    
                     <table>
                         {{form.as_table}}
                     </table>
@@ -208,19 +206,19 @@
                 </form>
             </div>
 
-                <!-- Bootstrap core JavaScript -->
-                <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
-                <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+            <!-- Bootstrap core JavaScript -->
+            <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+            <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
 
-                <!-- Plugin JavaScript -->
-                <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+            <!-- Plugin JavaScript -->
+            <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
 
-                <!-- Contact Form JavaScript -->
-                <script src="{% static 'js/jqBootstrapValidation.js'%}"></script>
-                <script src="{% static 'js/contact_me.js'%}"></script>
+            <!-- Contact Form JavaScript -->
+            <script src="{% static 'js/jqBootstrapValidation.js'%}"></script>
+            <script src="{% static 'js/contact_me.js'%}"></script>
 
-                <!-- Custom scripts for this template -->
-                <script src="{% static 'js/freelancer.min.js'%}"></script>
+            <!-- Custom scripts for this template -->
+            <script src="{% static 'js/freelancer.min.js'%}"></script>
 
 </body>
 

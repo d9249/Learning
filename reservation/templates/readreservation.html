@@ -1,111 +1,33 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<style type="text/css">
-   
-    .form-style-5 {
-        max-width: 1000px;
-        padding: 100px 200px;
-        background: #f4f7f8;
-        margin: 10px auto;
-        padding: 100px;
-        background: #f4f7f8;
-        border-radius: 5px;
-    }
-
-    .form-style-5 fieldset {
-        border: none;
-    }
-
-    .form-style-5 legend {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-    }
-
-    .form-style-5 label {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    .form-style-5 input[type="text"],
-    .form-style-5 input[type="date"],
-    .form-style-5 input[type="datetime"],
-    .form-style-5 input[type="email"],
-    .form-style-5 input[type="image"],
-    .form-style-5 input[type="search"],
-    .form-style-5 input[type="time"],
-    .form-style-5 input[type="url"],
-    .form-style-5 textarea,
-    .form-style-5 select {
-        background: rgba(255, 255, 255, .1);
-        border: none;
+<style>
+    input[type=search] {
+        width: 250px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
         border-radius: 4px;
-        font-size: 15px;
-        margin: 0;
-        outline: 0;
-        padding: 10px;
-        width: 100%;
-        background-color: #e8eeef;
-        color: #8a97a0;
-        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        margin-bottom: 30px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        transition: width 0.4s ease-in-out;
     }
 
-    .form-style-5 input[type="text"]:focus,
-    .form-style-5 input[type="date"]:focus,
-    .form-style-5 input[type="datetime"]:focus,
-    .form-style-5 input[type="email"]:focus,
-    .form-style-5 input[type="number"]:focus,
-    .form-style-5 input[type="search"]:focus,
-    .form-style-5 input[type="time"]:focus,
-    .form-style-5 input[type="url"]:focus,
-    .form-style-5 textarea:focus,
-    .form-style-5 select:focus {
-        background: #d2d9dd;
-    }
-
-    .form-style-5 select {
-        -webkit-appearance: menulist-button;
-        height: 35px;
-    }
-
-    .form-style-5 .number {
-        background: #1abc9c;
-        color: #fff;
-        height: 300px;
-        width: 200px;
-        display: inline-block;
-        font-size: 0.8em;
-        margin-right: 4px;
-        line-height: 30px;
-        text-align: center;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-        border-radius: 15px 15px 15px 0px;
-    }
-
-    .form-style-5 input[type="submit"],
-    .form-style-5 input[type="button"] {
-        position: relative;
-        display: block;
-        padding: 19px 39px 18px 39px;
-        color: #FFF;
-        margin: 0 auto;
-        background: #1abc9c;
-        font-size: 18px;
-        text-align: center;
-        font-style: normal;
-        width: 100%;
-        border: 1px solid #16a085;
-        border-width: 1px 1px 3px;
-        margin-bottom: 10px;
-    }
-
-    .form-style-5 input[type="submit"]:hover,
-    .form-style-5 input[type="button"]:hover {
-        background: #109177;
+    input[type=submit] {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
     }
 </style>
+
 <head>
 
     <meta charset="utf-8">
@@ -194,19 +116,47 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="form-style-5">
-                
-                <form enctype="multipart/form-data" method="post">
-                   
-                    {% csrf_token %}
-                    
-                    <table>
-                        {{form.as_table}}
-                    </table>
-                    <br>
-                    <input class="btn btn-dark" type="submit" value="제출하기">
+            <div class="col-md-10">
+
+                <h1 class="my-2">Reservation message board</h1>
+                <br>
+                <h3><a href="{% url 'postreservation'%}">Write Reservation</a> </h3>
+                <br>
+                <form action="{%url 'searchreservation'%}" method="GET">
+                    <input type='search' name='query' placeholder="ID search..">
+                    <input type='submit' value="검색">
                 </form>
-            </div>
+                <br>
+
+                <!-- Blog Post -->
+                {% for Rimg_board in posts %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">{{Rimg_board.title}}</h2>
+                        <p class="card-text">{{Rimg_board.description}}</p>
+                        <h4><a href="{% url 'detailreservation' Rimg_board.id %}">더보기</a></h4>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="{% url 'deletereservation' Rimg_board.id %}">삭제</a>
+                        <a href="{% url 'updatereservation' Rimg_board.id %}">수정</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                {% if posts.has_previous %}
+                <a href="?page=1">First</a>
+                <a href="?page= {{posts.previous_page_number}}">Previous</a>
+                {% endif %}
+
+                <span>{{posts.number}}</span>
+                <span>of</span>
+                <span>{{posts.paginator.num_pages}}</span>
+
+                {% if posts.has_next %}
+                <a href="?page={{posts.next_page_number}}">Next</a>
+                <a href="?page={{posts.paginator.num_pages}}">Last</a>
+                {% endif %}
+                <br><br>
 
                 <!-- Bootstrap core JavaScript -->
                 <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>

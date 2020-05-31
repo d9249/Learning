@@ -11,6 +11,7 @@ urlpatterns = [
     path('', base.views.base, name="base"),
     path('login/',include('login.urls')),
     path('createboard/',include('createboard.urls')),
+    path('reservation/',include('reservation.urls')),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 

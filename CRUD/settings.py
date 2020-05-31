@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'login.apps.LoginConfig',
     'createboard.apps.CreateboardConfig',
+    'reservation.apps.ReservationConfig',
 ]
 
 MIDDLEWARE = [
