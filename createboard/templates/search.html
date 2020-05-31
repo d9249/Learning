@@ -1,0 +1,9 @@
+{% for img_board in img_boards %}
+    <p>{{img_board.title}}</p>
+    <p><img src="{{ img_board.image.url }}" alt="사진입니다"></p>
+    <p>{{img_board.description}}</p>
+{% empty %} 
+    검색결과가 없습니다
+{% endfor %}    
+
+
