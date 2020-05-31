@@ -6205,7 +6205,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+  background-color: #dc3545 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6225,13 +6225,13 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: #dc3545 !important;
 }
 
 a.bg-success:hover, a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #1e7e34 !important;
+  background-color: #dc3545 !important;
 }
 
 .bg-info {
@@ -9752,7 +9752,7 @@ a.text-dark:hover, a.text-dark:focus {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(255,0,0,0.9);
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
@@ -9830,7 +9830,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #1abc9c;
+  color: #dc3545;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -9845,5 +9845,5 @@ form .row:first-child .floating-label-form-group {
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: #dc3545;
 }

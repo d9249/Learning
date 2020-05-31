@@ -38,10 +38,10 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">{{request.user}}(Logout)</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Reservation</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Review</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
           </li>
         </ul>
       </div>
@@ -61,10 +61,10 @@
           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'login' %}">Login</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Reservation</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Review</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
         </li>
       </ul>
     </div>
@@ -112,7 +112,6 @@
       <div class="row">
 
         <!-- Portfolio Item 1 -->
-        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -121,10 +120,8 @@
             </div>
             <img class="img-fluid" src="{% static 'img/portfolio/바싹불고기.png' %}" alt="">
           </div>
-        </div>
 
         <!-- Portfolio Item 2 -->
-        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -133,10 +130,8 @@
             </div>
             <img class="img-fluid" src="{% static 'img/portfolio/낙지볶음.png'%}" alt="">
           </div>
-        </div>
 
         <!-- Portfolio Item 3 -->
-        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -145,10 +140,8 @@
             </div>
             <img class="img-fluid" src="{% static 'img/portfolio/보쌈.png'%}" alt="">
           </div>
-        </div>
 
         <!-- Portfolio Item 4 -->
-        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -157,10 +150,8 @@
             </div>
             <img class="img-fluid" src="{% static 'img/portfolio/산낙지구이.png'%}" alt="">
           </div>
-        </div>
 
         <!-- Portfolio Item 5 -->
-        <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
@@ -169,19 +160,6 @@
             </div>
             <img class="img-fluid" src="{% static 'img/portfolio/산낙지초회.png'%}" alt="">
           </div>
-        </div>
-
-        <!-- Portfolio Item 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="{% static 'img/portfolio/삼합.png'%}" alt="">
-          </div>
-        </div>
 
       </div>
       <!-- /.row -->
@@ -194,7 +172,7 @@
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">역전회관의 메뉴</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-white">역전회관의 역사</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -222,7 +200,7 @@
     <div class="container">
 
       <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Reservation</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -247,7 +225,7 @@
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Email Address</label>
+                <label>Date</label>
                 <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
                 <p class="help-block text-danger"></p>
               </div>
@@ -261,7 +239,7 @@
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Message</label>
+                <label>Select menu</label>
                 <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
                 <p class="help-block text-danger"></p>
               </div>
@@ -308,7 +286,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">바싹 불고기 31,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">바싹 불고기</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -347,7 +325,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">낙지 볶음 31,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">낙지 볶음</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -386,7 +364,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">보쌈 33,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">보쌈</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -425,7 +403,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">산낙지 구이 45,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">산낙지구이</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -464,7 +442,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">산낙지초회 42,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">산낙지초회</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -503,7 +481,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">삼합 41,000</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">삼합</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
