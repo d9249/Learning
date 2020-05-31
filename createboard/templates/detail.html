@@ -99,10 +99,13 @@
                 <br>
 
             <div class="container jumbotron">
-                <h1>{{img_board_detail.title}}</h1>
+                <h1>ID : {{img_board_detail.title}}</h1>
+                <br>
                 <p><img src="{{ img_board_detail.image.url }}" alt="사진입니다"></p>
-                <p>{{img_board_detail.description}}</p>
-                <a href="{% url 'readboard' %}"> 돌아가기</a>
+                <br>
+                <h3><p>{{img_board_detail.description}}</p></h3>
+                <br>
+                <h2><a href="{% url 'readboard' %}">돌아가기</a></h2>
             </div>
 
                 <!-- Bootstrap core JavaScript -->
