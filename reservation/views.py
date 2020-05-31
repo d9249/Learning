@@ -29,14 +29,8 @@ def postreservation(request):
     if request.method =="POST":
         form = RImg_Board(request.POST, request.FILES)
         if form.is_valid():
-            try:
-                form.save()
-            except expression as identifier:
-                redirect('detailreservation')
+            form.save()
             return redirect('readreservation')
-        else:
-            redirect('detailreservation')
-            
     else:
         form = RImg_Board()
         return render(request, 'reservation.html',{'form':form})
