@@ -2,7 +2,31 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+  input[type=search] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+  }
+  input[type=submit] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius:10px;
+}
+</style>
 <head>
 
   <meta charset="utf-8">
@@ -10,62 +34,93 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Blog Home - Start Bootstrap Template</title>
+  <title>Kyonggi Restaurant</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+  <!-- Custom fonts for this theme -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/blog-home.css'%}" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
 
 </head>
 
-<body>
+<body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  {% if request.user.is_authenticated %}
+  <nav class="navbar navbar-expand-lg bg-dark text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'base' %}">Kyonggi Restaurant</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-danger text-white rounded"
+        type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+              href="{% url 'logout' %}">{{request.user}}(Logout)</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  {% else %}
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'base' %}">Kyonggi Restaurant</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-danger text-white rounded"
+        type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% endif %}
 
   <!-- Page Content -->
+  <section class="page-section portfolio" id="portfolio"></section>
   <div class="container">
 
     <div class="row">
 
       <!-- Blog Entries Column -->
-      <div class="col-md-8">
+      <div class="col-md-10">
 
-        <h1 class="my-4">장터게시판</h1>
-
+        <h1 class="my-2">Review message board</h1>
+        <br>
+        <h3><a href="{% url 'post'%}">Write Review</a> </h3>
+        <br>
         <form action="{%url 'search'%}" method="GET">
-            제목검색<input type = 'search' name = 'query'>
-            <input type ='submit' value="검색">
+            <input type = 'search' name = 'query' placeholder="Title search..">
+            <input type ='submit' value="검색" >
         </form>
 
-        <br><br>
+        <br>
         
         <!-- Blog Post -->
         {% for img_board in posts %}
@@ -73,10 +128,9 @@
           <div class="card-body">
             <h2 class="card-title">{{img_board.title}}</h2>
             <p class="card-text">{{img_board.description}}</p>
-            <a href="{% url 'detail' img_board.id %}">더보기 &rarr;</a>
+            <h4><a href="{% url 'detail' img_board.id %}">더보기</a></h4>
           </div>
           <div class="card-footer text-muted">
-            <a href="{% url 'detail' img_board.id %}">더보기</a>
             <a href="{% url 'delete' img_board.id %}">삭제</a>
             <a href="{% url 'update' img_board.id %}">수정</a>
           </div>
@@ -98,11 +152,19 @@
 {% endif %}
 <br><br>
 
-<h5><a href="{% url 'post'%}">글쓰기</a> </h5>
-
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script src="{% static 'js/jqBootstrapValidation.js'%}"></script>
+  <script src="{% static 'js/contact_me.js'%}"></script>
+  
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/freelancer.min.js'%}"></script>
 
 </body>
 
