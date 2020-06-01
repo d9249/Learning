@@ -12,9 +12,9 @@ class Board(models.Model):
 
 
 class Img_board(models.Model):
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/')
-    description = models.TextField()
+    title = models.CharField('ID',max_length=200)
+    image = models.ImageField('Image',upload_to='images/')
+    description = models.TextField('Content')
 
     def __str__(self):
         return self.title

@@ -10,4 +10,4 @@ class reservation(forms.ModelForm):
 class RImg_Board(forms.ModelForm):
     class Meta:
         model = RImg_board
-        fields=['title','description','pdate']
+        fields=['title','pdate','description']

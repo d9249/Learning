@@ -12,11 +12,11 @@ class reservation(models.Model):
 
 
 class RImg_board(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField('ID', max_length=200)
     image = models.ImageField(upload_to='images/')
-    description = models.TextField()
+    description = models.TextField('Reservation Menu ')
     now_date = models.DateTimeField(auto_now=True)
-    pdate = models.DateTimeField('Date')
+    pdate = models.DateTimeField('Reservation Time ')
 
     def __str__(self):
         return self.title
