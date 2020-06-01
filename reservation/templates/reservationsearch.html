@@ -101,6 +101,8 @@
                 <div class="container jumbotron">
                     {% for Rimg_board in Rimg_boards %}
                     <h1>ID : {{Rimg_board.title}}</h1>
+                    <h4><p class="card-text">Write Time : {{Rimg_board.now_date}}</p></h4>
+                    <h4><p class="card-text">Reservation Time : {{Rimg_board.pdate}}</p></h4>
                     <br>
                     <h3>
                         <p>{{Rimg_board.description}}</p>
