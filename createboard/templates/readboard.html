@@ -69,7 +69,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readreservation' %}">Reservation</a>
           </li>
         </ul>
       </div>
@@ -94,7 +94,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readboard' %}">Review</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readreservation' %}">Reservation</a>
           </li>
         </ul>
       </div>
@@ -126,9 +126,10 @@
         {% for img_board in posts %}
         <div class="card mb-4">
           <div class="card-body">
-            <h2 class="card-title">{{img_board.title}}</h2>
-            <p class="card-text">{{img_board.description}}</p>
-            <h4><a href="{% url 'detail' img_board.id %}">더보기</a></h4>
+            <h4 class="card-title">ID : {{img_board.title}}</h4>
+            <h4><p class="card-text">Reservation content : </p></h4>
+            <h6><p class="card-text">{{img_board.description}}</p></h6>
+            <h6><a href="{% url 'detail' img_board.id %}">더보기</a></h6>
           </div>
           <div class="card-footer text-muted">
             <a href="{% url 'delete' img_board.id %}">삭제</a>

@@ -132,9 +132,12 @@
                 {% for Rimg_board in posts %}
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h2 class="card-title">{{Rimg_board.title}}</h2>
-                        <p class="card-text">{{Rimg_board.description}}</p>
-                        <h4><a href="{% url 'detailreservation' Rimg_board.id %}">더보기</a></h4>
+                        <h4 class="card-title">ID : {{Rimg_board.title}}</h4>
+                        <h4><p class="card-text">Write Time : </p></h4>
+                        <h6><p class="card-text">{{Rimg_board.now_date}}</p></h6>
+                        <h4><p class="card-text">Reservation content : </p></h4>
+                        <h6><p class="card-text">{{Rimg_board.description}}</p></h6>
+                        <h6><a href="{% url 'detailreservation' Rimg_board.id %}">더보기</a></h6>
                     </div>
                     <div class="card-footer text-muted">
                         <a href="{% url 'deletereservation' Rimg_board.id %}">삭제</a>

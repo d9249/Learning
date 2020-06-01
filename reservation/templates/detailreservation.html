@@ -75,7 +75,7 @@
                             href="{% url 'readboard' %}">Review</a>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1">
-                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Reservation</a>
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'readreservation' %}">Reservation</a>
                     </li>
                 </ul>
             </div>
@@ -101,7 +101,7 @@
                 <div class="container jumbotron">
                     <h1>ID : {{Rimg_board_detail.title}}</h1>
                     <br>
-                    <p><img src="{{ Rimg_board_detail.image.url }}" alt="사진입니다"></p>
+                    <h2>Reservation time : {{Rimg_board_detail.pdate}}</h2>
                     <br>
                     <h3>
                         <p>{{Rimg_board_detail.description}}</p>
