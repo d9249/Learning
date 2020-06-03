@@ -80,25 +80,23 @@ class ModelMgr():
         hyper['epochs'] = 20  # epochs은 최대 20 설정 !!
         hyper['learning_rate'] = 0.005  # 학습률
         # 최적화 알고리즘 선택 [sgd, rmsprop, adagrad, adam 등]
-        hyper['optimizer'] = optimizers.Adagrad(lr=hyper['learning_rate'])  # default: SGD
+        hyper['optimizer'] = optimizers.adagrad(lr=hyper['learning_rate'])  # default: SGD
         ############################
         return hyper
 
     def get_model(self):
         model = Sequential()
-        model.add(Conv2D(32, (5, 5), kernel_initializer="glorot_uniform", padding='valid', input_shape=self.x_train.shape[1:]))
+        model.add(Conv2D(32, (3, 3), padding='same', kernel_initializer="glorot_uniform", input_shape=self.x_train.shape[1:]))
         model.add(Activation('relu'))
-
-        model.add(Conv2D(32, (7, 7), kernel_initializer="glorot_uniform", padding='valid'))
+        model.add(Conv2D(32, (5, 5), kernel_initializer="glorot_uniform", padding='same'))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))  # feature 크기를 1/2 배로 줄임
 
-        model.add(Conv2D(64, (5, 5), kernel_initializer="glorot_uniform", padding='valid', input_shape=self.x_train.shape[1:]))
+        model.add(Conv2D(64, (5, 5), padding='same', kernel_initializer="glorot_uniform", input_shape=self.x_train.shape[1:]))
         model.add(Activation('relu'))
-
-        model.add(Conv2D(64, (3, 3), kernel_initializer="glorot_uniform", padding='valid'))
+        model.add(Conv2D(64, (7, 7), kernel_initializer="glorot_uniform", padding='same'))
         model.add(Activation('relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2), padding="same"))  # feature 크기를 1/2 배로 줄임
+        model.add(MaxPooling2D(pool_size=(2, 2)))  # feature 크기를 1/2 배로 줄임
 
         model.add(Flatten())
         model.add(Dense(128, kernel_initializer="glorot_uniform"))
