@@ -3,5 +3,5 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (기본 코드)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.6.5 (sftp://ubuntu@49.50.164.233:16022/home/ubuntu/anaconda3/envs/sangmin_tensorflow_p36/bin/python3.6)" project-jdk-type="Python SDK" />
 </project>

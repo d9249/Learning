@@ -20,7 +20,7 @@ os.environ['PYTHONHASHSEED'] = '0'
 
 
 class ModelMgr():
-    def __init__(self, target_class=[3, 5], use_validation=True):
+    def __init__(self, target_class=[0, 1], use_validation=True):
         self.target_class = target_class
         self.use_validation = use_validation
         print('\nload dataset')
@@ -76,45 +76,39 @@ class ModelMgr():
         '''
             (1) 파라미터 값들을 수정해주세요.
         '''
-        hyper['batch_size'] = 8  # 배치 사이즈
+        hyper['batch_size'] = 28   # 배치 사이즈
         hyper['epochs'] = 20  # epochs은 최대 20 설정 !!
-        hyper['learning_rate'] = 0.05  # 학습률
+        hyper['learning_rate'] = 0.005  # 학습률
         # 최적화 알고리즘 선택 [sgd, rmsprop, adagrad, adam 등]
-        hyper['optimizer'] = optimizers.sgd(lr=hyper['learning_rate'])  # default: SGD
+        hyper['optimizer'] = optimizers.Adagrad(lr=hyper['learning_rate'])  # default: SGD
         ############################
         return hyper
 
     def get_model(self):
         model = Sequential()
-        ################
-        '''
-            (2) 모델 코드를 완성해주세요.
-            model.add(...)
-        '''
-        model.add(Conv2D(64, (3, 3), padding="same", input_shape=self.x_train.shape[1:], activation="relu"))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-        model.add(Conv2D(64, (3, 3), padding="same", activation="relu"))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(32, (5, 5), kernel_initializer="glorot_uniform", padding='valid', input_shape=self.x_train.shape[1:]))
+        model.add(Activation('relu'))
 
-        model.add(Conv2D(64, (3, 3), padding="same", activation="relu"))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-        model.add(Dropout(0.25))
+        model.add(Conv2D(32, (7, 7), kernel_initializer="glorot_uniform", padding='valid'))
+        model.add(Activation('relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))  # feature 크기를 1/2 배로 줄임
 
-        model.add(Conv2D(64, (3, 3), padding="same", activation="relu"))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-        model.add(Dropout(0.25))
+        model.add(Conv2D(64, (5, 5), kernel_initializer="glorot_uniform", padding='valid', input_shape=self.x_train.shape[1:]))
+        model.add(Activation('relu'))
+
+        model.add(Conv2D(64, (3, 3), kernel_initializer="glorot_uniform", padding='valid'))
+        model.add(Activation('relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2), padding="same"))  # feature 크기를 1/2 배로 줄임
 
         model.add(Flatten())
-        model.add(Dense(256, activation="relu"))
-        model.add(Dropout(0.5))
-        model.add(Dense(1, activation="sigmoid"))
+        model.add(Dense(128, kernel_initializer="glorot_uniform"))
+        model.add(Dense(64, kernel_initializer="glorot_uniform"))
+        model.add(Activation('relu'))
+        model.add(Dense(len(self.target_class), kernel_initializer="glorot_uniform"))
+        model.add(Activation('softmax'))
 
-        model.compile(loss="binary_crossentropy", optimizer="rmsprop", metrics=['accuracy'])
-
-        model.add(Dense(len(self.target_class)))  # output 예측. (이 부분은 필수)
-        model.add(Activation('softmax'))  # softmax 함수 적용 (이 부분은 필수)
-        ################
-        '''
+        return model
+        """
         주의사항
         1. 모델의 입력 데이터 크기는 (batch_size, 32, 32, 1) # 고양이 or 강아지 흑백 사진
            출력 데이터 크기는 (batch_size, 2) # 고양이일 확률, 강아지일 확률
@@ -125,9 +119,7 @@ class ModelMgr():
         4. BatchNormalization() 사용 금지
             
         기타 문의 : yellowjs0304@gmail.com (수업조교)
-        '''
-        return model
-
+        """
     def get_model_sample_1(self):
         # Fully-connected layer만을 이용한 모델
         model = Sequential() # 모델 정의

@@ -104,7 +104,7 @@ def draw_result(logs, use_validation, file_path='./result.png'):
     plt.xlim(left=-1)
     plt.xticks(x_len.tolist(), (x_len+1).tolist())
     plt.ylim(bottom=0, top=1)
-    plt.legend(loc='upper right')
+    plt.legend(loc='lower right')
     plt.grid()
     plt.xlabel('epoch')
     plt.ylabel('Accuracy')
