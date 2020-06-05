@@ -20,7 +20,7 @@ os.environ['PYTHONHASHSEED'] = '0'
 
 
 class ModelMgr():
-    def __init__(self, target_class=[0, 1], use_validation=True):
+    def __init__(self, target_class=[3, 5], use_validation=True):
         self.target_class = target_class
         self.use_validation = use_validation
         print('\nload dataset')
@@ -53,6 +53,7 @@ class ModelMgr():
 
         if hp['epochs'] > 20:  # epochs은 최대 20로 설정 !!
             hp['epochs'] = 20
+
         if self.use_validation:
             validation_data = (self.x_val, self.y_val)
         else:
@@ -76,9 +77,9 @@ class ModelMgr():
         '''
             (1) 파라미터 값들을 수정해주세요.
         '''
-        hyper['batch_size'] = 28   # 배치 사이즈
+        hyper['batch_size'] = 32   # 배치 사이즈
         hyper['epochs'] = 20  # epochs은 최대 20 설정 !!
-        hyper['learning_rate'] = 0.005  # 학습률
+        hyper['learning_rate'] = 0.01  # 학습률
         # 최적화 알고리즘 선택 [sgd, rmsprop, adagrad, adam 등]
         hyper['optimizer'] = optimizers.adagrad(lr=hyper['learning_rate'])  # default: SGD
         ############################
@@ -86,23 +87,24 @@ class ModelMgr():
 
     def get_model(self):
         model = Sequential()
-        model.add(Conv2D(32, (3, 3), padding='same', kernel_initializer="glorot_uniform", input_shape=self.x_train.shape[1:]))
+        model.add(Conv2D(64, (3, 3), padding='same', input_shape=self.x_train.shape[1:]))
         model.add(Activation('relu'))
-        model.add(Conv2D(32, (5, 5), kernel_initializer="glorot_uniform", padding='same'))
-        model.add(Activation('relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))  # feature 크기를 1/2 배로 줄임
+        model.add(MaxPooling2D(pool_size=(2, 2)))
 
-        model.add(Conv2D(64, (5, 5), padding='same', kernel_initializer="glorot_uniform", input_shape=self.x_train.shape[1:]))
+        model.add(Conv2D(64, (3, 3), padding='same'))
         model.add(Activation('relu'))
-        model.add(Conv2D(64, (7, 7), kernel_initializer="glorot_uniform", padding='same'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
+
+        model.add(Conv2D(64, (3, 3), padding='same'))
         model.add(Activation('relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))  # feature 크기를 1/2 배로 줄임
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
 
         model.add(Flatten())
-        model.add(Dense(128, kernel_initializer="glorot_uniform"))
-        model.add(Dense(64, kernel_initializer="glorot_uniform"))
-        model.add(Activation('relu'))
-        model.add(Dense(len(self.target_class), kernel_initializer="glorot_uniform"))
+        model.add(Dense(64))
+        model.add(Dropout(0.25))
+        model.add(Dense(len(self.target_class)))
         model.add(Activation('softmax'))
 
         return model
