@@ -1,5 +1,3 @@
-# -*- coding:utf-8 -*-
-
 from numpy.random import seed
 import random
 from tensorflow import set_random_seed
@@ -17,7 +15,6 @@ seed(0)
 random.seed(1)
 set_random_seed(2)
 os.environ['PYTHONHASHSEED'] = '0'
-
 
 class ModelMgr():
     def __init__(self, target_class=[3, 5], use_validation=True):
@@ -73,47 +70,46 @@ class ModelMgr():
 
     def get_hyperparameter(self):
         hyper = dict()
-        ############################
-        '''
-            (1) 파라미터 값들을 수정해주세요.
-        '''
-        hyper['batch_size'] = 32   # 배치 사이즈
-        hyper['epochs'] = 20  # epochs은 최대 20 설정 !!
-        hyper['learning_rate'] = 0.01  # 학습률
-        # 최적화 알고리즘 선택 [sgd, rmsprop, adagrad, adam 등]
-        hyper['optimizer'] = optimizers.adagrad(lr=hyper['learning_rate'])  # default: SGD
-        ############################
+        hyper['batch_size'] = 8
+        hyper['epochs'] = 20
+        hyper['learning_rate'] = 0.01
+        hyper['optimizer'] = optimizers.adagrad(lr=hyper['learning_rate'])
         return hyper
 
     def get_model(self):
         model = Sequential()
-        model.add(Conv2D(64, (3, 3), padding='same', kernel_initializer="glorot_uniform", input_shape=self.x_train.shape[1:]))
+        model.add(Conv2D(64, (3, 3), padding='same', input_shape=self.x_train.shape[1:]))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
 
-        model.add(Conv2D(64, (3, 3), padding='same', kernel_initializer="glorot_uniform"))
+        model.add(Conv2D(64, (3, 3), padding='same'))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
 
-        model.add(Conv2D(64, (3, 3), padding='same', kernel_initializer="glorot_uniform"))
+        model.add(Conv2D(64, (3, 3), padding='same'))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
 
-        model.add(Conv2D(64, (3, 3), padding='same', kernel_initializer="glorot_uniform"))
+        model.add(Conv2D(64, (3, 3), padding='same'))
+        model.add(Activation('relu'))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
+
+        model.add(Conv2D(64, (3, 3), padding='same'))
         model.add(Activation('relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
 
         model.add(Flatten())
-        model.add(Dense(32))
-        model.add(Dropout(0.25))
-        model.add(Dense(len(self.target_class), kernel_initializer="glorot_uniform"))
+        model.add(Dense(256))
+        model.add(Dense(len(self.target_class)))
         model.add(Activation('softmax'))
 
         return model
+
         """
         주의사항
         1. 모델의 입력 데이터 크기는 (batch_size, 32, 32, 1) # 고양이 or 강아지 흑백 사진
@@ -126,6 +122,7 @@ class ModelMgr():
             
         기타 문의 : yellowjs0304@gmail.com (수업조교)
         """
+
     def get_model_sample_1(self):
         # Fully-connected layer만을 이용한 모델
         model = Sequential() # 모델 정의
@@ -198,7 +195,6 @@ class ModelMgr():
     def draw_history(self, file_path='./result.png'):
         print('\nvisualize results : \"{}\"'.format(file_path))
         draw_result(self.history.history, self.use_validation, file_path=file_path)
-
 
 if __name__ == '__main__':
     trained_model = None
