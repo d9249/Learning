@@ -68,10 +68,19 @@ for l, f in zip(_list, files):
 _32_neurons = [get_dr_list(_list[i], 1) for i in range(3)]
 _64_neurons = [get_dr_list(_list[i], 1) for i in range(3,6)]
 _128_neurons = [get_dr_list(_list[i], 1) for i in range(6,9)]
-
+'''
 plt.plot(meanPlot(_32_neurons), label='32 neurons')
 plt.plot(meanPlot(_64_neurons), label='64 neurons(baseline)')
 plt.plot(meanPlot(_128_neurons), label='128 neurons')
+
+plt.plot(meanPlot(_32_neurons), label='buff_16')
+plt.plot(meanPlot(_64_neurons), label='buff_32(baseline)')
+plt.plot(meanPlot(_128_neurons), label='buff_64')
+'''
+plt.plot(meanPlot(_32_neurons), label='target_250')
+plt.plot(meanPlot(_64_neurons), label='target_500')
+plt.plot(meanPlot(_128_neurons), label='target_1000(baseline)')
+
 
 """
 add more plotting 
@@ -84,7 +93,9 @@ plt.plot(get_dr_list(_list[INDEX OF FILE], 1), label='description about file')
 plt.xlabel('Episode')
 plt.ylabel('Accumulated Reward')
 # 비교 대상에 따라 그래프 제목 변경
-plt.title('# of Hidden Layer Neurons')
+# plt.title('# of Hidden Layer Neurons')
+# plt.title('# of Replay Buffer Samples')
+plt.title('# of Target Update Period')
 plt.legend()
 plt.show()
 

@@ -13,6 +13,7 @@ from deepq.utils import ObservationInput
 from common.schedules import LinearSchedule
 import time
 
+
 def model(inpt, num_actions, scope, reuse=False):
     """This model takes as input an observation and returns values of all actions."""
     with tf.variable_scope(scope, reuse=reuse):
@@ -49,6 +50,8 @@ if __name__ == '__main__':
         reward_list = []  ###list for saving sum of reward to file
         episode_rewards = [0.0]
         obs = env.reset()
+        start = time.time()
+        end = time.time()
         for t in itertools.count():
             # Take action and update exploration to the newest value
             action = act(obs[None], update_eps=exploration.value(t))[0]
@@ -64,7 +67,7 @@ if __name__ == '__main__':
                 episode_rewards.append(0)
 
                 ###Reward 파일에 저장(파일명 변경)
-                with open("../../128neurons_3.txt", "a") as f:
+                with open("../../32neurons_1.txt", "a") as f:
                     f.write(str(sum(reward_list)) + "\n")
                 reward_list = []  ###init reward list
 
