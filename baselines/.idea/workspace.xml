@@ -145,7 +145,7 @@
       <workItem from="1592211624321" duration="91000" />
       <workItem from="1592494835114" duration="491000" />
       <workItem from="1592546574171" duration="618000" />
-      <workItem from="1592557399426" duration="28640000" />
+      <workItem from="1592557399426" duration="39213000" />
     </task>
     <servers />
   </component>
@@ -156,34 +156,35 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="370" y="274" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592559434380">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state x="555" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592665316720">
+      <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="370" y="274" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592559434380" />
+    <state x="555" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1592665316720" />
     <state x="419" y="282" key="FileChooserDialogImpl" timestamp="1592564675232">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
     <state x="419" y="282" key="FileChooserDialogImpl/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592564675232" />
-    <state width="1877" height="207" key="GridCell.Tab.0.bottom" timestamp="1592644690357">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom" timestamp="1592665990901">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.bottom/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="207" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690357" />
-    <state width="1877" height="207" key="GridCell.Tab.0.center" timestamp="1592644690357">
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1592665990901" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center" timestamp="1592665990901">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.center/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="207" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690356" />
-    <state width="1877" height="207" key="GridCell.Tab.0.left" timestamp="1592644690356">
+    <state width="1877" height="207" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1592665990901" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left" timestamp="1592665990900">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.left/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="207" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690356" />
-    <state width="1877" height="207" key="GridCell.Tab.0.right" timestamp="1592644690357">
+    <state width="1877" height="207" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1592665990900" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right" timestamp="1592665990901">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.right/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="207" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690357" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1592665990901" />
     <state x="49" y="258" key="SettingsEditor" timestamp="1591767131057">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
@@ -211,7 +212,7 @@
     <state x="587" y="254" key="ftp.server.browser/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1591755274083" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/baselines$custom_cartpole.coverage" NAME="custom_cartpole Coverage Results" MODIFIED="1592637695966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
+    <SUITE FILE_PATH="coverage/baselines$custom_cartpole.coverage" NAME="custom_cartpole Coverage Results" MODIFIED="1592664402094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
     <SUITE FILE_PATH="coverage/baselines$plot_reward.coverage" NAME="plot_reward Coverage Results" MODIFIED="1592637687731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
     <SUITE FILE_PATH="coverage/baselines$logger.coverage" NAME="logger Coverage Results" MODIFIED="1591755596093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

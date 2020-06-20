@@ -4,23 +4,24 @@ import itertools
 import numpy as np
 import tensorflow as tf
 import tensorflow.contrib.layers as layers
-
 import common.tf_util as U
 import logger
 import deepq
 from deepq.replay_buffer import ReplayBuffer
 from deepq.utils import ObservationInput
 from common.schedules import LinearSchedule
+import time
 
+#학습소요시간을 측정하기 위한 time method 사용
+start = time.time()
 
 def model(inpt, num_actions, scope, reuse=False):
-    """This model takes as input an observation and returns values of all actions."""
     #해당 모델은 관찰을 입력으로 하고 모든 동작의 값을 반환한다.
     with tf.variable_scope(scope, reuse=reuse):
         out = inpt
         #num_outputs 값 수정(32, 64, 128)
         #activation_function으로 tangent hyperbolic을 사용. (-1부터 1 사이의 값을 갖는다.)
-        #Sigmoid보다 더 표현 가능한 범위가 넓고 기울기 특성도 좋아 bound가 필요하지만 표현력도 필요한 재귀형 신경망(recurrent neural network)에서 많이 보인다.
+        #bound가 필요하지만 Sigmoid보다 표현 가능한 범위가 넓고, 기울기 특성이 좋아, 재귀형 신경망(recurrent neural network)에 많이 보이는 tanh를 사용
         out = layers.fully_connected(out, num_outputs=64, activation_fn=tf.nn.tanh)
         ################
         out = layers.fully_connected(out, num_outputs=num_actions, activation_fn=None)
@@ -36,8 +37,11 @@ if __name__ == '__main__':
             num_actions=env.action_space.n,
             optimizer=tf.train.AdamOptimizer(learning_rate=5e-4), #최적화 알고리즘으로 Adam을 사용.
         )
-        #replay buffer 생성
-        #repaly_buffer.py에서 E-Greedy 를 따라 작은 확률로 랜덤하게 가고, 큰 확률로 높은 Q 를 따르는 쪽으로 간다.
+        '''
+        replay buffer 생성 부분
+        학습데이터에서 랜덤하게 리플레이 메모리에 올리기위해,
+        repaly_buffer.py에서 E-Greedy 를 따라 작은 확률로 랜덤하게 가고, 큰 확률로 높은 Q 를 따르는 쪽으로 간다.
+        '''
         replay_buffer = ReplayBuffer(50000) #update 효율을 증가시키기 위해서 ReplayBuffer을 50000으로 설정.
         # Create the schedule for exploration starting from 1 (every action is random) down to
         # 0.02 (98% of actions are selected according to values predicted by the model).
@@ -47,7 +51,7 @@ if __name__ == '__main__':
         #매개 변수를 초기화하고 대상 네트워크에 복사.
         U.initialize()
         update_target()
-        reward_list = []  #reward들을 파일에 저장하기 위한 list.
+        reward_list = [] #reward들을 파일에 저장하기 위한 list.
         episode_rewards = [0.0]
         obs = env.reset() # 환경을 초기화
 
@@ -71,7 +75,7 @@ if __name__ == '__main__':
                     f.write(str(sum(reward_list)) + "\n")
                 reward_list = []  #reward list 초기화
 
-            #종료 조건
+            #종료
             is_solved = t > 100 and np.mean(episode_rewards[-101:-1]) >= 200
             is_finished = len(episode_rewards) > 2000 and is_solved
 
@@ -84,7 +88,7 @@ if __name__ == '__main__':
 
             else:
                 #재생 버퍼에서 샘플링된 배치에서 Bellman 방정식의 오류를 최소화한다.
-                #최적의 가치함수를 찾기 위해서는 단순히 현재 에이전트의 정책에 대한 가치함수를 구하는 것이 아니라 현재의 정책을 최적의 정책으로 업데이트 하기위해 적용.
+                #최적의 가치함수를 찾기 위해서 단순히 현재 에이전트의 정책에 대한 가치함수를 구하는 것이 아니라 현재의 정책을 최적의 정책으로 업데이트 하기위해 적용.
                 if t > 1000:
                     #Replay Buffer Sample 수 수정(16, 32, 64)
                     obses_t, actions, rewards, obses_tp1, dones = replay_buffer.sample(32)
@@ -103,5 +107,6 @@ if __name__ == '__main__':
                 logger.record_tabular("episodes", len(episode_rewards))
                 logger.record_tabular("mean episode reward", round(np.mean(episode_rewards[-101:-1]), 1))
                 logger.record_tabular("% time spent exploring", int(100 * exploration.value(t)))
+                print(time.time() - start)
                 logger.dump_tabular()
 
