@@ -2,40 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15f5a510-0e2d-4ca4-8b4d-d4a2e8b1abd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Buffer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/128neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/128neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/128neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/32neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/32neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/32neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/64neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/64neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Buffer/64neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/128neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/128neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/128neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/32neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/32neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/32neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/64neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/64neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Neurons/64neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/128neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/128neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/128neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/32neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/32neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/32neurons_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/64neurons_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/64neurons_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Update/64neurons_3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/deepq/cartpole/custom_cartpole.py" beforeDir="false" afterPath="$PROJECT_DIR$/deepq/cartpole/custom_cartpole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deepq/cartpole/plot_reward.py" beforeDir="false" afterPath="$PROJECT_DIR$/deepq/cartpole/plot_reward.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../강화학습 보고서.hwp" beforeDir="false" afterPath="$PROJECT_DIR$/../강화학습 보고서.hwp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +41,7 @@
       <recent name="C:\Users\mean\Downloads\DRL\baselines" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.plot_reward">
+  <component name="RunManager" selected="Python.custom_cartpole">
     <configuration name="custom_cartpole" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="baselines" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.plot_reward" />
         <item itemvalue="Python.custom_cartpole" />
+        <item itemvalue="Python.plot_reward" />
         <item itemvalue="Python.logger" />
       </list>
     </recent_temporary>
@@ -177,7 +145,7 @@
       <workItem from="1592211624321" duration="91000" />
       <workItem from="1592494835114" duration="491000" />
       <workItem from="1592546574171" duration="618000" />
-      <workItem from="1592557399426" duration="11206000" />
+      <workItem from="1592557399426" duration="28640000" />
     </task>
     <servers />
   </component>
@@ -196,26 +164,26 @@
       <screen x="0" y="30" width="1280" height="994" />
     </state>
     <state x="419" y="282" key="FileChooserDialogImpl/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592564675232" />
-    <state width="1237" height="207" key="GridCell.Tab.0.bottom" timestamp="1592569487178">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom" timestamp="1592644690357">
+      <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.bottom/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="222" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1591800250634" />
-    <state width="1237" height="207" key="GridCell.Tab.0.center" timestamp="1592569487178">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state width="1877" height="207" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690357" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center" timestamp="1592644690357">
+      <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.center/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="222" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1591800250634" />
-    <state width="1237" height="207" key="GridCell.Tab.0.left" timestamp="1592569487178">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state width="1877" height="207" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690356" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left" timestamp="1592644690356">
+      <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.left/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="222" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1591800250634" />
-    <state width="1237" height="207" key="GridCell.Tab.0.right" timestamp="1592569487178">
-      <screen x="0" y="30" width="1280" height="994" />
+    <state width="1877" height="207" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690356" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right" timestamp="1592644690357">
+      <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1237" height="207" key="GridCell.Tab.0.right/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592569487178" />
-    <state width="1877" height="222" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1591800250634" />
+    <state width="1877" height="207" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1592644690357" />
     <state x="49" y="258" key="SettingsEditor" timestamp="1591767131057">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
@@ -225,6 +193,10 @@
     </state>
     <state x="332" y="351" key="com.intellij.ide.util.TipDialog/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1592557414779" />
     <state x="498" y="369" key="com.intellij.ide.util.TipDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1592494842931" />
+    <state x="764" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592636111447">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="764" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1592636111447" />
     <state x="381" y="257" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1591755010496">
       <screen x="0" y="30" width="1280" height="994" />
     </state>
@@ -239,8 +211,8 @@
     <state x="587" y="254" key="ftp.server.browser/0.30.1280.994/1280.30.1280.994@0.30.1280.994" timestamp="1591755274083" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/baselines$custom_cartpole.coverage" NAME="custom_cartpole Coverage Results" MODIFIED="1592569260563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
-    <SUITE FILE_PATH="coverage/baselines$plot_reward.coverage" NAME="plot_reward Coverage Results" MODIFIED="1592569487171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
+    <SUITE FILE_PATH="coverage/baselines$custom_cartpole.coverage" NAME="custom_cartpole Coverage Results" MODIFIED="1592637695966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
+    <SUITE FILE_PATH="coverage/baselines$plot_reward.coverage" NAME="plot_reward Coverage Results" MODIFIED="1592637687731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/deepq/cartpole" />
     <SUITE FILE_PATH="coverage/baselines$logger.coverage" NAME="logger Coverage Results" MODIFIED="1591755596093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
