@@ -21,7 +21,6 @@ def model(inpt, num_actions, scope, reuse=False):
         out = inpt
         #num_outputs 값 수정(32, 64, 128)
         #activation_function으로 tangent hyperbolic을 사용. (-1부터 1 사이의 값을 갖는다.)
-        #bound가 필요하지만 Sigmoid보다 표현 가능한 범위가 넓고, 기울기 특성이 좋아, 재귀형 신경망(recurrent neural network)에 많이 보이는 tanh를 사용
         out = layers.fully_connected(out, num_outputs=64, activation_fn=tf.nn.tanh)
         ################
         out = layers.fully_connected(out, num_outputs=num_actions, activation_fn=None)
@@ -31,21 +30,20 @@ if __name__ == '__main__':
     with U.make_session(num_cpu=1):
         env = gym.make("CartPole-v0") #학습을 하기 위해 환경 생성.
         #모델을 교육하는 데 필요한 모든 기능 생성.
+        # act = state -> action
+        # train = 모델 학습
+        # update_target = target network update
         act, train, update_target, debug = deepq.build_train(
             make_obs_ph=lambda name: ObservationInput(env.observation_space, name=name),
             q_func=model, #model input
             num_actions=env.action_space.n,
             optimizer=tf.train.AdamOptimizer(learning_rate=5e-4), #최적화 알고리즘으로 Adam을 사용.
         )
-        '''
-        replay buffer 생성 부분
-        학습데이터에서 랜덤하게 리플레이 메모리에 올리기위해,
-        repaly_buffer.py에서 E-Greedy 를 따라 작은 확률로 랜덤하게 가고, 큰 확률로 높은 Q 를 따르는 쪽으로 간다.
-        '''
+        #replay buffer 생성 부분
         replay_buffer = ReplayBuffer(50000) #update 효율을 증가시키기 위해서 ReplayBuffer을 50000으로 설정.
         # Create the schedule for exploration starting from 1 (every action is random) down to
         # 0.02 (98% of actions are selected according to values predicted by the model).
-        #반복 작업을 쉽게 모형화하며, 시간과 공간 데이터 모두 시각화를 도와주고, work의 연속성을 확인시켜주기 위해 LinearSchedule를 사용.
+        #탐험을 하기 위해 98%의 확률로 모델에 의한 경로로 움직인다. 그리고 2% 확률로 랜덤한 행동을 취함.
         exploration = LinearSchedule(schedule_timesteps=10000, initial_p=1.0, final_p=0.02)
 
         #매개 변수를 초기화하고 대상 네트워크에 복사.
@@ -63,12 +61,12 @@ if __name__ == '__main__':
             #replay buffer에 transition을 저장.
             replay_buffer.add(obs, action, rew, new_obs, float(done))
             reward_list.append(rew) #리스트에 reward를 추가.
-            obs = new_obs
+            obs = new_obs #Step()함수의 새로운 결과 값을 obs에 저장.
 
-            episode_rewards[-1] += rew
+            episode_rewards[-1] += rew #현재 episode의 reward에 나온 reward 값을 합산.
             if done:
                 obs = env.reset() #완료 되었다면, 다시 반복하기 위해 환경 초기화
-                episode_rewards.append(0)
+                episode_rewards.append(0) #episode_rewards에 다음 episode에서 학습할 리스트를 추가
 
                 #Reward 파일에 저장(파일명 변경)
                 with open("../../32neurons_1.txt", "a") as f:
@@ -76,7 +74,9 @@ if __name__ == '__main__':
                 reward_list = []  #reward list 초기화
 
             #종료
+            #episode_rewards 리스트에 저장된 최근 100개의 평균이 200이 되면 문제 해결.
             is_solved = t > 100 and np.mean(episode_rewards[-101:-1]) >= 200
+            #episode가 2000번을 넘게 된다면 문제 해결.
             is_finished = len(episode_rewards) > 2000 and is_solved
 
             if is_solved:
@@ -85,14 +85,14 @@ if __name__ == '__main__':
                     env.render() #환경을 화면으로 출력
                 if is_finished:
                     sys.exit(0)
-
             else:
                 #재생 버퍼에서 샘플링된 배치에서 Bellman 방정식의 오류를 최소화한다.
-                #최적의 가치함수를 찾기 위해서 단순히 현재 에이전트의 정책에 대한 가치함수를 구하는 것이 아니라 현재의 정책을 최적의 정책으로 업데이트 하기위해 적용.
                 if t > 1000:
+                    #replay memory에서 (16, 32, 64)batch size만큼의 기록을 랜덤 추출.
                     #Replay Buffer Sample 수 수정(16, 32, 64)
                     obses_t, actions, rewards, obses_tp1, dones = replay_buffer.sample(32)
                     ################
+                    #추출한 기록을 학습.
                     train(obses_t, actions, rewards, obses_tp1, dones, np.ones_like(rewards))
 
                 # Update target network periodically.
@@ -101,7 +101,7 @@ if __name__ == '__main__':
                     #################
                     update_target()
 
-            #학습 진행도를 확인하기 위한 부분.
+            #학습 진행도를 확인하기 위한 부분. 에피소드가 완료 상태일 때 10번 단위로 결과를 출력
             if done and len(episode_rewards) % 10 == 0:
                 logger.record_tabular("steps", t)
                 logger.record_tabular("episodes", len(episode_rewards))
