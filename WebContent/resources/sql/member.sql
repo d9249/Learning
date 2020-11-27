@@ -16,3 +16,8 @@ create table PicDB.member (
 select * from PicDB.member;
 
 drop table PicDB.member;
+
+delete from member where id = 'mean';
+
+qer
+qweqw

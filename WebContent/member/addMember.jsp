@@ -24,6 +24,25 @@
 <script type="text/javascript" src="./resources/js/validation.js"></script>
 <script type="text/javascript">
 	function checkForm() {
+
+		var regExpId = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+		var regExpName = /^[가-힣]*$/;
+
+		var form = document.newMember;
+
+		var id = form.id.value;
+		var name = form.name.value;
+
+		if (!regExpId.test(id)) {
+			alert("아이디는 문자로 시작해 주세요!");
+			form.id.select();
+			return false;
+		}
+		if (!regExpName.test(name)) {
+			alert("이름은 한글만으로 입력해 주세요!");
+			return false;
+		}
+				
 		if (!document.newMember.id.value) {
 			alert("아이디를 입력하세요.");
 			return false;
