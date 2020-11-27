@@ -10,6 +10,8 @@ CREATE TABLE PicDB.board (
        PRIMARY KEY (num)
 )default CHARSET=utf8;
 
-select * from board;
+select * from picBoard;
 desc board;
 drop table board;
+
+delete from picBoard where num = 4;
