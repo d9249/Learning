@@ -3,8 +3,6 @@
 	request.setCharacterEncoding("euc-kr");
 %>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.Book"%>
-<%@ page import="dao.BookRepository"%>
 <%@ page import="java.sql.*"%>
 <html>
 <head>

@@ -60,9 +60,11 @@
 						name='password' required>
 				</div>
 				<button class="btn btn btn-lg btn-success btn-block" type="submit">로그인</button>
-
 			</form>
 		</div>
 	</div>
+	<br><br><br><br><br><br>
+	<hr>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>

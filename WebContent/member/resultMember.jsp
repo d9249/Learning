@@ -52,6 +52,8 @@
 				out.println("<h2 class='alert alert-danger'>회원정보가 삭제되었습니다.</h2>");
 			}
 		%>
-	</div>	
+	</div>
+	<hr>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>

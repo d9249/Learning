@@ -157,6 +157,8 @@
 		</form>	
 	</div>
 	</c:forEach>
+	<hr>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>
 <script type="text/javascript">

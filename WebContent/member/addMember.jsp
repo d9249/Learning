@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <html>
 <head>
 <link rel="stylesheet" href="../resources/css/bootstrap.min.css" />
@@ -19,7 +21,7 @@
 <link rel="stylesheet" href="../resources/css/flaticon.css">
 <link rel="stylesheet" href="../resources/css/icomoon.css">
 <link rel="stylesheet" href="../resources/css/style.css">
-
+<script type="text/javascript" src="./resources/js/validation.js"></script>
 <script type="text/javascript">
 	function checkForm() {
 		if (!document.newMember.id.value) {
@@ -74,58 +76,64 @@
 </head>
 <body>
 	<%@ include file="/menu.jsp"%>
+	<fmt:setLocale value='<%=request.getParameter("language")%>' />
+	<fmt:setBundle basename="bundle.Translation"/>
+	<fmt:bundle basename="bundle.message" />
 	<div class="jumbotron" style="background-color: #FFFFFF">
 		<div class="container">
 			<h1 class="display-3" align="right">
 				<p style="font-family: 'Nanum Myeongjo', sans-serif;">
-					<b>당신의 기억을 함께 공유하기 위해</b>
+					<b><fmt:message key="main1"/></b>
 				</p>
 			</h1>
 			<h2 class="display-4" align="right">
-				<p style="font-family: 'Nanum Myeongjo', sans-serif;">입력 해주세요.</p>
+				<p style="font-family: 'Nanum Myeongjo', sans-serif;"><fmt:message key="main2"/></p>
 			</h2>
 		</div>
 	</div>
-
 	<div class="container">
+		<div>
+			<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
+		</div>
+		<br>
 		<form name="newMember" class="form-horizontal"  action="processAddMember.jsp" method="post" onsubmit="return checkForm()">
 			<div class="form-group  row">
-				<label class="col-sm-2 ">아이디</label>
+				<label class="col-sm-2 "><fmt:message key="Id"/></label>
 				<div class="col-sm-3">
 					<input name="id" type="text" class="form-control" placeholder="id" >
 				</div>
 			</div>
 			<div class="form-group  row">
-				<label class="col-sm-2">비밀번호</label>
+				<label class="col-sm-2"><fmt:message key="password"/></label>
 				<div class="col-sm-3">
 					<input name="password" type="text" class="form-control" placeholder="password" >
 				</div>
 			</div>
 			<div class="form-group  row">
-				<label class="col-sm-2">비밀번호 확인</label>
+				<label class="col-sm-2"><fmt:message key="password_confirm"/></label>
 				<div class="col-sm-3">
 					<input name="password_confirm" type="text" class="form-control" placeholder="password confirm" >
 				</div>
 			</div>
 			<div class="form-group  row">
-				<label class="col-sm-2">이름</label>
+				<label class="col-sm-2"><fmt:message key="name"/></label>
 				<div class="col-sm-3">
 					<input name="name" type="text" class="form-control" placeholder="name" >
 				</div>
 			</div>
 			<div class="form-group  row">
-				<label class="col-sm-2">성별</label>
+				<label class="col-sm-2"><fmt:message key="gender"/></label>
 				<div class="col-sm-10">
-					<input name="gender" type="radio" value="남" /> 남 
-					<input name="gender" type="radio" value="여" /> 여
+					<input name="gender" type="radio" value="남" /><fmt:message key="gender1"/> 
+					<input name="gender" type="radio" value="여" /><fmt:message key="gender2"/>
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">생일</label>
+				<label class="col-sm-2"><fmt:message key="birthday"/></label>
 				<div class="col-sm-4  ">
 <!-- 					<input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6">
  -->				<select name="birthyy">
-						<option value="">년</option>
+						<option value=""><fmt:message key="yy"/></option>
 						<option value="1950">1950</option>
 						<option value="1951">1951</option>
 						<option value="1952">1952</option>
@@ -199,7 +207,7 @@
 						<option value="2020">2020</option>												
 					</select>
 					<select name="birthmm">
-						<option value="">월</option>
+						<option value=""><fmt:message key="mm"/></option>
 						<option value="01">1</option>
 						<option value="02">2</option>
 						<option value="03">3</option>
@@ -214,7 +222,7 @@
 						<option value="12">12</option>
 					</select>
 					<select name="birthdd">
-						<option value="">일</option>
+						<option value=""><fmt:message key="dd"/></option>
 						<option value="01">1</option>
 						<option value="02">2</option>
 						<option value="03">3</option>
@@ -251,7 +259,7 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">이메일</label>
+				<label class="col-sm-2"><fmt:message key="email"/></label>
 				<div class="col-sm-10">
 					<input type="text" name="mail1" maxlength="50"> @  
 					<select name="mail2">					
@@ -264,14 +272,14 @@
 				</div>				
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2">전화번호</label>
+				<label class="col-sm-2"><fmt:message key="phone_number"/></label>
 				<div class="col-sm-3">
 					<input name="phone" type="text" class="form-control" placeholder="phone" >
 
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 ">주소</label>
+				<label class="col-sm-2 "><fmt:message key="address"/></label>
 				<div class="col-sm-5">
 					<input name="address" type="text" class="form-control" placeholder="address">
 
@@ -279,11 +287,13 @@
 			</div>
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10 ">
-					<input type="submit" class="btn btn-primary " value="등록 " > 
-					<input type="reset" class="btn btn-primary " value="취소 " onclick="reset()" >
+					<input type="submit" class="btn btn-primary " value="<fmt:message key="submit"/>" > 
+					<input type="reset" class="btn btn-primary " value="<fmt:message key="cancel"/>" onclick="reset()" >
 				</div>
 			</div>
 		</form>
 	</div>
+	<hr>
+	<jsp:include page="../footer.jsp" />
 </body>
 </html>
