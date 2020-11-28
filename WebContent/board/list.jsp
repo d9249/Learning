@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.util.*"%>
 <%@ page import="mvc.model.BoardDTO"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
@@ -27,6 +26,7 @@
 <link rel="stylesheet" href="./resources/css/flaticon.css">
 <link rel="stylesheet" href="./resources/css/icomoon.css">
 <link rel="stylesheet" href="./resources/css/style.css">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html>
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
@@ -57,6 +57,9 @@
 </style>
 </head>
 <body>
+	<fmt:setLocale value='<%=request.getParameter("language")%>' />
+	<fmt:setBundle basename="bundle.Translation"/>
+	<fmt:bundle basename="bundle.message" />
 	<header>
 	<div class="container" style="padding-top: 8px; padding-bottom: 8px;">
 		<div class="colorlib-navbar-brand">
@@ -81,11 +84,11 @@
 		<div class="container">
 			<h1 class="display-3" align="right">
 				<p style="font-family: 'Nanum Myeongjo', sans-serif;">
-					<b>당신의 소중한 기억,</b>
+					<b><fmt:message key="text11"/></b>
 				</p>
 			</h1>
 			<h2 class="display-4" align="right">
-				<p style="font-family: 'Nanum Myeongjo', sans-serif;">공유 해주세요.</p>
+				<p style="font-family: 'Nanum Myeongjo', sans-serif;"><fmt:message key="text12"/></p>
 			</h2>
 		</div>
 	</div>
@@ -93,7 +96,11 @@
 		<form action="<c:url value="./BoardListAction.do"/>" method="post">
 			<div>
 				<div class="text-right">
-					<span class="badge badge-success">전체 게시물: <%=total_record%>건
+					<div>
+						<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
+					</div>
+					<br>
+					<span class="badge badge-success"><fmt:message key="text13"/> : <%=total_record%>
 					</span>
 				</div>
 			</div>
@@ -108,16 +115,16 @@
 						<img src="./resources/images/<%=notice.getFilename() %>" style="height: 300px; margin-right: 40px"></a>
 						<h8> </h8>
 						<h5>
-							<b>제목: <%=notice.getSubject()%></b>
+							<b><fmt:message key="text14"/> : <%=notice.getSubject()%></b>
 						</h5>
 						<h5>
-							<b>설명: <%=notice.getDescription()%></b>
+							<b><fmt:message key="text15"/> : <%=notice.getDescription()%></b>
 						</h5>
 						<h5>
-							<b>작성자: <%=notice.getName()%></b>
+							<b><fmt:message key="text16"/> : <%=notice.getName()%></b>
 						</h5>
 						<h5>
-							<b>조회수: <%=notice.getHit()%></b>
+							<b><fmt:message key="text17"/> : <%=notice.getHit()%></b>
 						</h5>
 					</div>
 					<%
@@ -145,16 +152,16 @@
 					<tr>
 						<td width="100%" align="left" style="width:100%; height:100px;">&nbsp;&nbsp; 
 							<select	name="items" class="txt" style="height: 40px;">
-								<option value="subject">제목에서</option>
-								<option value="description">설명에서</option>
-								<option value="name">글쓴이에서</option>
+								<option value="subject"><fmt:message key="text18"/></option>
+								<option value="description"><fmt:message key="text19"/></option>
+								<option value="name"><fmt:message key="text20"/></option>
 							</select>
 							<input name="text" type="text" style="height: 40px;"/> 
 							<input type="submit" id="btnAdd" class="btn btn-primary" style="height: 43.5px;" value="검색"/>
 						</td>
 						<td width="100%" align="right">
 							<a href="#"	onclick="checkForm(); return false;" class="btn btn-primary"
-								role="button" style="width: 120px; height:43.5px; margin-left: 10px; padding-top:8px;">&laquo; 함께하기</a>
+								role="button" style="width: 140px; height:43.5px; margin-left: 10px; padding-top:8px;">&laquo; <fmt:message key="text4"/>  </a>
 						</td>
 					</tr>
 				</table>

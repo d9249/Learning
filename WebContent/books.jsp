@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=euc-kr"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("euc-kr");
 %>
@@ -8,7 +10,6 @@
 <head>
 <title>Pic</title>
 <meta charset=utf-8>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
 %>
@@ -28,6 +29,8 @@
 <link rel="stylesheet" href="./resources/css/flaticon.css">
 <link rel="stylesheet" href="./resources/css/icomoon.css">
 <link rel="stylesheet" href="./resources/css/style.css">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 </head>
 <body>
 	<header>
@@ -49,6 +52,9 @@
 	</div>
 	<br>
 	<br>
+	<fmt:setLocale value='<%=request.getParameter("language")%>' />
+	<fmt:setBundle basename="bundle.Translation"/>
+	<fmt:bundle basename="bundle.message" />
 	</header>
 		<section class="hero-wrap js-fullheight">
 			<div class="container-fluid px-0">
@@ -75,13 +81,14 @@
 								style="background-image: url(./resources/images/image_1.jpg);"></div>
 							<div class="col-md-6">
 								<div class="text p-md-5 p-4 ftco-animate">
+									<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
 									<h2 class="mb-4">
-										<a href="blog-single.html">한번 뿐인 인생.</a>
+										<a href="blog-single.html"><fmt:message key="text1"/></a>
 									</h2>
-									<p>좋은 장소에서 좋은 기억.</p>
-									<p>속절없이 지나가는 너의 시간을 많이 남겨야하지 않겠어?</p>
+									<p><fmt:message key="text2"/></p>
+									<p><fmt:message key="text3"/></p>
 									<p class="mb-0 mt-4">
-										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary">함께 하러가기</a>
+										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary"><fmt:message key="text4"/></a>
 									</p>
 								</div>
 							</div>
@@ -93,12 +100,13 @@
 								style="background-image: url(./resources/images/image_2.jpg);"></div>
 							<div class="col-md-6">
 								<div class="text p-md-5 p-4 ftco-animate">
+									<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
 									<h2 class="mb-4">
-										<a href="blog-single.html">이런 인생샷 어디서 찍었는지 궁금하지 않아?</a>
+										<a href="blog-single.html"><fmt:message key="text5"/></a>
 									</h2>
-									<p>우리와 함께 한다면 너도 이런 인생샷 찍을 수 있어.</p>
+									<p><fmt:message key="text6"/></p>
 									<p class="mb-0 mt-4">
-										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary">함께 하러가기</a>
+										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary"><fmt:message key="text4"/></a>
 									</p>
 								</div>
 							</div>
@@ -110,12 +118,13 @@
 								style="background-image: url(./resources/images/image_8.jpg);"></div>
 							<div class="col-md-6">
 								<div class="text p-md-5 p-4 ftco-animate">
+									<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
 									<h2 class="mb-4">
-										<a href="blog-single.html">이런 장소를 어떻게 찍었는지 궁금하지 않아?</a>
+										<a href="blog-single.html"><fmt:message key="text7"/></a>
 									</h2>
-									<p>우리와 함께 한다면 너도 이런 인생샷 찍을 수 있어.</p>
+									<p><fmt:message key="text6"/></p>
 									<p class="mb-0 mt-4">
-										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary">함께 하러가기</a>
+										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary"><fmt:message key="text4"/></a>
 									</p>
 								</div>
 							</div>
@@ -130,13 +139,14 @@
 							</div>
 							<div class="col-md-6">
 								<div class="text p-md-5 p-4 ftco-animate">
+									<a href="?language=ko">Korean</a> | <a href="?language=en">English</a>
 									<h2 class="mb-4">
-										<a href="blog-single.html">우리와 함께 좋은 기억을 공유하자.</a>
+										<a href="blog-single.html"><fmt:message key="text8"/></a>
 									</h2>
-									<p>간단한 회원가입 후에 Pic board에 들어가서 너의 기억을 공유해줘.</p>
-									<p>우리와 함께 해주어서 고마워.</p>
+									<p><fmt:message key="text9"/></p>
+									<p><fmt:message key="text10"/></p>
 									<p class="mb-0 mt-4">
-										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary">함께 하러가기</a>
+										<a href="<c:url value="/BoardListAction.do?pageNum=1"/>" class="btn btn-primary"><fmt:message key="text4"/></a>
 									</p>
 								</div>
 							</div>
