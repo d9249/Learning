@@ -129,13 +129,6 @@
 						placeholder="filename">
 				</div>
 			</div>
-			<div class="form-group row">
-				<label class="col-sm-2 control-label" >파일 크기</label>
-				<div class="col-sm-5">
-					<input name="filesize" type="text" class="form-control"
-						placeholder="filesize">
-				</div>
-			</div>
 			<div>
 				<div style="display: flex; justify-content: flex-end;">
 					<input type="submit" class="btn btn-primary " value="등록 " style="margin-right:5px;">		

@@ -27,7 +27,6 @@
 <link rel="stylesheet" href="./resources/css/icomoon.css">
 <link rel="stylesheet" href="./resources/css/style.css">
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<html>
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 <meta name="viewport" content="width=device-width,initial-scale=1">

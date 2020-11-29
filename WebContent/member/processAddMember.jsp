@@ -26,8 +26,8 @@
 %>
 
 <sql:setDataSource var="dataSource"
-	url="jdbc:mysql://localhost:3306/PicDB"
-	driver="com.mysql.jdbc.Driver" user="root" password="1234" />
+	url="jdbc:mysql://picdb.chbkhuyccdgh.ap-northeast-2.rds.amazonaws.com:3306/PicDB"
+	driver="com.mysql.jdbc.Driver" user="admin" password="qwer1234" />
 
 <sql:update dataSource="${dataSource}" var="resultSet">
    INSERT INTO member VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)

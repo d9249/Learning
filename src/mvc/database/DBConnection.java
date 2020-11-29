@@ -10,9 +10,9 @@ public class DBConnection {
 
 		Connection conn = null;		
 	
-		String url = "jdbc:mysql://localhost:3306/PicDB";
-		String user = "root";
-		String password = "1234";
+		String url = "jdbc:mysql://picdb.chbkhuyccdgh.ap-northeast-2.rds.amazonaws.com:3306/PicDB";
+		String user = "admin";
+		String password = "qwer1234";
 
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url, user, password);		

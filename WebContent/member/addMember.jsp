@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="../resources/css/flaticon.css">
 <link rel="stylesheet" href="../resources/css/icomoon.css">
 <link rel="stylesheet" href="../resources/css/style.css">
-c<script type="text/javascript">
+<script type="text/javascript">
 	function checkForm() {
 
 		var regExpId = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
