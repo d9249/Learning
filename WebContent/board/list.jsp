@@ -149,18 +149,18 @@
 			<div align="left">
 				<table>
 					<tr>
-						<td width="100%" align="left" style="width:100%; height:100px;">&nbsp;&nbsp; 
-							<select	name="items" class="txt" style="height: 40px;">
+						<td width="100%" align="left">&nbsp;&nbsp; 
+							<select	name="items" class="txt">
 								<option value="subject"><fmt:message key="text18"/></option>
 								<option value="description"><fmt:message key="text19"/></option>
 								<option value="name"><fmt:message key="text20"/></option>
 							</select>
-							<input name="text" type="text" style="height: 40px;"/> 
-							<input type="submit" id="btnAdd" class="btn btn-primary" style="height: 43.5px;" value="검색"/>
+							<input name="text" type="text" /> 
+							<input type="submit" id="btnAdd" class="btn btn-primary" value="검색"/>
 						</td>
 						<td width="100%" align="right">
 							<a href="#"	onclick="checkForm(); return false;" class="btn btn-primary"
-								role="button" style="width: 140px; height:43.5px; margin-left: 10px; padding-top:8px;">&laquo; <fmt:message key="text4"/>  </a>
+								role="button" >&laquo; <fmt:message key="text4"/>  </a>
 						</td>
 					</tr>
 				</table>

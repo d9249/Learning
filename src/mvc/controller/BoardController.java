@@ -2,6 +2,7 @@ package mvc.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -10,12 +11,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 import mvc.model.BoardDAO;
 import mvc.model.BoardDTO;
 
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	static final int LISTCOUNT = 4; 
+	static final int LISTCOUNT = 4;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
@@ -106,21 +110,29 @@ public class BoardController extends HttpServlet {
 		request.setAttribute("name", name);									
 	}
 	// 새로운 글 등록하기
-	public void requestBoardWrite(HttpServletRequest request){
+	public void requestBoardWrite(HttpServletRequest request) throws IOException{
 					
-		BoardDAO dao = BoardDAO.getInstance();		
+		BoardDAO dao = BoardDAO.getInstance();
 		
 		BoardDTO board = new BoardDTO();
-		board.setId(request.getParameter("id"));
-		board.setName(request.getParameter("name"));
-		board.setSubject(request.getParameter("subject"));
-		board.setAddress(request.getParameter("address"));
-		board.setDescription(request.getParameter("description"));
-		board.setCamera(request.getParameter("camera"));
-		board.setFilter(request.getParameter("filter"));
-		board.setPhotoTime(request.getParameter("photoTime"));
-		board.setCategory(request.getParameter("category"));
-		board.setFilename(request.getParameter("filename"));
+		
+		String path = request.getSession().getServletContext().getRealPath("/resources/images");
+
+	    int size = 1024 * 1024 * 10; // 저장가능한 파일 크기
+
+	    MultipartRequest multi = new MultipartRequest(request, path, size, "UTF-8", new DefaultFileRenamePolicy());
+	    Enumeration files = multi.getFileNames();
+	    
+		board.setId(multi.getParameter("id"));
+		board.setName(multi.getParameter("name"));
+		board.setSubject(multi.getParameter("subject"));
+		board.setAddress(multi.getParameter("address"));
+		board.setDescription(multi.getParameter("description"));
+		board.setCamera(multi.getParameter("camera"));
+		board.setFilter(multi.getParameter("filter"));
+		board.setPhotoTime(multi.getParameter("photoTime"));
+		board.setCategory(multi.getParameter("category"));
+		board.setFilename(multi.getFilesystemName("filename"));
 		
 		System.out.println(request.getParameter("name"));
 		System.out.println(request.getParameter("subject"));
@@ -132,13 +144,13 @@ public class BoardController extends HttpServlet {
 		System.out.println(request.getParameter("category"));
 		System.out.println(request.getParameter("filename"));		
 		java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyy/MM/dd(HH:mm:ss)");
-		String regist_day = formatter.format(new java.util.Date()); 
+		String regist_day = formatter.format(new java.util.Date());
 		
 		board.setHit(0);
 		board.setRegist_day(regist_day);
 		board.setIp(request.getRemoteAddr());			
 		
-		dao.insertBoard(board);								
+		dao.insertBoard(board);					
 	}
 	//선택된 글 상세 페이지 가져오기
 	public void requestBoardView(HttpServletRequest request){
@@ -155,31 +167,38 @@ public class BoardController extends HttpServlet {
    		request.setAttribute("board", board);   									
 	}
 	//선택된 글 내용 수정하기
-	public void requestBoardUpdate(HttpServletRequest request){
+	public void requestBoardUpdate(HttpServletRequest request) throws IOException{
 					
 		int num = Integer.parseInt(request.getParameter("num"));
 		int pageNum = Integer.parseInt(request.getParameter("pageNum"));	
+		
+		String path = request.getSession().getServletContext().getRealPath("/resources/images");
+
+	    int size = 1024 * 1024 * 10; // 저장가능한 파일 크기
+
+	    MultipartRequest multi = new MultipartRequest(request, path, size, "UTF-8", new DefaultFileRenamePolicy());
+	    Enumeration files = multi.getFileNames();
 		
 		BoardDAO dao = BoardDAO.getInstance();		
 		
 		BoardDTO board = new BoardDTO();		
 		board.setNum(num);
-		board.setName(request.getParameter("name"));
-		board.setSubject(request.getParameter("subject"));
-		board.setAddress(request.getParameter("address"));
-		board.setDescription(request.getParameter("description"));
-		board.setCamera(request.getParameter("camera"));
-		board.setFilter(request.getParameter("filter"));
-		board.setPhotoTime(request.getParameter("photoTime"));
-		board.setCategory(request.getParameter("category"));
-		board.setFilename(request.getParameter("filename"));
+		board.setName(multi.getParameter("name"));
+		board.setSubject(multi.getParameter("subject"));
+		board.setAddress(multi.getParameter("address"));
+		board.setDescription(multi.getParameter("description"));
+		board.setCamera(multi.getParameter("camera"));
+		board.setFilter(multi.getParameter("filter"));
+		board.setPhotoTime(multi.getParameter("photoTime"));
+		board.setCategory(multi.getParameter("category"));
+		board.setFilename(multi.getFilesystemName("filename"));
 		
 		 java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyy/MM/dd(HH:mm:ss)");
 		 String regist_day = formatter.format(new java.util.Date()); 
 		 
 		 board.setHit(0);
 		 board.setRegist_day(regist_day);
-		 board.setIp(request.getRemoteAddr());			
+		 board.setIp(request.getRemoteAddr());
 		
 		 dao.updateBoard(board);								
 	}

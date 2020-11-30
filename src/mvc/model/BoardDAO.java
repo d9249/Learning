@@ -164,8 +164,9 @@ public class BoardDAO {
 	public void insertBoard(BoardDTO board)  {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
+		
 		try {
-			conn = DBConnection.getConnection();		
+			conn = DBConnection.getConnection();
 
 //			String sql = "insert into picBoard values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			String sql = "insert into picBoard (num, id, name, subject, address, description, camera, filter, hit, photoTime, category, ip, regist_day, filename) "

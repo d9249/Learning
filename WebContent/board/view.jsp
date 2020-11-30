@@ -66,7 +66,7 @@
 	<div class="container">
 		<form name="newUpdate"
 			action="BoardUpdateAction.do?num=<%=notice.getNum()%>&pageNum=<%=nowpage%>"
-			class="form-horizontal" method="post">
+			class="form-horizontal" method="post" enctype="multipart/form-data">
 			
 			<div class="form-group row">
  				<img src="./resources/images/<%=notice.getFilename() %>" style="width:100%;">

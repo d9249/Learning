@@ -62,7 +62,7 @@
 	<div class="container">
 
 		<form name="newWrite" action="./BoardWriteAction.do"
-			class="form-horizontal" method="post" onsubmit="return checkForm()">
+			class="form-horizontal" method="post" enctype="multipart/form-data" onsubmit="return checkForm()">
 			<input name="id" type="hidden" class="form-control"
 				value="${sessionId}">
 			<div class="form-group row">
