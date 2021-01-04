@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM의 정보 -->
+    <div id="app"></div>
+
+    <!-- 해당 태그나 DOM의 내용을 조작 -->
+    <script>
+        // Jquery 선택자 $('#app');와 같은 역활
+        var div = document.querySelector('#app');
+        // div tag의 정보를 가져와 변수 div에 저장
+        // console.log(div); div 정보를 출력
+        //div.innerHTML = 'hello world'; div에 문자열 추가
+        var str = 'hello world';
+        div.innerHTML = str;
+        str = 'hello world!!!';
+        div.innerHTML = str; //바뀐 문자열을 갱신 해주어야한다.
+
+    </script>
+</body>
+</html>
