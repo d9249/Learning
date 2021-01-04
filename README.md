@@ -2,7 +2,7 @@
 
 ## Organizing Notes
 ### Level 1. complete.
-https://www.notion.so/Inflearn_Vue-js-Level-1-5e27acee39ea4628b659a3eeec0d7422
+> https://www.notion.so/Inflearn_Vue-js-Level-1-5e27acee39ea4628b659a3eeec0d7422
 
 ### Level 2. Proceeding
 https://www.notion.so/Inflearn_Vue-js-Level-2-ead10ea9a39549edaa234c1149527749
