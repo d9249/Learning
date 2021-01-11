@@ -1,26 +1,68 @@
 <template>
   <div id="app">
     <todo-header></todo-header>
-    <todo-input></todo-input>
-    <todo-list></todo-list>
-    <todo-footer></todo-footer>
+    <todo-input v-on:addTodoItem="addOneItem"></todo-input>
+    <todo-list
+      v-bind:propsdata="todoItems"
+      v-on:removeItem="removeOneItem"
+      v-on:toggleItem="toggleOneItem"
+    ></todo-list>
+    <todo-footer v-on:clearAll="clearAllItems"></todo-footer>
   </div>
 </template>
 
 <script>
-import TodoHeader from './components/TodoHeader'
-import TodoInput from './components/TodoInput'
-import TodoList from './components/TodoList'
-import TodoFooter from './components/TodoFooter'
+import TodoHeader from "./components/TodoHeader";
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
+import TodoFooter from "./components/TodoFooter";
 
 export default {
+  data: function() {
+    return {
+      todoItems: []
+    };
+  },
+  methods: {
+    addOneItem: function(todoItem) {
+      var obj = { completed: false, item: todoItem };
+      localStorage.setItem(todoItem, JSON.stringify(obj));
+      this.todoItems.push(obj);
+    },
+    removeOneItem: function(todoItem, index) {
+      localStorage.removeItem(todoItem.item);
+      this.todoItems.splice(index, 1);
+    },
+    toggleOneItem: function(todoItem, index) {
+      // todoItem.completed = !todoItem.completed;
+      this.todoItems[index].completed = !this.todoItems[index].completed;
+      // 로컬 스토리지의 데이터 갱신
+      localStorage.removeItem(todoItem.item);
+      localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+    },
+    clearAllItems: function() {
+      localStorage.clear();
+      this.todoItems = [];
+    }
+  },
+  created: function() {
+    if (localStorage.length > 0) {
+      for (var i = 0; i < localStorage.length; i++) {
+        if (localStorage.key(i) !== "loglevel:webpack-dev-server") {
+          this.todoItems.push(
+            JSON.parse(localStorage.getItem(localStorage.key(i)))
+          );
+        }
+      }
+    }
+  },
   components: {
-    'TodoHeader': TodoHeader,
-    'TodoInput': TodoInput,
-    'TodoList': TodoList,
-    'TodoFooter': TodoFooter
+    TodoHeader: TodoHeader,
+    TodoInput: TodoInput,
+    TodoList: TodoList,
+    TodoFooter: TodoFooter
   }
-}
+};
 </script>
 
 <style>
@@ -36,6 +78,6 @@ button {
   border-style: groove;
 }
 .shadow {
-  box-shadow: 5px 10px 10px rgba(0,0,0,0.03);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
 }
 </style>
