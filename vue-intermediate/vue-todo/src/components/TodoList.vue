@@ -1,9 +1,20 @@
 <template>
   <div>
     <transition-group name="list" tag="ul">
-      <li v-for="(todoItem, index) in propsdata" v-bind:key="todoItem.item" class="shadow">
         <i class="checkBtn fas fa-check" v-bind:class="{checkBtnCompleted: todoItem.completed}" v-on:click="toggleComplete(todoItem, index)"></i>
-        <span v-bind:class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
+      <li
+        v-for="(todoItem, index) in this.$store.state.todoItems"
+        v-bind:key="todoItem.item"
+        class="shadow"
+      >
+        <i
+          class="checkBtn fas fa-check"
+          v-bind:class="{ checkBtnCompleted: todoItem.completed }"
+          v-on:click="toggleComplete(todoItem, index)"
+        ></i>
+        <span v-bind:class="{ textCompleted: todoItem.completed }">{{
+          todoItem.item
+        }}</span>
         <span class="removeBtn" v-on:click="removeTodo(todoItem, index)">
           <i class="fas fa-trash"></i>
         </span>
@@ -14,16 +25,15 @@
 
 <script>
 export default {
-  props: ['propsdata'],
   methods: {
     removeTodo(todoItem, index) {
-      this.$emit('removeItem', todoItem, index);
+      this.$store.commit("removeOneItem", { todoItem, index });
     },
     toggleComplete(todoItem, index) {
-      this.$emit('toggleItem', todoItem, index);
+      this.$store.commit("toggleOneItem", { todoItem, index });
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -60,7 +70,8 @@ li {
   color: #de4343;
 }
 /* 리스트 아이템 트렌지션 */
-.list-enter-active, .list-leave-active {
+.list-enter-active,
+.list-leave-active {
   transition: all 1s;
 }
 .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {

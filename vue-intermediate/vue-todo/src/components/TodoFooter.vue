@@ -1,8 +1,8 @@
 <template>
   <div class="clearAllContainer">
-      <span class="clearAllBtn" v-on:click="clearTodo">
-        Clear All
-      </span>
+    <span class="clearAllBtn" v-on:click="clearTodo">
+      Clear All
+    </span>
   </div>
 </template>
 
@@ -10,10 +10,10 @@
 export default {
   methods: {
     clearTodo() {
-      this.$emit('clearAll');
+      this.$store.commit("clearAllItems");
     }
   }
-}
+};
 </script>
 
 <style scoped>
