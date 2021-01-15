@@ -13,8 +13,6 @@
 |**Education**|2015.3 ~ Proceeding|Computer Science and Engineering|Kyonggi University|
 |**Research activities**|2019.1 ~ Proceeding|Undergraduate Research Students|Kyonggi Univ. Smart I.O.T Lab|
 
-<div align=center>
-
 ## Languages
 
 Python
@@ -28,4 +26,3 @@ Python
 [![Tistory Blog Badge](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.tistory.com)
 [![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:d9249@kyonggi.ac.kr)](mailto:d9249@kyonggi.ac.kr)
 
-</div>
