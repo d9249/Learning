@@ -19,8 +19,6 @@ Python Learning
 
 [![Ideal's github stats](https://github-readme-stats.vercel.app/api?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
-<br>
-
 ## Contacts
 
 [![Tistory Blog Badge](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.tistory.com)
