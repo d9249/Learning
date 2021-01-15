@@ -5,10 +5,11 @@
 
 </div>
 ## Career
-|Type|Date|Contents|Organization|
+
+| **Type** | **Date**| **Contents**| **Organization**|
 |---|---|---|---|
-|Education|2015. 3 ~ Proceeding|Computer Science and Engineering|Kyonggi University|
-|Research activities|2019.1 ~ Proceeding|Undergraduate Research Students|Kyonggi Univ. Smart I.O.T Lab|
+|**Education**|2015. 3 ~ Proceeding|Computer Science and Engineering|Kyonggi University|
+|**Research activities**|2019.1 ~ Proceeding|Undergraduate Research Students|Kyonggi Univ. Smart I.O.T Lab|
 
 <div align=center>
 
