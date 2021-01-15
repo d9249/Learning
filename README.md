@@ -19,8 +19,7 @@ Python Learning
 
 [![Ideal's github stats](https://github-readme-stats.vercel.app/api?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
-:mailbox_with_mail:
-## Contacts
+## :mailbox_with_mail: Contacts
 
 [![Tistory Blog Badge](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.tistory.com)
 [![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:d9249@kyonggi.ac.kr)](mailto:d9249@kyonggi.ac.kr)
