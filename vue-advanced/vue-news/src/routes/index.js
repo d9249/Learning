@@ -30,11 +30,15 @@ export const router = new VueRouter({
         },
         {
             path: '/item',
-            component: ItemView
+            component: ItemView,
         },
         {
-            path: '/user',
-            component: UserView
+            path: '/user/:id',
+            component: UserView,
+        },
+        {
+            path: '/item/:id',
+            component: ItemView,
         }
     ]
 });
