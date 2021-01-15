@@ -11,6 +11,8 @@
 
 Python Learning
 
+## :globe_with_meridians: Stats
+
 [![Ideal's github stats](https://github-readme-stats.vercel.app/api?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
 ## :mailbox_with_mail: Contacts
