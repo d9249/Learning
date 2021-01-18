@@ -3,3 +3,11 @@
 # Tom - Jerry
 # Tom - Mike
 # Jerry - Mike
+
+p = list(map(str, input().split()))
+print(p)
+x = len(p)
+
+for i in range(0, x-1):
+    for j in range(i+1, x):
+        print(p[i], p[j])
