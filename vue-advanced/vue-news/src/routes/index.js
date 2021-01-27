@@ -31,7 +31,7 @@ export const router = new VueRouter({
                 store
                     .dispatch("FETCH_LIST", to.name)
                     .then(() => {
-                        console.log("fetched");
+                        // console.log("fetched");
                         // bus.$emit("end:spinner");
                         next();
                     })
@@ -50,7 +50,7 @@ export const router = new VueRouter({
                 store
                     .dispatch("FETCH_LIST", to.name)
                     .then(() => {
-                        console.log("fetched");
+                        // console.log("fetched");
                         // bus.$emit("end:spinner");
                         next();
                     })
