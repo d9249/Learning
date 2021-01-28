@@ -13,7 +13,8 @@
 ### Level 3. complete.
 
 > [To notion](https://www.notion.so/Inflearn_Vue-js-Level-2-ead10ea9a39549edaa234c1149527749)
-> [Depoloy address](https://happy-panini-26d9b3.netlify.app/news)
+
+> [Depoloy address](https://happy-panini-26d9b3.netlify.app)
 
 ### Level 4. Proceeding.
 
