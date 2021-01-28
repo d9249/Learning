@@ -12,7 +12,7 @@
 
 ### Level 3. complete.
 
-> [To notion](https://www.notion.so/Inflearn_Vue-js-Level-3-0e477091c1104630ae9dddd14e7cec9e)
+> [To notion](https://www.notion.so/Inflearn_Vue-js-Level-2-ead10ea9a39549edaa234c1149527749)
 
 ### Level 4. Proceeding.
 
