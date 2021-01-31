@@ -38,7 +38,7 @@
 
 [![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
-[![iDeal's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ideal)](https://github.com/anuraghazra/github-readme-stats)
+[![iDeal's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
 ## :mailbox_with_mail: Contacts
 
