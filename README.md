@@ -38,6 +38,8 @@
 
 [![Ideal's github stats](https://github-readme-stats.vercel.app/api?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
 
+[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=d9249)](https://github.com/anuraghazra/github-readme-stats)
+
 ## :mailbox_with_mail: Contacts
 
 [![Tistory Blog Badge](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.tistory.com)
