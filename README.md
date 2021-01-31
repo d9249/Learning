@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=🇰🇷%20mean_ideal%20profile%20🇰🇷&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=🇰🇷%20iDeal%20profile%20🇰🇷&fontSize=50)
 
 <div align="center">
   
