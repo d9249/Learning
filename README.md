@@ -12,6 +12,7 @@
 |---|---|---|---|
 | **Education** | 2015.3 ~ Proceeding | Computer Science and Engineering | Kyonggi University |
 | **Research activities** | 2019.1 ~ Proceeding | Undergraduate Research Students | Kyonggi Univ. Smart I.O.T Lab |
+| **DIYA** | 2021.3 ~ Proceeding | 4th | DIYA |
 
 ## :computer: Tech stacks
 
