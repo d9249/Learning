@@ -6,23 +6,17 @@
 
 ### 2012
 
-[**imageNet Classification with Deep Convolutional Neural Network**](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60)
-
----
+-[**imageNet Classification with Deep Convolutional Neural Network**](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60)
 
 ### 2013
 
 [**Network In Network**](https://www.notion.so/Network-In-Network-1204aa586bdc4e1eb091ccfa2516a959)
-
----
 
 ### 2014
 
 [**Visualizing and Understanding Convolutional Networks**](https://www.notion.so/Visualizing-and-Understanding-Convolutional-Networks-00b895b0ca9c49e08cea3689980fbf48)
 
 [**OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks**](https://www.notion.so/OverFeat-Integrated-Recognition-Localization-and-Detection-using-Convolutional-Networks-566b4eac9804469c9e36c5395a7383a2)
-
----
 
 ### 2015
 
@@ -38,8 +32,6 @@
 
 [**Spatial Transformer Networks**](https://www.notion.so/Spatial-Transformer-Networks-839b6a12e69f4cc0ae5c9829c6f03d47)
 
----
-
 ### 2016
 
 [**Rethinking the Inception Architecture for Computer Vision**](https://www.notion.so/Rethinking-the-Inception-Architecture-for-Computer-Vision-d7b2da742e55418e8856a6c29fc29deb)
@@ -53,8 +45,6 @@
 [**Identity Mappings in Deep Residual Networks**](https://www.notion.so/Identity-Mappings-in-Deep-Residual-Networks-599310352e994685968cc585f0cabd93)
 
 [**Wide Residual Networks**](https://www.notion.so/Wide-Residual-Networks-c2dcbd8dcc2a432cb2613d5cc265428b)
-
----
 
 ### 2017
 
@@ -75,8 +65,6 @@
 [**MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications**](https://www.notion.so/MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-3622fa839f474e88ad20a1fd27800e32)
 
 [**Dynamic Routing Between Capsules**](https://www.notion.so/Dynamic-Routing-Between-Capsules-02be72ea401c47f390c3eac814fc83a8)
-
----
 
 ### 2018
 
