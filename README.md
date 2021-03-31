@@ -36,7 +36,7 @@
 
 ## 💡 Interests
 
-GAN, CNN, Deep Learning 
+GAN, CNN, Deep Learning, Computer Vision
 
 ## :globe_with_meridians: Stats
 
