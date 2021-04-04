@@ -37,39 +37,17 @@
 |2018|NIPS, Oral|How Does Batch Normalization Help Optimization?|[Korean translation](https://www.notion.so/How-Does-Batch-Normalization-Help-Optimization-e5ff18c092d94021832b192f350ab69a)
 |2018|NIPS|Understanding Batch Normalization|[Korean translation](https://www.notion.so/Understanding-Batch-Normalization-38516d2f1a024d4699f8a878b6e3a0a8)
 |2018|ECCV|ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design|[Korean translation](https://www.notion.so/ShuffleNet-V2-Practical-Guidelines-for-Efficient-CNN-Architecture-Design-4bb42454f3314d57ac227b72e631b3bd)
-
-### 2019
-
-[Bag of Tricks for Image Classification with Convolutional Neural Networks](https://www.notion.so/Bag-of-Tricks-for-Image-Classification-with-Convolutional-Neural-Networks-e81ae42863d5452a9e8d739c6d7f953b)
-
-[Searching for MobileNetV3](https://www.notion.so/Searching-for-MobileNetV3-03b1798e240d44a98da0050305c34387)
-
-[EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://www.notion.so/EfficientNet-Rethinking-Model-Scaling-for-Convolutional-Neural-Networks-dbad07b6dcc84f3480be869a7b186927)
-
-[When Does Label Smoothing Help?](https://www.notion.so/When-Does-Label-Smoothing-Help-499c58240fc94fa3813804dcfed3e81a)
-
-[Stand-Alone Self-Attention in Vision Models](https://www.notion.so/Stand-Alone-Self-Attention-in-Vision-Models-7943de8101644322b3a449bc7b8646ef)
-
-[Fixing the train-test resolution discrepancy](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-c5361686c90544d7b30fdb79b62ebbcd)
-
-### 2020
-
-[Self-training with Noisy Student improves ImageNet classification](https://www.notion.so/Self-training-with-Noisy-Student-improves-ImageNet-classification-8ae35f49144f46469c8ef67118d1db91)
-
-[Adversarial Examples Improve Image Recognition](https://www.notion.so/Adversarial-Examples-Improve-Image-Recognition-bf802d61fead4686a36d562a680f9655)
-
-[Big Transfer (BiT): General Visual Representation Learning](https://www.notion.so/Big-Transfer-BiT-General-Visual-Representation-Learning-d81a0b0bade141aa9ae6f06458a0d050)
-
-[Fixing the train-test resolution discrepancy: FixEfficientNet](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-FixEfficientNet-1b752988a8254996a2bd4bc7fd3284fc)
-
-### 2021
-
-[Sharpness-Aware Minimization for Efficiently Improving Generalization](https://www.notion.so/Sharpness-Aware-Minimization-for-Efficiently-Improving-Generalization-564eeafb95274c3ca309ee9e10b2d1a6)
-
-[An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://www.notion.so/An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-3f65fe916c0b4d52a86adde2a94b48b4)
-
----
-
-[Training data-efficient image transformers & distillation through attention](https://www.notion.so/Training-data-efficient-image-transformers-distillation-through-attention-f3311d82d37548d7a651a1ad991ea3d9)
-
-[High-Performance Large-Scale Image Recognition Without Normalization](https://www.notion.so/High-Performance-Large-Scale-Image-Recognition-Without-Normalization-da5ec8784e804ca88da63c077b221193)
+|2019|CVPR|Bag of Tricks for Image Classification with Convolutional Neural Networks|[Korean translation](https://www.notion.so/Bag-of-Tricks-for-Image-Classification-with-Convolutional-Neural-Networks-e81ae42863d5452a9e8d739c6d7f953b)
+|2019|ICCV, Oral|Searching for MobileNetV3|[Korean translation](https://www.notion.so/Searching-for-MobileNetV3-03b1798e240d44a98da0050305c34387)
+|2019|ICML, Oral|EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks|[Korean translation](https://www.notion.so/EfficientNet-Rethinking-Model-Scaling-for-Convolutional-Neural-Networks-dbad07b6dcc84f3480be869a7b186927)
+|2019|NIPS, Spotlight|When Does Label Smoothing Help?|[Korean translation](https://www.notion.so/When-Does-Label-Smoothing-Help-499c58240fc94fa3813804dcfed3e81a)
+|2019|NIPS|Stand-Alone Self-Attention in Vision Models|[Korean translation](https://www.notion.so/Stand-Alone-Self-Attention-in-Vision-Models-7943de8101644322b3a449bc7b8646ef)
+|2019|NIPS|Fixing the train-test resolution discrepancy|[Korean translation](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-c5361686c90544d7b30fdb79b62ebbcd)
+|2020|CVPR|Self-training with Noisy Student improves ImageNet classification|[Korean translation](https://www.notion.so/Self-training-with-Noisy-Student-improves-ImageNet-classification-8ae35f49144f46469c8ef67118d1db91)
+|2020|CVPR|Adversarial Examples Improve Image Recognition|[Korean translation](https://www.notion.so/Adversarial-Examples-Improve-Image-Recognition-bf802d61fead4686a36d562a680f9655)
+|2020|ECCV, Spotlight|Big Transfer (BiT): General Visual Representation Learning|[Korean translation](https://www.notion.so/Big-Transfer-BiT-General-Visual-Representation-Learning-d81a0b0bade141aa9ae6f06458a0d050)
+|2020|Arxiv|Fixing the train-test resolution discrepancy: FixEfficientNet|[Korean translation](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-FixEfficientNet-1b752988a8254996a2bd4bc7fd3284fc)
+|2021|ICLR, Spotlight|Sharpness-Aware Minimization for Efficiently Improving Generalization|[Korean translation](https://www.notion.so/Sharpness-Aware-Minimization-for-Efficiently-Improving-Generalization-564eeafb95274c3ca309ee9e10b2d1a6)
+|2021|ICLR, Oral|An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale|[Korean translation](https://www.notion.so/An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-3f65fe916c0b4d52a86adde2a94b48b4)
+|||Training data-efficient image transformers & distillation through attention|[Korean translation](https://www.notion.so/Training-data-efficient-image-transformers-distillation-through-attention-f3311d82d37548d7a651a1ad991ea3d9)
+|||High-Performance Large-Scale Image Recognition Without Normalization|[Korean translation](https://www.notion.so/High-Performance-Large-Scale-Image-Recognition-Without-Normalization-da5ec8784e804ca88da63c077b221193)
