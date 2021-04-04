@@ -14,20 +14,12 @@
 |2015|ICCV|Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification|[Korean translation](https://www.notion.so/Delving-Deep-into-Rectifiers-Surpassing-Human-Level-Performance-on-ImageNet-Classification-5dc0462fb81747db949bc724a5b8afd0)
 |2015|ICML|Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift|[Korean translation](https://www.notion.so/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift-df6613cbe9404f919af107c7d20a9f08)
 |2015|NIPS|Spatial Transformer Networks|[Korean translation](https://www.notion.so/Spatial-Transformer-Networks-839b6a12e69f4cc0ae5c9829c6f03d47)
-
-### 2016
-
-[**Rethinking the Inception Architecture for Computer Vision**](https://www.notion.so/Rethinking-the-Inception-Architecture-for-Computer-Vision-d7b2da742e55418e8856a6c29fc29deb)
-
-[**Deep Residual Learning for Image Recognition**](https://www.notion.so/Deep-Residual-Learning-for-Image-Recognition-5ad0b39db4444e739d6f707707067093)
-
-[**Learning Deep Features for Discriminative Localization**](https://www.notion.so/Learning-Deep-Features-for-Discriminative-Localization-a5acb9db59f043caabf498b4dc94c691)
-
-[**SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size**](https://www.notion.so/SqueezeNet-AlexNet-level-accuracy-with-50x-fewer-parameters-and-0-5MB-model-size-2aa832275f6b44feac64bd11d3171fd1)
-
-[**Identity Mappings in Deep Residual Networks**](https://www.notion.so/Identity-Mappings-in-Deep-Residual-Networks-599310352e994685968cc585f0cabd93)
-
-[**Wide Residual Networks**](https://www.notion.so/Wide-Residual-Networks-c2dcbd8dcc2a432cb2613d5cc265428b)
+|2016|CVPR|Rethinking the Inception Architecture for Computer Vision|[Korean translation](https://www.notion.so/Rethinking-the-Inception-Architecture-for-Computer-Vision-d7b2da742e55418e8856a6c29fc29deb)
+|2016|CVPR, Oral, Best Paper Award|Deep Residual Learning for Image Recognition|[Korean translation](https://www.notion.so/Deep-Residual-Learning-for-Image-Recognition-5ad0b39db4444e739d6f707707067093)
+|2016|CVPR|Learning Deep Features for Discriminative Localization|[Korean translation](https://www.notion.so/Learning-Deep-Features-for-Discriminative-Localization-a5acb9db59f043caabf498b4dc94c691)
+|2016|Arxiv|SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size|[Korean translation](https://www.notion.so/SqueezeNet-AlexNet-level-accuracy-with-50x-fewer-parameters-and-0-5MB-model-size-2aa832275f6b44feac64bd11d3171fd1)
+|2016|ECCV, Spotlight|Identity Mappings in Deep Residual Networks|[Korean translation](https://www.notion.so/Identity-Mappings-in-Deep-Residual-Networks-599310352e994685968cc585f0cabd93)
+|2016|BMVC|Wide Residual Networks|[Korean translation](https://www.notion.so/Wide-Residual-Networks-c2dcbd8dcc2a432cb2613d5cc265428b)
 
 ### 2017
 
