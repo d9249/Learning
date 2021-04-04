@@ -5,7 +5,7 @@ Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Lin
 
 ## 📕 Paper List up.
 
-|📅Year|🏢 Conference|📄 Paper|🔗 Link|
+|Year|🏢  Conference|📄  Paper|🔗  Link|
 |--|--|---|---|
 |2012|NIPS, Spotlight|imageNet Classification with Deep Convolutional Neural Network|[Korean translation](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60), [Paper Link](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf), [Summary](https://www.notion.so/Complete-78f08c463f714ce8a41f1f3e252d6c92), [Reference](https://www.notion.so/Link-898dc4ba580347fa9044c4fd987c7e40), [Open review](https://openreview.net/forum?id=BJWjTIWOWr), [Official code](https://paperswithcode.com/paper/imagenet-classification-with-deep)|
 |2014|ICLR|Network In Network|[Korean translation](https://www.notion.so/Network-In-Network-1204aa586bdc4e1eb091ccfa2516a959)|
