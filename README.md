@@ -52,3 +52,5 @@ Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Lin
 |2021|ICLR, Oral|An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale|[Korean translation](https://www.notion.so/An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-3f65fe916c0b4d52a86adde2a94b48b4)
 |||Training data-efficient image transformers & distillation through attention|[Korean translation](https://www.notion.so/Training-data-efficient-image-transformers-distillation-through-attention-f3311d82d37548d7a651a1ad991ea3d9)
 |||High-Performance Large-Scale Image Recognition Without Normalization|[Korean translation](https://www.notion.so/High-Performance-Large-Scale-Image-Recognition-Without-Normalization-da5ec8784e804ca88da63c077b221193)
+
+<center> **Copyright 2021. d9249(Lee sangmin) all rights reserved.** <center>
