@@ -1,5 +1,5 @@
 # DIYA 2021-01 Computer Vision 4th.
-Format: Year, Conference, Paper, Link(Korean translation(Notion), Summary(Notion), Open Review(Link), Official code(Link), Pytorch(Link))
+Format: Year, Conference, Paper, Link(Korean translation(Notion), Summary(Notion), Open Review(Link), Official code(Link), Pytorch(Link), Reference(Link))
 
 ## 📕 Paper List up.
 
