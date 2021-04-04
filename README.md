@@ -55,4 +55,6 @@ Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Lin
 |||Training data-efficient image transformers & distillation through attention|[Korean translation](https://www.notion.so/Training-data-efficient-image-transformers-distillation-through-attention-f3311d82d37548d7a651a1ad991ea3d9)
 |||High-Performance Large-Scale Image Recognition Without Normalization|[Korean translation](https://www.notion.so/High-Performance-Large-Scale-Image-Recognition-Without-Normalization-da5ec8784e804ca88da63c077b221193)
 
-**Copyright 2021. d9249(Lee sangmin) all rights reserved.**
+<div align="center">
+  Copyright 2021. d9249(Lee sangmin) all rights reserved.
+</div>
