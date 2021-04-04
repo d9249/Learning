@@ -5,7 +5,7 @@ Format: Year, Conference, Paper, Link(Korean translation(Notion), Summary(Notion
 
 |Year|Conference|Paper|Link|
 |---|---|---|---|
-|2012|NIPS, Spotlight|imageNet Classification with Deep Convolutional Neural Network [Paper Link](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60#9ce89e5d11404f5b805073d4182a0488)|[Korean translation](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60)|
+|2012|NIPS, Spotlight|imageNet Classification with Deep Convolutional Neural Network [Paper Link](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)|[Korean translation](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60)|
 |2014|ICLR|Network In Network|[Korean translation](https://www.notion.so/Network-In-Network-1204aa586bdc4e1eb091ccfa2516a959)|
 |2014|ECCV|Visualizing and Understanding Convolutional Networks|[Korean translation](https://www.notion.so/Visualizing-and-Understanding-Convolutional-Networks-00b895b0ca9c49e08cea3689980fbf48)|
 |2014|ICLR|OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks|[Korean translation](https://www.notion.so/OverFeat-Integrated-Recognition-Localization-and-Detection-using-Convolutional-Networks-566b4eac9804469c9e36c5395a7383a2)
