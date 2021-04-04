@@ -5,6 +5,7 @@
 ### 2012
 
 |:Year:|:Conference:|:Paper:|:Link:|
+|---|---|---|---|
 |:2012:|:NIPS, Spotlight:|:imageNet Classification with Deep Convolutional Neural Network:|:[Notion](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60):|
 
 ### 2014
