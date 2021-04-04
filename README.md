@@ -20,26 +20,15 @@
 |2016|Arxiv|SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size|[Korean translation](https://www.notion.so/SqueezeNet-AlexNet-level-accuracy-with-50x-fewer-parameters-and-0-5MB-model-size-2aa832275f6b44feac64bd11d3171fd1)
 |2016|ECCV, Spotlight|Identity Mappings in Deep Residual Networks|[Korean translation](https://www.notion.so/Identity-Mappings-in-Deep-Residual-Networks-599310352e994685968cc585f0cabd93)
 |2016|BMVC|Wide Residual Networks|[Korean translation](https://www.notion.so/Wide-Residual-Networks-c2dcbd8dcc2a432cb2613d5cc265428b)
-
-### 2017
-
-[**Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning**](https://www.notion.so/Inception-v4-Inception-ResNet-and-the-Impact-of-Residual-Connections-on-Learning-622c720280cf472592a981f392bd9c03)
-
-[**Densely Connected Convolutional Networks**](https://www.notion.so/Densely-Connected-Convolutional-Networks-05e53d2598694bb99fff6d7e5cb4c9da)
-
-[**Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization**](https://www.notion.so/Grad-CAM-Visual-Explanations-from-Deep-Networks-via-Gradient-based-Localization-433a6764a8814dc9a49a26bac7c755cc)
-
-[**Deep Pyramidal Residual Networks**](https://www.notion.so/Deep-Pyramidal-Residual-Networks-a6001a1851d84292a528f6f18cb95001)
-
-[**Xception: Deep Learning with Depthwise Separable Convolutions**](https://www.notion.so/Xception-Deep-Learning-with-Depthwise-Separable-Convolutions-5818af0061c044f3b88bd4f71d9e765c)
-
-[**Aggregated Residual Transformations for Deep Neural Networks**](https://www.notion.so/Aggregated-Residual-Transformations-for-Deep-Neural-Networks-dbf9287a5edb440cb4b89944a9f54a66)
-
-[**PolyNet: A Pursuit of Structural Diversity in Very Deep Networks**](https://www.notion.so/PolyNet-A-Pursuit-of-Structural-Diversity-in-Very-Deep-Networks-03dbcccd1ab74e51b0dfda93a0a3114a)
-
-[**MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications**](https://www.notion.so/MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-3622fa839f474e88ad20a1fd27800e32)
-
-[**Dynamic Routing Between Capsules**](https://www.notion.so/Dynamic-Routing-Between-Capsules-02be72ea401c47f390c3eac814fc83a8)
+|2017|AAAI|Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning|[Korean translation](https://www.notion.so/Inception-v4-Inception-ResNet-and-the-Impact-of-Residual-Connections-on-Learning-622c720280cf472592a981f392bd9c03)
+|2017|CVPR, Oral, Best Paper Award|Densely Connected Convolutional Networks|[Korean translation](https://www.notion.so/Densely-Connected-Convolutional-Networks-05e53d2598694bb99fff6d7e5cb4c9da)
+|2017|ICCV|Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization|[Korean translation](https://www.notion.so/Grad-CAM-Visual-Explanations-from-Deep-Networks-via-Gradient-based-Localization-433a6764a8814dc9a49a26bac7c755cc)
+|2017|CVPR|Deep Pyramidal Residual Networks|[Korean translation](https://www.notion.so/Deep-Pyramidal-Residual-Networks-a6001a1851d84292a528f6f18cb95001)
+|2017|CVPR|Xception: Deep Learning with Depthwise Separable Convolutions|[Korean translation](https://www.notion.so/Xception-Deep-Learning-with-Depthwise-Separable-Convolutions-5818af0061c044f3b88bd4f71d9e765c)
+|2017|CVPR|Aggregated Residual Transformations for Deep Neural Networks|[Korean translation](https://www.notion.so/Aggregated-Residual-Transformations-for-Deep-Neural-Networks-dbf9287a5edb440cb4b89944a9f54a66)
+|2017|CVPR|PolyNet: A Pursuit of Structural Diversity in Very Deep Networks|[Korean translation](https://www.notion.so/PolyNet-A-Pursuit-of-Structural-Diversity-in-Very-Deep-Networks-03dbcccd1ab74e51b0dfda93a0a3114a)
+|2017|CoRR|MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications|[Korean translation](https://www.notion.so/MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-3622fa839f474e88ad20a1fd27800e32)
+|2017|NIPS|Dynamic Routing Between Capsules|[Korean translation](https://www.notion.so/Dynamic-Routing-Between-Capsules-02be72ea401c47f390c3eac814fc83a8)
 
 ### 2018
 
