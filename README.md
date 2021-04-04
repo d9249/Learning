@@ -1,6 +1,6 @@
 # DIYA 2021-01 Computer Vision 4th.
 
-## 📕 Paper
+## 📕 Paper List up.
 
 |Year|Conference|Paper|Link|Review Completed|
 |---|---|---|---|---|
@@ -29,24 +29,14 @@
 |2017|CVPR|PolyNet: A Pursuit of Structural Diversity in Very Deep Networks|[Korean translation](https://www.notion.so/PolyNet-A-Pursuit-of-Structural-Diversity-in-Very-Deep-Networks-03dbcccd1ab74e51b0dfda93a0a3114a)
 |2017|CoRR|MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications|[Korean translation](https://www.notion.so/MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-3622fa839f474e88ad20a1fd27800e32)
 |2017|NIPS|Dynamic Routing Between Capsules|[Korean translation](https://www.notion.so/Dynamic-Routing-Between-Capsules-02be72ea401c47f390c3eac814fc83a8)
-
-### 2018
-
-[**ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices**](https://www.notion.so/ShuffleNet-An-Extremely-Efficient-Convolutional-Neural-Network-for-Mobile-Devices-64406878d4a04caa8e6eeda56b83c69f)
-
-[**Squeeze-and-Excitation Networks**](https://www.notion.so/Squeeze-and-Excitation-Networks-9a916233a6a945e68396ecdffca6a858)
-
-[**Non-local Neural Networks**](https://www.notion.so/Non-local-Neural-Networks-99fa2a9d393646af90246a37c0d03f05)
-
-[**MobileNetV2: Inverted Residuals and Linear Bottlenecks**](https://www.notion.so/MobileNetV2-Inverted-Residuals-and-Linear-Bottlenecks-9720a7607f024cb69eabb0ef54907164)
-
-[**Exploring the Limits of Weakly Supervised Pretraining**](https://www.notion.so/Exploring-the-Limits-of-Weakly-Supervised-Pretraining-8aa9db8d23024a8c861930b783b27625)
-
-[**How Does Batch Normalization Help Optimization?**](https://www.notion.so/How-Does-Batch-Normalization-Help-Optimization-e5ff18c092d94021832b192f350ab69a)
-
-[**Understanding Batch Normalization**](https://www.notion.so/Understanding-Batch-Normalization-38516d2f1a024d4699f8a878b6e3a0a8)
-
-[**ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design**](https://www.notion.so/ShuffleNet-V2-Practical-Guidelines-for-Efficient-CNN-Architecture-Design-4bb42454f3314d57ac227b72e631b3bd)
+|2018|CVPR|ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices|[Korean translation](https://www.notion.so/ShuffleNet-An-Extremely-Efficient-Convolutional-Neural-Network-for-Mobile-Devices-64406878d4a04caa8e6eeda56b83c69f)
+|2018|CVPR, Oral|Squeeze-and-Excitation Networks|[Korean translation](https://www.notion.so/Squeeze-and-Excitation-Networks-9a916233a6a945e68396ecdffca6a858)
+|2018|CVPR|Non-local Neural Networks|[Korean translation](https://www.notion.so/Non-local-Neural-Networks-99fa2a9d393646af90246a37c0d03f05)
+|2018|CVPR|MobileNetV2: Inverted Residuals and Linear Bottlenecks|[Korean translation](https://www.notion.so/MobileNetV2-Inverted-Residuals-and-Linear-Bottlenecks-9720a7607f024cb69eabb0ef54907164)
+|2018|ECCV|Exploring the Limits of Weakly Supervised Pretraining|[Korean translation](https://www.notion.so/Exploring-the-Limits-of-Weakly-Supervised-Pretraining-8aa9db8d23024a8c861930b783b27625)
+|2018|NIPS, Oral|How Does Batch Normalization Help Optimization?|[Korean translation](https://www.notion.so/How-Does-Batch-Normalization-Help-Optimization-e5ff18c092d94021832b192f350ab69a)
+|2018|NIPS|Understanding Batch Normalization|[Korean translation](https://www.notion.so/Understanding-Batch-Normalization-38516d2f1a024d4699f8a878b6e3a0a8)
+|2018|ECCV|ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design|[Korean translation](https://www.notion.so/ShuffleNet-V2-Practical-Guidelines-for-Efficient-CNN-Architecture-Design-4bb42454f3314d57ac227b72e631b3bd)
 
 ### 2019
 
