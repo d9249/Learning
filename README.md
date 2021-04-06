@@ -1,7 +1,7 @@
 # DIYA 2021-01 Computer Vision 4th.
-Description: Repository for reviewing papers in DIYA.
+**Description: Repository for reviewing papers in DIYA.**
 
-Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Link), Summary(Notion), Reference(Notion), Open Review(Link), Official code(Link))
+**Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Link), Summary(Notion), Reference(Notion), Open Review(Link), Official code(Link))**
 
 ## 📕 Paper List up.
 
