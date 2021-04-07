@@ -1,4 +1,4 @@
-# SmartIOTLab_Peper_2021-01
+# SmartIOTLab_Paper_2021-01
 
 ### 2019
 
