@@ -1,10 +1,8 @@
-# SmartIOTLab_Paper_2021-01
+# SmartIOTLab Paper
 
-### 2019
+## 2021-01
 
-[**Shadow Removal via Shadow Image Decomposition**](https://www.notion.so/Shadow-Removal-via-Shadow-Image-Decomposition-ea3a933b958d488abd9a8a014ddc7aea)
-
-### 2020
+[**(2019) Shadow Removal via Shadow Image Decomposition**](https://www.notion.so/Shadow-Removal-via-Shadow-Image-Decomposition-ea3a933b958d488abd9a8a014ddc7aea)
 
 [**From Shadow Segmentation to Shadow Removal**](https://www.notion.so/From-Shadow-Segmentation-to-Shadow-Removal-f9b4437feab3471298ebd460e90617e6)
 
