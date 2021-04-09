@@ -36,10 +36,7 @@
 
 ## 💡 Research Interests
 
-- GAN 
-- CNN
-- Deep Learning
-- Computer Vision
+- Deep Learning (GAN, CNN, Computer Vision)
 
 ## :globe_with_meridians: Stats
 
