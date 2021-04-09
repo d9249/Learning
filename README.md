@@ -3,6 +3,10 @@
 
 **Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Link), Summary(Notion), Reference(Notion), Open Review(Link), Official code(Link))**
 
+## All Paper Management pages
+
+**[Link to all activities in the fourth generation of DIYA Computer Vision](https://www.notion.so/DIYA-Computer-Vision-d8c032d49287440c8d47507478a0fb3f)**
+
 ## 📕 Paper List up.
 
 |Year|Conference|Paper|Link|
