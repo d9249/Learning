@@ -7,14 +7,15 @@
 # 따라서 (5, 8, 9, 2, 3, 4)는 정렬후 회전된 배열이다.
 # (b) 정렬후 회전된 배열A [0..n-1]가 회전연산을 몇번 적용한 것인지 알아내는 알고리즘을 설계하고 분석하시오.
 
-def FindRot(A, i):
+A= [5, 8, 9, 81, 99, -99, -98, 2, 3, 4]
+i = 0
+
+def NumRotAccount(A, i):
     if len(A) == i+1:
         return len(A)+1
     if A[i] < A[i+1]:
-        return FindRot(A, i+1)
+        return NumRotAccount(A, i+1)
     else:
         return i+1
     
-A= [5, 8, 9, 81, 99, -99, -98, 2, 3, 4]
-i = 0
-print(FindRot(A, i))
+print(NumRotAccount(A, i))

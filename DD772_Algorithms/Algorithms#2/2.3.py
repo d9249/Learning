@@ -4,18 +4,43 @@
 # 예를들어, 배열A가 아래와 같이 주어졌을 경우 (n= 10),
 #     31 -41 59 26 -53 58 97 -93 -23 84
 # 답은 a = 2, b = 6인 경우의 59+26-53+58+97=187가 된다.
-
-def FindMaxSum(A, a, b):
-    if a == b:
-        return A[a]
-    tok = (a+b)//2
-    Lsum = FindMaxSum(A, a, tok)
-    Rsum = FindMaxSum(A, tok+1, b)
-    if Lsum<0:
-        FindMaxSum(A, tok, b)
-    if Rsum<0:
-        FindMaxSum(A, a, tok+1)
-        
         
 A= [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
-print(FindMaxSum(A, 0, 10))
+
+MIN = -2 ** 31 - 1
+def divide_conquer(arr):
+    N = len(arr)
+
+    def find(lo, hi):
+        # 1.
+        if lo == hi:
+            return arr[lo]
+        mid = (lo + hi) // 2
+    
+    	# 2.
+        left = find(lo, mid)
+        right = find(mid+1, hi)
+
+        # 3.
+        tmp = 0
+        left_part = MIN
+        for i in range(mid, lo-1, -1):
+            tmp += arr[i]
+            left_part = max(left_part, tmp)
+
+        tmp = 0
+        right_part = MIN
+        for i in range(mid+1, hi+1):
+            tmp += arr[i]
+            right_part = max(right_part, tmp)
+
+        # 4.
+        return max(left, right, left_part + right_part)
+
+    # 5.
+    return find(0, N-1)
+
+print(divide_conquer(A))
+
+# https://jungmonster.tistory.com/126
+# https://shoark7.github.io/programming/algorithm/4-ways-to-get-subarray-consecutive-sum

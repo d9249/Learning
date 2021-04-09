@@ -7,13 +7,15 @@
 # 따라서 (5, 8, 9, 2, 3, 4)는 정렬후 회전된 배열이다.
 # (a) 길이가 n인 정렬후 회전된 배열 A [0..n-1]가 주어질 때, 이 배열A에서 최댓값을 찾는 알고리즘을 설계하고, 분석하시오
 
-def FindMax(A, i):
+A= [5, 8, 9, 81, 99, -99, -98, 2, 3, 4]
+i = 0
+
+def MaxValFind(A, i):
     if len(A) == i+1:
         return A[i]
     if A[i] < A[i+1]:
-        return FindMax(A, i+1)
+        return MaxValFind(A, i+1)
     else:
         return A[i]
-A= [5, 8, 9, 81, 99, -99, -98, 2, 3, 4]
-i = 0
-print(FindMax(A, i))
+        
+print(MaxValFind(A, i))
