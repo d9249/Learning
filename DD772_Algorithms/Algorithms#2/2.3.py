@@ -8,11 +8,11 @@
 A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
 MIN = -2 ** 31 - 1
 
-def divide_conquer(arr):
-    N = len(arr)
-    def find(lo, hi):
+def divide_conquer(A):
+    N = len(A)                                          # 배열 A의 길이
+    def find(lo, hi):                                   # lo : 인덱스의 최소값, hi : 인덱스의 최대값, mid : 중간인덱스
         if lo == hi:
-            return arr[lo]
+            return A[lo]
         mid = (lo + hi) // 2
     
         left = find(lo, mid)
@@ -21,12 +21,12 @@ def divide_conquer(arr):
         tmp = 0
         left_part = MIN
         for i in range(mid, lo-1, -1):
-            tmp += arr[i]
+            tmp += A[i]
             left_part = max(left_part, tmp)
         tmp = 0
         right_part = MIN
         for i in range(mid+1, hi+1):
-            tmp += arr[i]
+            tmp += A[i]
             right_part = max(right_part, tmp)
 
         return max(left, right, left_part + right_part)
