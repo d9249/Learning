@@ -8,16 +8,31 @@
 # (c) 정렬후 회전된 배열A [0..n-1]와 k가 주어질 때, A 안에서 k를 탐색하는 알고리즘을 설계하고 분석하시오.
 # 즉, A의 원소 중에 k가 있으면 그 위치(index)를 출력하고 없으면 -1을 출력합니다.
 
-A = [5, 8, 9, 81, 99, -99, -98, 2, 3, 4]
-i = 0
-k = 8
+A = [5, 8, 9, 2, 3, 4]        # 해당하는 배열
+k = 8                                           # 찾고자하는 k의 값
+n = len(A)                                      # 해당하는 배열의 길이
+I = 0                                           # 최대값의 인덱스 번호를 계산하기 위한 변수
 
-def EleIndOfArrFind(A, i, k):
-    if A[i] == k:
-        return i
-    if i == len(A)-1:
-        return -1
+def EleIndOfArrFind(A, k, I):
+    if(len(A) == 1):
+        if(A[0] == k):
+            print(I)
+        else:
+            print(-1)
     else:
-        return EleIndOfArrFind(A, i+1, k)
-    
-print(EleIndOfArrFind(A, i, k))
+        A1 = A[:len(A)//2]
+        A2 = A[len(A)//2:]
+        if(A1[-1] > A1[0]):
+            if(k <= A1[-1] and k >= A1[0]):
+                EleIndOfArrFind(A1, k, I)
+            else:
+                I += len(A)//2
+                EleIndOfArrFind(A2, k, I)
+        else:
+            if(k <= A2[-1] and k >= A2[0]):
+                I += len(A)//2
+                EleIndOfArrFind(A2, k, I)
+            else:
+                EleIndOfArrFind(A1, k, I)
+
+EleIndOfArrFind(A, k, I)
