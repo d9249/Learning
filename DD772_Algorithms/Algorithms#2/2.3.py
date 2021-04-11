@@ -80,8 +80,38 @@ def findMax(arr,start,last):
     else:                                               # 그리고 나머지의 경우는 중간의 최대합이 더 큰 경우이기 때문에
         return (midsum,midsumStart,midsumLast)          # 중간의 최대합, 중간 배열의 인덱스 시작 번호와 끝 번호를 return하며, 종료한다.
 
-mm = findMax(A, 0, len(A)-1)
-print("a:", mm[1], "b:", mm[2], "최대 합:", mm[0])
+# mm = findMax(A, 0, len(A)-1)
+# print("a:", mm[1], "b:", mm[2], "최대 합:", mm[0])
 
 # 시간 복잡도 : T(n) = 2T(n/2) + O(n) = O(nlogn)
 # 정확도 : 문제에서 제시되는 case의 배열을 모두 잘 해결하고, 다른 배열에 대해서도 잘 해결할 수 있기 때문에 정확도는 100%이다.
+
+A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+
+sum = 0
+q = 9999999                 #임의의 최솟값
+left = 0
+for i in range(len(A)):     #왼쪽부터 A배열의 길이만큼 반복
+    sum = sum+A[i]          #합을 구하며
+    if sum<0:               #0보다 작아진 경우
+        if sum<q:           #최솟값보다 작은지 계산하여
+            q = sum         #최솟값을 교체한다.
+            left = i+1      #왼쪽부터 몇번 째 수인지 기록한다.
+
+sum = 0
+q = 9999999
+i = 0
+right = 0
+for i in range(len(A)-left):    #오른쪽의 경우도 위와 동일한 방법으로 구한다.
+    sum = sum+A[len(A)-1-i]
+    if sum<0:
+        if sum<q:
+            q = sum
+            right = i+1
+
+print(left, right)         #왼쪽, 오른쪽으로 부터 몇 번째 값인지 출력한다.
+sum = 0
+i = 0
+for i in range(len(A)-left-right):
+    sum = sum+A[i+left]
+print(sum)         #값을 계산하여 출력한다.
