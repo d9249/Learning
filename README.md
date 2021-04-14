@@ -1,4 +1,4 @@
-# Undergraduate_researcher
+# Kyonggi univ. Department of Computer Science ndergraduate researcher
 What I felt as an undergraduate researcher.
 
 ## All Paper Management pages
