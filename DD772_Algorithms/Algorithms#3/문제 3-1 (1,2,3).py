@@ -27,3 +27,27 @@
 # 10              274
 # 15              5768
 
+#민규
+n = int(input('자연수 N을 입력해주세요: '))    #n 입력
+F = []
+for i in range(n+1):
+    F.append(0)                 #배열 초기화
+F[1] = 1
+F[2] = 2
+F[3] = 4                        #base case 선언
+for j in range(4,n+1):    #F(4)부터 F(n)까지 bottom-up 방식으로 구한다.
+    F[j] = F[j-1] + F[j-2] + F[j-3]
+print(F[n])
+
+#종상
+def way(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    elif n == 3:
+        return 4
+    else:
+        return way(n-1)+way(n-2)+way(n-3)
+num = int(input())
+print(way(num))
