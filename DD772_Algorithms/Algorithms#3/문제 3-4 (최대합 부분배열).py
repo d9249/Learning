@@ -9,28 +9,11 @@
 
 A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
 
-sum = 0
-q = 9999999                 #임의의 최솟값
-left = 0
-for i in range(len(A)):     #왼쪽부터 A배열의 길이만큼 반복
-    sum = sum+A[i]          #합을 구하며
-    if sum<0:               #0보다 작아진 경우
-        if sum<q:           #최솟값보다 작은지 계산하여
-            q = sum         #최솟값을 교체한다.
-            left = i+1      #왼쪽부터 몇번 째 수인지 기록한다.
-sum = 0
-q = 9999999
-i = 0
-right = 0
-for i in range(len(A)-left): #오른쪽의 경우도 위와 동일한 방법으로 구한다.
-    sum = sum+A[len(A)-1-i]
-    if sum < 0:
-        if sum < q:
-            q = sum
-            right = i+1
-print(left, right)#왼쪽, 오른쪽으로 부터 몇 번째 값인지 출력한다.
-sum = 0
-i = 0
-for i in range(len(A)-left-right):
-    sum = sum + A[i+left]
-print(sum)#값을 계산하여 출력한다.
+def dynamic_programming(arr):
+    cache = [None] * len(arr)
+    cache[0] = arr[0]
+    for i in range(1, len(arr)):
+        cache[i] = max(0, cache[i-1]) + arr[i]
+    return max(cache)
+
+print(dynamic_programming(A))
