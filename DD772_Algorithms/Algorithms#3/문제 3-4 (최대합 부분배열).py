@@ -7,13 +7,15 @@
 
 # 답은 a = 2, b = 6 인 경우의 59+26-53+58+97=187가 된다.
 
+# 구하고자하는 배열 A
 A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
 
-def dynamic_programming(arr):
-    cache = [None] * len(arr)
-    cache[0] = arr[0]
-    for i in range(1, len(arr)):
-        cache[i] = max(0, cache[i-1]) + arr[i]
+# Maximum sum subarray
+def MaxSumArray(A):
+    cache = [None] * len(A)
+    cache[0] = A[0]
+    for i in range(1, len(A)):
+        cache[i] = max(0, cache[i-1]) + A[i]
     return max(cache)
 
-print(dynamic_programming(A))
+print(MaxSumArray(A))

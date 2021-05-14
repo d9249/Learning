@@ -4,25 +4,15 @@
 # 입력으로 자연수 K가 주어지면 Nadiria 화폐를 이용하여 
 # $K 를 만들 수 있는 최소 동전 개수를 출력하는 알고리즘을 설계하고 분석하시오.
 
-def ad(n):
-    while(True):
-        if n == 0:
-            return 0
-        if n-365>=0:
-            return ad(n-365) + 1
-        if n-91>=0:
-            return ad(n-365) +1
-        if n-52>=0:
-            return ad(n-365) +1
-        if n-28>=0:
-            return ad(n-365) +1
-        if n-13>=0:
-            return ad(n-365) +1
-        if n-7>=0:
-            return ad(n-365) +1
-        if n-4>=0:
-            return ad(n-365) +1
-        if n-1>=0:
-            return ad(n-365) +1
-            
-print(ad(365))
+Sum = int(input("교환할 금액 :"))      # 교환할 금액
+Coins = [1,4,7,13,28,52,91,365]     # 화폐의 종류
+Count = 0                           # 동전의 개수
+
+for i in range(1,len(Coins)+1):     # 동전의 종류만큼 나누어가기 위해 동전의 종류의 수만큼 반복
+    coin = Coins[-i]                # 가장 큰 화폐 단위부터 나누어가기 위한 인덱스의 끝부터 시작
+    if Sum >= coin :                # 화폐의 단위가 구하려는 금액보다 작거나 같다면
+        num = Sum // coin           # 합계를 화폐의 단위로 나누어서 몫을 구한다.
+        Sum -= coin * num           # 구한 몫을 사용하여 화폐의 단위와 곱하여 합계에서 뺀다.
+        Count += num                # 그리고 구한 몫을 동전의 개수라고 생각하여 Count에 더한다.
+                                    # 위와 같은 연산을 인덱스의 수만큼 진행하여 동전의 개수를 구한다.
+print('최소 동전 개수 :', Count)
