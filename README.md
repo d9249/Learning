@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=%20Lee%20sangmin's%20Profile%20&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=%20Lee%20Sangmin's%20Profile%20&fontSize=50)
 
 <div align="center">
   
