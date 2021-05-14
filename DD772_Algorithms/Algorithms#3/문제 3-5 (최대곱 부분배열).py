@@ -8,91 +8,121 @@
 
 # 답은 a = 0, b = 2 인 경우의 (-6)*12*(-7)=504 가 된다.
 
-    # B = [5,-7,14,0,0,-7,12,-6]
+# 풀이
+# B = [5,-7,14,0,0,-7,12,-6]
 # 전체의 배열의 마이너스가 짝수라면 무조건 다 곱한거 
 # 중간의 0이 있다면 0을 기준으로 앞뒤로
 # 홀수라면 -가 있는 인덱스의 바로 앞
-A = [2, 3, -2, 4, 5]
-B = [5, 4, -2, 3, 2]
-
 # A = [-6, 12, -7, 0, 0, 14, -7, 5]
-def maxProduct(A):
-    B = A[::-1]
-    for i in range(1, len(A)):
-        A[i] *= A[i - 1] or 1  
-        B[i] *= B[i - 1] or 1
-    if (max(A) < max(B)):
-        C = B.index(max(B))
-    else:
-        C = A.index(max(A))
-    print("b:",C)
-    return max(A + B)
-
-print(maxProduct(A))
-
+# A = [2, 3, -2, 4, 5]
+# A = [-7, 4, -3, 6, 3, -8, 3, 4]
 
 # def maxProduct(A):
+#     B = A[::-1]
 #     for i in range(1, len(A)):
-#         A[i] *= A[i - 1] or 1
-#     print("b:",A.index(max(A)))
-#     return max(A)
+#         A[i] *= A[i - 1] or 1  
+#         B[i] *= B[i - 1] or 1
+#     if (max(A) < max(B)):
+#         C = B.index(max(B))
+#     else:
+#         C = A.index(max(A))
+#     print("b:",C)
+#     return max(A + B)
 
 # print(maxProduct(A))
 
-# N = int(input())
-# li = [int(input()) for _ in range(N)]
-# for i in range(1, N):
-#     li[i] = max(li[i], li[i]*li[i-1])
-# print("%.3f" % (max(li)))
+# 전체의 배열의 마이너스가 짝수라면 무조건 다 곱한거 = 시작 인덱스 0
+# 중간의 0이 있다면 0을 기준으로 앞뒤로
+# 홀수라면 -가 있는 인덱스의 바로 앞
+# A = [-2,3,4,-5,6,-7,2]
+# A = [-6, 12, -7, 0, 0, 14, -7, 5]
+# A = [2, 3, -2, 4, 5]
+# A = [7, 4, -3, 6, -3, 8, 3, 4]
+# B = []
+# C = []
+# count = 0
+# for i in range(len(A)):
+#         if A[i] < 0:
+#             count += 1
 
-# def find(A):
-#     pos = []    #배열을 나눴을 때 점점 커지는 양수가 들어갈 배열 (positive)
-#     neg = []    #배열을 나눴을 때 점점 작아지는 음수가 들어갈 배열 (negative)
-#     for i in range(len(A)): #양수배열, 음수배열 초기화
-#         pos.append(1)
-#         neg.append(1)
-#     i = 0
-#     for i in range (len(A)):    #A배열의 길이만큼 반복
-#         if i == 0:              #배열의 첫 번째 원소에 접근하는 경우 초기화가 필요하다.
-#             if A[0]<0:          #첫 번째 원소가 음수라면
-#                 pos[0] = 1      #양수배열의 첫 번째 원소는 1로,
-#                 neg[0] = A[0]   #음수배열의 첫 번째 원소는 A배열의 첫 번째 원소로
-#                 continue        #초기화 한 뒤 두 번째 원소에 대해 계산한다.
-            
-#         if A[i] == 0:           #배열의 값이 0이라면 배열을 나눠야 한다.
-#             if A[i+1] == 0:     #배열의 다음 원소 또한 0이라면
-#                 continue        #초기화 작업 없이 넘어간다.
-#             elif A[i+1]<0:      #배열의 다음 원소가 음수라면
-#                 pos[i+1] = 1    #양수배열의 나뉜 후 첫 번째 원소는 1로,
-#                 neg[i+1] = A[i+1]#음수배열의 첫 번째 원소는 A배열 원소로
-#                 i = i+1         #원래 원소의 다음 원소에 접근했으므로 i값을 1 증가시켜
-#                 continue        #나뉜 다음 배열에 대해 접근한다.
-#             else:                   #배열의 다음 원소가 양수라면
-#                 neg[i+1] = A[i+1]   #음수배열, 양수배열 모두 나뉜 후 첫 번째 원소로
-#                 pos[i+1] = A[i+1]   #바꿔준다.
-#                 i = i+1             #원래 원소의 다음 원소에 접근했으므로 i값을 1 증가시켜
-#                 continue            #나뉜 다음 배열에 대해 접근한다.
-          
-#         if A[i] > 0:                #배열의 값이 양수라면 다음 작업을 수행한다.
-#             pos[i] = pos[i-1] * A[i]#양수배열의 경우 이전값과 배열값을 곱한다.
-#             if neg[i-1]>0:          #음수배열의 경우 이전값이 0보다 크다면
-#                 neg[i] = A[i]       #양수를 곱하면 더 커지기 때문에 A[i]로 교체한다.
-#             else:                   #이전값이 음수였다면
-#                 neg[i] = neg[i-1] * A[i]#이전값과 배열값을 곱해 더 작게 만든다.
-                
-#         else:                       #배열의 값(A[i])이 음수라면 다음 작업을 수행한다.
-#             if pos[i-1] > neg[i-1] * A[i]: #음수배열의 이전값과 A[i]를 곱했을때
-#                 pos[i] = 1          #양수배열의 이전값보다 작다면 양수배열을 1로 설정한다.
-#             else:                   #음수배열의 이전값과 A[i]를 곱했을 때 더 큰 수가 나온다면
-#                 pos[i] = neg[i-1] * A[i]#양수배열을 음수배열 * A[i](음수)로 설정한다.
-                
-#             if neg[i-1] < pos[i-1] * A[i]:#음수배열의 이전값 보다
-#                 neg[i] =A[i]        #양수배열의 이전값*A[i]가 크다면 음수배열을 초기화한다.
-#             else:                   #음수배열의 이전값이 양수배열의 이전값 * A[i]보다 크다면
-#                 neg[i] = pos[i-1]*A[i]#음수배열값을더 작은값으로 설정한다.
-#         print(pos)                  #과정을 확인하기위해 음수, 양수배열을 찍는다.
-#         print(neg)
-#         print()
-#     print("답 : " , max(pos))#양수배열중 최대값을 계산한다.
+# def maxProduct(nums):
+#     if not nums:
+#         return 
+    
+#     locMin = locMax = gloMax = nums[0]
 
-# find(A)
+#     for i in range(1, len(nums)):
+#         tmp = locMin
+#         locMin = min(locMin*nums[i], nums[i], locMax*nums[i])
+#         locMax = max(tmp*nums[i], nums[i], locMax*nums[i])
+#         gloMax = max(gloMax, locMax)
+#         B.append(max(gloMax, locMax))
+        
+#     # print("b:",B.index(max(B))+1)
+#     return gloMax
+# # print(maxProduct(A))
+
+# def max2(nums):
+#     for i in range(1, len(nums)):
+#         if count % 2 == 0:
+#             print("a: 0")
+#         else:
+#             # print("a: 시발")
+#             # 배열을 뒤집지 않고 -값이 가장 먼저 나오는 원소의 인덱스
+#             Q = maxProduct(A[A.index(A[i])+1:])
+
+#             # 배열을 뒤집어서 -값이 가장 먼저 나오는 원소의 인덱스
+#             C = A
+#             C.reverse()
+#             W = maxProduct(C[C.index(C[i])+1:])
+#         print(W)
+#         print(Q)
+#     if (Q < W):
+#         print(W)
+#     else:
+#         print(Q)
+# print(max2(A))
+# 1. 모든 수의 절대값기준으로 최대값을 구해
+# 그 연산안에 -의 원소의 개수를 찾아
+# 짝수인 것들중에서 가장 큰수 = 최대값
+# 홀수인경우 - 볼필요조차 없어져
+
+# 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 1 1 1 1 1 
+
+# 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1
+
+#  -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 1 1 1 1 1 
+
+#  -1 1 1 -1 1 1 -1
+
+
+A = [2,3,4,-5,6,-7,2]
+# A = [-6, 12, -7, 0, 0, 14, -7, 5]
+# A = [2, 3, -2, 4, 5]
+# A = [7, 4, -3, 6, -3, 8, 3, 4]
+B =[]
+
+def maxProduct(nums):
+    if not nums:
+        return 
+    count = 0
+    locMin = locMax = gloMax = nums[0]
+
+    for i in range(len(A)):
+        if A[i] < 0:
+            count += 1
+    
+    for i in range(1, len(nums)):
+        tmp = locMin
+        locMin = min(locMin*nums[i], nums[i], locMax*nums[i])
+        locMax = max(tmp*nums[i], nums[i], locMax*nums[i])
+        gloMax = max(gloMax, locMax)
+        B.append(max(gloMax, locMax))
+    
+    if count % 2 == 0:
+        print("a: 0")
+    else:
+        print("a: 시발")
+    print("b:",B.index(max(B))+1)
+    return gloMax
+print(maxProduct(A))
