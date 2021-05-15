@@ -19,92 +19,95 @@
 # 짝수인 것들중에서 가장 큰수 = 최대값
 # 홀수인경우 - 볼필요조차 없어져
 
-# 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 1 1 1 1 1 
-# 1 1 1 1 -1 -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1
-#  -1 1 1 1 1 1 1 1 -1 1 1 1 1 -1 -1 1 1 1 1 1 
-#  -1 1 1 -1 1 1 -1
-
-# B = [5,-7,14,0,0,-7,12,-6]
-# A = [-6, 12, -7, 0, 0, 14, -7, 5]
-# A = [2, 3, -2, 4, 5]
+# A = [2, 4, -2, 4, 5]
+# A = [2, 1, -2, 4, 5]
 # A = [-7, 4, -3, 6, 3, -8, 3, 4]
 # A = [-2,3,4,-5,6,-7,2]
 # A = [-6, 12, -7, 0, 0, 14, -7, 5]
 # A = [2, 3, -2, 4, 5]
-# A = [7, 4, -3, 6, -3, 8, 3, 4]
-# B = []
-# C = []
-
-# count = 0
-# for i in range(len(A)):
-#         if A[i] < 0:
-#             count += 1
-
-# def maxProduct(nums):
-#     if not nums:
-#         return 
-    
-#     locMin = locMax = gloMax = nums[0]
-
-#     for i in range(1, len(nums)):
-#         tmp = locMin
-#         locMin = min(locMin*nums[i], nums[i], locMax*nums[i])
-#         locMax = max(tmp*nums[i], nums[i], locMax*nums[i])
-#         gloMax = max(gloMax, locMax)
-#         B.append(max(gloMax, locMax))
-        
-#     # print("b:",B.index(max(B))+1)
-#     return gloMax
-# # print(maxProduct(A))
-
-# def max2(nums):
-#     for i in range(1, len(nums)):
-#         if count % 2 == 0:
-#             print("a: 0")
-#         else:
-#             # print("a: ")
-#             # 배열을 뒤집지 않고 -값이 가장 먼저 나오는 원소의 인덱스
-#             Q = maxProduct(A[A.index(A[i])+1:])
-
-#             # 배열을 뒤집어서 -값이 가장 먼저 나오는 원소의 인덱스
-#             C = A
-#             C.reverse()
-#             W = maxProduct(C[C.index(C[i])+1:])
-#         print(W)
-#         print(Q)
-#     if (Q < W):
-#         print(W)
-#     else:
-#         print(Q)
-# print(max2(A))
-
 # A = [2,3,4,-5,6,-7,2]
-A = [-6, 12, -7, 0, 0, 14, -7, 5]
-# A = [2, 3, -2, 4, 5]
+# A = [-6, 12, -7, 0, 0, 14, -7, 5]
+# A = [2, 11, -2, 4, 5]
 # A = [7, 4, -3, 6, -3, 8, 3, 4]
-B =[]
+# A = [7, -4, -3, 6, -3, 8, 3, 4]
 
-def MaxProduct(nums):
+A = [-6, 12, -7, 0, 0, 14, -7, 5]
+B = []
+
+def maxProduct(nums):
     if not nums:
         return 
-    Count = 0
-    Lmin = Lmax = Gmax = nums[0]
+    locMin = locMax = gloMax = nums[0]
+    for i in range(1, len(nums)):
+        tmp = locMin
+        locMin = min(locMin*nums[i], nums[i], locMax*nums[i])
+        locMax = max(tmp*nums[i], nums[i], locMax*nums[i])
+        gloMax = max(gloMax, locMax)
+        B.append(max(gloMax, locMax))
+    return gloMax
+
+def max2(nums):
+    count = 0
+    C = A
+    D = list(reversed(C))
 
     for i in range(len(A)):
         if A[i] < 0:
-            Count += 1
-    
-    for i in range(1, len(nums)):
-        Tmp = Lmin
-        Lmin = min(Lmin*nums[i], nums[i], Lmax*nums[i])
-        Lmax = max(Tmp*nums[i], nums[i], Lmax*nums[i])
-        Gmax = max(Gmax, Lmax)
-        B.append(max(Gmax, Lmax))
-    
-    if Count % 2 == 0:
+            count += 1
+            Z = i # D 배열의 처음으로 마주하는 - 원소
+    for i in range(len(D)):
+        if D[i] < 0:
+            X = i # A 배열의 처음으로 마주하는 - 원소
+
+    T = maxProduct(D[:X])
+    Y = maxProduct(A[:Z])
+    if count % 2 == 0:
         print("a: 0")
+        print("b:", len(A)-1)
+        print(maxProduct(A))
     else:
-        print("a: ")
-    print("b:",B.index(max(B))+1)
-    return Gmax
-print(MaxProduct(A))
+        if T < Y:
+            print("a: 0")
+            print("b:", len(A)-len(A[:Z]))
+            print(maxProduct(A))
+        elif T > Y:
+            print("a:",Z+1)
+            print("b:", len(A)-1)
+            print(maxProduct(A))
+max2(A)
+
+    # print("A:",A)
+    # print("AR",D)
+    # print(Z)
+    # print(A)
+    # print(A[:Z])
+    # print(maxProduct(A[:Z]))
+    # print(X) 
+    # print(D[:X])
+    # XD = list(reversed(D[:X]))
+    # print(XD)
+    # print(maxProduct(D[:X]))
+# def MaxProduct(nums):
+#     if not nums:
+#         return 
+#     Count = 0
+#     Lmin = Lmax = Gmax = nums[0]
+
+#     for i in range(len(A)):
+#         if A[i] < 0:
+#             Count += 1
+    
+#     for i in range(1, len(nums)):
+#         Tmp = Lmin
+#         Lmin = min(Lmin*nums[i], nums[i], Lmax*nums[i])
+#         Lmax = max(Tmp*nums[i], nums[i], Lmax*nums[i])
+#         Gmax = max(Gmax, Lmax)
+#         B.append(max(Gmax, Lmax))
+    
+#     if Count % 2 == 0:
+#         print("a: 0")
+#     else:
+#         print("a: ")
+#     print("b:",B.index(max(B))+1)
+#     return Gmax
+# print(MaxProduct(A))
