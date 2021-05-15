@@ -21,6 +21,7 @@ What I felt as an undergraduate researcher.
 
 장소 : 경주코모도호텔
 
+<hr/>
 
 **2021년 한국정보기술학회 하계종합학술대회 및 대학생논문경진대회**
 
