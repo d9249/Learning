@@ -8,23 +8,21 @@
 # 답은 a = 2, b = 6 인 경우의 59+26-53+58+97=187가 된다.
 
 # 구하고자하는 배열 A
-# A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
+A = [31, -41, 59, 26, -53, 58, 97, -93, -23, 84]
 # A = [-7, 4, -3, 6, 3, -8, 3, 4]
-A = [-6, 12, -7, 0, 0, 14, -7, 5]
+# A = [-6, 12, -7, 0, 0, 14, -7, 5]
 # A = [31, -41, 59, 26, -53, -158, 97, -93, 23, 84]
 
 # Maximum sum subarray
-def MaxSumArray(A):
-    cache = [None] * len(A)
-    cache[0] = A[0]
-    for i in range(1, len(A)):
-        cache[i] = max(0, cache[i-1]) + A[i]
-        if (cache[i-1] < 0):
-            start = i
-    print("a:",start)
-    print("b:",cache.index(max(cache)))
-    return max(cache)
-
-print(MaxSumArray(A))
-
-# -가 나오면 그 다음 인덱스가 무조건 시작 인덱스 번호
+def MaxSumArray(A):                         
+    Temp = [None] * len(A)                  # 구하고자하는 배열 A의 길이 만큼 새로운 배열을 생성.
+    Temp[0] = A[0]                          # 새로운 배열의 첫번째 원소는 배열 A의 원소를 복사.
+    for i in range(1, len(A)):              # 배열의 인덱스 번호 1부터 입력한 배열의 끝까지 반복.
+        Temp[i] = max(0, Temp[i-1]) + A[i]  # Temp 배열의 A의 원소를 더해가면서 진행. Temp의 이전 원소가 음수라면 0으로 초기화하고 A의 원소를 더한다.
+        if (Temp[i-1] < 0):                 # 
+            a = i                           # Temp의 원소가 -가 나오면 해당 인덱스의 다음 인덱스 정보가 시작 인덱스 번호.
+    print("a:",a)                           # 구간 a 출력.
+    print("b:",Temp.index(max(Temp)))       # 구간 b 출력. 최대값이 존재하는 원소의 인덱스 번호 
+    return max(Temp)                        # 
+                                            # 
+print(MaxSumArray(A))                       # 

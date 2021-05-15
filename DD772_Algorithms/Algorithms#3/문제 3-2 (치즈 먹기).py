@@ -19,40 +19,39 @@
 # 출력은 표준출력(standard output; 모니터 화면에 출력)을 사용한다. 
 # 주어진 입력에 대해 최대로 먹을 수 있는 치즈의 개수를 정수 형태로 출력한다.
 
-# 입력 예             입력 예에 대한 출력
-# 1 1                   1
+# 입력 예  입력 예에 대한 출력
+# 1 1           1
 # 1 1
 
-# 3 2                   1
+# 설명
+# 3 = 3x3 행렬 2 = 치즈의 개수
+# 1 2 (치즈의 좌표), 3 1(치즈의 좌표)
+
+# 3 2           1
+# 3 2                   
 # 1 2                 
 # 3 1
 
-# 5 5                   3
+# 5 5           3
 # 2 3
 # 3 2
 # 4 3
 # 4 5
-# 5 2 
+# 5 2
 
-def Big(i, n):  #i, i부터 i, n까지 and i, i부터 n, i까지 치즈의 최대값을 구한다
-    eat[i][i] = max(eat[i-1][i], eat[i][i-1]) + Table[i][i]
-#(i, i)에서 먹을 수 있는 치즈의 최댓값 = 왼쪽, 아래족중 큰 값 + (i, i)위치의 치즈갯수
-    if i == n:#n, n의값을 구했다면
-        return eat[n][n]#n, n에서 먹을 수 있는 치즈의 최댓값 리턴
-    else:
-        for j in range (i+1, n+1): #(i+1, i)부터 (n, i) / (i, i+1)부터 (i, n)까지 치즈값
-            eat[i][j] = max(eat[i-1][j], eat[i][j-1]) + Table[i][j]
-            eat[j][i] = max(eat[j-1][i], eat[j][i-1]) + Table[j][i]
-        return Big(i+1, n) #i를 하나 올려 반복(구해야하는 테이블의 열과 행이 1씩 감소)
-N, M = input("").split(' ')#이하 n과 m등을 입력받고, 함수 호출하는 과정
-n = int(N)
-m = int(M)
-
-Table = [[0 for col in range(n+1)]for row in range(n+1)]
-eat = [[0 for col in range(n+1)]for row in range(n+1)]
-for i in range (m):
-    Q, W = input("").split()
-    q = int(Q)
-    w = int(W)
-    Table[q][w] = int(1)
-print(Big(1, n))
+def Way(i, n):                                                  # i, i부터 i, n까지 and i, i부터 n, i까지 치즈의 최대값을 구한다
+    E[i][i] = max(E[i-1][i], E[i][i-1]) + T[i][i]               # (i, i)에서 먹을 수 있는 치즈의 최댓값 = 왼쪽 좌표, 아래 좌표 중 큰 값 + (i, i)위치의 치즈 개수
+    if i == n:                                                  # 2차원 배열의 마지막에 도달하였다면,
+        return E[n][n]                                          # n, n에서 먹을 수 있는 치즈의 최댓값 리턴
+    else:                                                       # 
+        for j in range (i+1, n+1):                              # (i+1, i)부터 (n, i) / (i, i+1)부터 (i, n)까지 치즈값
+            E[i][j] = max(E[i-1][j], E[i][j-1]) + T[i][j]       # 왼쪽에서 온 경로의 값이 더 큰지, 아래에서 온 경로의 값이 더 큰지 비교 후
+            E[j][i] = max(E[j-1][i], E[j][i-1]) + T[j][i]       # 더 큰 값에 현재 좌표의 위치에 존재하는 치즈의 개수를 더한다. 
+        return Way(i+1, n)                                      # i를 1씩 증가하여 반복한다. 테이블의 크기가 N*N 다음 N-1*N-1, N-2*N-2,,, 으로 줄어들며 N,N에 도착하게되면 종료한다.
+N, M = map(int, input("").split(' '))                           # N(치즈 테이블의 크기), M(치즈의 개수)
+T = [[0 for col in range(N+1)]for row in range(N+1)]            # 배열 초기화 & 생성
+E = [[0 for col in range(N+1)]for row in range(N+1)]            # 배열 초기화 & 생성
+for i in range (M):                                             # 치즈의 좌표를 모두 설정하기 위해 치즈의 개수만큼 반복
+    Q, W = map(int, input("").split(' '))                       # Q, W(치즈의 좌표를 입력)
+    T[Q][W] = int(1)                                            # 치즈의 좌프를 1로 설정.
+print('개수: ',Way(1, N))                                        # 위에서 선언한 함수를 사용하여서 치즈를 최대로 먹을 수 있는 개수를 구한다.
