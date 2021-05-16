@@ -20,7 +20,7 @@
 # 홀수인경우 - 볼필요조차 없어져
 
 # A = [2, 4, -2, 4, 5]
-# A = [2, 1, -2, 4, 5]
+# A = [2, 11, -2, 4, 5]
 # A = [-7, 4, -3, 6, 3, -8, 3, 4]
 # A = [-2,3,4,-5,6,-7,2]
 # A = [-6, 12, -7, 0, 0, 14, -7, 5]
@@ -28,65 +28,61 @@
 # A = [2,3,4,-5,6,-7,2]
 # A = [-6, 12, -7, 0, 0, 14, -7, 5]
 # A = [2, 11, -2, 4, 5]
-# A = [7, 4, -3, 6, -3, 8, 3, 4]
+# A = [7, 4, -3, 6, -3, 8, -3, 4]
 # A = [7, -4, -3, 6, -3, 8, 3, 4]
+# A = [-6, 12, 7, 0, 0, 14, 7, 5]
+A = [-6, 12, -7, 0, 0, 14, -7, 5]           #
+B = []                                      #
 
-A = [-6, 12, -7, 0, 0, 14, -7, 5]
-B = []
+def MaxProduct(A):                          #
+    if not A:                               #
+        return                              # 
+    Lmin = Lmax = Gmax = A[0]               # 
+    for i in range(1, len(A)):              # 
+        Tmp = Lmin                          # 
+        Lmin=min(Lmin*A[i], A[i], Lmax*A[i])# 
+        Lmax=max(Tmp*A[i], A[i], Lmax*A[i]) # 
+        Gmax=max(Gmax, Lmax)                # 
+        B.append(max(Gmax, Lmax))           # 
+    return Gmax                             # 
 
-def maxProduct(nums):
-    if not nums:
-        return 
-    locMin = locMax = gloMax = nums[0]
-    for i in range(1, len(nums)):
-        tmp = locMin
-        locMin = min(locMin*nums[i], nums[i], locMax*nums[i])
-        locMax = max(tmp*nums[i], nums[i], locMax*nums[i])
-        gloMax = max(gloMax, locMax)
-        B.append(max(gloMax, locMax))
-    return gloMax
+def ZeroToArray(A):                         # 
+    for i in range(len(A)):                 # 
+        if A[i] == 0:                       # 
+            return i-1                      # 
 
-def max2(nums):
-    count = 0
-    C = A
-    D = list(reversed(C))
+def MaxMain(A):                             # 
+    count = 0                               # 
+    C = A                                   # 
+    D = list(reversed(C))                   # 
+    for i in range(len(A)):                 # 
+        if A[i] < 0:                        # 
+            count += 1                      # 
+            Z = i                           # D 배열의 처음으로 마주하는 - 원소
+    for i in range(len(D)):                 # 
+        if D[i] < 0:                        # 
+            X = i                           # A 배열의 처음으로 마주하는 - 원소
+    T = MaxProduct(D[:X])                   # 뒷부분
+    Y = MaxProduct(A[:Z])                   # 앞부분
+    if count % 2 == 0:                      # 
+        print("a: 0")                       # 
+        print("b:", len(A)-1)               # 
+        print(MaxProduct(A))                # 
+    else:                                   # 
+        if T < Y:                           # 앞이 더 큰경우
+            print("a: 0")                   # 
+            if (ZeroToArray!=None):         # 
+                print("b:",ZeroToArray(A))  # 
+            else:                           # 
+                print("b:", len(A[:Z])-1)   # 
+            print(MaxProduct(A))            # 
+        elif T > Y:                         # 뒤가 더 큰경우
+            print("a:",len(A)-len(D[:X]))   # 
+            print("b:", len(A)-1)           # 
+            print(MaxProduct(A))            # 
 
-    for i in range(len(A)):
-        if A[i] < 0:
-            count += 1
-            Z = i # D 배열의 처음으로 마주하는 - 원소
-    for i in range(len(D)):
-        if D[i] < 0:
-            X = i # A 배열의 처음으로 마주하는 - 원소
+MaxMain(A)
 
-    T = maxProduct(D[:X])
-    Y = maxProduct(A[:Z])
-    if count % 2 == 0:
-        print("a: 0")
-        print("b:", len(A)-1)
-        print(maxProduct(A))
-    else:
-        if T < Y:
-            print("a: 0")
-            print("b:", len(A)-len(A[:Z]))
-            print(maxProduct(A))
-        elif T > Y:
-            print("a:",Z+1)
-            print("b:", len(A)-1)
-            print(maxProduct(A))
-max2(A)
-
-    # print("A:",A)
-    # print("AR",D)
-    # print(Z)
-    # print(A)
-    # print(A[:Z])
-    # print(maxProduct(A[:Z]))
-    # print(X) 
-    # print(D[:X])
-    # XD = list(reversed(D[:X]))
-    # print(XD)
-    # print(maxProduct(D[:X]))
 # def MaxProduct(nums):
 #     if not nums:
 #         return 
