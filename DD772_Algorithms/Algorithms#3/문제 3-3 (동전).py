@@ -4,15 +4,26 @@
 # 입력으로 자연수 K가 주어지면 Nadiria 화폐를 이용하여 
 # $K 를 만들 수 있는 최소 동전 개수를 출력하는 알고리즘을 설계하고 분석하시오.
 
-Sum = int(input("교환할 금액 :"))      # 교환할 금액
-Coins = [1,4,7,13,28,52,91,365]     # 화폐의 종류
-Count = 0                           # 동전의 개수
+coins = [1,4,7,13,28,52,91,365]
+# coins = [10,70,100]
+def solution2(coins, money):
+    dp = [0] * (money + 1)          # dp배열 초기화
+    for i in range(1, money + 1):   # 1부터 money까지 순회한다.
+        temp = 9999                 # temp = 임의의 큰 값
+        j = 0
+        while j < len(coins) and i >= coins[j]: # j가 coins의 갯수보다 작으면서, i의 값이 coins[j]보다 작은 동안 값을 비교한다. 
+            temp = min(dp[i-coins[j]], temp)
+            j += 1
+        dp[i] = temp + 1
+    return dp[money]
 
-for i in range(1,len(Coins)+1):     # 동전의 종류만큼 나누어가기 위해 동전의 종류의 수만큼 반복
-    coin = Coins[-i]                # 가장 큰 화폐 단위부터 나누어가기 위한 인덱스의 끝부터 시작
-    if Sum >= coin :                # 화폐의 단위가 구하려는 금액보다 작거나 같다면
-        num = Sum // coin           # 합계를 화폐의 단위로 나누어서 몫을 구한다.
-        Sum -= coin * num           # 구한 몫을 사용하여 화폐의 단위와 곱하여 합계에서 뺀다.
-        Count += num                # 그리고 구한 몫을 동전의 개수라고 생각하여 Count에 더한다.
-                                    # 위와 같은 연산을 인덱스의 수만큼 진행하여 동전의 개수를 구한다.
-print('최소 동전 개수 :', Count)
+print(solution2(coins,140))
+
+# 점화식
+# 0                         if money <= 0
+# min(dp[i-coins[j]], temp) if money > 0
+
+# 풀이
+# 
+
+# 시간 복잡도 : O(n)
