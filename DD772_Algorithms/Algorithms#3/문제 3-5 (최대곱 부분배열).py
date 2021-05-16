@@ -1,121 +1,42 @@
 # 길이가 n 인 정수의 배열 A[0..n-1]가 있다. 
-# A[a]*A[a+1] * ... * A[b]의 값을 최대화하는 구간 (a, b)를 
-# 찾는 방법을 설계하고 분석하라. 
+# A[a]*A[a+1] * ... * A[b]의 값을 최대화하는 구간 (a, b)를 찾는 방법을 설계하고 분석하라. 
 # 배열 A 의 원소는 양수, 음수,0 모두 가능하다.
-# 예를 들어, 배열 A가 아래와 같이 주어졌을 경우 
+# 예를 들어, 배열 A가 아래와 같이 주어졌을 경우 (n=7), -6 12 -7 0 14 -7 5
+# 답은 a=0, b=2 인 경우의 (-6)*12*(-7)=504 가 된다.
 
-#     (n=7), -6 12 -7 0 14 -7 5
-
-# 답은 a = 0, b = 2 인 경우의 (-6)*12*(-7)=504 가 된다.
-
-# 풀이
-
-# 전체의 배열의 마이너스가 짝수라면 무조건 다 곱한거 = 시작 인덱스 0
-# 중간의 0이 있다면 0을 기준으로 앞뒤로
-# 홀수라면 -가 있는 인덱스의 바로 앞
-
-# 1. 모든 수의 절대값기준으로 최대값을 구해
-# 그 연산안에 -의 원소의 개수를 찾아
-# 짝수인 것들중에서 가장 큰수 = 최대값
-# 홀수인경우 - 볼필요조차 없어져
-
-A = [2, 4, -2, 4, 5, 2, 0]
-# A = [2, 4, -2, 4, 5]
-# A = [2, 11, -2, 4, 5]
-# A = [-7, 4, -3, 6, 3, -8, 3, 4]
-# A = [-2,3,4,-5,6,-7,2]
-# A = [-6, 12, -7, 0, 0, 14, -7, 5]
-# A = [2, 3, -2, 4, 5]
-# A = [2,3,4,-5,6,-7,2]
-# A = [-6, 12, -7, 0, 0, 14, -7, 5]
-# A = [2, 11, -2, 4, 5]
-# A = [7, 4, -3, 6, -3, 8, -3, 4]
-# A = [7, -4, -3, 6, -3, 8, 3, 4]
-# A = [-6, 12, 7, 0, 0, 14, 7, 5]
-# A = [-6, 12, -7, 0, 0, 14, -7, 5]           # 
-# B = []                                      # 
-
-X = [0 for i in range(len(A))]
-X[-1] = A[-1]
-def Maxmul(A):
-  Smin = [0 for i in range(len(A))]                         #
-  Smax = [0 for i in range(len(A))]                         #
-  Smin[0] = A[0]                                            #
-  Smax[0] = A[0]                                            #
-  start,end = 0,0                                           #
-  for k in range(1,len(A)):
-    Smin[k] = min(Smin[k-1]*A[k], Smax[k-1]*A[k], A[k])
-    Smax[k] = max(Smin[k-1]*A[k], Smax[k-1]*A[k], A[k])
-
-  if (max(Smax) < max(Smin)):
-    end = Smin.index(max(Smin))
-  else:
-    end = Smax.index(max(Smax))
-  
-  for k in range(len(A)-1,0,-1):
-    X[k-1] = X[k] *A[k-1]
-    if (X[k] == max(Smax)):
-      start = k
-
-  print("a:",start,"b:",end)
-  return max(Smin,Smax)
-  
-print(max(Maxmul(A)))
+A = [-6, 12, -7, 0, 14, -7, 5]                              # 대상이 되는 배열
+X = [0 for i in range(len(A))]                              # 배열 A의 길이만큼 배열 X를 0으로 채워 생성.
+X[-1] = A[-1]                                               # 배열 X의 끝을 배열 A의 끝으로 선언.
+def MaxProdArray(A):                                        # 
+  MinT = [0 for i in range(len(A))]                         # 배열 A의 길이만큼 배열 MinT를 0으로 채워 생성.
+  MaxT = [0 for i in range(len(A))]                         # 배열 A의 길이만큼 배열 MaxT를 0으로 채워 생성.
+  MinT[0] = A[0]                                            # MinT, MaxT의 첫 원소를 A[0]으로 초기화.
+  MaxT[0] = A[0]                                            # 
+  a, b = 0, 0                                               # 최대곱 구간을 저장하기 위한 변수 선언.
+  for j in range(1,len(A)):                                 # A[0]의 값을 이미 넣어두었기 때문에 A[1]을 제외한 반복.
+    MinT[j] = min(MinT[j-1]*A[j], MaxT[j-1]*A[j], A[j])     # MinT의 이전 원소와 대상이 되는 A 원소의 곱의 결과, MaxT의 이전 원소와 대상이 되는 A 원소의 곱의 결과,
+    MaxT[j] = max(MinT[j-1]*A[j], MaxT[j-1]*A[j], A[j])     # 대상이 되는 A원소의 값, 세 가지를 비교하여서 가장 큰 값과 가장 작은 값을 저장하여 다음 인덱스를 사용하여 반복을 진행.
+  if (max(MaxT) < max(MinT)):                               # 가장 큰 값이 MinT에 있는 경우.
+    b = MinT.index(max(MinT))                               # 최대 값의 구간의 끝을 구하기 위해 MinT에서 가장 큰 값의 인덱스 번호를 b로 넘긴다. 
+  else:                                                     # 가장 큰 값이 MaxT에 있는 경우.
+    b = MaxT.index(max(MaxT))                               # 최대 값의 구간의 끝이 MaxT에 존재하여 MaxT에서 가장 큰 값의 인덱스 번호를 b로 넘긴다.
+  for j in range(len(A)-1,0,-1):                            # 최대 곱의 시작 구간을 찾기 위한 반복
+    X[j-1] = X[j]*A[j-1]                                    # A 배열의 끝부터 시작하여 인덱스 번호 0까지 반복하며, 배열의 길이의 -1 만큼 반복.
+    if (X[j] == max(MaxT)):                                 # X에 저장된 최대 값의 값과 MaxT의 존재하는 최대 값과 일치한다면
+      a = j                                                 # X에 해당하는 인덱스 번호를 시작점으로 선언.
+  print("a:", a, "b:", b)                                   # 최대 곱의 구간 출력
+  return max(MinT,MaxT)                                     
+print(max(MaxProdArray(A)))                                 
 
 # 점화식
 # -1                                                    if 배열의 길이 <= 0
-# Smin[k] = min(Smin[k-1]*A[k], Smax[k-1]*A[k], A[k])   if 배열의 길이 > 1
-# Smax[k] = max(Smin[k-1]*A[k], Smax[k-1]*A[k], A[k])
+# MinT[j] = min(MinT[j-1]*A[j], MaxT[j-1]*A[j], A[j])   if 배열의 길이 > 1
+# MaxT[j] = max(MinT[j-1]*A[j], MaxT[j-1]*A[j], A[j])
 
-# 풀이
+# 요약
+# 배열 하나를 입력으로 받아 최대 곱을 저장하는 배열, 최소 값을 저장하는 배열 두개를 생성 후 두 개의 배열 결과를 가지고 비교하여
+# 새로운 배열에 최대 값을 넣어 최대 곱의 구간의 범위를 알아내는 알고리즘입니다. 
 
 # 시간 복잡도 : O(n)
-
-# def MaxProduct(A):                          # 
-#     if not A:                               # 
-#         return                              # 
-#     Lmin = Lmax = Gmax = A[0]               # 
-#     for i in range(1, len(A)):              # 
-#         Tmp = Lmin                          # 
-#         Lmin=min(Lmin*A[i], A[i], Lmax*A[i])# 
-#         Lmax=max(Tmp*A[i], A[i], Lmax*A[i]) # 
-#         Gmax=max(Gmax, Lmax)                # 
-#         B.append(max(Gmax, Lmax))           # 
-#     return Gmax                             # 
-
-# def ZeroToArray(A):                         # 
-#     for i in range(len(A)):                 # 
-#         if A[i] == 0:                       # 
-#             return i-1                      # 
-
-# def MaxMain(A):                             # 
-#     count = 0                               # 
-#     C = A                                   # 
-#     D = list(reversed(C))                   # 
-#     for i in range(len(A)):                 # 
-#         if A[i] < 0:                        # 
-#             count += 1                      # 
-#             Z = i                           # D 배열의 처음으로 마주하는 - 원소
-#     for i in range(len(D)):                 # 
-#         if D[i] < 0:                        # 
-#             X = i                           # A 배열의 처음으로 마주하는 - 원소
-#     T = MaxProduct(D[:X])                   # 뒷부분
-#     Y = MaxProduct(A[:Z])                   # 앞부분
-#     if count % 2 == 0:                      # 
-#         print("a: 0")                       # 
-#         print("b:", len(A)-1)               # 
-#         print(MaxProduct(A))                # 
-#     else:                                   # 
-#         if T < Y:                           # 앞이 더 큰경우
-#             print("a: 0")                   # 
-#             if (ZeroToArray!=None):         # 
-#                 print("b:",ZeroToArray(A))  # 
-#             else:                           # 
-#                 print("b:", len(A[:Z])-1)   # 
-#             print(MaxProduct(A))            # 
-#         elif T > Y:                         # 뒤가 더 큰경우
-#             print("a:",len(A)-len(D[:X]))   # 
-#             print("b:", len(A)-1)           # 
-#             print(MaxProduct(A))            # 
-
-# MaxMain(A)
+# 정확성 : 100% (모든 테스트 케이스 해결 가능)
+# 해당 문제는 임한민, 정범식, 한상준 학우와 함께 작성 후 풀이를 각자 진행하였습니다.
