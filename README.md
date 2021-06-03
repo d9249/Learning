@@ -3,16 +3,10 @@
 <div align="center">
   
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fd9249&count_bg=%23F73838&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
-
-</div>
-
-<div align ="center">
   
 ## 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
   
-</div>
-
 ## :mortar_board: Career
 
 | **Type** | **Date**| **Contents**| **Organization**|
@@ -40,8 +34,6 @@
 <img src="https://img.shields.io/badge/flask-000000?style=flat-square&logo=Flask&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/></a>
-
-<div align="center">
 
 ## 💡 Research Interests
 
