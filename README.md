@@ -7,6 +7,8 @@
 ## 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
   
+ </div>
+  
 ## :mortar_board: Career
 
 | **Type** | **Date**| **Contents**| **Organization**|
@@ -42,6 +44,8 @@
 ## :globe_with_meridians: Stats
 
 [![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+
+<div align="center">
 
 ## :mailbox_with_mail: Contacts
 
