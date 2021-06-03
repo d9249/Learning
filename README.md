@@ -41,6 +41,8 @@
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/></a>
 
+<div align="center">
+
 ## 💡 Research Interests
 
 - Deep Learning (GAN, CNN, Computer Vision)
@@ -54,4 +56,4 @@
 [![Tistory Blog Badge](http://img.shields.io/badge/-Tech%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.tistory.com)
 [![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:d9249@kyonggi.ac.kr)](mailto:d9249@kyonggi.ac.kr)
 
-
+</div>
