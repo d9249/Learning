@@ -17,6 +17,12 @@
 | **Research activities** | 2020.1 ~ Proceeding | Undergraduate Research Students | Kyonggi Univ. Smart I.O.T laboratory |
 | **Research activities** | 2021.3 ~ Proceeding | DIYA Computer Vision Team 4th | DIYA. Machine Learning Club. |
 
+## :trophy: Award
+| **Date** | **Contents** | **Result** | **Organization**|
+|---|---|---|---|
+|2020.06.4 | PoseNet을 활용한 헬스 트레이너 웹 서비스 | 동상 | 한국정보기술학회 대학생논문경진대회 |
+|2020.06.10 | 핏-시방 | 5위(26개팀) | Kyonggi Univ. |
+
 ## :computer: Tech stacks
 
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>
