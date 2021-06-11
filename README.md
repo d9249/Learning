@@ -1,6 +1,9 @@
 # Lee Sangmin's Portfolio
+
 <div align="center">
+ 
 ![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/LeeSangmin.png)
+ 
  </div>
 
 ### 📬 Contact.
