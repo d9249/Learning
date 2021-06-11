@@ -21,7 +21,7 @@
 | **Date** | **Contents** | **Result** | **Organization**|
 |---|---|---|---|
 |2020.06.04 | PoseNet을 활용한 헬스 트레이너 웹 서비스 | 동상 | 한국정보기술학회 대학생논문경진대회 |
-|2020.06.10 | 핏-시방(Fit-sibang) | 5위(26개팀) | Kyonggi Univ. Department of Computer Engineering |
+|2020.06.10 | 핏-시방(Fit-sibang) | 5위(26개팀) | Department of Computer Engineering |
 
 ## :computer: Tech stacks
 
