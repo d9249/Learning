@@ -38,14 +38,17 @@
 # 💁🏻 Introdution.
 
 > **"굳은 인내와 노력을 하지 않는 천재는 이 세상에서 있었던 적이 없다."
-> "발명의 길은 부단한 노력이다."  - 아이작 뉴턴(Isaac Newton)
+> "발명의 길은 부단한 노력이다."  
+> - 아이작 뉴턴(Isaac Newton)
 
 현재 경기대학교 컴퓨터공학부 재학중이며, Smart I.O.T Lab에 소속되어 연구 활동을 진행중입니다.
-2021년 하반기부터 경기대학교 일반대학원에 진학할 예정이고, 이에 대한 연구 준비를 진행하기 위해 DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니다.
+2021년 하반기부터 경기대학교 일반대학원에 진학할 예정이고, 이에 대한 연구 준비를 진행하기 위해 
+DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니다.
 관심 있는 분야는 Computer Vison이며, 현재 Computer Vision 관련하여 논문에 대한 이해와, 
-문제를 발견했을 때 어떻게 이를 해결하는지, 이에 해당하는 실험을 통해 engineering적인 관점에 대한 이해도 향상을 목적으로 논문 리뷰를 진행하고 있으며, Notion에 논문을 읽고 해당 논문이 어떠한 식으로 논리가 전개되는지, 어떻게 문제를 해결하고자 하는지를 정리하고 있습니다.
+문제를 발견했을 때 어떻게 이를 해결하는지, 이에 해당하는 실험을 통해 engineering적인 관점에 대한 이해도 향상을 
+목적으로 논문 리뷰를 진행하고 있으며, Notion에 논문을 읽고 해당 논문이 어떠한 식으로 논리가 전개되는지, 
+어떻게 문제를 해결하고자 하는지를 정리하고 있습니다.
 그리고 해당 논문의 실험을 함께 진행하며, Network modeling과 Problem Solving Capabilities을 기르고 있습니다.
-
 제가 작성한 코드들의 형상유지를 위해서 Github을 사용하여서 기록하였으며,
 배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다.
 
@@ -53,7 +56,7 @@
 
 # ⚒️ Tech stacks.
 
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/><img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=C&logoColor=white"/><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/><img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/><img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/><img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/><img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a><img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=C&logoColor=white"/></a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/></a><img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/></a><img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a><img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a><img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/></a>
 
 ---
 
