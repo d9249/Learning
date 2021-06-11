@@ -6,22 +6,21 @@
  
  </div>
 
+<div align="right">
+
 ### 📬 Contact.
 
-📱  **Phone** : +82 10-9130-9249
-
-📮  **Email** : d9249@kyonggi.ac.kr
+📱  Phone : +82 10-9130-9249
+📮  Email : d9249@kyonggi.ac.kr
 
 ### ℹ️ Information.
+📛  Name : Lee Sangmin, Nickname : d9249
+🏫  Affiliation : Kyonggi Univ. Department of Computer Engineering
+🔗  Github : [https://github.com/d9249](https://github.com/d9249)
+🔗  Blog : [https://d9249.tistory.com/](https://d9249.tistory.com/)
 
-📛  **Name** : Lee Sangmin, Nickname : d9249
-
-🏫  **Affiliation** : Kyonggi Univ. Department of Computer Engineering
-
-🔗  **Github** : [https://github.com/d9249](https://github.com/d9249)
-
-🔗  **Blog** : [https://d9249.tistory.com/](https://d9249.tistory.com/)
-
+ </div>
+ 
 # 💼 Career.
 
 ### Education
