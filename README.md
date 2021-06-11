@@ -528,20 +528,35 @@ Plan.
 # 📄 첨부 사항
 
 [1] PoseNet을 활용한 헬스 트레이너 웹 서비스
+
 [2] 학술대회 참가 확인증_이상민
+
 [3] ImageNet Classification with Deep Convolutional Neural Networks.
+
 [4] Network In Network.
+
 [5] Visualizing and Understanding Convolutional Networks.
+
 [6] OverFeat: InIntegrated Recognition, Localization and Detection using Convolutional Networks.
+
 [7] Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
+
 [8] VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.
+
 [9] Going Deeper with Convolutions.
+
 [10] 발명설명서(PoseNet 기반의 헬스 트레이닝 웹 서비스)
+
 [11] 최종 보고서
+
 [12] 사용자 인터페이스 설계서
+
 [13] 시스템 설계서
+
 [14] 최종 발표 자료
+
 [15] DB 요구사항 명세서
+
 [16] PoseNet을 활용한 헬스 트레이너 웹 서비스 상장.
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
