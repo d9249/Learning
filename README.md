@@ -5,7 +5,7 @@ Lee Sangmin's Portfolio
 
 # Lee Sangmin's Portfolio
 
-![Portfolio%20e76447b044f94d4d96154ddee2ca6870.png](Portfolio%20e76447b044f94d4d96154ddee2ca6870.png)
+![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/LeeSangmin.png)
 
 ### 📬 Contact.
 
