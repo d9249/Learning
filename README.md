@@ -7,6 +7,8 @@
 
  </div>
 
+
+
 # 📬 Contact.
 
 📱  Phone : +82 10-9130-9249
@@ -14,11 +16,11 @@
 📮  Email : d9249@kyonggi.ac.kr
 
 # ℹ️ Information.
-📛  Name : Lee Sangmin, Nickname : d9249
+📛 Name : Lee Sangmin, Nickname : d9249
 
-🏫  Affiliation : Kyonggi Univ. Department of Computer Engineering
+🏫 Affiliation : Kyonggi Univ. Department of Computer Engineering
 
-🔗  [Github](https://github.com/d9249) 🔗 [Tistory Blog](https://d9249.tistory.com/) 🔗 [Github blog](https://d9249.github.io/)
+✍️ [Github](https://github.com/d9249) ✍️ [Tistory Blog](https://d9249.tistory.com/) ✍️ [Github blog](https://d9249.github.io/)
 
 # 💼 Career.
 
@@ -40,25 +42,25 @@
 >
 > 아이작 뉴턴(Isaac Newton)
 
-현재 경기대학교 컴퓨터공학부 재학중이며, Smart I.O.T Lab에 소속되어 연구 활동을 진행중입니다.
+현재 경기대학교 컴퓨터공학부 재학중이며, Smart I.O.T Lab에 소속되어 연구 활동을 진행중입니다. </br>
 
-2021년 하반기부터 경기대학교 일반대학원에 진학할 예정이고, 이에 대한 연구 준비를 진행하기 위해 
+2021년 하반기부터 경기대학교 일반대학원에 진학할 예정이고, 이에 대한 연구 준비를 진행하기 위해 </br>
 
-DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니다.
+DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니다.</br>
 
-관심 있는 분야는 Computer Vison이며, 현재 Computer Vision 관련하여 논문에 대한 이해와, 
+관심 있는 분야는 Computer Vison이며, 현재 Computer Vision 관련하여 논문에 대한 이해와, </br>
 
-문제를 발견했을 때 어떻게 이를 해결하는지, 이에 해당하는 실험을 통해 engineering적인 관점에 대한 이해도 향상을 
+문제를 발견했을 때 어떻게 이를 해결하는지, 이에 해당하는 실험을 통해 engineering적인 관점에 대한 이해도 향상을 </br>
 
-목적으로 논문 리뷰를 진행하고 있으며, Notion에 논문을 읽고 해당 논문이 어떠한 식으로 논리가 전개되는지, 
+목적으로 논문 리뷰를 진행하고 있으며, Notion에 논문을 읽고 해당 논문이 어떠한 식으로 논리가 전개되는지, </br>
 
-어떻게 문제를 해결하고자 하는지를 정리하고 있습니다.
+어떻게 문제를 해결하고자 하는지를 정리하고 있습니다. </br>
 
-그리고 해당 논문의 실험을 함께 진행하며, Network modeling과 Problem Solving Capabilities을 기르고 있습니다.
+그리고 해당 논문의 실험을 함께 진행하며, Network modeling과 Problem Solving Capabilities을 기르고 있습니다.</br>
 
-제가 작성한 코드들의 형상유지를 위해서 Github을 사용하여서 기록하였으며,
+제가 작성한 코드들의 형상유지를 위해서 Github을 사용하여서 기록하였으며, </br>
 
-배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다.
+배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다. </br>
 
 ---
 
@@ -118,7 +120,7 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 
 2019 ~ 2021년 동안 진행한 개인 프로젝트의 결과들을 정리해둔 결과입니다.
 
-#### 인공지능 DD313_2221 (Course Date : 2020-1, 김인철 교수님)
+### 인공지능 DD313_2221 (Course Date : 2020-1, 김인철 교수님)
 
 ### **🔖  Explanation.**
 
