@@ -24,15 +24,17 @@
 
 # 💼 Career.
 
-### Education
+| **Type**                | **Date**            | **Contents**                     | **Organization**                     |
+| ----------------------- | ------------------- | -------------------------------- | ------------------------------------ |
+| **Education**           | 2015.3 ~ Proceeding | Computer Science and Engineering | Kyonggi University                   |
+| **Research activities** | 2020.1 ~ Proceeding | Undergraduate Research Students  | Kyonggi Univ. Smart I.O.T laboratory |
+| **Research activities** | 2021.3 ~ Proceeding | DIYA Computer Vision Team 4th    | DIYA. Machine Learning Club.         |
 
-📌  2015.03.01 ~ Proceeding, Computer Science and Engineering, Kyonggi Univ.
-
-### Research activities
-
-📌  2020.01.01 ~ Proceeding, Undergraduate Research Students, Kyonggi Univ. S.I.O.T laboratory.
-
-📌  2021.03.01 ~ Proceeding, DIYA Computer Vision Team 4th, DIYA. Machine Learning Club.
+# :trophy: Award
+| **Date**   | **Contents**                             | **Result**  | **Organization**                    |
+| ---------- | ---------------------------------------- | ----------- | ----------------------------------- |
+| 2020.06.04 | PoseNet을 활용한 헬스 트레이너 웹 서비스 | 동상        | 한국정보기술학회 대학생논문경진대회 |
+| 2020.06.10 | 핏-시방(Fit-sibang)                      | 5위(26개팀) | Department of Computer Engineering  |
 
 # 💁🏻 Introdution.
 
@@ -62,11 +64,21 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다.
 
-# ⚒️ Tech stacks.
+# :computer: Tech stacks.
 
-<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a><img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=C&logoColor=white"/></a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/></a><img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/></a><img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a><img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a><img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/JAVA-007396?style=flat-square&logo=Java&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=C&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a>
 
-## Vue.js
+## 🌱 Vue.js
 
 ### 🔖 Explanation.
 
@@ -85,17 +97,17 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️  Notion Link. 
 
-#### >> LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
+>LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
 
-#### >> LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
+>LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
 
-#### >> LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
+>LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
 
 ### ✍️  Github Link. ([https://github.com/d9249/Inflearn_Vue.js](https://github.com/d9249/Inflearn_Vue.js))
 
 
 
-## React.js
+## 🌱 React.js
 
 ### 🔖 Explanation.
 
@@ -123,7 +135,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ------
 
-## 인공지능 DD313_2221 (Course Date : 2020-1, 김인철 교수님)
+## 1️⃣ 인공지능 DD313_2221 (Course Date : 2020-01, 김인철 교수님)
 
 ### 🔖 Explanation.
 
@@ -142,7 +154,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ---
 
-## 소프트웨어공학  DD316_2223 (Course Date : 2020-1, 권기현 교수님)
+## 2️⃣ 소프트웨어공학  DD316_2223 (Course Date : 2020-01, 권기현 교수님)
 
 ### 🔖 Explanation.
 
@@ -159,7 +171,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ---
 
-## 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)
+## 3️⃣ 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)
 
 ### 🔖 Explanation.
 
@@ -175,7 +187,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ---
 
-## 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)
+## 4️⃣ 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)
 
 ### 🔖 Explanation.
 
@@ -195,6 +207,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 ### 🔖 Explanation.
 
 > 캡스톤디자인 과목을 수강하면서 진행하였던 프로젝트에 대해 작성하였던 논문을 
+>
 > 한국정보기술학회의 대학생논문경진대회의 투고하였으며, 2021년 6월 3일 ~ 5일 대회에 참가하였습니다.
 
 이름(국문) : PoseNet을 활용한 헬스 트레이너 웹 서비스
@@ -217,11 +230,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > 주로 Computer Vision 관련된 논문들을 Review를 진행하고 있으며, 2021년동안 모두 Review를 진행할 예정입니다.
 
-## Research Interests.
+## 💡 Research Interests.
 
 > Deep Learning (Convolutional Neural Network, Computer Vision, GAN)
 
-## Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
+## 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
 
 ### 📜  Relevant research paper.
 
@@ -248,7 +261,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
-## DIYA. ( 2021.03 ~ 현재 )
+## 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
 
 ### 🔖  Explanation.
 
@@ -278,7 +291,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > Computer Vision Paper Review의 결과를 기록하였습니다.
 
-## ImageNet Classification with Deep Convolutional Neural Networks.
+## 1️⃣ ImageNet Classification with Deep Convolutional Neural Networks.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phqx](https://c11.kr/phqx))
 
@@ -287,7 +300,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 2012년 이미지 분류를 위한 크고 심층적인 Convolutional Neural Networks인 AlexNet의 등장으로 기존의 DNN 방식의 fully-connection 방식보다 더 적은 parameter로 효율적인 학습이 가능한 이유에 대해서 알 수 있게되었다.
 - 추가적으로 AlexNet의 기본 구조, 과적합을 줄이기 위한 방법, 이미지 영역에서 CNN이 DNN보다 학습에서 효율적인 이유, 정규화, Pooling, Data Augumentation을 배울 수 있었습니다.
 
-## Network In Network.
+## 2️⃣ Network In Network.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phqz](https://c11.kr/phqz))
 
@@ -298,7 +311,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - NIN에서는 Fullyconnected layer(FC layer)를 사용하는 대신 Global Average Pooling(GAP)을 사용하는데 기존의 FC layer를  사용하였는데 이 과정에서 Parameter의 수가 전체 Parameter의 수 중 대부분을 차지하기 때문에 Overfitting 문제가 발생하기 쉬운데 GAP를 사용하여서 이러한 문제를 해결하였습니다.
 - 해당 논문을 통해서 mlpconv, GAP를 배울 수 있었으며, Parameter의 수를 줄여 Overfitting을 피하는 방법과 더 깊은 Network를 생성하는 방법에 대해서 배울 수 있었습니다.
 
-## Visualizing and Understanding Convolutional Networks.
+## 3️⃣ Visualizing and Understanding Convolutional Networks.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr0](https://c11.kr/phr0))
 
@@ -316,7 +329,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - ZFNet을 통해 알게 된 점은 Network의 최적화 문제가 Network 성능에 막대한 영향을 준다는 것을 알게되었으며, 
   이러한 시각화를 사용한 최적화를 통해 네트워크의 성능을 향상 시킬 수 있다는 것을 배울 수 있었습니다.
 
-## OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.
+## 4️⃣ OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr2](https://c11.kr/phr2))
 
@@ -336,7 +349,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   하지만 ConvNet을 이용하여 localization/detection까지 통합 시도를 했다는 점에서 의미가 있고, 
   1년 뒤에 마이크로소프트 팀에서 발표할 SPPNet에 맥이 닿아 있다는 점에서 의미가 있는 것 같다.
 
-## Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
+## 5️⃣ Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr4](https://c11.kr/phr4))
 
@@ -357,7 +370,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   SPPNet 이후 대폭 개선된 Fast R-CNN에 대한 궁금증이 생겼습니다.
   추가적으로 여러 이미지의 크기를 고정시키지 않고 Network를 학습시키는 방법에 대해서도 알게 되었습니다.
 
-## VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION. 
+## 6️⃣ VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION. 
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr6](https://c11.kr/phr6))
 
@@ -383,7 +396,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   이러한 conv filter size가 다양하기 때문에 여러 문제마다의 최적화되 conv filter size가 존재할 수도 있겠다라는 것을 
   알 수 있게 되었습니다.
 
-## Going Deeper with Convolutions.
+## 7️⃣ Going Deeper with Convolutions.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/piz8](https://c11.kr/piz8))
 
@@ -414,9 +427,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️ DACON Code Link. ([https://github.com/d9249/DACON](https://github.com/d9249/DACON))
 
-### 📜 All Paper Management pages 
-
-### (DIYA 2021-01 Computer Vision 4th.)
+### 📜 All Paper Management pages
 
 > DIYA에서 리뷰할 Computer Vision 관련 Paper에 대한 목록 및 순서입니다.
 >
@@ -482,7 +493,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 # ✏️ Personal Study.
 
-## Algoritms.
+## 🌱 Algoritms.
 
 ### 🔖  Explanation.
 
@@ -502,7 +513,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️ Code Link. ([https://github.com/d9249/Algorithm](https://github.com/d9249/Algorithm))
 
-## Deep Learning.
+## 🌱 Deep Learning.
 
 ### 🔖 Explanation.
 
@@ -555,9 +566,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ---
 
-## 컴퓨터공학캡스톤디자인 DD822_1558
+## 📛 컴퓨터공학캡스톤디자인 DD822_1558
 
-### 📛 Team : Code-15
+### 👨‍💻 Team : Code-15
 
 > Development personnel ( 팀장 : 이상민, 팀원 : 이선우, 임한민, 정범식, 한상준 )
 >
