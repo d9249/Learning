@@ -3,7 +3,7 @@
 <div align="center">
 
 
-![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/LeeSangmin.png)
+![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png)
 
  </div>
 
