@@ -74,9 +74,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### 🔖  Explanation.
 
-Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 
-
-프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
+> Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 
+>
+> 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -97,8 +97,9 @@ Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기�
 
 ### 🔖  Explanation.
 
-NomardCoders를 통해 React.js를 학습하면서 느낌 점과 
-React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
+> NomardCoders를 통해 React.js를 학습하면서 느낌 점과 
+>
+> React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
 ### 🙏🏻  Lessons Learned.
 
@@ -145,7 +146,8 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 
 ### 🔖  Explanation.
 
-소프트웨어공학 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
+> 소프트웨어공학 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
+>
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -161,7 +163,8 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 
 ### 🔖  Explanation.
 
-자료구조론 과목을 수강하면서 느낀 점과 작성하였던 과제들에 대한 기록을 위한 Github 링크입니다.
+> 자료구조론 과목을 수강하면서 느낀 점과 작성하였던 과제들에 대한 기록을 위한 Github 링크입니다.
+>
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -176,7 +179,8 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 
 ### 🔖  Explanation.
 
-지능웹설계 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
+> 지능웹설계 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
+>
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -210,6 +214,7 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 # 🔬 Research Activity.
 
 > 관심 분야, 연구 활동에 대한 결과와 기록을 정리한 링크입니다.
+>
 > 주로 Computer Vision 관련된 논문들을 Review를 진행하고 있으며, 2021년동안 모두 Review를 진행할 예정입니다.
 
 ## Research Interests.
@@ -230,12 +235,16 @@ From Shadow Segmentation to Shadow Removal
 
 ### 🔖  Explanation.
 
-그림자가 있는 이미지의 이미지를 제거 후 GAN을 통해 재생성을하고 생성한 그림자의 이미지의 일치율을 판단하여서 원본이미지의 완벽한 그림자 제거를 위한 Task에 대해서 연구를 진행하고 있습니다.
-위의 논문은 해당 Task를 해결하기 위한 다양한 방법에 대한 논문입니다.
+> 그림자가 있는 이미지의 이미지를 제거 후 GAN을 통해 재생성을하고 생성한 그림자의 이미지의 일치율을 
+>
+> 판단하여서 원본이미지의 완벽한 그림자 제거를 위한 Task에 대해서 연구를 진행하고 있습니다.
+>
+> 위의 논문은 해당 Task를 해결하기 위한 다양한 방법에 대한 논문입니다.
 
 ### 🔖  Activity Explanation.
 
-학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
+> 학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
+>
 
 ###### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
@@ -245,8 +254,21 @@ From Shadow Segmentation to Shadow Removal
 
 ### 🔖  Explanation.
 
-제가 DIYA에서 활동하는 이유는 Computer Vision의 기본 지식들을 쌓아 배워가면서 배웠던 지식들을 활용해 여러 문제에 대한 해결 능력을 키우고 싶어 아래에 첨부되어있는 논문들의 리뷰를 진행하고 있으며, 해당 문제만을 해결하는 능력을 갖는 것이 아닌 모든 문제를 해결할 수 있는 능력을 기를수 있도록 꾸준히 노력하는 것이 미래의 저에게 많은 도움이 될 것이라고 판단해 Computer Vision에 대해 흥미가 있는 사람들과 함께 지식을 쌓아가며 DIYA에서 프로젝트를 진행하고 있습니다. 
-DIYA에서 매주 진행하는 논문 리뷰와 매주 진행하는 발표의 결과를 정리하기위해 Notion을 사용하였으며, 추가적으로 활동에 대한 Issue 및 진행 사항을 기록하기 위해서 Github을 사용하였습니다. 추가적인 기록이나 자료에 관해서는 Github에 올려두었습니다.
+> 제가 DIYA에서 활동하는 이유는 Computer Vision의 기본 지식들을 쌓아 배워가면서 배웠던 지식들을 활용해 
+>
+> 여러 문제에 대한 해결 능력을 키우고 싶어 아래에 첨부되어있는 논문들의 리뷰를 진행하고 있으며, 
+>
+> 해당 문제만을 해결하는 능력을 갖는 것이 아닌 모든 문제를 해결할 수 있는 능력을 기를수 있도록 
+>
+> 꾸준히 노력하는 것이 미래의 저에게 많은 도움이 될 것이라고 판단해 Computer Vision에 대해 
+>
+> 흥미가 있는 사람들과 함께 지식을 쌓아가며 DIYA에서 프로젝트를 진행하고 있습니다. 
+>
+> DIYA에서 매주 진행하는 논문 리뷰와 매주 진행하는 발표의 결과를 정리하기위해 Notion을 사용하였으며, 
+>
+> 추가적으로 활동에 대한 Issue 및 진행 사항을 기록하기 위해서 Github을 사용하였습니다. 
+>
+> 추가적인 기록이나 자료에 관해서는 Github에 올려두었습니다.
 
 ###### ✍️ DIYA Docs Link. ([https://c11.kr/phqi](https://c11.kr/phqi))
 
@@ -254,7 +276,9 @@ DIYA에서 매주 진행하는 논문 리뷰와 매주 진행하는 발표의 �
 
 ### 🔖  Paper Review Explanation.
 
-Computer Vision 논문 리뷰 기록을 Notion을 사용하여 진행하였으며, Computer Vision Paper Review의 결과를 기록하였습니다.
+> Computer Vision 논문 리뷰 기록을 Notion을 사용하여 진행하였으며, 
+>
+> Computer Vision Paper Review의 결과를 기록하였습니다.
 
 ------
 
@@ -480,8 +504,9 @@ Computer Vision 논문 리뷰 기록을 Notion을 사용하여 진행하였으�
 
 ### 🔖  Explanation.
 
-FastCampus를 통해 알고리즘에 대해서 공부한 내용과 알고리듬(DD772_1547, 배상원 교수님)을 수강하며, 
-개인적으로 공부하면서 느낀 점과 형상유지, 문제를 푼 Code 기록을 위한 Github 링크입니다.
+> FastCampus를 통해 알고리즘에 대해서 공부한 내용과 알고리듬(DD772_1547, 배상원 교수님)을 수강하며, 
+>
+> 개인적으로 공부하면서 느낀 점과 형상유지, 문제를 푼 Code 기록을 위한 Github 링크입니다.
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -518,9 +543,11 @@ FastCampus를 통해 알고리즘에 대해서 공부한 내용과 알고리듬(
 
 ## 📛 Smart Network Internet of Things Lab.
 
-##### Development personnel ( 장민호, 이상민 )
+> ##### Development personnel ( 장민호, 이상민 )
+>
 
-##### Development Period ( 2021.01 ~ 02 )
+> ##### Development Period ( 2021.01 ~ 02 )
+>
 
 ### 🔖  Explanation.
 
@@ -561,8 +588,9 @@ FastCampus를 통해 알고리즘에 대해서 공부한 내용과 알고리듬(
 
 ### 🔖 Explanation.
 
-프로젝트를 진행하는 과정에서 느낀점과 프로젝트 결과물이며,
-협업 과정에서 개발 과정 기록을 위해 사용한 Notion과 형상관리를 위한 Github의 링크입니다.
+> 프로젝트를 진행하는 과정에서 느낀점과 프로젝트 결과물이며,
+>
+> 협업 과정에서 개발 과정 기록을 위해 사용한 Notion과 형상관리를 위한 Github의 링크입니다.
 
 ### 👏󠁲󠁳 Lessons Learned.
 
