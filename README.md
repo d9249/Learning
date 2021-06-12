@@ -2,11 +2,13 @@
 
 <div align="center">
 
+
 ![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/LeeSangmin.png)
 
  </div>
 
-<div align="right">
+<div align="left">
+
 
 ##### 📬 Contact.
 
@@ -37,19 +39,27 @@
 
 # 💁🏻 Introdution.
 
-> **"굳은 인내와 노력을 하지 않는 천재는 이 세상에서 있었던 적이 없다."
-> "발명의 길은 부단한 노력이다."  
-> - 아이작 뉴턴(Isaac Newton)
+> "굳은 인내와 노력을 하지 않는 천재는 이 세상에서 있었던 적이 없다."
+> "발명의 길은 부단한 노력이다."  아이작 뉴턴(Isaac Newton)
 
 현재 경기대학교 컴퓨터공학부 재학중이며, Smart I.O.T Lab에 소속되어 연구 활동을 진행중입니다.
+
 2021년 하반기부터 경기대학교 일반대학원에 진학할 예정이고, 이에 대한 연구 준비를 진행하기 위해 
+
 DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니다.
+
 관심 있는 분야는 Computer Vison이며, 현재 Computer Vision 관련하여 논문에 대한 이해와, 
+
 문제를 발견했을 때 어떻게 이를 해결하는지, 이에 해당하는 실험을 통해 engineering적인 관점에 대한 이해도 향상을 
+
 목적으로 논문 리뷰를 진행하고 있으며, Notion에 논문을 읽고 해당 논문이 어떠한 식으로 논리가 전개되는지, 
+
 어떻게 문제를 해결하고자 하는지를 정리하고 있습니다.
+
 그리고 해당 논문의 실험을 함께 진행하며, Network modeling과 Problem Solving Capabilities을 기르고 있습니다.
+
 제가 작성한 코드들의 형상유지를 위해서 Github을 사용하여서 기록하였으며,
+
 배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다.
 
 ---
@@ -64,12 +74,16 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ##### **🔖  Explanation.**
 
-Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
+Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 
+
+프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
 ##### **🙏🏻  Lessons Learned.**
 
-- Vue.js를 통해서 Lab Homepage를 제작하기 위해서 학습을 시작하였으며, Vue.js를 배우면서 기존의 JS를 사용하여서 개발할때와의 차이점을 명확하게 알게 되었습니다.
-- Vue.js의 기초적인 Framework를 이해할 수 있었으며, 데이터 흐름을 완전히 제어하면서 개발하여 웹페이지를 가볍게 만듦으로써 발생하는 많은 이점에 대해서 배울 수 있었습니다.
+- Vue.js를 통해서 Lab Homepage를 제작하기 위해서 학습을 시작하였으며, 
+  Vue.js를 배우면서 기존의 JS를 사용하여서 개발할때와의 차이점을 명확하게 알게 되었습니다.
+- Vue.js의 기초적인 Framework를 이해할 수 있었으며, 데이터 흐름을 완전히 제어하면서 개발하여 
+  웹페이지를 가볍게 만듦으로써 발생하는 많은 이점에 대해서 배울 수 있었습니다.
 
 ###### **🔗  Depoly address.** ([https://happy-panini-26d9b3.netlify.app/news](https://happy-panini-26d9b3.netlify.app/news))
 
@@ -83,20 +97,22 @@ Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기�
 
 ##### **🔖  Explanation.**
 
-NomardCoders를 통해 React.js를 학습하면서 느낌 점과 React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
+NomardCoders를 통해 React.js를 학습하면서 느낌 점과 
+React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
 ##### **🙏🏻  Lessons Learned.**
 
 - Vue.js를 배운 이후 비슷한 종류의 React.js의 웹프레임워크의 인기도가 높아지고 있는 소식을 접하고 
   Vue.js에 비해 React.js이 갖는 장점이 무엇인지 알기 위해서 React.js를 활용한 프로젝트를 진행하였습니다.
-- React.js의 기초적인 프로젝트를 진행해보았을 때 Vue.js가 갖는 장점이 추가적인 라이브러리, 더 잘 정리되어있는 공식 문서, 
-  자신에게 맞는 프로그래밍 스타일등 제가 경험한 바로는 Vue.js가 저에게 더욱 맞는 프레임워크라는 경험을 할 수 있었습니다.
-- 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 응용을 위해서는 
-  추가적으로 배워야할 것 같다고 생각이 들었습니다.
+- React.js의 기초적인 프로젝트를 진행해보았을 때 Vue.js가 갖는 장점이 추가적인 라이브러리, 
+  더 잘 정리되어있는 공식 문서, 자신에게 맞는 프로그래밍 스타일등 제가 경험한 바로는 
+  Vue.js가 저에게 더욱 맞는 프레임워크라는 경험을 할 수 있었습니다.
+- 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 
+  응용을 위해서는 추가적으로 배워야할 것 같다고 생각이 들었습니다.
 
-###### **🔗  Depoly address.** ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
+###### 📎 Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
 
-###### **🔗  Github Link.** ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
+###### 📎 Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
 
 ---
 
