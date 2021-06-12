@@ -81,11 +81,17 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - Vue.js의 기초적인 Framework를 이해할 수 있었으며, 데이터 흐름을 완전히 제어하면서 개발하여 
   웹페이지를 가볍게 만듦으로써 발생하는 많은 이점에 대해서 배울 수 있었습니다.
 
-##### ✍️  Depoly address. ([https://happy-panini-26d9b3.netlify.app/news](https://happy-panini-26d9b3.netlify.app/news))
+### ✍️  Depoly address. ([https://happy-panini-26d9b3.netlify.app/news](https://happy-panini-26d9b3.netlify.app/news))
 
-##### ✍️  Notion Link. LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
+### ✍️  Notion Link. 
 
-##### ✍️  Github Link. ([https://github.com/d9249/Inflearn_Vue.js](https://github.com/d9249/Inflearn_Vue.js))
+#### 	LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
+
+#### 	LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
+
+#### 	LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
+
+### ✍️  Github Link. ([https://github.com/d9249/Inflearn_Vue.js](https://github.com/d9249/Inflearn_Vue.js))
 
 
 
@@ -107,9 +113,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 
   응용을 위해서는 추가적으로 배워야할 것 같다고 생각이 들었습니다.
 
-##### ✍️ Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
+### ✍️ Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
 
-##### ✍️ Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
+### ✍️ Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
 
 # 📘 University Personal Project.
 
@@ -149,7 +155,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   그 중 애자일 개발방법론을 사용하여서 해당 프로젝트를 제작하였습니다.
 - 개발기간이 2~3주 남짓이라 많은 기능을 구현하지는 못하였지만, 기본적인 회원관리와 CRUD, 관리자 기능을 구현하였습니다.
 
-##### ✍️  Code Link. ([https://github.com/d9249/Django_Restaurant-Reservation](https://github.com/d9249/Django_Restaurant-Reservation))
+### ✍️  Code Link. ([https://github.com/d9249/Django_Restaurant-Reservation](https://github.com/d9249/Django_Restaurant-Reservation))
 
 ---
 
@@ -165,7 +171,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 컴퓨터 사이언스로서 기본 소양이라고 생각하는 자료구조에 대해서 원어를 수업을 들으면서 이에 대해 이해하고 원어 책을 보면서 
   책 속의 자료구조 관련 문제를 해결을 위한 과정을 진행하면서 기초소양을 많이 기를 수 있었습니다.
 
-##### ✍️ Code Link. ([https://github.com/d9249/DataStructure](https://github.com/d9249/DataStructure))
+### ✍️ Code Link. ([https://github.com/d9249/DataStructure](https://github.com/d9249/DataStructure))
 
 ---
 
@@ -180,7 +186,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 - 해당 과목을 수강하면서 기존의 Django에 대해서와 HTML5, CSS3에 대해서만 알고 있었는데 JS를 활용하여서 프로젝트를 진행하며, JS에 대한 지식들을 알 수 있었으며, JS를 활용한 프로젝트를 처음 진행하며 웹에 대한 기본적인 기술들을 알 수 있게 되었습니다.
 
-##### ✍️  Code Link. ([https://github.com/d9249/JSP_Pic](https://github.com/d9249/JSP_Pic))
+### ✍️  Code Link. ([https://github.com/d9249/JSP_Pic](https://github.com/d9249/JSP_Pic))
 
 ---
 
@@ -200,7 +206,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 저자(영문) : Lee Sang-min* and Kim Dohoon**
 
 "PoseNet을 활용한 헬스 트레이너 웹 서비스" [1]
+
 학술대회 참가 확인증. [2]
+
 한국정보기술학회 대학생논문경진대회 부문 동상 수상. [16]
 
 # 🔬 Research Activity.
@@ -217,13 +225,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### 📜  Relevant research paper.
 
-Shadow Removal via Shadow Image Decomposition
+1. Shadow Removal via Shadow Image Decomposition
 
-Mask-ShadowGAN : Learning to Remove Shadows from Unpaired Data
+2. Mask-ShadowGAN : Learning to Remove Shadows from Unpaired Data
 
-Image Smoothing via Unsupervised Learning
+3. Image Smoothing via Unsupervised Learning
 
-From Shadow Segmentation to Shadow Removal
+4. From Shadow Segmentation to Shadow Removal
 
 ### 🔖  Explanation.
 
@@ -238,7 +246,7 @@ From Shadow Segmentation to Shadow Removal
 > 학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
 >
 
-##### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
+### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
 ## DIYA ( 2021.03 ~ 현재 )
 
@@ -260,9 +268,9 @@ From Shadow Segmentation to Shadow Removal
 >
 > 추가적인 기록이나 자료에 관해서는 Github에 올려두었습니다.
 
-##### ✍️ DIYA Docs Link. ([https://c11.kr/phqi](https://c11.kr/phqi))
+### ✍️ DIYA Docs Link. ([https://c11.kr/phqi](https://c11.kr/phqi))
 
-##### ✍️ DIYA Code Link. ([https://github.com/d9249/DIYA](https://github.com/d9249/DIYA))
+### ✍️ DIYA Code Link. ([https://github.com/d9249/DIYA](https://github.com/d9249/DIYA))
 
 ### 🔖  Paper Review Explanation.
 
@@ -402,9 +410,9 @@ From Shadow Segmentation to Shadow Removal
 > DACON 컴퓨터 비전 학습 경진 대회의 과정 기록을 위한 Notion과 Github.
 >
 
-##### ✍️ DACON Docs Link. ([https://c11.kr/phqm](https://c11.kr/phqm))
+### ✍️ DACON Docs Link. ([https://c11.kr/phqm](https://c11.kr/phqm))
 
-##### ✍️ DACON Code Link. ([https://github.com/d9249/DACON](https://github.com/d9249/DACON))
+### ✍️ DACON Code Link. ([https://github.com/d9249/DACON](https://github.com/d9249/DACON))
 
 ### 📜 All Paper Management pages 
 
@@ -492,7 +500,7 @@ From Shadow Segmentation to Shadow Removal
   사고방식들이 현실에 존재하는 여러 인공지능 관련 문제 해결을 위한 사고와도 연관이 있다고 생각하여 
   여러 알고리즘을 배워나가야한다고 생각합니다.
 
-##### ✍️ Code Link. ([https://github.com/d9249/Algorithm](https://github.com/d9249/Algorithm))
+### ✍️ Code Link. ([https://github.com/d9249/Algorithm](https://github.com/d9249/Algorithm))
 
 ## Deep Learning.
 
@@ -537,13 +545,13 @@ From Shadow Segmentation to Shadow Removal
 
 ### 📕 Develop docs.
 
-##### ✍️ Docs Link ([https://c11.kr/pi22](https://c11.kr/pi22))
+### ✍️ Docs Link ([https://c11.kr/pi22](https://c11.kr/pi22))
 
-##### ✍️ Develop StackOverflow Link ([https://c11.kr/pi23](https://c11.kr/pi23))
+### ✍️ Develop StackOverflow Link ([https://c11.kr/pi23](https://c11.kr/pi23))
 
-##### ✍️ Depoly address. ([https://netlab.kyonggi.ac.kr/](https://netlab.kyonggi.ac.kr/))
+### ✍️ Depoly address. ([https://netlab.kyonggi.ac.kr/](https://netlab.kyonggi.ac.kr/))
 
-##### ✍️ Code Link. ([https://github.com/Smart-IoT-Lab/Lab-Homepage](https://github.com/Smart-IoT-Lab/Lab-Homepage))
+### ✍️ Code Link. ([https://github.com/Smart-IoT-Lab/Lab-Homepage](https://github.com/Smart-IoT-Lab/Lab-Homepage))
 
 ---
 
@@ -599,11 +607,11 @@ From Shadow Segmentation to Shadow Removal
 4. 최종 발표 자료. [14]
 5. DB 요구사항 명세서. [15]
 
-##### ✍️ Depoly address. ([https://fitsibang.herokuapp.com/](https://fitsibang.herokuapp.com/))
+### ✍️ Depoly address. ([https://fitsibang.herokuapp.com/](https://fitsibang.herokuapp.com/))
 
-##### ✍️ Docs Link. ([https://c11.kr/phqs](https://c11.kr/phqs))
+### ✍️ Docs Link. ([https://c11.kr/phqs](https://c11.kr/phqs))
 
-##### ✍️ Code Link. ([https://github.com/KGU-Code-15/fit-sibang](https://github.com/KGU-Code-15/fit-sibang))
+### ✍️ Code Link. ([https://github.com/KGU-Code-15/fit-sibang](https://github.com/KGU-Code-15/fit-sibang))
 
 # 📄 첨부 사항
 
