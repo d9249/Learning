@@ -72,7 +72,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## Vue.js
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 
 >
@@ -95,13 +95,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## React.js
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > NomardCoders를 통해 React.js를 학습하면서 느낌 점과 
 >
 > React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
-### 🙏🏻  Lessons Learned.
+### 🙏🏻 Lessons Learned.
 
 - Vue.js를 배운 이후 비슷한 종류의 React.js의 웹프레임워크의 인기도가 높아지고 있는 소식을 접하고 
   Vue.js에 비해 React.js이 갖는 장점이 무엇인지 알기 위해서 React.js를 활용한 프로젝트를 진행하였습니다.
@@ -125,12 +125,12 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 인공지능 DD313_2221 (Course Date : 2020-1, 김인철 교수님)
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > 인공지능 과목을 수강하면서 느낀 점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 >
 
-### 🙏🏻  Lessons Learned.
+### 🙏🏻 Lessons Learned.
 
 - 해당 과목을 수강하면서 개인프로젝트는 CNN, DQN에 대해서 배울 수 있었으며,
   강의 초반에 이루어졌던 이론적인 측면에 학습 내용에 대해서 실제로 시험을 진행하면서
@@ -144,7 +144,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 소프트웨어공학  DD316_2223 (Course Date : 2020-1, 권기현 교수님)
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > 소프트웨어공학 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 >
@@ -161,7 +161,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > 자료구조론 과목을 수강하면서 느낀 점과 작성하였던 과제들에 대한 기록을 위한 Github 링크입니다.
 >
@@ -171,13 +171,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 컴퓨터 사이언스로서 기본 소양이라고 생각하는 자료구조에 대해서 원어를 수업을 들으면서 이에 대해 이해하고 원어 책을 보면서 
   책 속의 자료구조 관련 문제를 해결을 위한 과정을 진행하면서 기초소양을 많이 기를 수 있었습니다.
 
-###### ✍️  Code Link. ([https://github.com/d9249/DataStructure](https://github.com/d9249/DataStructure))
+###### ✍️ Code Link. ([https://github.com/d9249/DataStructure](https://github.com/d9249/DataStructure))
 
 ---
 
 ## 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)
 
-### 🔖  Explanation.
+### 🔖 Explanation.
 
 > 지능웹설계 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 >
@@ -221,7 +221,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 > Deep Learning (Convolutional Neural Network, Computer Vision, GAN)
 
-## Smart I.O.T Lab ( 2020. 03 ~ 현재 )
+## Smart Network Internet Of Thing Lab ( 2020. 03 ~ 현재 )
 
 ### 📜  Relevant research paper.
 
@@ -284,9 +284,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## ImageNet Classification with Deep Convolutional Neural Networks.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phqx](https://c11.kr/phqx))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phqx](https://c11.kr/phqx))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - 2012년 이미지 분류를 위한 크고 심층적인 Convolutional Neural Networks인 AlexNet의 등장으로 기존의 DNN 방식의 fully-connection 방식보다 더 적은 parameter로 효율적인 학습이 가능한 이유에 대해서 알 수 있게되었다.
 - 추가적으로 AlexNet의 기본 구조, 과적합을 줄이기 위한 방법, 이미지 영역에서 CNN이 DNN보다 학습에서 효율적인 이유, 정규화, Pooling, Data Augumentation을 배울 수 있었습니다.
@@ -295,9 +295,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## Network In Network.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phqz](https://c11.kr/phqz))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phqz](https://c11.kr/phqz))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - 해당 논문에서는 NIN이라는 새로운 심층 네트워크 구조를 제안하였고, 기존의 CNN구조보다 더 복잡한 구조를 가진 마이크로 신경망을 구축하는데 이는 다층 퍼셉트론을 사용한 마이크로 신경망을 인스턴스화하는 방식을 사용하였습니다.
 - 해당 논문에서의 주요 맹점은 MLP Convolution Layers와 Global Average Pooling 이라고 생각하며, mlpconv는 Feature map의 모든 값들을 1x1 Convolution하여 새로운 Featuer map에게 전달하는 과정을 통해 비슷한 성질을 추출하여 Feature map 크기를 줄일 수 있으며, 결과적으로 Feature map 크기를 줄여 연상량이 줄어들게 되고, 이를 이용하여서 더 깊은 Network를 생성할 수 있게됩니다.
@@ -308,9 +308,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## Visualizing and Understanding Convolutional Networks.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phr0](https://c11.kr/phr0))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phr0](https://c11.kr/phr0))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - 해당 논문의 ZFNet은 기존의 Large Convolutional Network model들이 ImageNet bench-mark에서 
   좋은 성능을 보이는지와 기존의 모델들이 어떻게 개선될 수 있는 지에 대한 명확한 이해를 설명하고 있습니다.
@@ -328,9 +328,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phr2](https://c11.kr/phr2))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phr2](https://c11.kr/phr2))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - OverFeat은 고해상도 이미지로부터 만들어진 fully connected layer를 1x1 convolutional layer로 변환함으로써 
   이미지 인식 CNN을 "sliding window" detector로 형태로 변환 합니다. 
@@ -350,9 +350,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phr4](https://c11.kr/phr4))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phr4](https://c11.kr/phr4))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - 해당 논문에서는 SPPNet에 대해서 제안하였다.
 - 해당 논문에서의 주요 문제는 입력 이미지의 크기나 비율에 관계없이 CNN을 학습시킬 수는 없을까? 라는 
@@ -373,9 +373,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION. 
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/phr6](https://c11.kr/phr6))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/phr6](https://c11.kr/phr6))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - 해당 논문에서의 주요한 키워드는 'large scale image recognition', '3x3 convolution filter', 'increasing depth'로 볼 수 있을거 같습니다.
 - 이를 한문장으로 요약하자면 "3x3 conv filter를 통해 기존 CNN 모델의 layer의 갯수를 (deep하게) 늘렸고 (increasing depth), 이것이 large-scale image recognition에서도 좋은 결과를 얻게 만들었다" 정도가 될 것 같다고 생각합니다.
@@ -401,9 +401,9 @@ From Shadow Segmentation to Shadow Removal
 
 ## Going Deeper with Convolutions.
 
-### ✍️ Paper Review Summary Link ([https://c11.kr/piz8](https://c11.kr/piz8))
+### ✍️ Paper Review Summary Link. ([https://c11.kr/piz8](https://c11.kr/piz8))
 
-### 👏󠁲󠁳 Lessons Learned
+### 👏󠁲󠁳 Lessons Learned.
 
 - GoogLeNet의 주요 특징은 연산을 하는 데 소모되는 자원의 사용 효율이 개선되었다는 것이다.
   즉, 정교한 설계 덕에 네트워크의 depth와 width를 늘려도 연산량이 증가하지 않고 유지된다는 뜻이다. 
@@ -434,7 +434,9 @@ From Shadow Segmentation to Shadow Removal
 
 ---
 
-### 📜 All Paper Management pages (DIYA 2021-01 Computer Vision 4th.)
+### 📜 All Paper Management pages 
+
+### (DIYA 2021-01 Computer Vision 4th.)
 
 > DIYA에서 리뷰할 Computer Vision 관련 Paper에 대한 목록 및 순서입니다.
 >
