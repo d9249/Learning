@@ -18,7 +18,7 @@
 # ℹ️ Information.
 📛 Name : Lee Sangmin, Nickname : d9249
 
-🏫 Affiliation : Kyonggi Univ. Department of Computer Engineering
+🏫 Affiliation : Kyonggi Univ. Department of Computer Engineering.
 
 ✍️ [Github](https://github.com/d9249) ✍️ [Tistory Blog](https://d9249.tistory.com/) ✍️ [Github blog](https://d9249.github.io/)
 
@@ -85,11 +85,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️  Notion Link. 
 
-#### 	LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
+#### >> LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
 
-#### 	LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
+#### >> LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
 
-#### 	LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
+#### >> LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
 
 ### ✍️  Github Link. ([https://github.com/d9249/Inflearn_Vue.js](https://github.com/d9249/Inflearn_Vue.js))
 
@@ -138,7 +138,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 과목을 통해 CNN에 대해 많은 관심이 생겨 Computer Vision에 대해서 
   배우고 싶은 흥미가 생겨 현재 Computer Vision에 관한 연구를 진행하기 위해서 관련 지식들을 쌓고 있습니다.
 
-##### ✍️ Code Link. ([https://github.com/d9249/AI_DQN-proejct](https://github.com/d9249/AI_DQN-proejct)), ([https://github.com/d9249/AI_CNN-Project](https://github.com/d9249/AI_CNN-Project))
+### ✍️ Code Link. ([https://github.com/d9249/AI_DQN-proejct](https://github.com/d9249/AI_DQN-proejct)), ([https://github.com/d9249/AI_CNN-Project](https://github.com/d9249/AI_CNN-Project))
 
 ---
 
@@ -221,7 +221,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 > Deep Learning (Convolutional Neural Network, Computer Vision, GAN)
 
-## Smart Network Internet Of Thing Lab ( 2020. 03 ~ 현재 )
+## Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
 
 ### 📜  Relevant research paper.
 
@@ -248,7 +248,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
-## DIYA ( 2021.03 ~ 현재 )
+## DIYA. ( 2021.03 ~ 현재 )
 
 ### 🔖  Explanation.
 
