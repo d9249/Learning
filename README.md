@@ -1,6 +1,6 @@
 # Lee Sangmin's Portfolio
 
-<div align="center">
+<div align="center" style="width:200px">
 
 
 ![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/LeeSangmin.png)
@@ -10,13 +10,13 @@
 <div align="left">
 
 
-##### 📬 Contact.
+# 📬 Contact.
 
 📱  Phone : +82 10-9130-9249
 
 📮  Email : d9249@kyonggi.ac.kr
 
-##### ℹ️ Information.
+# ℹ️ Information.
 📛  Name : Lee Sangmin, Nickname : d9249
 
 🏫  Affiliation : Kyonggi Univ. Department of Computer Engineering
@@ -40,7 +40,10 @@
 # 💁🏻 Introdution.
 
 > "굳은 인내와 노력을 하지 않는 천재는 이 세상에서 있었던 적이 없다."
-> "발명의 길은 부단한 노력이다."  아이작 뉴턴(Isaac Newton)
+>
+> "발명의 길은 부단한 노력이다." 
+>
+> 아이작 뉴턴(Isaac Newton)
 
 현재 경기대학교 컴퓨터공학부 재학중이며, Smart I.O.T Lab에 소속되어 연구 활동을 진행중입니다.
 
@@ -110,9 +113,9 @@ React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하�
 - 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 
   응용을 위해서는 추가적으로 배워야할 것 같다고 생각이 들었습니다.
 
-###### 📎 Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
+###### Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
 
-###### 📎 Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
+###### Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
 
 ---
 
