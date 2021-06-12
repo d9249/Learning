@@ -62,13 +62,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 배운점들과 기록을 위해서 Notion을 사용하여서 기록하였습니다.
 
----
-
 # ⚒️ Tech stacks.
 
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a><img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=C&logoColor=white"/></a><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=Django&logoColor=white"/></a><img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/></a><img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white"/></a><img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=Vue.js&logoColor=white"/></a><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a><img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a><img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/></a>
-
----
 
 ## Vue.js
 
@@ -114,8 +110,6 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 ##### ✍️ Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
 
 ##### ✍️ Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
-
----
 
 # 📘 University Personal Project.
 
@@ -209,8 +203,6 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 학술대회 참가 확인증. [2]
 한국정보기술학회 대학생논문경진대회 부문 동상 수상. [16]
 
----
-
 # 🔬 Research Activity.
 
 > 관심 분야, 연구 활동에 대한 결과와 기록을 정리한 링크입니다.
@@ -248,8 +240,6 @@ From Shadow Segmentation to Shadow Removal
 
 ##### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
----
-
 ## DIYA ( 2021.03 ~ 현재 )
 
 ### 🔖  Explanation.
@@ -280,8 +270,6 @@ From Shadow Segmentation to Shadow Removal
 >
 > Computer Vision Paper Review의 결과를 기록하였습니다.
 
-------
-
 ## ImageNet Classification with Deep Convolutional Neural Networks.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phqx](https://c11.kr/phqx))
@@ -290,8 +278,6 @@ From Shadow Segmentation to Shadow Removal
 
 - 2012년 이미지 분류를 위한 크고 심층적인 Convolutional Neural Networks인 AlexNet의 등장으로 기존의 DNN 방식의 fully-connection 방식보다 더 적은 parameter로 효율적인 학습이 가능한 이유에 대해서 알 수 있게되었다.
 - 추가적으로 AlexNet의 기본 구조, 과적합을 줄이기 위한 방법, 이미지 영역에서 CNN이 DNN보다 학습에서 효율적인 이유, 정규화, Pooling, Data Augumentation을 배울 수 있었습니다.
-
----
 
 ## Network In Network.
 
@@ -303,8 +289,6 @@ From Shadow Segmentation to Shadow Removal
 - 해당 논문에서의 주요 맹점은 MLP Convolution Layers와 Global Average Pooling 이라고 생각하며, mlpconv는 Feature map의 모든 값들을 1x1 Convolution하여 새로운 Featuer map에게 전달하는 과정을 통해 비슷한 성질을 추출하여 Feature map 크기를 줄일 수 있으며, 결과적으로 Feature map 크기를 줄여 연상량이 줄어들게 되고, 이를 이용하여서 더 깊은 Network를 생성할 수 있게됩니다.
 - NIN에서는 Fullyconnected layer(FC layer)를 사용하는 대신 Global Average Pooling(GAP)을 사용하는데 기존의 FC layer를  사용하였는데 이 과정에서 Parameter의 수가 전체 Parameter의 수 중 대부분을 차지하기 때문에 Overfitting 문제가 발생하기 쉬운데 GAP를 사용하여서 이러한 문제를 해결하였습니다.
 - 해당 논문을 통해서 mlpconv, GAP를 배울 수 있었으며, Parameter의 수를 줄여 Overfitting을 피하는 방법과 더 깊은 Network를 생성하는 방법에 대해서 배울 수 있었습니다.
-
----
 
 ## Visualizing and Understanding Convolutional Networks.
 
@@ -323,8 +307,6 @@ From Shadow Segmentation to Shadow Removal
   추가적으로 feature의 수를 증가, 선명하게 하였으며, anti-aliasing현상을 없애는 효과를 보였습니다.
 - ZFNet을 통해 알게 된 점은 Network의 최적화 문제가 Network 성능에 막대한 영향을 준다는 것을 알게되었으며, 
   이러한 시각화를 사용한 최적화를 통해 네트워크의 성능을 향상 시킬 수 있다는 것을 배울 수 있었습니다.
-
----
 
 ## OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.
 
@@ -346,8 +328,6 @@ From Shadow Segmentation to Shadow Removal
   하지만 ConvNet을 이용하여 localization/detection까지 통합 시도를 했다는 점에서 의미가 있고, 
   1년 뒤에 마이크로소프트 팀에서 발표할 SPPNet에 맥이 닿아 있다는 점에서 의미가 있는 것 같다.
 
----
-
 ## Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr4](https://c11.kr/phr4))
@@ -368,8 +348,6 @@ From Shadow Segmentation to Shadow Removal
 - 해당 논문의 Review를 진행하면서 R-CNN의 이해의 대한 필요성도 느끼게 되었으며, 
   SPPNet 이후 대폭 개선된 Fast R-CNN에 대한 궁금증이 생겼습니다.
   추가적으로 여러 이미지의 크기를 고정시키지 않고 Network를 학습시키는 방법에 대해서도 알게 되었습니다.
-
----
 
 ## VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION. 
 
@@ -397,8 +375,6 @@ From Shadow Segmentation to Shadow Removal
   이러한 conv filter size가 다양하기 때문에 여러 문제마다의 최적화되 conv filter size가 존재할 수도 있겠다라는 것을 
   알 수 있게 되었습니다.
 
----
-
 ## Going Deeper with Convolutions.
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/piz8](https://c11.kr/piz8))
@@ -421,8 +397,6 @@ From Shadow Segmentation to Shadow Removal
   이는 기존에 CNN 성능을 높이기 위한 방법과는 다른 새로운 방법이었으며, 
   성능은 대폭 상승하지만 연산량은 약간만 증가한다는 장점이 있다는 것을 알게 되었다.
 
----
-
 ### 🔖 DACON Pesonal Project Explanation.
 
 > DACON 컴퓨터 비전 학습 경진 대회의 과정 기록을 위한 Notion과 Github.
@@ -431,8 +405,6 @@ From Shadow Segmentation to Shadow Removal
 ##### ✍️ DACON Docs Link. ([https://c11.kr/phqm](https://c11.kr/phqm))
 
 ##### ✍️ DACON Code Link. ([https://github.com/d9249/DACON](https://github.com/d9249/DACON))
-
----
 
 ### 📜 All Paper Management pages 
 
@@ -535,25 +507,20 @@ From Shadow Segmentation to Shadow Removal
 | 모두를 위한 딥러닝 시즌2                   | 2021.07.05 ~ 2021.07.18 |       |
 | 실전 인공지능으로 이어지는 파이토치 딥러닝 | 2021.07.19 ~ 2021.07.25 |       |
 
-
-
----
-
 # 📕 Team Project.
 
 > 2021년에 함께 진행하였던 프로젝트의 대한 기록.
 
 ## 📛 Smart Network Internet of Things Lab.
 
-> ##### Development personnel ( 장민호, 이상민 )
+> Development personnel ( 장민호, 이상민 )
 >
-
-> ##### Development Period ( 2021.01 ~ 02 )
->
+> Development Period ( 2021.01 ~ 02 )
 
 ### 🔖  Explanation.
 
 > 기존의 Lab Homepage를 새로운 Homepage로 제작한 기록이며,
+>
 > 개발 과정에서 느낀 점과, 배포 주소, 개발 문서를 정리해둔 링크입니다.
 
 ### 👏󠁲󠁳 Lessons Learned.
@@ -584,9 +551,9 @@ From Shadow Segmentation to Shadow Removal
 
 ### 📛 Team : Code-15
 
-##### Development personnel ( 팀장 : 이상민, 팀원 : 이선우, 임한민, 정범식, 한상준 )
-
-##### Development Period ( 2021.03 ~ 06 )
+> Development personnel ( 팀장 : 이상민, 팀원 : 이선우, 임한민, 정범식, 한상준 )
+>
+> Development Period ( 2021.03 ~ 06 )
 
 ### 🔖 Explanation.
 
@@ -612,10 +579,10 @@ From Shadow Segmentation to Shadow Removal
 
 1. 컴퓨터공학캡스톤디자인 26팀 중 5등 수상
 2. 한국정보기술학회의 논문 투고. [1] 
-   "PoseNet을 활용한 헬스 트레이너 웹 서비스" 투고 완료. 
-   한국정보기술학회 대학생논문경진대회 동상 수상. [16]
+   1. "PoseNet을 활용한 헬스 트레이너 웹 서비스" 투고 완료. 
+   2. 한국정보기술학회 대학생논문경진대회 동상 수상. [16]
 3. 특허청에 특허 출원 중. [10]
-   발명설명서 "PoseNet 기반의 헬스 트레이닝 웹 서비스" 작성 완료.
+   1. 발명설명서 "PoseNet 기반의 헬스 트레이닝 웹 서비스" 작성 완료.
 4. 한국저작원위원회 저작권 등록.
 5. 핏-시방 Version 1.0.0 배포 완료. (최종 소스코드)
 
