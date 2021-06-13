@@ -590,11 +590,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 #### 📛 Project Name : fit-sibang Version 1.0.0
 
 1. 컴퓨터공학캡스톤디자인 26팀 중 5등 수상
-2. 한국정보기술학회의 논문 투고. [1] 
+2. ["PoseNet을 활용한 헬스 트레이너 웹 서비스"] [1] 
    1. "PoseNet을 활용한 헬스 트레이너 웹 서비스" 투고 완료. 
-   2. 한국정보기술학회 대학생논문경진대회 동상 수상. [16]
+   2. [한국정보기술학회 대학생논문경진대회 부문 동상] [16]
 3. 특허청에 특허 출원 중. [10]
-   1. 발명설명서 "PoseNet 기반의 헬스 트레이닝 웹 서비스" 작성 완료.
+   1. [발명설명서 "PoseNet 기반의 헬스 트레이닝 웹 서비스"] 작성 완료.
 4. 한국저작원위원회 저작권 등록.
 5. 핏-시방 Version 1.0.0 배포 완료. (최종 소스코드)
 
@@ -605,11 +605,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### Development outputs.
 
-1. 최종 보고서. [11]
-2. 사용자 인터페이스 설계서. [12]
-3. 시스템 설계서. [13]
-4. 최종 발표 자료. [14]
-5. DB 요구사항 명세서. [15]
+1. [최종 보고서.] [11]
+2. [사용자 인터페이스 설계서.] [12]
+3. [시스템 설계서.] [13]
+4. [최종 발표 자료.] [14]
+5. [DB 요구사항 명세서.] [15]
 
 ### ✍️ Depoly address. ([https://fitsibang.herokuapp.com/](https://fitsibang.herokuapp.com/))
 
@@ -660,8 +660,14 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B06%5D%20OverFeat__InIntegrated_Recognition_Localization_and_Detection_using_Convolutional_Networks.pdf
 [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B07%5D%20Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
 [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B08%5D%20VERY_DEEP_CONVOLUTIONAL_NETWORKS_FOR_LARGE-SCALE_IMAGE_RECOGNITION.pdf
-
 [Going Deeper with Convolutions.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B09%5D%20Going_deeper_with_convolutions..pdf
+[발명설명서 "PoseNet 기반의 헬스 트레이닝 웹 서비스"]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B10%5D%20%EB%B0%9C%EB%AA%85%20%EC%84%A4%EB%AA%85%EC%84%9C(PoseNet%20%EA%B8%B0%EB%B0%98%EC%9D%98%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4).hwp
+[최종 보고서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B11%5D%20%EC%B5%9C%EC%A2%85%20%EB%B3%B4%EA%B3%A0%EC%84%9C.hwp
+[사용자 인터페이스 설계서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B12%5D%20%EC%82%AC%EC%9A%A9%EC%9E%90%20%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4%20%EC%84%A4%EA%B3%84%EC%84%9C.pdf
+[시스템 설계서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B13%5D%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%EC%84%9C.pdf
+[최종 발표 자료.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B14%5D%20%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C%EB%B3%B8.pdf
+
+[DB 요구사항 명세서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B15%5D%20DB%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EB%AA%85%EC%84%B8%EC%84%9C.hwp
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
 
