@@ -28,13 +28,13 @@
   - [💡 Research Interests.](#-research-interests)
   - 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
   - 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
-  - 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.] [03]
-  - 2️⃣ [Network In Network.] [04]
-  - 3️⃣ [Visualizing and Understanding Convolutional Networks.] [05]
-  - 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.] [06]
-  - 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.] [07]
-  - 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.] [08]
-  - 7️⃣ [Going Deeper with Convolutions.] [09]
+  - 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.]
+  - 2️⃣ [Network In Network.]
+  - 3️⃣ [Visualizing and Understanding Convolutional Networks.]
+  - 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.]
+  - 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.]
+  - 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.]
+  - 7️⃣ [Going Deeper with Convolutions.]
 - [✏️ Personal Study.](#-personal-study)
   - [🌱 Algoritms.](#-algoritms)
   - [🌱 Deep Learning.](#-deep-learning)
@@ -42,6 +42,8 @@
   - [📛 Smart Network Internet of Things Lab.](#-smart-network-internet-of-things-lab)
   - [📛 컴퓨터공학캡스톤디자인 DD822_1558](#-컴퓨터공학캡스톤디자인-dd822_1558)
 - [📄 첨부 사항](#-첨부-사항)
+
+------
 
 # 📬 Contact.
 
