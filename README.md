@@ -246,7 +246,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 > 학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
 
-### ✍️ Code Link. ([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
+### ✍️ [Code Link.]:([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
 
 ## 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
 
