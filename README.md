@@ -93,19 +93,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - Vue.js의 기초적인 Framework를 이해할 수 있었으며, 데이터 흐름을 완전히 제어하면서 개발하여 
   웹페이지를 가볍게 만듦으로써 발생하는 많은 이점에 대해서 배울 수 있었습니다.
 
-### ✍️  Depoly address. ([https://happy-panini-26d9b3.netlify.app/news](https://happy-panini-26d9b3.netlify.app/news))
+### ✍️  [Vue.js Project Depoly address.]
 
-### ✍️  Notion Link. 
+### ✍️  Notion Link. [LV1.] [LV2.] [LV3.]
 
->LV1. ([https://c11.kr/phqe](https://c11.kr/phqe)) 
-
->LV2. ([https://c11.kr/phqb](https://c11.kr/phqb)) 
-
->LV3. ([https://c11.kr/phqf](https://c11.kr/phqf))
-
-### ✍️  Github Link. ([https://github.com/d9249/Inflearn_Vue.js](https://github.com/d9249/Inflearn_Vue.js))
-
-
+### ✍️  [Vue.js Github Link.]
 
 ## 🌱 React.js
 
@@ -667,6 +659,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [시스템 설계서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B13%5D%20%EC%8B%9C%EC%8A%A4%ED%85%9C%20%EC%84%A4%EA%B3%84%EC%84%9C.pdf
 [최종 발표 자료.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B14%5D%20%EC%B5%9C%EC%A2%85%20%EB%B0%9C%ED%91%9C%EB%B3%B8.pdf
 [DB 요구사항 명세서.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B15%5D%20DB%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD%EB%AA%85%EC%84%B8%EC%84%9C.hwp
+[LV1.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV1-Beginners-guide-5e27acee39ea4628b659a3eeec0d7422
+[LV2.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV2-Intermediate-ead10ea9a39549edaa234c1149527749
+[LV3.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV3-Complete-guide-0e477091c1104630ae9dddd14e7cec9e
+[Vue.js Project Depoly address]:https://happy-panini-26d9b3.netlify.app/
+[Vue.js Github Link.]:(https://github.com/d9249/Inflearn_Vue.js)
+
+
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
 
