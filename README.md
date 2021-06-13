@@ -214,7 +214,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 저자(영문) : Lee Sang-min* and Kim Dohoon**
 
-["PoseNet을 활용한 헬스트레이너 웹 서비스"]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B01%5D%20PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf
+["PoseNet을 활용한 헬스트레이너 웹 서비스"]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B01%5D%20PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf	"PoseNet을 활용한 헬스트레이너 웹 서비스"
 
 학술대회 참가 확인증. [2]
 
