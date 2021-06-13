@@ -1,11 +1,6 @@
 # Lee Sangmin's Portfolio
 
-<div align="center" style="width:200px">
-
-
-![Lee Sangmin](https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png){: width="200" height="200"}
-
- </div>
+<img src="https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png" align="center" height="200px" width="200px">
 
 # Table of contents
 
