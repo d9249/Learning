@@ -117,9 +117,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 
   응용을 위해서는 추가적으로 배워야할 것 같다고 생각이 들었습니다.
 
-### ✍️ Depoly address. ([https://d9249.github.io/NomardCoders_nwitter/](https://d9249.github.io/NomardCoders_nwitter/))
+### ✍️ [Depoly address.](https://d9249.github.io/NomardCoders_nwitter/)
 
-### ✍️ Github Link. ([https://github.com/d9249/NomardCoders_nwitter](https://github.com/d9249/NomardCoders_nwitter))
+### ✍️ [Github Link.](https://github.com/d9249/NomardCoders_nwitter)
 
 # 📘 University Personal Project.
 
@@ -141,7 +141,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 과목을 통해 CNN에 대해 많은 관심이 생겨 Computer Vision에 대해서 
   배우고 싶은 흥미가 생겨 현재 Computer Vision에 관한 연구를 진행하기 위해서 관련 지식들을 쌓고 있습니다.
 
-### ✍️ Code Link. ([https://github.com/d9249/AI_DQN-proejct](https://github.com/d9249/AI_DQN-proejct)), ([https://github.com/d9249/AI_CNN-Project](https://github.com/d9249/AI_CNN-Project))
+### ✍️ Code Link. ([DQN](https://github.com/d9249/AI_DQN-proejct)), ([CNN](https://github.com/d9249/AI_CNN-Project))
 
 ---
 
@@ -157,7 +157,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   그 중 애자일 개발방법론을 사용하여서 해당 프로젝트를 제작하였습니다.
 - 개발기간이 2~3주 남짓이라 많은 기능을 구현하지는 못하였지만, 기본적인 회원관리와 CRUD, 관리자 기능을 구현하였습니다.
 
-### ✍️  Code Link. ([https://github.com/d9249/Django_Restaurant-Reservation](https://github.com/d9249/Django_Restaurant-Reservation))
+### ✍️  [Code Link.](https://github.com/d9249/Django_Restaurant-Reservation)
 
 ---
 
@@ -172,7 +172,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 컴퓨터 사이언스로서 기본 소양이라고 생각하는 자료구조에 대해서 원어를 수업을 들으면서 이에 대해 이해하고 원어 책을 보면서 
   책 속의 자료구조 관련 문제를 해결을 위한 과정을 진행하면서 기초소양을 많이 기를 수 있었습니다.
 
-### ✍️ Code Link. ([https://github.com/d9249/DataStructure](https://github.com/d9249/DataStructure))
+### ✍️ [Code Link.](https://github.com/d9249/DataStructure)
 
 ---
 
@@ -186,7 +186,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 - 해당 과목을 수강하면서 기존의 Django에 대해서와 HTML5, CSS3에 대해서만 알고 있었는데 JS를 활용하여서 프로젝트를 진행하며, JS에 대한 지식들을 알 수 있었으며, JS를 활용한 프로젝트를 처음 진행하며 웹에 대한 기본적인 기술들을 알 수 있게 되었습니다.
 
-### ✍️  Code Link. ([https://github.com/d9249/JSP_Pic](https://github.com/d9249/JSP_Pic))
+### ✍️  [Code Link.](https://github.com/d9249/JSP_Pic)
 
 ---
 
@@ -246,7 +246,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 > 학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
 
-### ✍️ [Code Link.]:([https://github.com/d9249/Undergraduate_researcher](https://github.com/d9249/Undergraduate_researcher))
+### ✍️ [Code Link.](https://github.com/d9249/Undergraduate_researcher)
 
 ## 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
 
@@ -337,7 +337,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.] [03]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phqx](https://c11.kr/phqx))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phqx)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -346,7 +346,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 2️⃣ [Network In Network.] [04]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phqz](https://c11.kr/phqz))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phqz)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -357,7 +357,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 3️⃣ [Visualizing and Understanding Convolutional Networks.] [05]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phr0](https://c11.kr/phr0))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phr0)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -375,7 +375,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.] [06]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phr2](https://c11.kr/phr2))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phr2)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -395,7 +395,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.] [07]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phr4](https://c11.kr/phr4))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phr4)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -416,7 +416,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.] [08]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/phr6](https://c11.kr/phr6))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/phr6)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -442,7 +442,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 7️⃣ [Going Deeper with Convolutions.] [09]
 
-### ✍️ Paper Review Summary Link. ([https://c11.kr/piz8](https://c11.kr/piz8))
+### ✍️ [Paper Review Summary Link.](https://c11.kr/piz8)
 
 ### 👏󠁲󠁳 Lessons Learned.
 
@@ -462,17 +462,17 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   이는 기존에 CNN 성능을 높이기 위한 방법과는 다른 새로운 방법이었으며, 
   성능은 대폭 상승하지만 연산량은 약간만 증가한다는 장점이 있다는 것을 알게 되었다.
 
-### ✍️ DIYA Docs Link. ([https://c11.kr/phqi](https://c11.kr/phqi))
+### ✍️ [DIYA Docs Link.](https://c11.kr/phqi)
 
-### ✍️ DIYA Code Link. ([https://github.com/d9249/DIYA](https://github.com/d9249/DIYA))
+### ✍️ [DIYA Code Link.](https://github.com/d9249/DIYA)
 
 ### 🔖 DACON Pesonal Project Explanation.
 
 > DACON 컴퓨터 비전 학습 경진 대회의 과정 기록을 위한 Notion과 Github.
 
-### ✍️ DACON Docs Link. ([https://c11.kr/phqm](https://c11.kr/phqm))
+### ✍️ [DACON Docs Link.](https://c11.kr/phqm)
 
-### ✍️ DACON Code Link. ([https://github.com/d9249/DACON](https://github.com/d9249/DACON))
+### ✍️ [DACON Code Link.](https://github.com/d9249/DACON)
 
 
 
@@ -496,7 +496,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   사고방식들이 현실에 존재하는 여러 인공지능 관련 문제 해결을 위한 사고와도 연관이 있다고 생각하여 
   여러 알고리즘을 배워나가야한다고 생각합니다.
 
-### ✍️ Code Link. ([https://github.com/d9249/Algorithm](https://github.com/d9249/Algorithm))
+### ✍️ [Code Link.](https://github.com/d9249/Algorithm)
 
 ## 🌱 Deep Learning.
 
@@ -541,13 +541,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### 🔚 Project deliverables.
 
-### ✍️ Docs Link ([https://c11.kr/pi22](https://c11.kr/pi22))
+### ✍️ [Docs Link.](https://c11.kr/pi22)
 
-### ✍️ Develop StackOverflow Link ([https://c11.kr/pi23](https://c11.kr/pi23))
+### ✍️ [Develop StackOverflow Link.](https://c11.kr/pi23)
 
-### ✍️ Depoly address. ([https://netlab.kyonggi.ac.kr/](https://netlab.kyonggi.ac.kr/))
+### ✍️ [Depoly address.](https://netlab.kyonggi.ac.kr/)
 
-### ✍️ Code Link. ([https://github.com/Smart-IoT-Lab/Lab-Homepage](https://github.com/Smart-IoT-Lab/Lab-Homepage))
+### ✍️ [Code Link.](https://github.com/Smart-IoT-Lab/Lab-Homepage)
 
 ---
 
@@ -603,11 +603,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 4. [최종 발표 자료.] [14]
 5. [DB 요구사항 명세서.] [15]
 
-### ✍️ Depoly address. ([https://fitsibang.herokuapp.com/](https://fitsibang.herokuapp.com/))
+### ✍️ [Depoly address.](https://fitsibang.herokuapp.com/)
 
-### ✍️ Docs Link. ([https://c11.kr/phqs](https://c11.kr/phqs))
+### ✍️ [Docs Link.](https://c11.kr/phqs)
 
-### ✍️ Code Link. ([https://github.com/KGU-Code-15/fit-sibang](https://github.com/KGU-Code-15/fit-sibang))
+### ✍️ [Code Link.](https://github.com/KGU-Code-15/fit-sibang)
 
 # 📄 첨부 사항
 
