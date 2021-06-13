@@ -7,6 +7,8 @@
 
  </div>
 
+[TOC]
+
 
 
 # 📬 Contact.
@@ -80,34 +82,34 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 🌱 Vue.js
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > Inflearn을 통한 Vue.js를 학습하면서 느낌 점과 Vue.js에 대한 기록을 Notion을 사용하여서 진행하였으며, 
 >
 > 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - Vue.js를 통해서 Lab Homepage를 제작하기 위해서 학습을 시작하였으며, 
   Vue.js를 배우면서 기존의 JS를 사용하여서 개발할때와의 차이점을 명확하게 알게 되었습니다.
 - Vue.js의 기초적인 Framework를 이해할 수 있었으며, 데이터 흐름을 완전히 제어하면서 개발하여 
   웹페이지를 가볍게 만듦으로써 발생하는 많은 이점에 대해서 배울 수 있었습니다.
 
-### ✍️  [Vue.js Project Depoly address.]
+**✍️  [Vue.js Project Depoly address.]**
 
-### ✍️  Notion Link. [LV1.] [LV2.] [LV3.]
+**✍️  Notion Link. [LV1.] [LV2.] [LV3.]**
 
-### ✍️  [Vue.js Github Link.]
+**✍️  [Vue.js Github Link.]**
 
-## 🌱 React.js
+## **🌱 React.js**
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > NomardCoders를 통해 React.js를 학습하면서 느낌 점과 
 >
 > React.js 프로젝트 결과물에 대한 기록을 Github를 통해 진행하였습니다.
 
-### 🙏🏻 Lessons Learned.
+**🙏🏻 Lessons Learned.**
 
 - Vue.js를 배운 이후 비슷한 종류의 React.js의 웹프레임워크의 인기도가 높아지고 있는 소식을 접하고 
   Vue.js에 비해 React.js이 갖는 장점이 무엇인지 알기 위해서 React.js를 활용한 프로젝트를 진행하였습니다.
@@ -117,9 +119,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 강의는 React.js의 기초적인 부분에 집중되어있어 Life Cycle hook과 같은 것을 추가적으로 배운 뒤 
   응용을 위해서는 추가적으로 배워야할 것 같다고 생각이 들었습니다.
 
-### ✍️ [Depoly address.](https://d9249.github.io/NomardCoders_nwitter/)
+**✍️ [Depoly address.](https://d9249.github.io/NomardCoders_nwitter/)**
 
-### ✍️ [Github Link.](https://github.com/d9249/NomardCoders_nwitter)
+**✍️ [Github Link.](https://github.com/d9249/NomardCoders_nwitter)**
 
 # 📘 University Personal Project.
 
@@ -129,11 +131,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 1️⃣ 인공지능 DD313_2221 (Course Date : 2020-01, 김인철 교수님)
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 인공지능 과목을 수강하면서 느낀 점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 
-### 🙏🏻 Lessons Learned.
+**🙏🏻 Lessons Learned.**
 
 - 해당 과목을 수강하면서 개인프로젝트는 CNN, DQN에 대해서 배울 수 있었으며,
   강의 초반에 이루어졌던 이론적인 측면에 학습 내용에 대해서 실제로 시험을 진행하면서
@@ -141,58 +143,58 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 해당 과목을 통해 CNN에 대해 많은 관심이 생겨 Computer Vision에 대해서 
   배우고 싶은 흥미가 생겨 현재 Computer Vision에 관한 연구를 진행하기 위해서 관련 지식들을 쌓고 있습니다.
 
-### ✍️ Code Link. ([DQN](https://github.com/d9249/AI_DQN-proejct)), ([CNN](https://github.com/d9249/AI_CNN-Project))
+**✍️ Code Link. ([DQN](https://github.com/d9249/AI_DQN-proejct)), ([CNN](https://github.com/d9249/AI_CNN-Project))**
 
 ---
 
 ## 2️⃣ 소프트웨어공학  DD316_2223 (Course Date : 2020-01, 권기현 교수님)
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 소프트웨어공학 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 과목을 수강하면서 소프트웨어공학의 기반한 프로그램의 개발 방법에 대해서 알 수 있었으며, 
   그 중 애자일 개발방법론을 사용하여서 해당 프로젝트를 제작하였습니다.
 - 개발기간이 2~3주 남짓이라 많은 기능을 구현하지는 못하였지만, 기본적인 회원관리와 CRUD, 관리자 기능을 구현하였습니다.
 
-### ✍️  [Code Link.](https://github.com/d9249/Django_Restaurant-Reservation)
+**✍️  [Code Link.](https://github.com/d9249/Django_Restaurant-Reservation)**
 
 ---
 
 ## 3️⃣ 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 자료구조론 과목을 수강하면서 느낀 점과 작성하였던 과제들에 대한 기록을 위한 Github 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 컴퓨터 사이언스로서 기본 소양이라고 생각하는 자료구조에 대해서 원어를 수업을 들으면서 이에 대해 이해하고 원어 책을 보면서 
   책 속의 자료구조 관련 문제를 해결을 위한 과정을 진행하면서 기초소양을 많이 기를 수 있었습니다.
 
-### ✍️ [Code Link.](https://github.com/d9249/DataStructure)
+**✍️ [Code Link.](https://github.com/d9249/DataStructure)**
 
 ---
 
 ## 4️⃣ 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 지능웹설계 과목을 수강하면서 느낀점과 과목 수강 중 제작하였던 프로젝트의 기록을 위한 Github 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 과목을 수강하면서 기존의 Django에 대해서와 HTML5, CSS3에 대해서만 알고 있었는데 JS를 활용하여서 프로젝트를 진행하며, JS에 대한 지식들을 알 수 있었으며, JS를 활용한 프로젝트를 처음 진행하며 웹에 대한 기본적인 기술들을 알 수 있게 되었습니다.
 
-### ✍️  [Code Link.](https://github.com/d9249/JSP_Pic)
+**✍️  [Code Link.](https://github.com/d9249/JSP_Pic)**
 
 ---
 
 # 📃 Graduation thesis.
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 캡스톤디자인 과목을 수강하면서 진행하였던 프로젝트에 대해 작성하였던 논문을 
 >
@@ -224,7 +226,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
 
-### 📜  Relevant research paper.
+**📜  Relevant research paper.**
 
 1. Shadow Removal via Shadow Image Decomposition
 
@@ -234,7 +236,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 4. From Shadow Segmentation to Shadow Removal
 
-### 🔖  Explanation.
+**🔖  Explanation.**
 
 > 그림자가 있는 이미지의 이미지를 제거 후 GAN을 통해 재생성을하고 생성한 그림자의 이미지의 일치율을 
 >
@@ -242,15 +244,15 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > 위의 논문은 해당 Task를 해결하기 위한 다양한 방법에 대한 논문입니다.
 
-### 🔖  Activity Explanation.
+**🔖  Activity Explanation.**
 
 > 학부 연구생의 활동을 Github를 사용하여서 기록하였습니다.
 
-### ✍️ [Code Link.](https://github.com/d9249/Undergraduate_researcher)
+**✍️ [Code Link.](https://github.com/d9249/Undergraduate_researcher)**
 
 ## 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
 
-### 🔖  Explanation.
+**🔖  Explanation.**
 
 > 제가 DIYA에서 활동하는 이유는 Computer Vision의 기본 지식들을 쌓아 배워가면서 배웠던 지식들을 활용해 
 >
@@ -268,11 +270,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > 추가적인 기록이나 자료에 관해서는 Github에 올려두었습니다.
 
-### 📜 All Paper Management pages
+**📜 All Paper Management pages**
 
 > DIYA에서 리뷰할 Computer Vision 관련 Paper에 대한 목록 및 순서입니다.
 
-### 📕 Paper List.
+### **📕 Paper List.**
 
 | Paper                                                        | Check |
 | ------------------------------------------------------------ | :---: |
@@ -322,14 +324,14 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 | Sharpness-Aware Minimization for Efficiently Improving Generalization |       |
 | An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale |       |
 
-### 📕 Add Paper List.
+**📕 Add Paper List.**
 
 | Paper                                                        | Check |
 | ------------------------------------------------------------ | :---: |
 | Training data-efficient image transformers & distillation through attention |       |
 | High-Performance Large-Scale Image Recognition Without Normalization |       |
 
-### 🔖  Paper Review Explanation.
+**🔖  Paper Review Explanation.**
 
 > Computer Vision 논문 리뷰 기록을 Notion을 사용하여 진행하였으며, 
 >
@@ -337,18 +339,18 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.] [03]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phqx)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phqx)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 2012년 이미지 분류를 위한 크고 심층적인 Convolutional Neural Networks인 AlexNet의 등장으로 기존의 DNN 방식의 fully-connection 방식보다 더 적은 parameter로 효율적인 학습이 가능한 이유에 대해서 알 수 있게되었다.
 - 추가적으로 AlexNet의 기본 구조, 과적합을 줄이기 위한 방법, 이미지 영역에서 CNN이 DNN보다 학습에서 효율적인 이유, 정규화, Pooling, Data Augumentation을 배울 수 있었습니다.
 
 ## 2️⃣ [Network In Network.] [04]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phqz)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phqz)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 논문에서는 NIN이라는 새로운 심층 네트워크 구조를 제안하였고, 기존의 CNN구조보다 더 복잡한 구조를 가진 마이크로 신경망을 구축하는데 이는 다층 퍼셉트론을 사용한 마이크로 신경망을 인스턴스화하는 방식을 사용하였습니다.
 - 해당 논문에서의 주요 맹점은 MLP Convolution Layers와 Global Average Pooling 이라고 생각하며, mlpconv는 Feature map의 모든 값들을 1x1 Convolution하여 새로운 Featuer map에게 전달하는 과정을 통해 비슷한 성질을 추출하여 Feature map 크기를 줄일 수 있으며, 결과적으로 Feature map 크기를 줄여 연상량이 줄어들게 되고, 이를 이용하여서 더 깊은 Network를 생성할 수 있게됩니다.
@@ -357,9 +359,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 3️⃣ [Visualizing and Understanding Convolutional Networks.] [05]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phr0)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phr0)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 논문의 ZFNet은 기존의 Large Convolutional Network model들이 ImageNet bench-mark에서 
   좋은 성능을 보이는지와 기존의 모델들이 어떻게 개선될 수 있는 지에 대한 명확한 이해를 설명하고 있습니다.
@@ -375,9 +377,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.] [06]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phr2)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phr2)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - OverFeat은 고해상도 이미지로부터 만들어진 fully connected layer를 1x1 convolutional layer로 변환함으로써 
   이미지 인식 CNN을 "sliding window" detector로 형태로 변환 합니다. 
@@ -395,9 +397,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.] [07]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phr4)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phr4)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 논문에서는 SPPNet에 대해서 제안하였다.
 - 해당 논문에서의 주요 문제는 입력 이미지의 크기나 비율에 관계없이 CNN을 학습시킬 수는 없을까? 라는 
@@ -416,9 +418,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.] [08]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/phr6)
+**✍️ [Paper Review Summary Link.](https://c11.kr/phr6)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 해당 논문에서의 주요한 키워드는 'large scale image recognition', '3x3 convolution filter', 'increasing depth'로 볼 수 있을거 같습니다.
 - 이를 한문장으로 요약하자면 "3x3 conv filter를 통해 기존 CNN 모델의 layer의 갯수를 (deep하게) 늘렸고 (increasing depth), 이것이 large-scale image recognition에서도 좋은 결과를 얻게 만들었다" 정도가 될 것 같다고 생각합니다.
@@ -442,9 +444,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 7️⃣ [Going Deeper with Convolutions.] [09]
 
-### ✍️ [Paper Review Summary Link.](https://c11.kr/piz8)
+**✍️ [Paper Review Summary Link.](https://c11.kr/piz8)**
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - GoogLeNet의 주요 특징은 연산을 하는 데 소모되는 자원의 사용 효율이 개선되었다는 것이다.
   즉, 정교한 설계 덕에 네트워크의 depth와 width를 늘려도 연산량이 증가하지 않고 유지된다는 뜻이다. 
@@ -462,17 +464,17 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   이는 기존에 CNN 성능을 높이기 위한 방법과는 다른 새로운 방법이었으며, 
   성능은 대폭 상승하지만 연산량은 약간만 증가한다는 장점이 있다는 것을 알게 되었다.
 
-### ✍️ [DIYA Docs Link.](https://c11.kr/phqi)
+**✍️ [DIYA Docs Link.](https://c11.kr/phqi)**
 
-### ✍️ [DIYA Code Link.](https://github.com/d9249/DIYA)
+**✍️ [DIYA Code Link.](https://github.com/d9249/DIYA)**
 
-### 🔖 DACON Pesonal Project Explanation.
+**🔖 DACON Pesonal Project Explanation.**
 
 > DACON 컴퓨터 비전 학습 경진 대회의 과정 기록을 위한 Notion과 Github.
 
-### ✍️ [DACON Docs Link.](https://c11.kr/phqm)
+**✍️ [DACON Docs Link.](https://c11.kr/phqm)**
 
-### ✍️ [DACON Code Link.](https://github.com/d9249/DACON)
+**✍️ [DACON Code Link.](https://github.com/d9249/DACON)**
 
 
 
@@ -480,13 +482,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 🌱 Algoritms.
 
-### 🔖  Explanation.
+**🔖  Explanation.**
 
 > FastCampus를 통해 알고리즘에 대해서 공부한 내용과 알고리듬(DD772_1547, 배상원 교수님)을 수강하며, 
 >
 > 개인적으로 공부하면서 느낀 점과 형상유지, 문제를 푼 Code 기록을 위한 Github 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 알고리즘 문제를 해결하는 자료구조에 관한 지식들과 이산수학적인 사고를 통해 해당하는 문제를 푸는 과정에 
   적용이 필요하다는 것을 배웠습니다.
@@ -496,11 +498,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   사고방식들이 현실에 존재하는 여러 인공지능 관련 문제 해결을 위한 사고와도 연관이 있다고 생각하여 
   여러 알고리즘을 배워나가야한다고 생각합니다.
 
-### ✍️ [Code Link.](https://github.com/d9249/Algorithm)
+**✍️ [Code Link.](https://github.com/d9249/Algorithm)**
 
 ## 🌱 Deep Learning.
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 6월 14일 ~ 7월 31일까지 Deep Learning 을 공부하기 위한 계획입니다.
 
@@ -521,13 +523,13 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > Development Period ( 2021.01 ~ 02 )
 
-### 🔖  Explanation.
+**🔖  Explanation.**
 
 > 기존의 Lab Homepage를 새로운 Homepage로 제작한 기록이며,
 >
 > 개발 과정에서 느낀 점과, 배포 주소, 개발 문서를 정리해둔 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 기존의 사용하던 Lab Homepage를 새롭게 개발하기 위해서 Vue.js를 적용하여서 새로이 제작하였으며, 
   혼자 강의를 보면서 배웠던 Vue.js를 응용함으로써 Vue.js에 대한 이해를 높일 수 있었으며, 
@@ -541,31 +543,31 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ### 🔚 Project deliverables.
 
-### ✍️ [Docs Link.](https://c11.kr/pi22)
+**✍️ [Docs Link.](https://c11.kr/pi22)**
 
-### ✍️ [Develop StackOverflow Link.](https://c11.kr/pi23)
+**✍️ [Develop StackOverflow Link.](https://c11.kr/pi23)**
 
-### ✍️ [Depoly address.](https://netlab.kyonggi.ac.kr/)
+**✍️ [Depoly address.](https://netlab.kyonggi.ac.kr/)**
 
-### ✍️ [Code Link.](https://github.com/Smart-IoT-Lab/Lab-Homepage)
+**✍️ [Code Link.](https://github.com/Smart-IoT-Lab/Lab-Homepage)**
 
 ---
 
 ## 📛 컴퓨터공학캡스톤디자인 DD822_1558
 
-### 👨‍💻 Team : Code-15
+**👨‍💻 Team : Code-15**
 
 > Development personnel ( 팀장 : 이상민, 팀원 : 이선우, 임한민, 정범식, 한상준 )
 >
 > Development Period ( 2021.03 ~ 06 )
 
-### 🔖 Explanation.
+**🔖 Explanation.**
 
 > 프로젝트를 진행하는 과정에서 느낀점과 프로젝트 결과물이며,
 >
 > 협업 과정에서 개발 과정 기록을 위해 사용한 Notion과 형상관리를 위한 Github의 링크입니다.
 
-### 👏󠁲󠁳 Lessons Learned.
+**👏󠁲󠁳 Lessons Learned.**
 
 - 의견이 맞는 동기들과 모여서 프로젝트를 진행하였으며, 팀장을 맡아 프로젝트를 진행하였으며, 
   개발의 전반적인 측면을 관리함으로써 개발 기간, 개발 진행, 개발 문서, 팀원 관리, 일정 관리 등 
@@ -603,11 +605,11 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 4. [최종 발표 자료.] [14]
 5. [DB 요구사항 명세서.] [15]
 
-### ✍️ [Depoly address.](https://fitsibang.herokuapp.com/)
+**✍️ [Depoly address.](https://fitsibang.herokuapp.com/)**
 
-### ✍️ [Docs Link.](https://c11.kr/phqs)
+**✍️ [Docs Link.](https://c11.kr/phqs)**
 
-### ✍️ [Code Link.](https://github.com/KGU-Code-15/fit-sibang)
+**✍️ [Code Link.](https://github.com/KGU-Code-15/fit-sibang)**
 
 # 📄 첨부 사항
 
