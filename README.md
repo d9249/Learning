@@ -7,8 +7,6 @@
 
  </div>
 
-[TOC]
-
 # Table of contents
 
 - [Lee Sangmin's Portfolio](#lee-sangmins-portfolio)
@@ -21,29 +19,29 @@
   - [🌱 Vue.js](#-vuejs)
   - [**🌱 React.js**](#-reactjs)
 - [📘 University Personal Project.](#-university-personal-project)
-  - [1️⃣ 인공지능 DD313_2221 (Course Date : 2020-01, 김인철 교수님)](#1-인공지능-dd313_2221-course-date-:-2020-01-김인철-교수님)
-  - [2️⃣ 소프트웨어공학  DD316_2223 (Course Date : 2020-01, 권기현 교수님)](#2---dd316_2223-course-date--2020-01--)
-  - [3️⃣ 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)](#3--cs343_2207-course-date--2020-1--)
-  - [4️⃣ 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)](#4--dd812_1838-course-date--2020-2--)
+  - 1️⃣ 인공지능 DD313_2221 (Course Date : 2020-01, 김인철 교수님)
+  - 2️⃣ 소프트웨어공학  DD316_2223 (Course Date : 2020-01, 권기현 교수님)
+  - 3️⃣ 자료구조론 CS343_2207 (Course Date : 2020-1, 김광훈 교수님)
+  - 4️⃣ 지능웹설계 DD812_1838 (Course Date : 2020-2, 정경용 교수님)
 - [📃 Graduation thesis.](#-graduation-thesis)
 - [🔬 Research Activity.](#-research-activity)
   - [💡 Research Interests.](#-research-interests)
-  - [🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )](#-smart-network-internet-of-thing-lab--2020-03---)
-  - [🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )](#-diya-computer-vision-4th--202103---)
-  - [1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.] [03]](#1-imagenet-classification-with-deep-convolutional-neural-networks-03)
-  - [2️⃣ [Network In Network.] [04]](#2-network-in-network-04)
-  - [3️⃣ [Visualizing and Understanding Convolutional Networks.] [05]](#3-visualizing-and-understanding-convolutional-networks-05)
-  - [4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.] [06]](#4-overfeat--inintegrated-recognition-localization-and-detection-using-convolutional-networks-06)
-  - [5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.] [07]](#5-spatial-pyramid-pooling-in-deep-convolutional-networks-for-visual-recognition-07)
-  - [6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.] [08]](#6-very-deep-convolutional-networks-for-large-scale-image-recognition-08)
-  - [7️⃣ [Going Deeper with Convolutions.] [09]](#7-going-deeper-with-convolutions-09)
+  - 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
+  - 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
+  - 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.] [03]
+  - 2️⃣ [Network In Network.] [04]
+  - 3️⃣ [Visualizing and Understanding Convolutional Networks.] [05]
+  - 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.] [06]
+  - 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.] [07]
+  - 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.] [08]
+  - 7️⃣ [Going Deeper with Convolutions.] [09]
 - [✏️ Personal Study.](#-personal-study)
   - [🌱 Algoritms.](#-algoritms)
   - [🌱 Deep Learning.](#-deep-learning)
 - [📕 Team Project.](#-team-project)
   - [📛 Smart Network Internet of Things Lab.](#-smart-network-internet-of-things-lab)
-  - [📛 컴퓨터공학캡스톤디자인 DD822_1558](#--dd822_1558)
-- [📄 첨부 사항](#--)
+  - [📛 컴퓨터공학캡스톤디자인 DD822_1558](#-컴퓨터공학캡스톤디자인-dd822_1558)
+- [📄 첨부 사항](#-첨부-사항)
 
 # 📬 Contact.
 
