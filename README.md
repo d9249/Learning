@@ -1,4 +1,4 @@
-# Lee Sangmin's Portfolio
+# 😄 Lee Sangmin's Portfolio
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 # Table of contents
 
-- [Lee Sangmin's Portfolio](#lee-sangmins-portfolio)
+- [😄 Lee Sangmin's Portfolio](#lee-sangmins-portfolio)
 - [📬 Contact.](#-contact)
 - [ℹ️ Information.](#-information)
 - [💼 Career.](#-career)
@@ -16,7 +16,7 @@
 - [💁🏻 Introdution.](#-introdution)
 - [:computer: Tech stacks.](#computer-tech-stacks)
   - [🌱 Vue.js](#-vuejs)
-  - [**🌱 React.js**](#-reactjs)
+  - [🌱 React.js](#-reactjs)
 - [📘 University Personal Project.](#-university-personal-project)
   - 1️⃣ 인공지능 DD313_2221 (Course Date : 2020-01, 김인철 교수님)
   - 2️⃣ 소프트웨어공학  DD316_2223 (Course Date : 2020-01, 권기현 교수님)
@@ -699,6 +699,8 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [LV3.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV3-Complete-guide-0e477091c1104630ae9dddd14e7cec9e
 [Vue.js Github Link.]:https://github.com/d9249/Inflearn_Vue.js
 [Vue.js Project Depoly address.]:https://happy-panini-26d9b3.netlify.app
+
+------
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
 
