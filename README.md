@@ -216,9 +216,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ["PoseNet을 활용한 헬스 트레이너 웹 서비스"] [1]
 
-학술대회 참가 확인증. [2]
+[학술대회 참가 확인증] [2]
 
-한국정보기술학회 대학생논문경진대회 부문 동상 수상. [16]
+[한국정보기술학회 대학생논문경진대회 부문 동상] [16]
 
 # 🔬 Research Activity.
 
@@ -286,7 +286,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 >
 > Computer Vision Paper Review의 결과를 기록하였습니다.
 
-## 1️⃣ ImageNet Classification with Deep Convolutional Neural Networks.
+## 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phqx](https://c11.kr/phqx))
 
@@ -295,7 +295,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - 2012년 이미지 분류를 위한 크고 심층적인 Convolutional Neural Networks인 AlexNet의 등장으로 기존의 DNN 방식의 fully-connection 방식보다 더 적은 parameter로 효율적인 학습이 가능한 이유에 대해서 알 수 있게되었다.
 - 추가적으로 AlexNet의 기본 구조, 과적합을 줄이기 위한 방법, 이미지 영역에서 CNN이 DNN보다 학습에서 효율적인 이유, 정규화, Pooling, Data Augumentation을 배울 수 있었습니다.
 
-## 2️⃣ Network In Network.
+## 2️⃣ [Network In Network.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phqz](https://c11.kr/phqz))
 
@@ -306,7 +306,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - NIN에서는 Fullyconnected layer(FC layer)를 사용하는 대신 Global Average Pooling(GAP)을 사용하는데 기존의 FC layer를  사용하였는데 이 과정에서 Parameter의 수가 전체 Parameter의 수 중 대부분을 차지하기 때문에 Overfitting 문제가 발생하기 쉬운데 GAP를 사용하여서 이러한 문제를 해결하였습니다.
 - 해당 논문을 통해서 mlpconv, GAP를 배울 수 있었으며, Parameter의 수를 줄여 Overfitting을 피하는 방법과 더 깊은 Network를 생성하는 방법에 대해서 배울 수 있었습니다.
 
-## 3️⃣ Visualizing and Understanding Convolutional Networks.
+## 3️⃣ [Visualizing and Understanding Convolutional Networks.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr0](https://c11.kr/phr0))
 
@@ -324,7 +324,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 - ZFNet을 통해 알게 된 점은 Network의 최적화 문제가 Network 성능에 막대한 영향을 준다는 것을 알게되었으며, 
   이러한 시각화를 사용한 최적화를 통해 네트워크의 성능을 향상 시킬 수 있다는 것을 배울 수 있었습니다.
 
-## 4️⃣ OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.
+## 4️⃣ [OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr2](https://c11.kr/phr2))
 
@@ -344,7 +344,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   하지만 ConvNet을 이용하여 localization/detection까지 통합 시도를 했다는 점에서 의미가 있고, 
   1년 뒤에 마이크로소프트 팀에서 발표할 SPPNet에 맥이 닿아 있다는 점에서 의미가 있는 것 같다.
 
-## 5️⃣ Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.
+## 5️⃣ [Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr4](https://c11.kr/phr4))
 
@@ -365,7 +365,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   SPPNet 이후 대폭 개선된 Fast R-CNN에 대한 궁금증이 생겼습니다.
   추가적으로 여러 이미지의 크기를 고정시키지 않고 Network를 학습시키는 방법에 대해서도 알게 되었습니다.
 
-## 6️⃣ VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION. 
+## 6️⃣ [VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/phr6](https://c11.kr/phr6))
 
@@ -391,7 +391,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
   이러한 conv filter size가 다양하기 때문에 여러 문제마다의 최적화되 conv filter size가 존재할 수도 있겠다라는 것을 
   알 수 있게 되었습니다.
 
-## 7️⃣ Going Deeper with Convolutions.
+## 7️⃣ [Going Deeper with Convolutions.]
 
 ### ✍️ Paper Review Summary Link. ([https://c11.kr/piz8](https://c11.kr/piz8))
 
@@ -652,6 +652,16 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [16] PoseNet을 활용한 헬스 트레이너 웹 서비스 상장.
 
 ["PoseNet을 활용한 헬스 트레이너 웹 서비스"]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B01%5D%20PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf
+[학술대회 참가 확인증]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B02%5D%20%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C%20%EC%B0%B8%EA%B0%80%20%ED%99%95%EC%9D%B8%EC%A6%9D_%EC%9D%B4%EC%83%81%EB%AF%BC.pdf
+[한국정보기술학회 대학생논문경진대회 부문 동상]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B16%5D%20%EB%8F%99%EC%83%81_%EC%9D%B4%EC%83%81%EB%AF%BC_PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf
+[ImageNet Classification with Deep Convolutional Neural Networks.]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B03%5D%20ImageNet_Classification_with_Deep_Convolutional_Neural_Networks.pdf
+[Network In Network.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B04%5D%20Network_In_Network.pdf
+[Visualizing and Understanding Convolutional Networks.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B05%5D%20Visualizing_and_Understanding_Convolutional_Networks.pdf
+[OverFeat : InIntegrated Recognition, Localization and Detection using Convolutional Networks.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B06%5D%20OverFeat__InIntegrated_Recognition_Localization_and_Detection_using_Convolutional_Networks.pdf
+[Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B07%5D%20Spatial_Pyramid_Pooling_in_Deep_Convolutional_Networks_for_Visual_Recognition.pdf
+[VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B08%5D%20VERY_DEEP_CONVOLUTIONAL_NETWORKS_FOR_LARGE-SCALE_IMAGE_RECOGNITION.pdf
+
+[Going Deeper with Convolutions.]:https://github.com/d9249/Portfolio/blob/main/Attachment/%5B09%5D%20Going_deeper_with_convolutions..pdf
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
 
