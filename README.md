@@ -663,9 +663,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [LV2.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV2-Intermediate-ead10ea9a39549edaa234c1149527749
 [LV3.]:https://www.notion.so/ideal96/Inflearn_Age-of-Vue-js-LV3-Complete-guide-0e477091c1104630ae9dddd14e7cec9e
 [Vue.js Project Depoly address]:https://happy-panini-26d9b3.netlify.app/
-[Vue.js Github Link.]:(https://github.com/d9249/Inflearn_Vue.js)
-
-
+[Vue.js Github Link.]:https://github.com/d9249/Inflearn_Vue.js
 
 ### Copyright 2021. Lee Sangmin  All pictures cannot be copied without permission.
 
