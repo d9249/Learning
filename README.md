@@ -1,6 +1,10 @@
 # Lee Sangmin's Portfolio
 
-<img src="https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png" align="center" height="200px" width="200px">
+<div align="center">
+
+<img src="https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png" height="300px" width="300px">
+
+</div>
 
 # Table of contents
 
