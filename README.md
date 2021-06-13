@@ -6,6 +6,7 @@
   
 ## 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
+[![Tistory Blog Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://github.com/d9249/Portfolio)
   
  </div>
   
