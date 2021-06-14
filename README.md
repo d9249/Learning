@@ -25,8 +25,8 @@
 - [📃 Graduation thesis.](#-graduation-thesis)
 - [🔬 Research Activity.](#-research-activity)
   - [💡 Research Interests.](#-research-interests)
-  - 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
-  - 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
+  - 🌿 Smart Network Internet Of Thing Lab.
+  - 🌿 DIYA. Computer Vision 4th.
   - 1️⃣ [ImageNet Classification with Deep Convolutional Neural Networks.]
   - 2️⃣ [Network In Network.]
   - 3️⃣ [Visualizing and Understanding Convolutional Networks.]
@@ -164,7 +164,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 1️⃣ 인공지능 DD313_2221 
 
-**Course Date : 2020-01, 김인철 교수님**
+🗓 **Course Date : 2020-01, 김인철 교수님**
 
 **🔖 Explanation.**
 
@@ -184,7 +184,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 2️⃣ 소프트웨어공학  DD316_2223 
 
-**Course Date : 2020-01, 권기현 교수님**
+🗓 **Course Date : 2020-01, 권기현 교수님**
 
 **🔖 Explanation.**
 
@@ -202,7 +202,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 3️⃣ 자료구조론 CS343_2207
 
-**Course Date : 2020-1, 김광훈 교수님**
+🗓 **Course Date : 2020-1, 김광훈 교수님**
 
 **🔖 Explanation.**
 
@@ -219,7 +219,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 4️⃣ 지능웹설계 DD812_1838
 
-**Course Date : 2020-2, 정경용 교수님**
+🗓 **Course Date : 2020-2, 정경용 교수님**
 
 **🔖 Explanation.**
 
@@ -270,7 +270,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 🌿 Smart Network Internet Of Thing Lab. 
 
-**Period : 2020. 03 ~ 현재**
+🗓 **Period : 2020. 03 ~ 현재**
 
 **📜  Relevant research paper.**
 
@@ -298,7 +298,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 🌿 DIYA. Computer Vision 4th 
 
- **Period : 2021.03 ~ 현재**
+ 🗓 **Period : 2021.03 ~ 현재**
 
 **🔖  Explanation.**
 
@@ -554,12 +554,14 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 > 6월 14일 ~ 7월 31일까지 Deep Learning 을 공부하기 위한 계획입니다.
 
-| Name                                       | Data                    | Check |
-| :----------------------------------------- | :---------------------- | :---: |
-| 쉽고 빠르게 배우는 딥러닝                  | 2021.06.14 ~ 2021.06.20 |       |
-| 모두를 위한 딥러닝 시즌1                   | 2021.06.21 ~ 2021.07.04 |       |
-| 모두를 위한 딥러닝 시즌2                   | 2021.07.05 ~ 2021.07.18 |       |
-| 실전 인공지능으로 이어지는 파이토치 딥러닝 | 2021.07.19 ~ 2021.07.25 |       |
+| Name                                        | **Organization** | Data                    | Check |
+| :------------------------------------------ | ---------------- | :---------------------- | :---: |
+| 대학생 코딩 캠프 7기                        | 코드잇           | 2021.06.23 ~ 2021.08.23 |       |
+| 쉽고 빠르게 배우는 딥러닝                   | 인프런           | 2021.06.14 ~ 2021.06.20 |       |
+| 모두를 위한 딥러닝 시즌1                    | 유투브           | 2021.06.21 ~ 2021.07.04 |       |
+| 모두를 위한 딥러닝 시즌2                    | 유투브           | 2021.07.05 ~ 2021.07.18 |       |
+| 실전 인공지능으로 이어지는 파이토치 딥러닝  | 인프런           | 2021.07.19 ~ 2021.07.25 |       |
+| 실전 인공지능으로 이어지는 딥러닝 개념 잡기 | 인프런           |                         |       |
 
 # 📕 Team Project.
 
