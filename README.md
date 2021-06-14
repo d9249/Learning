@@ -268,7 +268,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 <img src="https://img.shields.io/badge/Convolutional_Neural_Network-000000?style=flat-square&logo=Convolutional_Neural_Network&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Computer_Vision-000000?style=flat-square&logo=Computer_Vision&logoColor=white"/></a>
 
-## 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
+## 🌿 Smart Network Internet Of Thing Lab. 
+
+**Period : 2020. 03 ~ 현재**
 
 **📜  Relevant research paper.**
 
@@ -294,7 +296,9 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 **✍️ [Code Link.](https://github.com/d9249/Undergraduate_researcher)**
 
-## 🌿 DIYA. Computer Vision 4th ( 2021.03 ~ 현재 )
+## 🌿 DIYA. Computer Vision 4th 
+
+ **Period : 2021.03 ~ 현재**
 
 **🔖  Explanation.**
 
