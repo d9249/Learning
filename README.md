@@ -46,10 +46,10 @@
 
 ## 💡 Research Interests
 
-<img src="https://img.shields.io/badge/DeepLearing-000000?style=flat-square&logo=DeepLearing&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/DeepLearing-000000?style=flat-square&logo=Deep_Learing&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Generative_Adversarial_Network-000000?style=flat-square&logo=Generative_Adversarial_Network&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Convolutional_Neural_Network-000000?style=flat-square&logo=Convolutional_Neural_Network&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/ComputerVision-000000?style=flat-square&logo=ComputerVision&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/ComputerVision-000000?style=flat-square&logo=Computer_Vision&logoColor=white"/></a>
 
 ## :globe_with_meridians: Stats
 
