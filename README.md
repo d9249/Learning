@@ -263,7 +263,10 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 ## 💡 Research Interests.
 
-> Deep Learning (Convolutional Neural Network, Computer Vision, GAN)
+<img src="https://img.shields.io/badge/Deep_Learing-000000?style=flat-square&logo=Deep_Learing&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Generative_Adversarial_Network-000000?style=flat-square&logo=Generative_Adversarial_Network&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Convolutional_Neural_Network-000000?style=flat-square&logo=Convolutional_Neural_Network&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Computer_Vision-000000?style=flat-square&logo=Computer_Vision&logoColor=white"/></a>
 
 ## 🌿 Smart Network Internet Of Thing Lab. ( 2020. 03 ~ 현재 )
 
