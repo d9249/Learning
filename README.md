@@ -1,5 +1,5 @@
 # DeepLearning-for-All-Season1.
-> 모두를 위한 머신러닝/딥러닝 시즌 1.
+> [모두를 위한 머신러닝/딥러닝 시즌 1.](https://hunkim.github.io/ml/)
 
 ## 시즌 1 - 딥러닝의 기본 (TF 1.X lab 완료!) [비디오 리스트](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&index=2)
 - 수업에 사용하는 코드 https://github.com/hunkim/DeepLearningZeroToAll
