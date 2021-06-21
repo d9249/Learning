@@ -1,7 +1,7 @@
 # DeepLearning-for-All-Season1.
-Deep Learning Season 1 for All.
+> 모두를 위한 머신러닝/딥러닝 시즌 1.
 
-시즌 1 - 딥러닝의 기본 (TF 1.X lab 완료!) 비디오 리스트
+## 시즌 1 - 딥러닝의 기본 (TF 1.X lab 완료!) [비디오 리스트](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm&index=2)
 - 수업에 사용하는 코드 https://github.com/hunkim/DeepLearningZeroToAll
 - 수업의 개요 [비디오](https://www.youtube.com/watch?v=BS6O0zOGX4E) [슬라이드](https://hunkim.github.io/ml/lec0.pdf)
 - 머신러닝의 개념과 용어 [비디오](https://www.youtube.com/watch?v=qPMeuL2LIqY) (TensorFlow의 기본 [Lab 비디오](https://www.youtube.com/watch?v=-57Ne86Ia8w) ) [강의 슬라이드](https://hunkim.github.io/ml/lec1.pdf) [Lab 슬라이드](https://docs.google.com/presentation/d/137IlT2N3AYcclqxNuc8j9RDrIeHiYkSZ5JPg_vg9Jqk/edit#slide=id.g1d115b0ec5_0_215)
@@ -56,3 +56,29 @@ Deep Learning Season 1 for All.
 - [보너스] Deep Deep Network AWS 에서 GPU와 돌려보기 (powered by AWS) [실습 슬라이드](https://hunkim.github.io/ml/lab13.pdf) [비디오](https://www.youtube.com/watch?v=9VckXVoJEe0&feature=youtu.be)
 - [보너스2] AWS에서 저렴하게 Spot Instance를 터미네이션 걱정없이 사용하기 (powered by AWS) [실습 슬라이드](https://hunkim.github.io/ml/lab14-aws_spot_instance.pdf) [비디오](https://www.youtube.com/watch?v=orIXr5xd6P0)
 - [보너스3] Google Cloud ML을 이용해 TensorFlow 실행하기 [실습 슬라이드](https://github.com/hunkim/GoogleCloudMLExamples/blob/master/Google%20Cloud%20ML.pdf) [비디오 (한글)](https://www.youtube.com/watch?v=8Jkz2HexDAM) [비디오 (영어)](https://www.youtube.com/watch?v=EIRD3HAp-QQ)
+
+## 시즌 RL - Deep Reinforcement Learning
+[비디오 리스트](https://www.youtube.com/watch?v=dZ4vw6v3LcA&list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG&index=2)
+- Lecture 1: 수업의 개요 [비디오](https://www.youtube.com/watch?v=dZ4vw6v3LcA) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl01.pdf)
+- Lecture 2: OpenAI GYM 게임해보기 [비디오](https://www.youtube.com/watch?v=xgoO54qN4lY) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl02.pdf)
+  - Lab 2: OpenAI GYM 게임해보기 [실습 비디오](https://www.youtube.com/watch?v=xvDAURQVDhk&feature=youtu.be) [실습슬라이드](https://hunkim.github.io/ml/RL/rl-l02.pdf)
+Lecture 3: Dummy Q-learning (table) [비디오](https://www.youtube.com/watch?v=Vd-gmo-qO5E) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl03.pdf)
+  - Lab 3: Dummy Q-learning (table) [비디오](https://www.youtube.com/watch?v=yOBKtGU6CG0) [실습슬라이드](https://hunkim.github.io/ml/RL/rl-l03.pdf)
+Lecture 4: Q-learning exploit&exploration and discounted reward [비디오](https://www.youtube.com/watch?v=MQ-3QScrFSI) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl04.pdf)
+  - Lab 4: Q-learning exploit&exploration and discounted reward [비디오](https://www.youtube.com/watch?v=VYOq-He90bE) [실습슬라이드](https://hunkim.github.io/ml/RL/rl-l04.pdf)
+Lecture 5: Q-learning in non-deterministic world [비디오](https://www.youtube.com/watch?v=6KSf-j4LL-c) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl05.pdf)
+  - Lab 5: Q-learning in non-deterministic world [비디오](https://www.youtube.com/watch?v=ZCumo_6qTsU) [실습슬라이드](https://hunkim.github.io/ml/RL/rl-l05.pdf)
+  - Lab 5-1: Q-learning web Demo [비디오](https://www.youtube.com/watch?v=B-CZv9WD5eM)
+Lecture 6: Q-Network [비디오](https://www.youtube.com/watch?v=w9GwqPx7LW8) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl06.pdf)
+  - Lab 6-1: Q Network for Frozen Lake [비디오](https://www.youtube.com/watch?v=Fcmgl8ow2Uc) [실습슬라이드](https://hunkim.github.io/ml/RL/rl06-l1.pdf)
+  - Lab 6-2: Q Network for Cart Pole [비디오](https://www.youtube.com/watch?v=MF_Wllw9VKk) [실습슬라이드](https://hunkim.github.io/ml/RL/rl06-l2.pdf)
+Lecture 7: DQN [비디오](https://www.youtube.com/watch?v=S1Y9eys2bdg&feature=youtu.be) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl07.pdf)
+  - Lab 7-1: DQN 1 (NIPS 2013) [비디오](https://www.youtube.com/watch?v=Fbf9YUyDFww&feature=youtu.be) [실습슬라이드](https://hunkim.github.io/ml/RL/rl07-l1.pdf)
+  - Lab 7-2: DQN 2 (Nature 2015) [비디오](https://www.youtube.com/watch?v=ByB49iDMiZE&feature=youtu.be) [실습슬라이드](https://hunkim.github.io/ml/RL/rl07-l2.pdf)
+  - Lab 7-3: DQN Cart Pole Demo [비디오](https://www.youtube.com/watch?v=TdA0APWRCx0&list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG&index=15)
+  - Lab 7-4: DQN Simple Pacman Demo (여러분은 최고 몇점까지 갈수 있나요?) [비디오](https://www.youtube.com/watch?v=SJQEWgkvBvo)
+
+## 시즌 NLP - Deep NLP (TBA)
+- Lec 0: 수업의 개요 [비디오](https://www.youtube.com/watch?v=O9THzrcCLoA) [슬라이드](https://hunkim.github.io/ml/s2-lec00.pdf)
+  - Bot lab1-1: API.ai의 개념 [비디오](https://www.youtube.com/watch?v=jF70X0tUzV8)
+  - Bot lab1-2: API.ai 사용해보기 [비디오](https://www.youtube.com/watch?v=jBnzfLGcn5o)
