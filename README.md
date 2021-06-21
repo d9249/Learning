@@ -57,8 +57,7 @@
 - [보너스2] AWS에서 저렴하게 Spot Instance를 터미네이션 걱정없이 사용하기 (powered by AWS) [실습 슬라이드](https://hunkim.github.io/ml/lab14-aws_spot_instance.pdf) [비디오](https://www.youtube.com/watch?v=orIXr5xd6P0)
 - [보너스3] Google Cloud ML을 이용해 TensorFlow 실행하기 [실습 슬라이드](https://github.com/hunkim/GoogleCloudMLExamples/blob/master/Google%20Cloud%20ML.pdf) [비디오 (한글)](https://www.youtube.com/watch?v=8Jkz2HexDAM) [비디오 (영어)](https://www.youtube.com/watch?v=EIRD3HAp-QQ)
 
-## 시즌 RL - Deep Reinforcement Learning
-[비디오 리스트](https://www.youtube.com/watch?v=dZ4vw6v3LcA&list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG&index=2)
+## 시즌 RL - Deep Reinforcement Learning [비디오 리스트](https://www.youtube.com/watch?v=dZ4vw6v3LcA&list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG&index=2)
 - Lecture 1: 수업의 개요 [비디오](https://www.youtube.com/watch?v=dZ4vw6v3LcA) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl01.pdf)
 - Lecture 2: OpenAI GYM 게임해보기 [비디오](https://www.youtube.com/watch?v=xgoO54qN4lY) [강의 슬라이드](https://hunkim.github.io/ml/RL/rl02.pdf)
   - Lab 2: OpenAI GYM 게임해보기 [실습 비디오](https://www.youtube.com/watch?v=xvDAURQVDhk&feature=youtu.be) [실습슬라이드](https://hunkim.github.io/ml/RL/rl-l02.pdf)
