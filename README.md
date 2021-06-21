@@ -1,7 +1,7 @@
 ### Inflearn_Deep-Learning-Concepts-Lead-to-Real-Artificial-Intelligence
 > Deep Learning Concepts Lead to Real Artificial Intelligence.
 
-[Inflearn Link](https://www.inflearn.com/course/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%85%90/dashboard)
+[Inflearn Link](https://www.inflearn.com/course/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EA%B0%9C%EB%85%90/dashboard), [Notion Summary Link](https://www.notion.so/ideal96/Inflearn_-81cbc2c2e2dc41c68e5b1d5c1b1fb7fd)
 
 ### Curriculum
 
