@@ -3,8 +3,8 @@ Deep Learning Season 1 for All.
 
 시즌 1 - 딥러닝의 기본 (TF 1.X lab 완료!) 비디오 리스트
 - 수업에 사용하는 코드 https://github.com/hunkim/DeepLearningZeroToAll
-- 수업의 개요 비디오  슬라이드 
-- 머신러닝의 개념과 용어 비디오  (TensorFlow의 기본 Lab 비디오 ) 강의 슬라이드  Lab 슬라이드 
+- 수업의 개요 [비디오](https://www.youtube.com/watch?v=BS6O0zOGX4E) [슬라이드](https://hunkim.github.io/ml/lec0.pdf)
+- 머신러닝의 개념과 용어 [비디오](https://www.youtube.com/watch?v=qPMeuL2LIqY) (TensorFlow의 기본 [Lab 비디오](https://www.youtube.com/watch?v=-57Ne86Ia8w) ) [강의 슬라이드](https://hunkim.github.io/ml/lec1.pdf) [Lab 슬라이드](https://docs.google.com/presentation/d/137IlT2N3AYcclqxNuc8j9RDrIeHiYkSZ5JPg_vg9Jqk/edit#slide=id.g1d115b0ec5_0_215)
 - Linear Regression 의 개념 비디오  (TensorFlow 로 구현 Lab 비디오 ) 강의 슬라이드  Lab 슬라이드 
 - Linear Regression cost함수 최소화 비디오  (TensorFlow 로 구현 Lab 비디오 ) 강의 슬라이드  Lab 슬라이드 
 - 여러개의 입력(feature)의 Linear Regression 비디오  (TensorFlow 로 구현 Lab1 비디오 ) (파일 데이타 로딩 Lab2 비디오 ) 강의 슬라이드  Lab 슬라이드 
