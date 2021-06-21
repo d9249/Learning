@@ -9,9 +9,9 @@ Deep Learning Season 1 for All.
 - Linear Regression cost함수 최소화 비디오  (TensorFlow 로 구현 Lab 비디오 ) 강의 슬라이드  Lab 슬라이드 
 - 여러개의 입력(feature)의 Linear Regression 비디오  (TensorFlow 로 구현 Lab1 비디오 ) (파일 데이타 로딩 Lab2 비디오 ) 강의 슬라이드  Lab 슬라이드 
 - Logistic (Regression) Classification 강의 슬라이드  실습 슬라이드 
--- Hypothesis 함수 소개 비디오 
--- Cost 함수 소개 비디오 
-- TensorFlow 에서의 구현 비디오 
+  - Hypothesis 함수 소개 비디오 
+  - Cost 함수 소개 비디오 
+  - TensorFlow 에서의 구현 비디오 
 - Softmax Regression (Multinomial Logistic Regression) 슬라이드  실습 슬라이드 
 - Multinomial 개념 소개 비디오 
 - Cost 함수 소개 비디오 
