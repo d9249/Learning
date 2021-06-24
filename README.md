@@ -40,6 +40,8 @@ Section 1. 머신 러닝 기본기
   - 머신 러닝에 미분이 필요한 이유
 
 Section 2. 기본 지도 학습 알고리즘들
+01. 선형 회귀 (Linear Regression)
+- 선형 회귀
 
 Section 3. 머신 러닝, 더 빠르고 정확하게
 
