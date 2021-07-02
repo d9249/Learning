@@ -635,7 +635,7 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 📛 Project Name : fit-sibang Version 1.0.0
 
-1. 컴퓨터공학캡스톤디자인 26팀 중 5등 수상
+1. 컴퓨터공학캡스톤디자인 장려상 수상 [17](https://github.com/d9249/Portfolio/blob/main/Attachment/%5B17%5D%20Code-15%20AI%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%B2%E1%84%90%E1%85%A5%E1%84%80%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%A8%E1%84%87%E1%85%AE%20%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%85%E1%85%A7%E1%84%89%E1%85%A1%E1%86%BC.jpeg)
 2. ["PoseNet을 활용한 헬스 트레이너 웹 서비스"] [1] 
    1. "PoseNet을 활용한 헬스 트레이너 웹 서비스" 투고 완료. 
    2. [한국정보기술학회 대학생논문경진대회 부문 동상] [16]
@@ -696,6 +696,8 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 [15] DB 요구사항 명세서
 
 [16] PoseNet을 활용한 헬스 트레이너 웹 서비스 상장.
+
+[17] Code-15 AI컴퓨터공학부 장려상.
 
 ["PoseNet을 활용한 헬스 트레이너 웹 서비스"]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B01%5D%20PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf
 [학술대회 참가 확인증]: https://github.com/d9249/Portfolio/blob/main/Attachment/%5B02%5D%20%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C%20%EC%B0%B8%EA%B0%80%20%ED%99%95%EC%9D%B8%EC%A6%9D_%EC%9D%B4%EC%83%81%EB%AF%BC.pdf
