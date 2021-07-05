@@ -6,7 +6,7 @@
 
 </div>
 
-# Table of contents
+# Table of contents.
 
 - [😄 Lee Sangmin's Portfolio](#lee-sangmins-portfolio)
 - [📬 Contact.](#-contact)
