@@ -158,6 +158,20 @@ DIYA라는 연합동아리에서 Computer Vision 4기로 활동하고 있습니�
 
 **✍️ [Github Link.](https://github.com/d9249/NomardCoders_nwitter)**
 
+## ** 🌱 Deep Learning **
+
+**🔖 Explanation.**
+
+> 설명
+
+**🙏🏻 Lessons Learned.**
+
+- 인프런, 코드잇
+
+**✍️ [Depoly address.]()**
+
+**✍️ [Github Link.]()**
+
 # 📘 University Personal Project.
 
 > 2019 ~ 2021년 동안 진행한 개인 프로젝트의 결과들을 정리해둔 결과입니다.
