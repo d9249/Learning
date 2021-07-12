@@ -16,10 +16,6 @@
 [[Paper.]](https://arxiv.org/pdf/1911.08718v2.pdf)
 [[Code.]](https://github.com/vinthony/ghost-free-shadow-removal)
 
-## 5. 
-[[Paper.]]()
-[[Code.]]()
-
 ## 하나의 idea
 1. 그림자 매트의 경우 하나의 이미지안에 화이트화소와 블랙화소만 존재하기때문에 사물의 객체의 영역만 필요하지않을까?
 
