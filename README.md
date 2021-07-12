@@ -23,6 +23,9 @@
 ## 하나의 idea
 1. 그림자 매트의 경우 하나의 이미지안에 화이트화소와 블랙화소만 존재하기때문에 사물의 객체의 영역만 필요하지않을까?
 
+![image](https://user-images.githubusercontent.com/60354713/125323208-7fd2c700-e379-11eb-8739-b4905e309770.png)
+
+
 Mask R-CNN
 [[Paper.]](https://arxiv.org/pdf/1703.06870.pdf)
 [[Code.]]()
