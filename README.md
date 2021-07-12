@@ -12,13 +12,20 @@
 [[Paper.]](https://arxiv.org/pdf/2103.12997v1.pdf)
 [[Code.]](https://github.com/hhqweasd/G2R-ShadowNet)
 
-## 4. 
-[[Paper.]]()
-[[Code.]]()
+## 4. Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN
+[[Paper.]](https://arxiv.org/pdf/1911.08718v2.pdf)
+[[Code.]](https://github.com/vinthony/ghost-free-shadow-removal)
 
 ## 5. 
 [[Paper.]]()
 [[Code.]]()
 
-하나의 idea
+## 하나의 idea
 1. 그림자 매트의 경우 하나의 이미지안에 화이트화소와 블랙화소만 존재하기때문에 사물의 객체의 영역만 필요하지않을까?
+
+[[Paper.]](https://arxiv.org/pdf/1703.06870.pdf)
+[[Code.]]()
+
+TensorMask: A Foundation for Dense Object Segmentation
+[[Paper.]](https://arxiv.org/pdf/1903.12174v2.pdf)
+[[Code.]](https://github.com/facebookresearch/detectron2/tree/master/projects/TensorMask)
