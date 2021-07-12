@@ -23,9 +23,14 @@
 ## 하나의 idea
 1. 그림자 매트의 경우 하나의 이미지안에 화이트화소와 블랙화소만 존재하기때문에 사물의 객체의 영역만 필요하지않을까?
 
+Mask R-CNN
 [[Paper.]](https://arxiv.org/pdf/1703.06870.pdf)
 [[Code.]]()
 
 TensorMask: A Foundation for Dense Object Segmentation
 [[Paper.]](https://arxiv.org/pdf/1903.12174v2.pdf)
 [[Code.]](https://github.com/facebookresearch/detectron2/tree/master/projects/TensorMask)
+
+2. 웹 개발의 기술중 글자의 그림자를 생성하는 기능을 활용한다면, 글자에 따라서 충분한 양의 데이터셋을 만들수 있지않을까?
+
+![image](https://user-images.githubusercontent.com/60354713/125323144-6cbff700-e379-11eb-9425-da0ebced3600.png)
