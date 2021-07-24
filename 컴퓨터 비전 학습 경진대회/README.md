@@ -2,9 +2,9 @@
 
 DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 기록하기 위한 레포지토리 입니다.
 
-[DACON 컴퓨터 비전 학습 경진대회](https://dacon.io/competitions/open/235626/overview/description)
+[DACON 컴퓨터 비전 학습 경진대회 Link.](https://dacon.io/competitions/open/235626/overview/description)
 
-[DACON 컴퓨터 비전 학습 경진대회 EDA Summary](https://www.notion.so/9233351a081340988f7343eed541aff7)
+[DACON 컴퓨터 비전 학습 경진대회 EDA Summary.](https://www.notion.so/9233351a081340988f7343eed541aff7)
 
 ## Directory structure description
 ```컴퓨터 비전 학습 경진 대회
