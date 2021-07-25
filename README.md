@@ -32,3 +32,13 @@ What I felt as an undergraduate researcher.
 2021 05 15 SAT. "PoseNet을 활용한 헬스 트레이너 웹 서비스"를 작성하여 대학생논문경진대회 부문에 투고.
 
 Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
+
+## External Participation Activities
+
+**산업인공지능 단기집중교육**
+
+날짜 : 2021년 7월 26~27일, 8월 19일~20일
+
+장소 : 한국생산성본부
+
+참여한 프로그램 : 파이썬을 활용한 딥러닝 이해(7월 26일~27일), 산업인공지능 기반 제조 운영관리 실무(8월 19일~20일)
