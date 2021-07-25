@@ -29,7 +29,7 @@ What I felt as an undergraduate researcher.
 
 장 소 : 제주 한화리조트
 
-2021 05 15 SAT. "PoseNet을 활용한 헬스 트레이너 웹 서비스"를 작성하여 대학생논문경진대회 부문 장려상 수상.
+2021 05 15 SAT. "PoseNet을 활용한 헬스 트레이너 웹 서비스"를 작성하여 대학생논문경진대회 부문 상 수상.
 
 Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
 
@@ -37,7 +37,7 @@ Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
 
 **산업인공지능 단기집중교육**
 
-날짜 : 2021년 7월 26~27일, 8월 19일~20일
+날짜 : 2021년 7월 26-27일, 8월 19일-20일
 
 장소 : 한국생산성본부
 
