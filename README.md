@@ -42,3 +42,5 @@ Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
 장소 : 한국생산성본부
 
 참여한 프로그램 : 파이썬을 활용한 딥러닝 이해(7월 26일~27일), 산업인공지능 기반 제조 운영관리 실무(8월 19일~20일)
+
+[Link.](https://raymicro.kr/kpc/smt/2021/202106_ai/)
