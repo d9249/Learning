@@ -29,7 +29,7 @@ What I felt as an undergraduate researcher.
 
 장 소 : 제주 한화리조트
 
-2021 05 15 SAT. "PoseNet을 활용한 헬스 트레이너 웹 서비스"를 작성하여 대학생논문경진대회 부문에 투고.
+2021 05 15 SAT. "PoseNet을 활용한 헬스 트레이너 웹 서비스"를 작성하여 대학생논문경진대회 부문 장려상 수상.
 
 Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
 
