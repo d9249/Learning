@@ -1,11 +1,5 @@
 # 😄 Lee Sangmin's Portfolio
 
-<div align="center">
-
-<img src="https://github.com/d9249/Portfolio/blob/main/Attachment/LeeSangmin.png" height="300px" width="300px">
-
-</div>
-
 # Table of contents.
 
 - [😄 Lee Sangmin's Portfolio](#lee-sangmins-portfolio)
