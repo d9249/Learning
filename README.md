@@ -13,6 +13,16 @@ What I felt as an undergraduate researcher.
 
 2021 04 21 THU. [Network In Network](https://www.notion.so/Network-In-Network-1204aa586bdc4e1eb091ccfa2516a959)
 
+2021 06 25
+
+2021 07 01
+
+2021 07 09 산업인공지능 단기집중교육, ShapeNet, 한국정보기술학회에 투고한 논문
+
+2021 07 15 기계학습 + 논문 2편에 대한 아이디어 ( DACON, Yolo-5, shadow removal detection)
+
+2021 07 21 기계학습 Chapter 1. 발표
+
 ## Academic conference
 
 **콘텐츠융합소프트웨어연구소 한국인터넷정보학회 춘계학술발표대회**
