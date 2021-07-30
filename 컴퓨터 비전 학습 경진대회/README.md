@@ -17,7 +17,7 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 
 ## To do list
 1. Data Argmentation의 필요성 판단.
-2. Model change.
+2. Model change. [Keras model Link.](https://keras.io/ko/applications/)
 
 | Check |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 |
 |:-----:|------------------:|--------------:|--------------:|------------:|:----:|
@@ -41,7 +41,5 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 |       |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 |
 |       |      NASNetMobile |         0.744 |         0.919 |   5,326,716 |   -  |
 |       |       NASNetLarge |         0.825 |         0.960 |  88,949,818 |   -  |
-
-[Keras model Link.](https://keras.io/ko/applications/)
 
 3. 모델의 최적화를 위한 Parameter 조정.
