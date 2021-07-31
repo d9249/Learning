@@ -17,8 +17,8 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 
 ## To do list
 1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
-2. No Data Argmentation, model and optimizer change.
-> 기존 Baseline에서 model, optimizer를 변경하였더니 81%에서 96%로 아주 높은 개선을 볼 수 있었다. (CVLC_05를 통해서 확인.)
+2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인.)
+> 기존 Baseline에서 model, optimizer를 변경하였더니 81%에서 96%로 아주 높은 개선을 볼 수 있었다. 
 3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 진행 중)
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. (CVLC_07을 통해서 진행 중)
 
