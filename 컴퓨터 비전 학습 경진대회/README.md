@@ -16,9 +16,9 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 ``` 
 
 ## To do list
-1. Data Argmentation의 필요성 판단.
-2. Model change. [Keras model Link.](https://keras.io/ko/applications/)
-3. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용.
+1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행)
+2. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 진행.)
+3. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. (CVLC_07을 통해서 진행.)
 
 | Check |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 |
 |:-----:|------------------:|--------------:|--------------:|------------:|:----:|
@@ -38,4 +38,5 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 |       |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 |
 |       |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 |
 
-4. 모델의 최적화를 위한 Parameter 조정. -> 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨.
+4. 모델의 최적화를 위한 Parameter 조정 
+> 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. (CVLC_08을 통해서 진행.)
