@@ -28,7 +28,9 @@ Private Score: 나머지 테스트 데이터로 채점
 > Data Argmentation을 적용한 것과 적용하지 않은 모델을 학습하여 결과를 비교할 예정.
 
 2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
-> 기존 Baseline에서 model, optimizer를 변경하였더니 81%에서 96%로 아주 높은 개선을 볼 수 있었다. 
+> 기존 Baseline에서 model을 변경하였더니, 81%에서 90%의 9%의 향상을 보였고 
+> 
+> 추가적으로optimizer를 변경하였더니 90%에서 96%로 6%의 정확도 향상을 보였다. 
 >
 > Result Link - [Baseline](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20(public-0.81862%2C%20private-0%2C76593).ipynb), [Baseline + model change](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20model%20change%20(public-0.90686%2C%20private-0.89687).ipynb), [Baseline + model change + optimizar change](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20model%20change%20%2B%20optimizer%20change%20(public-0.96078%2C%20private-0.90397).ipynb)
 >
@@ -51,7 +53,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | |   |          ResNet50 |         0.749 |         0.921 |  25,636,712 |   -  | |
 | 0.92857 | 0.90377   |         ResNet101 |         0.764 |         0.928 |  44,707,176 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) |
 | 0.90196 | 0.89568   |         ResNet152 |         0.766 |         0.931 |  60,419,944 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet152(public-0.90196%2C%20private-0.89568).ipynb) |
-| 0.89215 |   0.90076    |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  | |
+| 0.89215 |   0.90076    |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50V2(public-0.89215%2C%20private-0.90076).ipynb) |
 | |      |       ResNet101V2 |         0.772 |         0.938 |  44,675,560 |   -  | |
 | |       |       ResNet152V2 |         0.780 |         0.942 |  60,380,648 |   -  | |
 | |       |         ResNeXt50 |         0.777 |         0.938 |  25,097,128 |   -  | |
