@@ -1,6 +1,6 @@
-# DACON
+# DACON 컴퓨터 비전 학습 경진 대회
 
-DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 기록하기 위한 레포지토리 입니다.
+> 대회의 문제를 해결하기 위해서 진행된 EDA, Code, Submission의 설명 및 기록.
 
 [DACON 컴퓨터 비전 학습 경진대회 Link.](https://dacon.io/competitions/open/235626/overview/description)
 
