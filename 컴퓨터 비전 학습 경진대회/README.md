@@ -25,6 +25,8 @@ Private Score: 나머지 테스트 데이터로 채점
 ## Summary.
 
 1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
+> Data Argmentation을 적용한 것과 적용하지 않은 모델을 학습하여 결과를 비교할 예정.
+
 2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
 > 기존 Baseline에서 model, optimizer를 변경하였더니 81%에서 96%로 아주 높은 개선을 볼 수 있었다. 
 >
