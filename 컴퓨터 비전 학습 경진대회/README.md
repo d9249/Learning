@@ -36,6 +36,12 @@ Private Score: 나머지 테스트 데이터로 채점
 
 3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 진행 중)
 
+> Found 1642 images belonging to 10 classes.
+> 
+> Found 406 images belonging to 10 classes.
+> 
+> Train data set 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
+
 |public| private |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 | Result Link |
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|
 |  |      |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  |
@@ -66,7 +72,7 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > Found 406 images belonging to 10 classes.
 > 
-> Train 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
+> Train data set 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
 
 | val_accuracy |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 |
 |:-----:|------------------:|--------------:|--------------:|------------:|:----:|
