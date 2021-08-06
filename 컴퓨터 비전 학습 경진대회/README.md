@@ -38,7 +38,7 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > 정확도를 더욱 향상 시킬 수 있을것이라고 생각되어 진행하였다.
 
-3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 진행 중)
+3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
 > Found 1642 images belonging to 10 classes.
 > 
