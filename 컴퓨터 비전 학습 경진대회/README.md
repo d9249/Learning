@@ -36,10 +36,10 @@ Result - [Baseline Result Link](https://github.com/d9249/DACON/blob/main/%EC%BB%
 
 |public| private |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 | Result Link |
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|
-| 0.92857 |   0.90377   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) |
+|  |      |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  |
 | |      |             VGG19 |         0.713 |         0.900 | 143,667,240 |  26  | |
 | |   |          ResNet50 |         0.749 |         0.921 |  25,636,712 |   -  | |
-| |    |         ResNet101 |         0.764 |         0.928 |  44,707,176 |   -  | |
+| 0.92857 | 0.90377   |         ResNet101 |         0.764 |         0.928 |  44,707,176 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) |
 | |    |         ResNet152 |         0.766 |         0.931 |  60,419,944 |   -  | |
 | |       |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  | |
 | |      |       ResNet101V2 |         0.772 |         0.938 |  44,675,560 |   -  | |
