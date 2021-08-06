@@ -15,6 +15,13 @@ DIYA Computer Vision 4기에서 컴퓨터 비전 관련 프로젝트를 진행, 
 └── Submission (DACON 컴퓨터 비전 학습 경진대회에 제출한 CSV 파일)
 ``` 
 
+## Rules.
+Public Score: 전체 테스트 데이터 중 1%로 채점
+
+Private Score: 나머지 테스트 데이터로 채점
+
+외부데이터 사용 불가, 사전학습모델 (pretrained model) 사용 불가
+
 ## Summary.
 
 1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
