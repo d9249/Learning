@@ -65,8 +65,11 @@ Private Score: 나머지 테스트 데이터로 채점
 >
 > 11개의 model을 ensemble 한 결과 - public-0.94607, private-0.93317로 private의 성능 향상을 보였다. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Eleven_model_ensemble(public-0.94607%2C%20private-0.93317).ipynb)
 
-> 15개의 모델을 비교하려하였는데, VGG16, VGG19, ResNeXt50, ResNeXt101 4개의 model의 error가 있어서 학습을 중단하였으며,
-> 기존의 사용하려했던 15개의 모델 중 11개의 모델로 충분히 여러개의 모델을 사용하여 결과를 내는 것에 대한 정확도 향상을 볼 수 있다고 판단하여, 11개의 모델의 ensemble 결과를 내었다.
+> 15개의 모델을 비교하려하였는데, VGG16, VGG19, ResNeXt50, ResNeXt101 4개의 model running error가 있어서 학습을 중단하였으며,
+> 
+> 기존의 사용하려했던 15개의 모델 중 11개의 모델로 충분히 여러개의 모델을 사용하여 결과를 내는 것에 대한 
+> 
+> 정확도 향상을 볼 수 있다고 판단하여, 11개의 모델의 ensemble 결과를 내었다.
 
 > Found 1642 images belonging to 10 classes.
 > 
