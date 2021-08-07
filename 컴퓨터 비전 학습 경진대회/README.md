@@ -59,7 +59,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X     |         ResNeXt50 |         0.777 |         0.938 |  25,097,128 |   -  | |
 | X |  X     |        ResNeXt101 |         0.787 |         0.943 |  44,315,560 |   -  | |
 | 0.92156 |  0.91640     |       InceptionV3 |         0.779 |         0.937 |  23,851,784 |  159 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_InceptionV3(public-0.92156%2C%20private-0.91640).ipynb) |
-| |       | InceptionResNetV2 |         0.803 |         0.953 |  55,873,736 |  572 | |
+| 0.94117 | 0.91408      | InceptionResNetV2 |         0.803 |         0.953 |  55,873,736 |  572 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_InceptionResNetV2(public-0.94117%2C%20private-0.91408).ipynb) |
 | |       |       DenseNet121 |         0.750 |         0.923 |   8,062,504 |  121 | |
 | |       |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 | |
 | |       |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 | |
