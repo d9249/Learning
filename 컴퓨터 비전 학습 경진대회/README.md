@@ -112,4 +112,4 @@ Private Score: 나머지 테스트 데이터로 채점
 5. 모델의 최적화를 위한 Parameter 조정 
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
 >
-> (CVLC_08을 통해서 진행 예정)
+> (CVLC_08을 통해서 진행 예정이였으나, pre-training on ImageNet된 모델의 가중치를 불러다 쓰기 때문에 대회의 규칙상 pre-training을 사용하면 안되기 때문에 취소하였다.)
