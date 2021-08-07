@@ -30,7 +30,7 @@ Private Score: 나머지 테스트 데이터로 채점
 2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
 > 기존 Baseline에서 model을 변경하였더니, 81%에서 90%의 9%의 향상을 보였고 
 > 
-> 추가적으로optimizer를 변경하였더니 90%에서 96%로 6%의 정확도 향상을 보였다. 
+> 추가적으로 optimizer의 세부 parameter를 변경하였더니 90%에서 96%로 6%의 정확도 향상을 보였다. 
 >
 > Result Link - [Baseline](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20(public-0.81862%2C%20private-0%2C76593).ipynb), [Baseline + model change](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20model%20change%20(public-0.90686%2C%20private-0.89687).ipynb), [Baseline + model, optimizar change](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_05_baseline%20model%20change%20%2B%20optimizer%20change%20(public-0.96078%2C%20private-0.90397).ipynb)
 >
