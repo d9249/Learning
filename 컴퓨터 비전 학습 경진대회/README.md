@@ -53,7 +53,7 @@ Private Score: 나머지 테스트 데이터로 채점
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|
 | X |  X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  |
 | X |  X    |             VGG19 |         0.713 |         0.900 | 143,667,240 |  26  | |
-| |   |          ResNet50 |         0.749 |         0.921 |  25,636,712 |   -  | |
+| 0.93137 | 0.90930  |          ResNet50 |         0.749 |         0.921 |  25,636,712 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50(public-0.93137%2C%20private-0.90930).ipynb) |
 | 0.92857 | 0.90377   |         ResNet101 |         0.764 |         0.928 |  44,707,176 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) |
 | 0.90196 | 0.89568   |         ResNet152 |         0.766 |         0.931 |  60,419,944 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet152(public-0.90196%2C%20private-0.89568).ipynb) |
 | 0.89215 |   0.90076    |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50V2(public-0.89215%2C%20private-0.90076).ipynb) |
