@@ -38,6 +38,9 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > 정확도를 더욱 향상 시킬 수 있을것이라고 생각되어 진행하였다.
 
+![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
+![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
+
 3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
 > Found 1642 images belonging to 10 classes.
@@ -63,6 +66,10 @@ Private Score: 나머지 테스트 데이터로 채점
 | |       |       DenseNet121 |         0.750 |         0.923 |   8,062,504 |  121 | |
 | |       |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 | |
 | |       |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 | |
+
+![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
+![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
+
 
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
 
