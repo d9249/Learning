@@ -41,7 +41,9 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
 
-3. Model change. [Keras model Link.](https://keras.io/ko/applications/) (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
+3. 1개의 모델을 사용 하여서 개별 모델들의 정확도 판단. [Keras model Link.](https://keras.io/ko/applications/) 
+
+> (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
 > Found 1642 images belonging to 10 classes.
 > 
@@ -71,7 +73,8 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
 ![image](https://user-images.githubusercontent.com/60354713/128607279-6377d969-32fe-4008-a4d0-49232a3b447a.png)
 
-4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
+4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. 
+> (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
 
 > Found 1642 images belonging to 10 classes.
 > 
@@ -109,7 +112,7 @@ Private Score: 나머지 테스트 데이터로 채점
 
 ![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 
-5. 모델의 최적화를 위한 Parameter 조정 
+5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
 >
 > (CVLC_08을 통해서 진행 예정이였으나, pre-training on ImageNet된 모델의 가중치를 불러다 쓰기 때문에 대회의 규칙상 pre-training을 사용하면 안되기 때문에 취소하였다.)
