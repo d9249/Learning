@@ -73,8 +73,6 @@ Private Score: 나머지 테스트 데이터로 채점
 
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
 
-![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
-
 > Found 1642 images belonging to 10 classes.
 > 
 > Found 406 images belonging to 10 classes.
@@ -108,6 +106,8 @@ Private Score: 나머지 테스트 데이터로 채점
 |  0.93842     |       DenseNet121 |         0.750 |         0.923 |   8,062,504 |  121 |
 |  0.93596     |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 |
 |  0.93103     |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 |
+
+![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 
 5. 모델의 최적화를 위한 Parameter 조정 
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
