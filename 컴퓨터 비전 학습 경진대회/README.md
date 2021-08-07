@@ -49,7 +49,7 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > Train data set 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
 
-|public| private |              모델 | 상위-1 정확성 | 상위-5 정확성 |    매개변수 | 깊이 | Result Link |
+| Public accuracy| Private accuracy| Model | Top-1 accuracy | Top-5 accuracy | Parameter | Depth | Result Link |
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|
 | X |  X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  |
 | X |  X    |             VGG19 |         0.713 |         0.900 | 143,667,240 |  26  | |
