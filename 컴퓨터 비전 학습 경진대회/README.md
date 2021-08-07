@@ -69,6 +69,7 @@ Private Score: 나머지 테스트 데이터로 채점
 <div align="center"> 
   ![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 </div>
+
 > 3개의 model을 ensemble 한 결과 - public-0.94607, private-0.93090. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Three_model_ensemble(public-0.94607%2C%20private-0.93090).ipynb)
 >
 > 11개의 model을 ensemble 한 결과 - public-0.94607, private-0.93317로 private의 성능 향상을 보였다. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Eleven_model_ensemble(public-0.94607%2C%20private-0.93317).ipynb)
