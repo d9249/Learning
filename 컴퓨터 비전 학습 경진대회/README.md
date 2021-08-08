@@ -41,7 +41,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
 
-3. 1개의 모델을 사용 하여서 개별 모델들의 정확도 판단. [Keras model Link.](https://keras.io/ko/applications/) 
+3. 1개의 모델을 사용 하여서 개별 모델들의 정확도 판단. [Keras model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications) 
 
 > (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
