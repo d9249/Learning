@@ -41,7 +41,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
 
-3.  Single model을 사용 하여서 개별 모델들의 정확도 판단. [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications) 
+3.  Single model을 사용 하여서 개별 모델들의 정확도 판단. [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
 
 기존의 tensorflow for keras application을 사용하였는데, 아래의 도표는 keras documentation을 참고하여서 작성하였기에 Top-1 acc, Top-5 acc, Parameter, Depth를 추가적으로 다시 알아보아서 수정해야될 것 같습니다.
 
@@ -70,7 +70,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.93137 |  0.91689     |       DenseNet121 |         0.750 |         0.923 |   8,062,504 |  121 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet121(public-0.93137%2C%20private-0.91689).ipynb) | 224x224 | 224x224 |
 | 0.92156 | 0.91285      |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet169(public-0.92156%2C%20private-0.91285).ipynb) | 224x224 | 224x224 |
 | 0.91666 | 0.90940      |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet201(public-0.91666%2C%20private-0.90940).ipynb) | 224x224 | 224x224 |
-| X |  X    |             Xception |         0 |         0 | 0 |  0  | | 299x299 | 224x224|
+| X |  X    |             Xception |         0.790 |         0.945 | 22,910,480	 |  126  | | 299x299 | 224x224|
 | X |  X    |             EfficientNetB0 |         0 |         0 |  |  0  | | 224x224 | 224x224|
 | X |  X    |             EfficientNetB1 |         0 |         0 |  |  0  | | 240x240 | 224x224|
 | X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | 260x260 | 224x224|
