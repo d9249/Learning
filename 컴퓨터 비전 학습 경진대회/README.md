@@ -69,14 +69,14 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.92156 | 0.91285      |       DenseNet169 |         0.762 |         0.932 |  14,307,880 |  169 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet169(public-0.92156%2C%20private-0.91285).ipynb) | 224x224 | 224x224 |
 | 0.91666 | 0.90940      |       DenseNet201 |         0.773 |         0.936 |  20,242,984 |  201 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet201(public-0.91666%2C%20private-0.90940).ipynb) | 224x224 | 224x224 |
 | X |  X    |             Xception |         0 |         0 | 0 |  0  | | 299x299 | 224x224|
-| X |  X    |             EfficientNetB0 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB1 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB3 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB4 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB5 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB6 |         0 |         0 |  |  0  | | None | 224x224|
-| X |  X    |             EfficientNetB7 |         0 |         0 |  |  0  | | None | 224x224|
+| X |  X    |             EfficientNetB0 |         0 |         0 |  |  0  | | 224x224 | 224x224|
+| X |  X    |             EfficientNetB1 |         0 |         0 |  |  0  | | 240x240 | 224x224|
+| X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | 260 | 224x224|
+| X |  X    |             EfficientNetB3 |         0 |         0 |  |  0  | | 300 | 224x224|
+| X |  X    |             EfficientNetB4 |         0 |         0 |  |  0  | | 380 | 224x224|
+| X |  X    |             EfficientNetB5 |         0 |         0 |  |  0  | | 456 | 224x224|
+| X |  X    |             EfficientNetB6 |         0 |         0 |  |  0  | | 528 | 224x224|
+| X |  X    |             EfficientNetB7 |         0 |         0 |  |  0  | | 600 | 224x224|
 
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
