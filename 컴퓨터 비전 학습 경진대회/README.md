@@ -61,8 +61,6 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.89215 |   0.90076    |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50V2(public-0.89215%2C%20private-0.90076).ipynb) | 224x224 | 224x224 |
 | 0.91666 |   0.91512   |       ResNet101V2 |         0.772 |         0.938 |  44,675,560 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101V2(public-0.91666%2C%20private-0.91512).ipynb) | 224x224 | 224x224 |
 | 0.89705 |    0.89647   |       ResNet152V2 |         0.780 |         0.942 |  60,380,648 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet152V2(public-0.89705%2C%20private-0.89647).ipynb) | 224x224 | 224x224 |
-| X |  X     |         ResNeXt50 |         0.777 |         0.938 |  25,097,128 |   -  | | 224x224 | 224x224 |
-| X |  X     |        ResNeXt101 |         0.787 |         0.943 |  44,315,560 |   -  | | 224x224 | 224x224 |
 | 0.92156 |  0.91640     |       InceptionV3 |         0.779 |         0.937 |  23,851,784 |  159 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_InceptionV3(public-0.92156%2C%20private-0.91640).ipynb) | 299x299 | 224x224 |
 | 0.94117 | 0.91408      | InceptionResNetV2 |         0.803 |         0.953 |  55,873,736 |  572 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_InceptionResNetV2(public-0.94117%2C%20private-0.91408).ipynb) | 299x299 | 224x224 |
 | |       |       InceptionV3 |         0.779 |         0.937 |  23,851,784 |  159 | [Link]() | 299x299 | 299x299 |
@@ -104,8 +102,6 @@ Private Score: 나머지 테스트 데이터로 채점
 |  0.93350     |        ResNet50V2 |         0.760 |         0.930 |  25,613,800 |   -  |
 |  0.92118    |       ResNet101V2 |         0.772 |         0.938 |  44,675,560 |   -  |
 |  0.93596     |       ResNet152V2 |         0.780 |         0.942 |  60,380,648 |   -  |
-|    X   |         ResNeXt50 |         0.777 |         0.938 |  25,097,128 |   -  |
-|    X   |        ResNeXt101 |         0.787 |         0.943 |  44,315,560 |   -  |
 |  0.94581     |       InceptionV3 |         0.779 |         0.937 |  23,851,784 |  159 |
 |  0.93103     | InceptionResNetV2 |         0.803 |         0.953 |  55,873,736 |  572 |
 |  0.93842     |       DenseNet121 |         0.750 |         0.923 |   8,062,504 |  121 |
