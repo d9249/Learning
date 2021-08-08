@@ -43,6 +43,8 @@ Private Score: 나머지 테스트 데이터로 채점
 
 3.  Single model을 사용 하여서 개별 모델들의 정확도 판단. [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications) 
 
+기존의 tensorflow for keras application을 사용하였는데, 아래의 도표는 keras documentation을 참고하여서 작성하였기에 Top-1 acc, Top-5 acc, Parameter, Depth를 추가적으로 다시 알아보아서 수정해야될 것 같습니다.
+
 > (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
 > Found 1642 images belonging to 10 classes.
@@ -71,12 +73,12 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X    |             Xception |         0 |         0 | 0 |  0  | | 299x299 | 224x224|
 | X |  X    |             EfficientNetB0 |         0 |         0 |  |  0  | | 224x224 | 224x224|
 | X |  X    |             EfficientNetB1 |         0 |         0 |  |  0  | | 240x240 | 224x224|
-| X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | 260 | 224x224|
-| X |  X    |             EfficientNetB3 |         0 |         0 |  |  0  | | 300 | 224x224|
-| X |  X    |             EfficientNetB4 |         0 |         0 |  |  0  | | 380 | 224x224|
-| X |  X    |             EfficientNetB5 |         0 |         0 |  |  0  | | 456 | 224x224|
-| X |  X    |             EfficientNetB6 |         0 |         0 |  |  0  | | 528 | 224x224|
-| X |  X    |             EfficientNetB7 |         0 |         0 |  |  0  | | 600 | 224x224|
+| X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | 260x260 | 224x224|
+| X |  X    |             EfficientNetB3 |         0 |         0 |  |  0  | | 300x300 | 224x224|
+| X |  X    |             EfficientNetB4 |         0 |         0 |  |  0  | | 380x380 | 224x224|
+| X |  X    |             EfficientNetB5 |         0 |         0 |  |  0  | | 456x456 | 224x224|
+| X |  X    |             EfficientNetB6 |         0 |         0 |  |  0  | | 528x528 | 224x224|
+| X |  X    |             EfficientNetB7 |         0 |         0 |  |  0  | | 600x600 | 224x224|
 
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
