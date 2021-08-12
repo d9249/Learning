@@ -75,12 +75,19 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X    |             [Xception]() |         0.790 |         0.945 | 22,910,480	 |  126  | [Link]() | 299x299 | 299x299|
 | X |  X    |             [EfficientNetB0]() |         0 |         0 |  |  0  | [Link]() | 224x224 | 224x224|
 | X |  X    |             [EfficientNetB1]() |         0 |         0 |  |  0  | [Link]() | 240x240 | 224x224|
+| X |  X    |             [EfficientNetB1]() |         0 |         0 |  |  0  | [Link]() | 240x240 | 240x240|
 | X |  X    |             [EfficientNetB2]() |         0 |         0 |  |  0  | [Link]() | 260x260 | 224x224|
+| X |  X    |             [EfficientNetB2]() |         0 |         0 |  |  0  | [Link]() | 260x260 | 260x260|
 | X |  X    |             [EfficientNetB3]() |         0 |         0 |  |  0  | [Link]() | 300x300 | 224x224|
+| X |  X    |             [EfficientNetB3]() |         0 |         0 |  |  0  | [Link]() | 300x300 | 300x300|
 | X |  X    |             [EfficientNetB4]() |         0 |         0 |  |  0  | [Link]() | 380x380 | 224x224|
+| X |  X    |             [EfficientNetB4]() |         0 |         0 |  |  0  | [Link]() | 380x380 | 380x380|
 | X |  X    |             [EfficientNetB5]() |         0 |         0 |  |  0  | [Link]() | 456x456 | 224x224|
+| X |  X    |             [EfficientNetB5]() |         0 |         0 |  |  0  | [Link]() | 456x456 | 456x456|
 | X |  X    |             [EfficientNetB6]() |         0 |         0 |  |  0  | [Link]() | 528x528 | 224x224|
+| X |  X    |             [EfficientNetB6]() |         0 |         0 |  |  0  | [Link]() | 528x528 | 528x528|
 | X |  X    |             [EfficientNetB7]() |         0 |         0 |  |  0  | [Link]() | 600x600 | 224x224|
+| X |  X    |             [EfficientNetB7]() |         0 |         0 |  |  0  | [Link]() | 600x600 | 600x600|
 
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
