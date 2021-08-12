@@ -1,4 +1,4 @@
-# DACON 컴퓨터 비전 학습 경진 대회
+# DACON 컴퓨터 비전 학습 경진 대회.
 
 > 대회의 문제를 해결하기 위해서 진행된 EDA, Code, Submission의 설명 및 기록.
 
@@ -6,7 +6,7 @@
 
 [DACON 컴퓨터 비전 학습 경진대회 EDA Summary.](https://www.notion.so/9233351a081340988f7343eed541aff7)
 
-## Directory structure description
+## Directory structure description.
 ```컴퓨터 비전 학습 경진 대회
 ├── Code(ipynb) (작성, 실험 결과기록을 위한 파일)
 ├── EDA (EDA의 결과기록을 위한 파일)
