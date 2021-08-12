@@ -72,6 +72,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.92156 | 0.91285      |       [DenseNet169](https://drive.google.com/file/d/15kS7_mohTv6xVvr84Of1-H36ql0CjnLe/view?usp=sharing) |         0.762 |         0.932 |  14,307,880 |  169 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet169(public-0.92156%2C%20private-0.91285).ipynb) | 224x224 | 224x224 |
 | 0.91666 | 0.90940      |       [DenseNet201](https://drive.google.com/file/d/1A-tkg-SWwoN1WvGicnEH_nPTWr764wzC/view?usp=sharing) |         0.773 |         0.936 |  20,242,984 |  201 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet201(public-0.91666%2C%20private-0.90940).ipynb) | 224x224 | 224x224 |
 | X |  X    |             [Xception]() |         0.790 |         0.945 | 22,910,480	 |  126  | [Link]() | 299x299 | 224x224|
+| X |  X    |             [Xception]() |         0.790 |         0.945 | 22,910,480	 |  126  | [Link]() | 299x299 | 299x299|
 | X |  X    |             [EfficientNetB0]() |         0 |         0 |  |  0  | [Link]() | 224x224 | 224x224|
 | X |  X    |             [EfficientNetB1]() |         0 |         0 |  |  0  | [Link]() | 240x240 | 224x224|
 | X |  X    |             [EfficientNetB2]() |         0 |         0 |  |  0  | [Link]() | 260x260 | 224x224|
