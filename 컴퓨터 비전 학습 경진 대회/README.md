@@ -58,7 +58,7 @@ Private Score: 나머지 테스트 데이터로 채점
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|:----:|:---------:|
 | X |  X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  | 224x224 | 224x224|
 | X |  X    |             VGG19 |         0.713 |         0.900 | 143,667,240 |  26  | | 224x224 | 224x224|
-| 0.93137 | 0.90930  |          [ResNet50]() |         0.749 |         0.921 |  25,636,712 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50(public-0.93137%2C%20private-0.90930).ipynb) | 224x224 | 224x224 |
+| 0.93137 | 0.90930  |          [ResNet50](https://drive.google.com/file/d/1k8xoKPKdJW1fTpYT1gtHEfRItyuKb0AT/view?usp=sharing) |         0.749 |         0.921 |  25,636,712 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50(public-0.93137%2C%20private-0.90930).ipynb) | 224x224 | 224x224 |
 | 0.92857 | 0.90377   |         [ResNet101](https://drive.google.com/file/d/1L98_1aydEzZuRPfl7CYadLJ9I6K_eM55/view?usp=sharing) |         0.764 |         0.928 |  44,707,176 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) | 224x224 | 224x224 |
 | 0.90196 | 0.89568   |         [ResNet152](https://drive.google.com/file/d/1PSrJRKc4dd8R2FGhifNOku3JkYsl-Ikb/view?usp=sharing) |         0.766 |         0.931 |  60,419,944 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet152(public-0.90196%2C%20private-0.89568).ipynb) | 224x224 | 224x224 |
 | 0.89215 |   0.90076    |        [ResNet50V2](https://drive.google.com/file/d/1qv9lv15CQFarucihFBw0eI6BigjXu-gh/view?usp=sharing) |         0.760 |         0.930 |  25,613,800 |   -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50V2(public-0.89215%2C%20private-0.90076).ipynb) | 224x224 | 224x224 |
@@ -71,15 +71,15 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.93137 |  0.91689     |       [DenseNet121](https://drive.google.com/file/d/1RTz47GS80clxxCi7y8G__Pd4KGbKgzia/view?usp=sharing) |         0.750 |         0.923 |   8,062,504 |  121 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet121(public-0.93137%2C%20private-0.91689).ipynb) | 224x224 | 224x224 |
 | 0.92156 | 0.91285      |       [DenseNet169](https://drive.google.com/file/d/15kS7_mohTv6xVvr84Of1-H36ql0CjnLe/view?usp=sharing) |         0.762 |         0.932 |  14,307,880 |  169 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet169(public-0.92156%2C%20private-0.91285).ipynb) | 224x224 | 224x224 |
 | 0.91666 | 0.90940      |       [DenseNet201](https://drive.google.com/file/d/1A-tkg-SWwoN1WvGicnEH_nPTWr764wzC/view?usp=sharing) |         0.773 |         0.936 |  20,242,984 |  201 | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_DenseNet201(public-0.91666%2C%20private-0.90940).ipynb) | 224x224 | 224x224 |
-| X |  X    |             Xception |         0.790 |         0.945 | 22,910,480	 |  126  | | 299x299 | 224x224|
-| X |  X    |             EfficientNetB0 |         0 |         0 |  |  0  | | 224x224 | 224x224|
-| X |  X    |             EfficientNetB1 |         0 |         0 |  |  0  | | 240x240 | 224x224|
-| X |  X    |             EfficientNetB2 |         0 |         0 |  |  0  | | 260x260 | 224x224|
-| X |  X    |             EfficientNetB3 |         0 |         0 |  |  0  | | 300x300 | 224x224|
-| X |  X    |             EfficientNetB4 |         0 |         0 |  |  0  | | 380x380 | 224x224|
-| X |  X    |             EfficientNetB5 |         0 |         0 |  |  0  | | 456x456 | 224x224|
-| X |  X    |             EfficientNetB6 |         0 |         0 |  |  0  | | 528x528 | 224x224|
-| X |  X    |             EfficientNetB7 |         0 |         0 |  |  0  | | 600x600 | 224x224|
+| X |  X    |             [Xception]() |         0.790 |         0.945 | 22,910,480	 |  126  | [Link]() | 299x299 | 224x224|
+| X |  X    |             [EfficientNetB0]() |         0 |         0 |  |  0  | [Link]() | 224x224 | 224x224|
+| X |  X    |             [EfficientNetB1]() |         0 |         0 |  |  0  | [Link]() | 240x240 | 224x224|
+| X |  X    |             [EfficientNetB2]() |         0 |         0 |  |  0  | [Link]() | 260x260 | 224x224|
+| X |  X    |             [EfficientNetB3]() |         0 |         0 |  |  0  | [Link]() | 300x300 | 224x224|
+| X |  X    |             [EfficientNetB4]() |         0 |         0 |  |  0  | [Link]() | 380x380 | 224x224|
+| X |  X    |             [EfficientNetB5]() |         0 |         0 |  |  0  | [Link]() | 456x456 | 224x224|
+| X |  X    |             [EfficientNetB6]() |         0 |         0 |  |  0  | [Link]() | 528x528 | 224x224|
+| X |  X    |             [EfficientNetB7]() |         0 |         0 |  |  0  | [Link]() | 600x600 | 224x224|
 
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
