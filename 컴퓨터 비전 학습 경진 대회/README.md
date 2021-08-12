@@ -9,11 +9,11 @@
 ## Directory structure description
 ```컴퓨터 비전 학습 경진 대회
 ├── Code(ipynb) (작성, 실험 결과기록을 위한 파일)
-├── EDA (EDA의 결과기록을 위한 파일) 
+├── EDA (EDA의 결과기록을 위한 파일)
+├── References (Code 작성 시 참고한 파일) 
 ├── Problematic code(ipynb) (문제가 있는 코드의 기록을 위한 파일) 
 ├── Submission (DACON 컴퓨터 비전 학습 경진대회에 제출한 CSV 파일)
-├── data (실험에 사용된 데이터)
-└── References (Code 작성 시 참고한 파일) 
+└── data (실험에 사용된 데이터) 
 ``` 
 
 ## Rules.
