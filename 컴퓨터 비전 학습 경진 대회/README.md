@@ -93,6 +93,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
 ![image](https://user-images.githubusercontent.com/60354713/128607279-6377d969-32fe-4008-a4d0-49232a3b447a.png)
 ![image](https://user-images.githubusercontent.com/60354713/129208821-578df996-1032-4d9f-805c-d2fa2e6718b9.png)
+![image](https://user-images.githubusercontent.com/60354713/129292127-9015f403-099b-4d77-bc66-bdd7457f33db.png)
 
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. 
 > (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
