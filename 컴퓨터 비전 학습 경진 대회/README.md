@@ -79,7 +79,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | 0.93137 |  0.91009    |             [Xception](https://drive.google.com/file/d/1I0z8oP-n7ivUQHMyLD7AweJIL5jkXdmO/view?usp=sharing) |         0.790 |         0.945 | 22,910,480	 |  126  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_Xception(Input%20shape-299x299%2C%20public-0.93137%2C%20private-0.91009).ipynb) | 299x299 | 299x299|
 | 0.91666 |  0.89830    |             [EfficientNetB0](https://drive.google.com/file/d/1snbUDflnqcxwPeJpYa0_1WjBu2F6oL_a/view?usp=sharing) |         0.763 |         0.932 | 5.3M |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB0(public-0.91666%2C%20private-0.89830).ipynb) | 224x224 | 224x224|
 | 0.90686 |  0.90032    |             [EfficientNetB1](https://drive.google.com/file/d/1Cla_OLv0V4xY7WfCevEZqw4UMGidJOGA/view?usp=sharing) |         0.788 |         0.944 | 7.8M |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB1(public-0.90686%2C%20private-0.90032).ipynb) | 240x240 | 224x224|
-| X |  X    |             [EfficientNetB1]() |         0.788 |         0.944 |  7.8M  |  -  | [Link]() | 240x240 | 240x240|
+| 0.92647 |  0.90540    |             [EfficientNetB1](https://drive.google.com/file/d/15iwJlkM2Cql7-COytXjrjKTMzBpyouxc/view?usp=sharing) |         0.788 |         0.944 |  7.8M  |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB1(Input%20shape-240x240%2C%20public-0.92647%2C%20private-0.90540).ipynb) | 240x240 | 240x240|
 | 0.74019 |  0.72913    |             [EfficientNetB2](https://drive.google.com/file/d/1dfaBbZsj82JtoPK_V1I_ablnsWVjqD_b/view?usp=sharing) |         0.798 |         0.949 | 9.2M |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB2(public-0.74019%2C%20private-0.72913).ipynb) | 260x260 | 224x224|
 | X |  X    |             [EfficientNetB2]() |         0.798 |         0.949 | 9.2M |  -  | [Link]() | 260x260 | 260x260|
 | X |  X    |             [EfficientNetB3]() |         0.811 |         0.955 | 12M |  -  | [Link]() | 300x300 | 224x224|
@@ -98,6 +98,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128607279-6377d969-32fe-4008-a4d0-49232a3b447a.png)
 ![image](https://user-images.githubusercontent.com/60354713/129208821-578df996-1032-4d9f-805c-d2fa2e6718b9.png)
 ![image](https://user-images.githubusercontent.com/60354713/129292127-9015f403-099b-4d77-bc66-bdd7457f33db.png)
+![image](https://user-images.githubusercontent.com/60354713/129340554-e38cfce1-4632-4596-bdbe-2f681e1002d0.png)
 
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. 
 > (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
