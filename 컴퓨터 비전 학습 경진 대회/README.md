@@ -106,6 +106,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128607279-6377d969-32fe-4008-a4d0-49232a3b447a.png)
 ![image](https://user-images.githubusercontent.com/60354713/129208821-578df996-1032-4d9f-805c-d2fa2e6718b9.png)
 ![image](https://user-images.githubusercontent.com/60354713/129292127-9015f403-099b-4d77-bc66-bdd7457f33db.png)
+![image](https://user-images.githubusercontent.com/60354713/129451711-6bde99b4-cb0c-4c17-b9c9-c745d336e6f2.png)
 ![image](https://user-images.githubusercontent.com/60354713/129341107-a6124e22-0e05-44ed-a6c3-2f2e0462d2aa.png)
 ![image](https://user-images.githubusercontent.com/60354713/129340554-e38cfce1-4632-4596-bdbe-2f681e1002d0.png)
 ![image](https://user-images.githubusercontent.com/60354713/129430592-f298a300-ddcc-470c-b30d-43233d5beac3.png)
