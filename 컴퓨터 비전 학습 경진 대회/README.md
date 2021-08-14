@@ -147,6 +147,43 @@ Private Score: 나머지 테스트 데이터로 채점
 
 ![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 
+25개의 모델을 앙상블하여 결과를 예측할 예정.
+
+| Model             | Private acc | Result Link | Default input size | Input size |
+|-------------------|-------------|-------------|--------------------|------------|
+| VGG16             | 224x224     | 224x224     |                    |            |
+| VGG19             | 224x224     | 224x224     |                    |            |
+| ResNet50          | 0.90930     | [Link]()        | 224x224            | 224x224    |
+| ResNet101         | 0.90377     | [Link]()        | 224x224            | 224x224    |
+| ResNet152         | 0.89568     | [Link]()        | 224x224            | 224x224    |
+| ResNet50V2        | 0.90076     | [Link]()        | 224x224            | 224x224    |
+| ResNet101V2       | 0.91512     | [Link]()        | 224x224            | 224x224    |
+| ResNet152V2       | 0.89647     | [Link]()        | 224x224            | 224x224    |
+| InceptionV3       | 0.91640     | [Link]()        | 299x299            | 224x224    |
+| InceptionResNetV2 | 0.91408     | [Link]()        | 299x299            | 224x224    |
+| InceptionV3       | 0.82831     | [Link]()        | 299x299            | 299x299    |
+| InceptionResNetV2 | 0.74758     | [Link]()        | 299x299            | 299x299    |
+| DenseNet121       | 0.91689     | [Link]()        | 224x224            | 224x224    |
+| DenseNet169       | 0.91285     | [Link]()        | 224x224            | 224x224    |
+| DenseNet201       | 0.90940     | [Link]()        | 224x224            | 224x224    |
+| Xception          | 0.91862     | [Link]()        | 299x299            | 224x224    |
+| Xception          | 0.91009     | [Link]()        | 299x299            | 299x299    |
+| EfficientNetB0    | 0.89830     | [Link]()        | 224x224            | 224x224    |
+| EfficientNetB1    | 0.90032     | [Link]()        | 240x240            | 224x224    |
+| EfficientNetB1    | 0.90540     | [Link]()        | 240x240            | 240x240    |
+| EfficientNetB2    | 0.72913     | [Link]()        | 260x260            | 224x224    |
+| EfficientNetB2    | 0.          | 260x260     | 260x260            |            |
+| EfficientNetB3    | 0.90185     | [Link]()        | 300x300            | 224x224    |
+| EfficientNetB3    | 0.          | 300x300     | 300x300            |            |
+| EfficientNetB4    | 0.91196     | [Link]()        | 380x380            | 224x224    |
+| EfficientNetB4    | 380x380     | 380x380     |                    |            |
+| EfficientNetB5    | 0.90338     | [Link]()        | 456x456            | 224x224    |
+| EfficientNetB5    | 456x456     | 456x456     |                    |            |
+| EfficientNetB6    | 0.91122     | [Link]()        | 528x528            | 224x224    |
+| EfficientNetB6    | 528x528     | 528x528     |                    |            |
+| EfficientNetB7    | 600x600     | 224x224     |                    |            |
+| EfficientNetB7    | 600x600     | 600x600     |                    |            |
+
 5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
 >
