@@ -151,10 +151,10 @@ Private Score: 나머지 테스트 데이터로 채점
 
 | Model             | Private acc | Result Link | Default input size | Input size |
 |-------------------|-------------|-------------|--------------------|------------|
-| VGG16                            |            |  [Link]() | 224x224     | 224x224     |    
-| VGG19                            |            |  [Link]() | 224x224     | 224x224     |    
-| ResNet50          | 0.90930     | [Link]()        | 224x224            | 224x224    |
-| ResNet101         | 0.90377     | [Link]()        | 224x224            | 224x224    |
+| VGG16                            |       X     |   | 224x224     | 224x224     |    
+| VGG19                            |       X     |   | 224x224     | 224x224     |    
+| [ResNet50](https://drive.google.com/file/d/1k8xoKPKdJW1fTpYT1gtHEfRItyuKb0AT/view?usp=sharing)          | 0.90930     | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50(public-0.93137%2C%20private-0.90930).ipynb)        | 224x224            | 224x224    |
+| [ResNet101](https://drive.google.com/file/d/1L98_1aydEzZuRPfl7CYadLJ9I6K_eM55/view?usp=sharing)         | 0.90377     | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb)        | 224x224            | 224x224    |
 | ResNet152         | 0.89568     | [Link]()        | 224x224            | 224x224    |
 | ResNet50V2        | 0.90076     | [Link]()        | 224x224            | 224x224    |
 | ResNet101V2       | 0.91512     | [Link]()        | 224x224            | 224x224    |
@@ -176,13 +176,13 @@ Private Score: 나머지 테스트 데이터로 채점
 | EfficientNetB3    | 0.90185     | [Link]()        | 300x300            | 224x224    |
 | EfficientNetB3    | 0.                           |      [Link]()   | 300x300     | 300x300            | 
 | EfficientNetB4    | 0.91196     | [Link]()        | 380x380            | 224x224    |
-| EfficientNetB4                      |            | [Link]() | 380x380     | 380x380     | 
+| EfficientNetB4                      |      X      |  | 380x380     | 380x380     | 
 | EfficientNetB5    | 0.90338     | [Link]()        | 456x456            | 224x224    |
-| EfficientNetB5                     |            | [Link]() | 456x456     | 456x456     | 
+| EfficientNetB5                     |        X    |  | 456x456     | 456x456     | 
 | EfficientNetB6    | 0.91122     | [Link]()        | 528x528            | 224x224    |
-| EfficientNetB6                     |            | [Link]() | 528x528     | 528x528     |  
-| EfficientNetB7                    |            |  [Link]() | 600x600     | 224x224     |     
-| EfficientNetB7                    |            |  [Link]() | 600x600     | 600x600     | 
+| EfficientNetB6                     |      X      |  | 528x528     | 528x528     |  
+| EfficientNetB7                    |       X     |   | 600x600     | 224x224     |     
+| EfficientNetB7                    |        X    |   | 600x600     | 600x600     | 
 
 5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
