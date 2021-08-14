@@ -93,6 +93,20 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 224x224|
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 600x600|
 
+> EfficientNetB7의 경우, Colab pro GPU memory 부족으로 인해서 학습이 불가합니다.
+> 
+> batch size를 줄인다.
+> 
+> Layer수를 줄인다.
+> 
+> Filter 갯수를 줄인다.
+> 
+> input size를 줄인다.
+> 
+> GPU를 바꾼다.
+>
+> 와 같은 방법들이 있겠지만, 위와 같이 해결하여서 학습을 진행할 경우 지금까지 진행하온 학습의 Parameter와 다르기때문에 진행을 보류하였습니다.
+
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
 ![image](https://user-images.githubusercontent.com/60354713/128607279-6377d969-32fe-4008-a4d0-49232a3b447a.png)
