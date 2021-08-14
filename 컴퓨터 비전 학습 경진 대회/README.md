@@ -88,7 +88,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X    |             [EfficientNetB4]() |         0.826 |         0.963 | 19M |  -  | [Link]() | 380x380 | 380x380|
 | 0.93137 |  0.90338    |             [EfficientNetB5](https://drive.google.com/file/d/1282glNU40sbL_k0PDdIMaHiBsIUpp0KC/view?usp=sharing) |         0.833 |         0.967 | 30M |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB5(public-0.93137%2C%20private-0.90338).ipynb) | 456x456 | 224x224|
 | X |  X    |             [EfficientNetB5]() |         0.833 |         0.967 | 30M |  -  | [Link]() | 456x456 | 456x456|
-| X |  X    |             [EfficientNetB6]() |         0.840 |         0.969 | 43M |  -  | [Link]() | 528x528 | 224x224|
+| 0.95588 |  0.91122    |             [EfficientNetB6](https://drive.google.com/file/d/1jxP49w8mqZKwO1bpapf1VpQ7JV_jMyqd/view?usp=sharing) |         0.840 |         0.969 | 43M |  -  | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_EfficientNetB6(public-0.95588%2C%20private-0.91122).ipynb) | 528x528 | 224x224|
 | X |  X    |             [EfficientNetB6]() |         0.840 |         0.969 | 43M |  -  | [Link]() | 528x528 | 528x528|
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 224x224|
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 600x600|
