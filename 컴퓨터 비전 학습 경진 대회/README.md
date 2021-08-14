@@ -93,9 +93,7 @@ Private Score: 나머지 테스트 데이터로 채점
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 224x224|
 | X |  X    |             [EfficientNetB7]() |         0.844 |         0.971 | 66M |  -  | [Link]() | 600x600 | 600x600|
 
-> EfficientNetB4(380x380), EfficientNetB5(456x456), EfficientNetB6(528x528), EfficientNetB7(224x224), EfficientNetB7(600x600)의 경우, 
-> 
-> Colab pro GPU memory 부족으로 인해서 학습이 불가합니다.
+> EfficientNetB4(380x380), EfficientNetB5(456x456), EfficientNetB6(528x528), EfficientNetB7(224x224), EfficientNetB7(600x600)의 경우, Colab pro GPU memory 부족으로 인해서 학습이 불가합니다.
 > 
 > batch size, Layer수, Filter 갯수, input size를 줄이거나, GPU를 바꾼다 같은 방법들이 있겠지만, 
 > 
