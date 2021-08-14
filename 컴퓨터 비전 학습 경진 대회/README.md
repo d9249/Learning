@@ -109,6 +109,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/129451711-6bde99b4-cb0c-4c17-b9c9-c745d336e6f2.png)
 ![image](https://user-images.githubusercontent.com/60354713/129341107-a6124e22-0e05-44ed-a6c3-2f2e0462d2aa.png)
 ![image](https://user-images.githubusercontent.com/60354713/129340554-e38cfce1-4632-4596-bdbe-2f681e1002d0.png)
+![image](https://user-images.githubusercontent.com/60354713/129451856-f0244363-418b-4c88-8a8f-4c1ee8fb31e1.png)
 ![image](https://user-images.githubusercontent.com/60354713/129430592-f298a300-ddcc-470c-b30d-43233d5beac3.png)
 
 4. 15개의 모델 예측 결과를 이용하여서 예측 빈도가 가장 많이 보이는 숫자를 사용. 
