@@ -28,7 +28,10 @@ Private Score: 나머지 테스트 데이터로 채점
 ## 1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
 > Data Argmentation을 적용한 것과 적용하지 않은 모델을 학습하여 결과를 비교할 예정.
 
-## 2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
+## 2. No Data Argmentation, model and optimizer change.
+
+(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
+
 > 기존 Baseline에서 model을 변경하였더니, 81%에서 90%의 9%의 향상을 보였고 
 > 
 > 추가적으로 optimizer의 세부 parameter를 변경하였더니 90%에서 96%로 6%의 정확도 향상을 보였다. 
@@ -42,9 +45,9 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
 
-## 3.  Individual model - 32 models.(Individual model - 32 models) [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
+## 3.  Individual model - 32 models.(Individual model - 32 models) 
 
-기존의 tensorflow for keras application을 사용하였는데, 아래의 도표는 keras documentation을 참고하여서 작성하였기에 Top-1 acc, Top-5 acc, Parameter, Depth를 추가적으로 다시 알아보아서 수정해야될 것 같습니다.
+[tensorflow keras application model Link](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
 
 > (CVLC_06을 통해서 확인, 아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
 
