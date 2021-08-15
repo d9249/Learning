@@ -6,7 +6,7 @@
 
 [DACON 컴퓨터 비전 학습 경진대회 EDA Summary.](https://www.notion.so/9233351a081340988f7343eed541aff7)
 
-## Directory structure description.
+# Directory structure description.
 ```컴퓨터 비전 학습 경진 대회
 ├── Code(ipynb) (작성, 실험 결과기록을 위한 파일)
 ├── EDA (EDA의 결과기록을 위한 파일)
@@ -16,19 +16,19 @@
 └── data (실험에 사용된 데이터) 
 ``` 
 
-## Rules.
+# Rules.
 Public Score: 전체 테스트 데이터 중 1%로 채점
 
 Private Score: 나머지 테스트 데이터로 채점
 
 외부데이터 사용 불가, 사전학습모델 (pretrained model) 사용 불가
 
-## Summary.
+# Summary.
 
-1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
+## 1. Data Argmentation의 필요성 판단 (CVLC_04를 통해서 진행 중)
 > Data Argmentation을 적용한 것과 적용하지 않은 모델을 학습하여 결과를 비교할 예정.
 
-2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
+## 2. No Data Argmentation, model and optimizer change.(CVLC_05를 통해서 확인. public-0.96078, private-0.90397) 
 > 기존 Baseline에서 model을 변경하였더니, 81%에서 90%의 9%의 향상을 보였고 
 > 
 > 추가적으로 optimizer의 세부 parameter를 변경하였더니 90%에서 96%로 6%의 정확도 향상을 보였다. 
@@ -42,7 +42,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/128587385-446cc2bf-e60c-4957-82c3-a68dcf961985.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587390-c5aea0bc-df91-4eeb-b762-dffb24f3ff86.png)
 
-3.  Individual model - 32 models.(Individual model - 32 models) [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
+## 3.  Individual model - 32 models.(Individual model - 32 models) [tensorflow keras application model Link.](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
 
 기존의 tensorflow for keras application을 사용하였는데, 아래의 도표는 keras documentation을 참고하여서 작성하였기에 Top-1 acc, Top-5 acc, Parameter, Depth를 추가적으로 다시 알아보아서 수정해야될 것 같습니다.
 
@@ -111,7 +111,7 @@ Private Score: 나머지 테스트 데이터로 채점
 ![image](https://user-images.githubusercontent.com/60354713/129451856-f0244363-418b-4c88-8a8f-4c1ee8fb31e1.png)
 ![image](https://user-images.githubusercontent.com/60354713/129430592-f298a300-ddcc-470c-b30d-43233d5beac3.png)
 
-4. Model ensemble
+## 4. Model ensemble
 > (CVLC_07을 통해서 확인. public-0.94607, private-0.93317)
 
 > Found 1642 images belonging to 10 classes.
@@ -128,11 +128,11 @@ Private Score: 나머지 테스트 데이터로 채점
 >
 >  추가적으로 다른 모델들의 학습 시켜서 더 많은 양의 모델을 ensemble할 예정이다.
 
-## model ensemble - 3 models
+### model ensemble - 3 models
 
 > 3개의 model을 ensemble 한 결과 - public-0.94607, private-0.93090. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Three_model_ensemble(public-0.94607%2C%20private-0.93090).ipynb)
 
-## model ensemble - 11 models
+### model ensemble - 11 models
 | val_accuracy |              Model | Top-1 accuracy | Top-5 accuracy |    Parameter | Depth |
 |:-----:|------------------:|--------------:|--------------:|------------:|:----:|
 |   X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |
@@ -153,7 +153,7 @@ Private Score: 나머지 테스트 데이터로 채점
 
 ![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 
-## model ensemble - 25 models
+### model ensemble - 25 models
 
 | Model             | Private acc | Result Link | Default input size | Input size |
 |-------------------|-------------|-------------|--------------------|------------|
@@ -190,10 +190,10 @@ Private Score: 나머지 테스트 데이터로 채점
 | EfficientNetB7                    |       X     |   | 600x600     | 224x224     |     
 | EfficientNetB7                    |        X    |   | 600x600     | 600x600     | 
 
-5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
+## 5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
 > 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
 >
 > (CVLC_08을 통해서 진행 예정이였으나, pre-training on ImageNet된 모델의 가중치를 불러다 쓰기 때문에 대회의 규칙상 pre-training을 사용하면 안되기 때문에 취소하였다.)
 
-6. optimizer의 세부 parameter를 조정하지않고, 기존의 있던 optimizer를 불러서 학습을 진행하여 정확도의 차이를 볼 예정.
+## 6. optimizer의 세부 parameter를 조정하지않고, 기존의 있던 optimizer를 불러서 학습을 진행하여 정확도의 차이를 볼 예정.
 > CVLC_09를 통해서 진행 예정.
