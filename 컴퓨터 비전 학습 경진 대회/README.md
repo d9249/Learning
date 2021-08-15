@@ -110,6 +110,9 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > 위와 같이 해결하여서 학습을 진행할 경우 지금까지 진행하온 학습의 Parameter와 다르기때문에 진행을 보류하였습니다.
 
+> 추가적으로 EfficientNet B0~B7의 default input size의 경우 224~600의 사이즈를 가지며,
+> 위의 작성된 default input size의 경우, 해당 모델의 최적의 input size를 작성해둔 것입니다.
+
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
 ![image](https://user-images.githubusercontent.com/60354713/128587357-7b4bf933-287d-40b7-974e-fecd8c1aa71f.png)
 ![image](https://user-images.githubusercontent.com/60354713/129477711-abd85c89-3eaa-4363-aa0e-e905c2e611d4.png)
