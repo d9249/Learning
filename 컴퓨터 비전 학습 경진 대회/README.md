@@ -65,6 +65,8 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > 기대한 만큼의 성능을 보이지 않았기에 아래의 따로 추가할지는 추후에 결정해야할 것 같습니다. [Result Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_VGG16(public-0.88235%2C%20private-0.86037).ipynb)
 
+![image](https://user-images.githubusercontent.com/60354713/129487849-5370dbd7-3b2e-4369-b436-82d96a764b53.png)
+
 | Public accuracy| Private accuracy| Model (Link : Experiment Results File)| Top-1 accuracy | Top-5 accuracy | Parameter | Depth | Result Link | Default Input Size | Input Size |
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|:----:|:---------:|
 | X |  X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  - | 224x224 | 224x224|
@@ -201,6 +203,9 @@ Private Score: 나머지 테스트 데이터로 채점
 > 25개의 model을 voting ensemble 한 결과 - public-0.94117, private-0.93386로 private의 성능 향상을 보였다. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Twenty-five%20model%20voting%20ensemble(public-0.94117%2C%20private-0.93386).ipynb)
 > 
 > 추가적으로 ImageDataGenerator를 통해서 데이터 증강을 더욱 해당 문제에 최적화하는 방법과, Optimizer를 바꾸어서 학습한 경우 더 높은 성능을 보일 수 있을것같다.
+
+![image](https://user-images.githubusercontent.com/60354713/129487841-90229ce0-62e0-4f81-8a17-389e28470451.png)
+
 
 ## 6. optimizer의 세부 parameter를 조정하지않고, 기존의 있던 optimizer를 불러서 학습을 진행하여 정확도의 차이를 볼 예정.
 > CVLC_09를 통해서 진행 예정.
