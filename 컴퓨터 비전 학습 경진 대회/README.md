@@ -124,19 +124,19 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > Train data set 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
 > 
-> 15개의 모델을 비교하려하였는데, VGG16, VGG19, ResNeXt50, ResNeXt101 4개의 model running error가 있어서 학습을 중단하였으며,
+> 15개의 모델을 비교하려하였는데, VGG16, VGG19 2개의 model running error가 있어서 학습을 중단하였으며,
 > 
-> 기존의 사용하려했던 15개의 모델 중 11개의 모델로 충분히 여러개의 모델을 사용하여 결과를 내는 것에 대한 
+> 기존의 사용하려했던 13개의 모델 중 11개의 모델로 충분히 여러개의 모델을 사용하여 결과를 내는 것에 대한 
 > 
 > 정확도 향상을 볼 수 있다고 판단하여, 11개의 모델의 ensemble 결과를 내었다.
 >
->  추가적으로 다른 모델들의 학습 시켜서 더 많은 양의 모델을 ensemble할 예정이다.
+>  추가적으로 EfficientNet과 Xeption의 학습을 추가로 진행하였고, CVLC_06을 통해서 개별적으로 학습된 모델들을 이용하여서 voting ensemble 하였다.
 
-### model ensemble - 3 models
+### model voting ensemble - 3 models
 
 > 3개의 model을 ensemble 한 결과 - public-0.94607, private-0.93090. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Three_model_ensemble(public-0.94607%2C%20private-0.93090).ipynb)
 
-### model ensemble - 11 models
+### model voting ensemble - 11 models
 | val_accuracy |              Model | Top-1 accuracy | Top-5 accuracy |    Parameter | Depth |
 |:-----:|------------------:|--------------:|--------------:|------------:|:----:|
 |   X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |
@@ -157,7 +157,7 @@ Private Score: 나머지 테스트 데이터로 채점
 
 ![image](https://user-images.githubusercontent.com/60354713/128587281-2a2cf2be-b2ee-4139-aaf5-c715bebb2744.png)
 
-### model ensemble - 25 models
+### model voting ensemble - 25 models
 
 | Model             | Private acc | Result Link | Default input size | Input size |
 |-------------------|-------------|-------------|--------------------|------------|
@@ -194,10 +194,9 @@ Private Score: 나머지 테스트 데이터로 채점
 | EfficientNetB7                    |       X     |   | 600x600     | 224x224     |     
 | EfficientNetB7                    |        X    |   | 600x600     | 600x600     | 
 
-## 5. 모델의 더 높은 정확성를 위한 pre-training weight 사용.
-> 현재 학습은 weights를 설정하지 않고 학습하지만, 추후에 weights를 설정하여서 학습을 진행하게 될 경우 학습의 영향을 미칠 것으로 예상됨. 
->
-> (CVLC_08을 통해서 진행 예정이였으나, pre-training on ImageNet된 모델의 가중치를 불러다 쓰기 때문에 대회의 규칙상 pre-training을 사용하면 안되기 때문에 취소하였다.)
+> 25개의 model을 voting ensemble 한 결과 - public-0.94117, private-0.93386로 private의 성능 향상을 보였다. [Result Link.](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_07_Twenty-five%20model%20voting%20ensemble(public-0.94117%2C%20private-0.93386).ipynb)
+> 
+> 추가적으로 ImageDataGenerator를 통해서 데이터 증강을 더욱 해당 문제에 최적화하는 방법과, Optimizer를 바꾸어서 학습한 경우 더 높은 성능을 보일 수 있을것같다.
 
 ## 6. optimizer의 세부 parameter를 조정하지않고, 기존의 있던 optimizer를 불러서 학습을 진행하여 정확도의 차이를 볼 예정.
 > CVLC_09를 통해서 진행 예정.
