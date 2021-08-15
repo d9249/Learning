@@ -61,6 +61,10 @@ Private Score: 나머지 테스트 데이터로 채점
 > 
 > 깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다.
 
+> VGG16의 경우 학습을 진행하였는데, 다른 모델을 학습하는 방식과 다르게 Dense layer를 추가하여서 학습을 진행한 이유와
+> 
+> 기대한 만큼의 성능을 보이지 않았기에 아래의 따로 추가할지는 추후에 결정해야할 것 같습니다. [Result Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_VGG16(public-0.88235%2C%20private-0.86037).ipynb)
+
 | Public accuracy| Private accuracy| Model (Link : Experiment Results File)| Top-1 accuracy | Top-5 accuracy | Parameter | Depth | Result Link | Default Input Size | Input Size |
 |:-----:|:-----:|------------------:|--------------:|--------------:|------------:|:----:|:---------:|:----:|:---------:|
 | X |  X   |             VGG16 |         0.713 |         0.901 | 138,357,544 |  23  |  - | 224x224 | 224x224|
