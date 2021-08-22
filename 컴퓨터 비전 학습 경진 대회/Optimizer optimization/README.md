@@ -3,16 +3,15 @@
 Baseline parameter.
 
 ```python
-model = DenseNet121 (input size = 224 x 224)
-datagen = ImageDataGenerator(
-                             rescale=1./255, 
-                             validation_split=0.2,
-                             rotation_range=10,
-                             width_shift_range=0.1,
-                             height_shift_range=0.1)
-                             
+model = DenseNet121 (input size = 224x224)
 Batch_size = 32 (dafault)
 epochs = 500
+ImageDataGenerator(
+		rescale = 1./255, 
+   	validation_split = 0.2,
+  	rotation_range = 10,
+    width_shift_range = 0.1,
+		height_shift_range = 0.1)
 ```
 
 [`class Adadelta`](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adadelta): Optimizer that implements the Adadelta algorithm.
