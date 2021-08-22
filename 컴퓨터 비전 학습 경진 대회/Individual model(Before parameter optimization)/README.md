@@ -2,35 +2,27 @@
 
 [tensorflow keras application model Link](https://www.tensorflow.org/api_docs/python/tf/keras/applications), [Keras applications documentation](https://keras.io/ko/applications/)
 
-> (아래의 도표에 모델 마다의 정확도를 나타내었습니다.)
-
-> Found 1642 images belonging to 10 classes.
->
-> Found 406 images belonging to 10 classes.
->
-> Train data set 2048개를 1642개를 train data로 406개를 validation data로 나누어서 학습을 진행하였습니다.
+> Train data set 2048개를 train data(1642개), validation data(406개)로 나누어서 학습을 진행되었으며, ImageDataGenerator을 사용하여서 Data Argmentation을 진행하여 학습에는 Train image = 52544, Validataion image = 12992가 사용되었습니다. 
 
 > 상위-1과 상위-5 정확성은 ImageNet의 검증 데이터셋에 대한 모델의 성능을 가리킵니다.
 >
-> 깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다.
+> 깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다. 
 
-> VGG16, VGG19의 경우 학습을 진행하였는데, 다른 모델을 학습하는 방식과 다르게 Dense layer를 추가하여서 학습을 진행한 이유와
->
-> 기대한 만큼의 성능을 보이지 않았기에 아래의 따로 추가할지는 추후에 결정해야할 것 같습니다. 
->
-> [VGG16(public-0.88235, private-0.86037) Result Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_VGG16(public-0.88235%2C%20private-0.86037).ipynb)
+```python
+datagen = ImageDataGenerator(rescale=1./255, 
+                             validation_split=0.2,
+                             rotation_range=10,
+                             width_shift_range=0.1,
+                             height_shift_range=0.1)
 
-![image](https://user-images.githubusercontent.com/60354713/129487849-5370dbd7-3b2e-4369-b436-82d96a764b53.png)
-
-> [VGG19(public-0.89215, private-0.88991) Result Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_VGG19(public-0.89215%2C%20private-0.88991).ipynb)
-
-![image](https://user-images.githubusercontent.com/60354713/129489742-b6fc475c-8794-4499-b347-3b1f1a68b0e1.png)
+Batch_size = 32(default)
+```
 
 
 | Public accuracy | Private accuracy |                       Model (Link : Experiment Results File) | Top-1 accuracy | Top-5 accuracy |   Parameter | Depth |                         Result Link                          | Default Input Size | Input Size |
 | :-------------: | :--------------: | -----------------------------------------------------------: | -------------: | -------------: | ----------: | :---: | :----------------------------------------------------------: | :----------------: | :--------: |
-|        X        |        X         |                                                        VGG16 |          0.713 |          0.901 | 138,357,544 |  23   |                              -                               |      224x224       |  224x224   |
-|        X        |        X         |                                                        VGG19 |          0.713 |          0.900 | 143,667,240 |  26   |                              -                               |      224x224       |  224x224   |
+|     0.88235     |     0.86037      |                                                        VGG16 |          0.713 |          0.901 | 138,357,544 |  23   |                             Link                             |      224x224       |  224x224   |
+|     0.89215     |     0.88991      |                                                        VGG19 |          0.713 |          0.900 | 143,667,240 |  26   |                             Link                             |      224x224       |  224x224   |
 |     0.92156     |     0.90816      | [ResNet50](https://drive.google.com/file/d/1wPau-IXTl15NRIDe6xSjcMNrYT3jGP8R/view?usp=sharing) |          0.749 |          0.921 |  25,636,712 |   -   | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet50(public-0.92156%2C%20private-0.90816).ipynb) |      224x224       |  224x224   |
 |     0.92857     |     0.90377      | [ResNet101](https://drive.google.com/file/d/1L98_1aydEzZuRPfl7CYadLJ9I6K_eM55/view?usp=sharing) |          0.764 |          0.928 |  44,707,176 |   -   | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet101(public-0.92857%2C%20private-0.90377).ipynb) |      224x224       |  224x224   |
 |     0.90196     |     0.89568      | [ResNet152](https://drive.google.com/file/d/1PSrJRKc4dd8R2FGhifNOku3JkYsl-Ikb/view?usp=sharing) |          0.766 |          0.931 |  60,419,944 |   -   | [Link](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Code(ipynb)/CVLC_06_ResNet152(public-0.90196%2C%20private-0.89568).ipynb) |      224x224       |  224x224   |
@@ -83,3 +75,8 @@
 ![image](https://user-images.githubusercontent.com/60354713/129340554-e38cfce1-4632-4596-bdbe-2f681e1002d0.png)
 ![image](https://user-images.githubusercontent.com/60354713/129451856-f0244363-418b-4c88-8a8f-4c1ee8fb31e1.png)
 ![image](https://user-images.githubusercontent.com/60354713/129430592-f298a300-ddcc-470c-b30d-43233d5beac3.png)
+
+![image](https://user-images.githubusercontent.com/60354713/129489742-b6fc475c-8794-4499-b347-3b1f1a68b0e1.png)
+
+![image](https://user-images.githubusercontent.com/60354713/129487849-5370dbd7-3b2e-4369-b436-82d96a764b53.png)
+
