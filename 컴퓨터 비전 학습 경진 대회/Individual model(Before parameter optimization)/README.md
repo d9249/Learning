@@ -9,13 +9,16 @@
 > 깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다. 
 
 ```python
-datagen = ImageDataGenerator(rescale=1./255, 
+datagen = ImageDataGenerator(
+                             rescale=1./255, 
                              validation_split=0.2,
                              rotation_range=10,
                              width_shift_range=0.1,
                              height_shift_range=0.1)
-
-Batch_size = 32(default)
+                             
+Batch_size = 32 (dafault)
+optimizer = Adam(lr=0.002, epsilon=None)
+epochs = 500
 ```
 
 
