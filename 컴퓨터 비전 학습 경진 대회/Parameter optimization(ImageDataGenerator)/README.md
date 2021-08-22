@@ -2,17 +2,17 @@
 
 Baseline - Individual model(Before parameter optimization)
 
-```python
-model = DenseNet121 (input size = 224x224)
+```markdown
+model = DenseNet121 (input size = 224 x 224)
 Batch_size = 32 (dafault)
 optimizer = Adam(lr=0.002, epsilon=None)
 epochs = 500
 ImageDataGenerator(
 		rescale = 1./255, 
-   	validation_split = 0.2,
-  	rotation_range = 10,
-    width_shift_range = 0.1,
-		height_shift_range = 0.1)
+   	validation_split = 0.X,
+  	rotation_range = X,
+    width_shift_range = 0.X,
+		height_shift_range = 0.X)
 ```
 
 ##### validation_split(rotation_range=10, width_shift_range=0.1, height_shift_range=0.1)
