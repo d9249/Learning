@@ -3,15 +3,17 @@
 Baseline - Individual model(Before parameter optimization)
 
 ```python
-datagen = ImageDataGenerator(rescale=1./255, 
+model = Xception (input size = 224x224)
+datagen = ImageDataGenerator(
+                             rescale=1./255, 
                              validation_split=0.2,
                              rotation_range=10,
                              width_shift_range=0.1,
                              height_shift_range=0.1)
                              
 Batch_size = 32 (dafault)
-optimizer=Adam(lr=0.002,epsilon=None)
-epochs=500
+optimizer = Adam(lr=0.002, epsilon=None)
+epochs = 500
 ```
 
 validation_split(rotation_range=10, width_shift_range=0.1, height_shift_range=0.1)
