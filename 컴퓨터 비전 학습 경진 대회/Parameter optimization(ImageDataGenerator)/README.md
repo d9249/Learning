@@ -8,6 +8,7 @@ datagen = ImageDataGenerator(rescale=1./255,
                              rotation_range=10,
                              width_shift_range=0.1,
                              height_shift_range=0.1)
+Batch_size = 32 (dafault)
 ```
 
 validation_split(rotation_range=10, width_shift_range=0.1, height_shift_range=0.1)
