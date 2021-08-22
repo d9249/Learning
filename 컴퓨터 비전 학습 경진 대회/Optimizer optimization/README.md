@@ -3,7 +3,7 @@
 Baseline parameter.
 
 ```python
-model = Xception (input size = 224 x 224)
+model = DenseNet121 (input size = 224 x 224)
 datagen = ImageDataGenerator(
                              rescale=1./255, 
                              validation_split=0.2,

@@ -3,7 +3,7 @@
 Baseline - Individual model(Before parameter optimization)
 
 ```python
-model = Xception (input size = 224x224)
+model = DenseNet121 (input size = 224x224)
 datagen = ImageDataGenerator(
                              rescale=1./255, 
                              validation_split=0.2,
