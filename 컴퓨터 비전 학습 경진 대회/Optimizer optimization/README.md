@@ -3,13 +3,16 @@
 Baseline parameter.
 
 ```python
-datagen = ImageDataGenerator(rescale=1./255, 
+model = Xception (input size = 224 x 224)
+datagen = ImageDataGenerator(
+                             rescale=1./255, 
                              validation_split=0.2,
                              rotation_range=10,
                              width_shift_range=0.1,
                              height_shift_range=0.1)
-
-Batch_size = 32 (default)
+                             
+Batch_size = 32 (dafault)
+epochs = 500
 ```
 
 [`class Adadelta`](https://www.tensorflow.org/api_docs/python/tf/keras/optimizers/Adadelta): Optimizer that implements the Adadelta algorithm.
