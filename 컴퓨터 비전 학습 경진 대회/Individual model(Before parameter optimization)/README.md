@@ -60,7 +60,7 @@ Batch_size = 32(default)
 >
 > 위와 같이 해결하여서 학습을 진행할 경우 지금까지 진행하온 학습의 Parameter와 다르기때문에 진행을 보류하였습니다.
 
-> 추가적으로 EfficientNet B0~B7의 default input size의 경우 224~600의 사이즈를 가지며,
+> 추가적으로 EfficientNet B0-B7의 default input size의 경우 224-600의 사이즈를 가지며,
 > 위의 작성된 default input size의 경우, 해당 모델의 최적의 input size를 작성해둔 것입니다.
 
 ![image](https://user-images.githubusercontent.com/60354713/128587328-808800c1-0c97-49db-b28f-27052eb9db16.png)
@@ -75,8 +75,5 @@ Batch_size = 32(default)
 ![image](https://user-images.githubusercontent.com/60354713/129340554-e38cfce1-4632-4596-bdbe-2f681e1002d0.png)
 ![image](https://user-images.githubusercontent.com/60354713/129451856-f0244363-418b-4c88-8a8f-4c1ee8fb31e1.png)
 ![image](https://user-images.githubusercontent.com/60354713/129430592-f298a300-ddcc-470c-b30d-43233d5beac3.png)
-
 ![image](https://user-images.githubusercontent.com/60354713/129489742-b6fc475c-8794-4499-b347-3b1f1a68b0e1.png)
-
 ![image](https://user-images.githubusercontent.com/60354713/129487849-5370dbd7-3b2e-4369-b436-82d96a764b53.png)
-
