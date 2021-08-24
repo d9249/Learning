@@ -9,9 +9,9 @@ optimizer = Adam(lr=0.002, epsilon=None)
 epochs = 500
 ImageDataGenerator(
 		rescale = 1./255, 
-   	validation_split = 0.X,
-  	rotation_range = X,
-    width_shift_range = 0.X,
+		validation_split = 0.X,
+  		rotation_range = X,
+    		width_shift_range = 0.X,
 		height_shift_range = 0.X)
 ```
 
