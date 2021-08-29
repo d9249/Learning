@@ -17,7 +17,7 @@
 
       1. Digit과 Letter를 합쳐서 만들어진 이미지에서 Letter의 범위을 넘어서는 Digit의 부분의 Pixel의 값을 0으로 낮추어 원본 숫자 이미지의 영역을 감추어 제일 오른쪽의 이미지로 만들어진 데이터를 학습 데이터로 사용합니다. 연두색의 영역은 겹쳐진 숫자의 영역이며, 연녹색의 영역은 Letter의 영역이며 해당 부분에는 감추어진 숫자가 없다는 것을 의미합니다.
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830010258353.png" alt="image-20210830010258353" style="zoom: 20%;" />
+      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Task.png?raw=true" alt="Task.png" style="zoom:25%;" />
 
       2. train_sample, test_sample
 
@@ -27,19 +27,55 @@
          - letter : 숫자를 가리는 알파벳.
          - 0 ~ 784 : 28 by 28 이미지 RGB pixel values.
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830010329402.png" alt="image-20210830010329402" style="zoom: 20%;" />
+      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/train_sample.png?raw=true" alt="train_sample.png" style="zoom:25%;" />
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830010337445.png" alt="image-20210830010337445" style="zoom:20%;" />
+      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/test_sample.png?raw=true" alt="test_sample.png" style="zoom:25%;" />
 
       3. 실제 데이터를 보기 위한 Data visualization.
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830011823604.png" alt="image-20210830011823604" style="zoom:20%;" />
+         1. 사람이 쉽게 예측할 수 있는 train data 예시.
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830012615450.png" alt="image-20210830012615450" style="zoom:20%;" />
+            <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Train/1000.png?raw=true" alt="1000.png"/>
+
+            ​															대문자 알파벳 E에 숫자 2가 숨겨져있는 example.
+
+            ![1005.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Train/1005.png?raw=true)
+
+            ​															소문자 알파벳 e에 숫자 0이 숨겨져있는 example.
+
+         2. 사람이 예측하기 어려운 train data 예시.
+
+            ![106.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Train/106.png?raw=true)
+
+            ​															소문자 알파벳 r에 숫자 6이 숨겨져있는 example.
+
+            ![1235.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Train/1235.png?raw=true)
+
+            ​															대문자 알파벳 A에 숫자 8이 숨겨져 있는 example.
+
+         3. 정확도 측정을 위해 주어지는 test data set
+
+            1. 사람이 단번에 예측하기 어려운 Test data set example.
+
+            ![106.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Test/106.png?raw=true)
+
+            ​																	대문자 알파벳 D에 숫자가 숨겨져있다.
+
+            ![122.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20visualization/Test/122.png?raw=true)
+
+            ​																	소문자 알파벳 T에 숫자가 숨겨져있다.
 
       4. train data set의 분포.
 
-      <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830010354601.png" alt="image-20210830010354601" style="zoom:15%;" />
+         가로(0-25) : 알파벳의 종류 (26가지)
+
+         세로(0-9) : 숫자 0부터 9 (10가지)
+
+         26*10 = 260가지로 분포된 train set의 분포 visualization.
+
+         Letter(A or a)로 Digit(3)을 가린 train data의 개수 1개 처럼 학습 데이터가 압도적으로 부족한 data imbalance 문제를 해결해야 할 필요가 있다.
+
+      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20Distribution.png?raw=true" alt="Data Distribution.png" style="zoom:25%;" />
 
       
 
@@ -56,15 +92,38 @@
 
       Google Colaboratory
 
-      - Tesla P100
+      - CPU : 
+
+      - GPU : Tesla P100
+      - RAM : 
 
    2. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
+      Random하게 생성되는 image data의 이해를 돕기위한 시각화 예시 입니다.
 
-   <img src="/Users/mean/Library/Application Support/typora-user-images/image-20210830010506726.png" alt="image-20210830010506726" style="zoom: 25%;" />
+   <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/IDG.png?raw=true" alt="IDG.png" style="zoom:25%;" />
 
-   
+   Train data set 2048개를 train data(1642개), validation data(406개)로 나누어서 학습을 진행되었으며, ImageDataGenerator을 사용하여서 Data Argmentation을 진행하여 학습에는 Train image = 52544, Validataion image = 12992가 사용되었습니다.
+
+   validation data는 train에 사용되지 않습니다.
 
 9. **실험결과 및 분석** : 
+
+   상위-1과 상위-5 정확성은 ImageNet의 검증 데이터셋에 대한 모델의 성능을 가리킵니다.
+
+   깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다.
+
+   ```python
+   datagen = ImageDataGenerator(
+   			rescale = 1./255, 
+       	validation_split = 0.2,
+       	rotation_range = 10,
+       	width_shift_range = 0.1,
+       	height_shift_range = 0.1)
+                  
+   Batch_size = 32 (dafault)
+   optimizer = Adam(lr=0.002, epsilon=None)
+   epochs = 500
+   ```
 
    | Public accuracy | Private accuracy |                       Model (Link : Experiment Results File) | Top-1 accuracy | Top-5 accuracy |   Parameter | Depth |                         Result Link                          | Default Input Size | Input Size |
    | :-------------: | :--------------: | -----------------------------------------------------------: | -------------: | -------------: | ----------: | :---: | :----------------------------------------------------------: | :----------------: | :--------: |
@@ -100,6 +159,12 @@
    |        X        |        X         |                                               EfficientNetB6 |          0.840 |          0.969 |         43M |   -   |                              -                               |      528x528       |  528x528   |
    |        X        |        X         |                                               EfficientNetB7 |          0.844 |          0.971 |         66M |   -   |                              -                               |      600x600       |  224x224   |
    |        X        |        X         |                                               EfficientNetB7 |          0.844 |          0.971 |         66M |   -   |                              -                               |      600x600       |  600x600   |
+
+   EfficientNetB4(380x380), EfficientNetB5(456x456), EfficientNetB6(528x528), EfficientNetB7(224x224), EfficientNetB7(600x600)의 경우, Colab pro GPU memory 부족으로 인해서 학습이 불가합니다.
+
+   batch size, Layer수, Filter 갯수, input size를 줄이거나, GPU를 바꾼다 같은 방법들이 있겠지만, 위와 같이 해결하여서 학습을 진행할 경우 지금까지 진행하온 학습의 Parameter와 다르기때문에 진행을 보류하였습니다.
+
+   추가적으로 EfficientNet B0-B7의 default input size의 경우 224-600의 사이즈를 가지며, 위의 작성된 default input size의 경우, 해당 모델의 최적의 input size를 작성해둔 것입니다.
 
 10. **결론**
 
