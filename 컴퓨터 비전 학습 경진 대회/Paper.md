@@ -15,17 +15,18 @@
 
    2. **DACON 컴퓨터 비전 학습 경진 대회 문제에 대한 설명.**
 
-      1. Digit과 Letter를 합쳐서 만들어진 이미지에서 Letter의 범위을 넘어서는 Digit의 부분의 Pixel의 값을 0으로 낮추어 원본 숫자 이미지의 영역을 감추어 제일 오른쪽의 이미지로 만들어진 데이터를 학습 데이터로 사용합니다. 연두색의 영역은 겹쳐진 숫자의 영역이며, 연녹색의 영역은 Letter의 영역이며 해당 부분에는 감추어진 숫자가 없다는 것을 의미합니다.
+      1. Digit과 Letter를 합쳐서 만들어진 이미지에서 Letter의 범위을 넘어서는 Digit의 부분의 Pixel의 값을 0으로 낮추어 원본 숫자 이미지의 영역을 감추어 제일 오른쪽의 이미지로 만들어진 데이터를 학습 데이터로 사용합니다. 연두색의 영역은 겹쳐진 숫자의 영역이며, 연녹색의 영역은 Letter의 영역이며 해당 부분에는 감추어진 숫자가 없다는 것을 의미합니다. 이러한 색으로 나타낸 것은 시각화를 하여 편하게 보기위한 임의의 색을 채워둔 것으로 실제로는 grayscale의 이미지가 사용됩니다.
 
       <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Task.png?raw=true" alt="Task.png" style="zoom:25%;" />
 
       2. train_sample, test_sample
 
          - id : 데이터 id.
-
          - digit : 가려진 숫자.
          - letter : 숫자를 가리는 알파벳.
          - 0 ~ 784 : 28 by 28 이미지 RGB pixel values.
+         - train_sample (1부터 2048)
+         - test_sample (2049부터 22528)
 
       <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/train_sample.png?raw=true" alt="train_sample.png" style="zoom:25%;" />
 
@@ -84,9 +85,22 @@
 
          26*10 = 260가지로 분포된 train set의 분포 visualization.
 
-         Letter(A or a)로 Digit(3)을 가린 train data의 개수 1개 처럼 학습 데이터가 압도적으로 부족한 data imbalance 문제를 해결해야 할 필요가 있다.
+         학습하는 과정에서 train data 2048개의 이미지로 test data 20480개를 예측하는데 학습 데이터의 부족이 발생하였고,
+
+         Letter(A or a)로 Digit(3)을 가린 train data의 개수 1개 처럼 Learning data imbalance 문제가 발생 하였다.
+
+         때문에 tensorflow에서 제공하는 Data Argmentation 라이브러리인 ImageDataGenerator를 사용하여서 학습 데이터를 만들어 해당 문위에서 언급한 문제를 해결하였습니다.
 
       <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20Distribution.png?raw=true" alt="Data Distribution.png" style="zoom:25%;" />
+
+      6. Data Argmentation - ImageDataGenerator
+         1. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
+            Random하게 생성되는 image data의 이해를 돕기위한 시각화 예시 입니다.
+         2. 아래의 이미지에서 볼 수 있든 Random하게 문제의 Pixel 위치를 조정하여 Data Argmentation을 진행하였으며, 
+         3. 회전, 플립 등 더 다양하게 Data Argmentation을 할 수 있지만, 진행하게 될 경우 회전의 경우 6,9, 플립의 경우 모든 숫자에 사진에 나타나있는 숫자의 정보를 손실시켜 오히려 Train Data set의 혼란을 야기시켜 진행하지 않았습니다.
+         4. Train data set 2048개를 train data(1642개), validation data(406개)로 나누어서 Data Argmentation이 진행되었으며, ImageDataGenerator을 사용하여서 2048개의 이미지를 65536개로 증강하여 학습에는 Train image = 52544, Validataion image = 12992가 사용되었습니다. validation imaga는 train에 사용되지 않고 학습이 진행되었습니다.
+
+         5. <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/IDG.png?raw=true" alt="IDG.png" style="zoom:25%;" />
 
 6. **관련연구**
 
@@ -106,15 +120,6 @@
       - GPU : Tesla P100
       - RAM : 
 
-   2. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
-      Random하게 생성되는 image data의 이해를 돕기위한 시각화 예시 입니다.
-
-   <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/IDG.png?raw=true" alt="IDG.png" style="zoom:25%;" />
-
-   Train data set 2048개를 train data(1642개), validation data(406개)로 나누어서 학습을 진행되었으며, ImageDataGenerator을 사용하여서 Data Argmentation을 진행하여 학습에는 Train image = 52544, Validataion image = 12992가 사용되었습니다.
-
-   validation data는 train에 사용되지 않습니다.
-
 9. **실험결과 및 분석** : 
 
    상위-1과 상위-5 정확성은 ImageNet의 검증 데이터셋에 대한 모델의 성능을 가리킵니다.
@@ -122,7 +127,7 @@
    깊이란 네트워크의 토폴로지 깊이를 말합니다. 이는 활성화 레이어, 배치 정규화 레이어 등을 포함합니다.
 
    ```python
-   datagen = ImageDataGenerator(
+   ImageDataGenerator (
    			rescale = 1./255, 
        	validation_split = 0.2,
        	rotation_range = 10,
@@ -130,7 +135,7 @@
        	height_shift_range = 0.1)
                   
    Batch_size = 32 (dafault)
-   optimizer = Adam(lr=0.002, epsilon=None)
+   optimizer = Adam (lr=0.002, epsilon=None)
    epochs = 500
    ```
 
