@@ -115,10 +115,10 @@
 
       Google Colaboratory
 
-      - CPU : 
-
-      - GPU : Tesla P100
-      - RAM : 
+      - CPU : Intel(R) Xeon(R) CPU @ 2.00GHz.
+   - GPU : Tesla P100, T4, T8.
+      - RAM : 26696424 kB.
+      - OS : Ubuntu 18.04.5 LTS.
 
 9. **실험결과 및 분석** : 
 
@@ -197,11 +197,30 @@
 10. **결론**
 
    1. model ensamble.
-   2. Train set의 숫자가 보이는 영역을 모두 합친 이미지를 대상으로 모델을 구성할 필요가 있다.
-   3. Validation K-fold.
-   4. Parameter optimization.
-   5. Letter 정보를 활용한 학습. (숫자가 무조건 있는 영역, 숫자가 무조건 없는 영역, 숫자가 있을 수 있는 영역)
-      1. 
+
+   2. Validation K-fold.
+
+   3. Parameter optimization.
+
+   4. Letter 정보를 활용한 학습. (숫자가 무조건 있는 영역, 숫자가 무조건 없는 영역, 숫자가 있을 수 있는 영역)
+
+      1. Original images
+
+         ![Original.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Original.png?raw=true)
+
+      2. Letter part.
+
+         ![Letter.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Letter.png?raw=true)
+
+      3. Digit part.
+
+         ![Digit.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Digit.png?raw=true)
+
+      4. All of Digit Sum.
+
+         ![Total digit sum.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Total%20digit%20sum.png?raw=true)
+
+      Origin image에서 letter 부분을 제외하고 Digit 부분만 모두 모아서 시각화한 결과 4번과 같은 이미지의 형상을 볼 수 있는데 해당 이미지로 유추해보아 Original image를 Digit 부분과 Letter 부분을 같이 학습하여 예측을 진행할 경우 더 높은 정확도를 보일 수 있을거라고 생각한다.
 
 11. **참고문헌**
 
