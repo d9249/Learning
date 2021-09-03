@@ -1,3 +1,5 @@
+
+
 **Paper**
 
 1. **한글제목** : 알파벳으로 덮어씌워진 숫자 인식을 위한 기존 모델의 정확도 분석.
@@ -10,8 +12,8 @@
 
 4. **서론**
 
-5. 1. **해당 논문을 작성하게 된 이유**
-       Image Classification on MNIST의 정확도가 Top Accuracy 99.870를 달성한 모델의 성능을 보고 사람이 작성한 숫자를 분류해내는 정확도가 ILSVRC 대회 역대 우승 알고리즘들과 인식 에러율에서 사람의 숫자 분류 에러율을 5%로 보았을 때 사람보다 약 4.8% 더 높은 정확도를 보이는 것을 알 수 있었다. 앞서 설명한 숫자 분류의 문제는 단순히 필기체를 인식해 분류해내는 것에서 그쳤지만, DACON의 컴퓨터 비전 학습 경진 대회에서는 알파벳으로 가린 숫자의 일부분의 영역을 보아 감추어진 숫자를 예측하는 단순히 인식하여 예측하는 문제보다 더 Task가 높다고 볼 수 있다. 때문에 해당 문제에서도 기존 모델들의 정확도가 어떠할지 분석하기 위한 과정이다. 
+   1. *해당 논문을 작성하게 된 이유**
+      Image Classification on MNIST의 정확도가 Top Accuracy 99.870를 달성한 모델의 성능을 보고 사람이 작성한 숫자를 분류해내는 정확도가 ILSVRC 대회 역대 우승 알고리즘들과 인식 에러율에서 사람의 숫자 분류 에러율을 5%로 보았을 때 사람보다 약 4.8% 더 높은 정확도를 보이는 것을 알 수 있었다. 앞서 설명한 숫자 분류의 문제는 단순히 필기체를 인식해 분류해내는 것에서 그쳤지만, DACON의 컴퓨터 비전 학습 경진 대회에서는 알파벳으로 가린 숫자의 일부분의 영역을 보아 감추어진 숫자를 예측하는 단순히 인식하여 예측하는 문제보다 더 Task가 높다고 볼 수 있다. 때문에 해당 문제에서도 기존 모델들의 정확도가 어떠할지 분석하기 위한 과정이다. 
 
    2. **DACON 컴퓨터 비전 학습 경진 대회 문제에 대한 설명.**
 
@@ -36,10 +38,6 @@
          - test_sample (2049부터 22528)
 
            ![test_sample.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/test_sample.png?raw=true)
-
-      
-
-      
 
       3. 실제 데이터를 보기 위한 Data visualization.
 
@@ -99,24 +97,22 @@
          Train data에서 (A or a, 3), (B or b, 1), (Y or y,1), (E or e, 7), (N or n, 9)와 같이 train dataset 개수가 엄청나게 적은 dataset 쌍들로 인해서 Learning data imbalance 문제가 발생 하였다.
 
          때문에 tensorflow에서 제공하는 Data Argmentation 라이브러리인 ImageDataGenerator를 사용하여서 학습 데이터를 만들어 해당 문위에서 언급한 문제를 해결하였습니다.
-         
+
          1. Data statistics.
 
-      ![Data statistics.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20statistics.png?raw=true)
+            ![Data statistics.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20statistics.png?raw=true)
 
-      2. Digit By Distribution.
+         2. Digit By Distribution.
 
-      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/digit%EB%B3%84%20%EB%B6%84%ED%8F%AC.png?raw=true" alt="digit별 분포.png" style="zoom:30%;" />
+            <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/digit%EB%B3%84%20%EB%B6%84%ED%8F%AC.png?raw=true" alt="digit별 분포.png" style="zoom:30%;" />
 
-      3. Alphabet distribution by number.
+         3. Alphabet distribution by number.
 
-      ![숫자별 알파벳 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%88%AB%EC%9E%90%EB%B3%84%20%EC%95%8C%ED%8C%8C%EB%B2%B3%20%EB%B6%84%ED%8F%AC.png?raw=true)
+            ![숫자별 알파벳 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%88%AB%EC%9E%90%EB%B3%84%20%EC%95%8C%ED%8C%8C%EB%B2%B3%20%EB%B6%84%ED%8F%AC.png?raw=true)
 
-      4. Numeric distribution by alphabet.
+         4. Numeric distribution by alphabet.
 
-      ![알파벳별 숫자 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%95%8C%ED%8C%8C%EB%B2%B3%EB%B3%84%20%EC%88%AB%EC%9E%90%20%EB%B6%84%ED%8F%AC.png?raw=true)
-
-      
+            ![알파벳별 숫자 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%95%8C%ED%8C%8C%EB%B2%B3%EB%B3%84%20%EC%88%AB%EC%9E%90%20%EB%B6%84%ED%8F%AC.png?raw=true)
 
       6. Data Argmentation - ImageDataGenerator
          1. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
@@ -127,12 +123,18 @@
 
          5. <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/IDG.png?raw=true" alt="IDG.png" style="zoom:25%;" />
 
-6. **관련연구**
+   
 
-7. 1. Image Classification. 
-   2. Cursive recognition.
+   **관련연구** - Convolution neural network model
 
-8. **진행한 실험** : Individual model Learning을 통해 정확도 추정.
+5. 1. VGG16, VGG19
+   2. ResNet50, ResNet101, ResNet152
+   3. ResNet50V2, ResNEt101V2, ResNet152V2
+   4. InceptionV3, InceptionResNetV2
+   5. Xception
+   6. EfficientNetB0, EfficientNetB1, EfficientNetB2, EfficientNetB3, EfficientNetB4, EfficientNetB5, EfficientNetB6, EfficientNetB7
+
+6. **진행한 실험** : Individual model Learning을 통해 정확도 추정.
 
    해당 테스크에 가장 적합한 모델을 찾기 위해서 기존의 Image Classification 분야에서 널리 알려진 모델들을 학습시켜 가장 높은 정확도를 보인는 모델을 기준으로 세부 Parameter를 조정하여 더 정확도를 높이거나, 새로운 방식을 통해 학습을 진행하여 정확도를 높일 예정이다.
 
@@ -145,7 +147,7 @@
       - RAM : 26696424 kB.
       - OS : Ubuntu 18.04.5 LTS.
 
-9. **실험결과 및 분석** : 
+7. **실험결과 및 분석** : 
 
    상위-1(Top-1 accuracy)과 상위-5 정확성(Top-5 accuracy)은 ImageNet의 검증 데이터셋에 대한 모델의 성능을 가리킵니다.
 
@@ -157,7 +159,7 @@
 
    Private score가 해당 문제의 test data의 99%를 가지고 채점된 결과이며, Public score보다 훨씬 더 높은 가치를 갖습니다.
 
-   아래의 도표에서 사용된 결과는 한번의 학습의 정확도를 입력해둔것입니다.
+   아래의 도표에서 사용된 결과는 한번의 학습의 정확도를 기록한 것입니다.
 
    ```python
    ImageDataGenerator (
@@ -171,6 +173,8 @@
    optimizer = Adam (lr=0.002, epsilon=None)
    epochs = 500
    ```
+
+   ![accuracy graph 2.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/accuracy%20graph%202.png?raw=true)
 
    | Public accuracy | Private accuracy |             Model | Top-1 accuracy | Top-5 accuracy |   Parameter | Depth | Default Input Size | Input Size |
    | :-------------: | :--------------: | ----------------: | -------------: | -------------: | ----------: | :---: | :----------------: | :--------: |
@@ -219,35 +223,35 @@
 
    InceptionResNetV2, InceptionV3, Xception 3가지 모델의 경우 default input size가 해당 모델의 최적의 input size로 알려져있는데 오히려 input size가 더 작은 경우의 정확도가 높아지는 추이를 볼 수 있으나, EfficientNetB1부터 EfficientNetB3까지의 정확도 비교를 보면 default input size를 맞추어서 학습을 진행하는 것이 더 높은 정확도를 보인다.
 
-10. **결론**
+8. **결론**
 
-   1. model ensamble.
+   9. model ensamble.
 
-   2. Validation K-fold.
+   10. Validation K-fold.
 
-   3. Parameter optimization.
+   11. Parameter optimization.
 
-   4. Letter 정보를 활용한 학습. (숫자가 무조건 있는 영역, 숫자가 무조건 없는 영역, 숫자가 있을 수 있는 영역)
+   12. Letter 정보를 활용한 학습. (숫자가 무조건 있는 영역, 숫자가 무조건 없는 영역, 숫자가 있을 수 있는 영역)
 
-      1. Original images
+       1. Original images
 
-         ![Original.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Original.png?raw=true)
+          ![Original.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Original.png?raw=true)
 
-      2. Letter part.
+       2. Letter part.
 
-         ![Letter.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Letter.png?raw=true)
+          ![Letter.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Letter.png?raw=true)
 
-      3. Digit part.
+       3. Digit part.
 
-         ![Digit.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Digit.png?raw=true)
+          ![Digit.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Digit.png?raw=true)
 
-      4. All of Digit Sum.
+       4. All of Digit Sum.
 
-         ![Total digit sum.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Total%20digit%20sum.png?raw=true)
+          ![Total digit sum.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Total%20digit%20sum.png?raw=true)
 
-      Origin image에서 letter 부분을 제외하고 Digit 부분만 모두 모아서 시각화한 결과 4번과 같은 이미지의 형상을 볼 수 있는데 해당 이미지로 유추해보아 Original image를 Digit 부분과 Letter 부분을 같이 학습하여 예측을 진행할 경우 더 높은 정확도를 보일 수 있을거라고 생각한다.
+       Origin image에서 letter 부분을 제외하고 Digit 부분만 모두 모아서 시각화한 결과 4번과 같은 이미지의 형상을 볼 수 있는데 해당 이미지로 유추해보아 Original image를 Digit 부분과 Letter 부분을 같이 학습하여 예측을 진행할 경우 더 높은 정확도를 보일 수 있을거라고 생각한다.
 
-11. **참고문헌**
+13. **참고문헌**
 
     ​		Image Classification on MNIST
 
