@@ -93,7 +93,15 @@
 
          때문에 tensorflow에서 제공하는 Data Argmentation 라이브러리인 ImageDataGenerator를 사용하여서 학습 데이터를 만들어 해당 문위에서 언급한 문제를 해결하였습니다.
 
-      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20Distribution.png?raw=true" alt="Data Distribution.png" style="zoom:25%;" />
+      ![Data statistics.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20statistics.png?raw=true)
+      
+      <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/digit%EB%B3%84%20%EB%B6%84%ED%8F%AC.png?raw=true" alt="digit별 분포.png" style="zoom:30%;" />
+      
+      ![숫자별 알파벳 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%88%AB%EC%9E%90%EB%B3%84%20%EC%95%8C%ED%8C%8C%EB%B2%B3%20%EB%B6%84%ED%8F%AC.png?raw=true)
+      
+      ![알파벳별 숫자 분포.png](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/%EC%95%8C%ED%8C%8C%EB%B2%B3%EB%B3%84%20%EC%88%AB%EC%9E%90%20%EB%B6%84%ED%8F%AC.png?raw=true)
+      
+      
       
       6. Data Argmentation - ImageDataGenerator
          1. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
