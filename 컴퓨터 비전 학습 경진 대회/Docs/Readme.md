@@ -22,6 +22,8 @@
       2. train_sample, test_sample
 
          - id : 데이터 id.
+         - digit  :  [0 1 2 3 4 5 6 7 8 9] 
+         - letter :  ['A' 'B' 'C' 'D' 'E' 'F' 'G' 'H' 'I' 'J' 'K' 'L' 'M' 'N' 'O' 'P' 'Q' 'R' 'S' 'T' 'U' 'V' 'W' 'X' 'Y' 'Z']
          - digit : 가려진 숫자.
          - letter : 숫자를 가리는 알파벳.
          - 0 ~ 784 : 28 by 28 image pixel values.
@@ -67,7 +69,7 @@
             ​																	소문자 알파벳 T에 숫자가 숨겨져있다.
 
       4. 실제 실험에 사용된 train, test images. (28 by 28)
-
+      
          1. train data
             1. <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/1001.png?raw=true" alt="1001.png" style="zoom:200%;" />
             2. <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/1006.png?raw=true" alt="1006.png" style="zoom:200%;" />
@@ -92,16 +94,16 @@
          때문에 tensorflow에서 제공하는 Data Argmentation 라이브러리인 ImageDataGenerator를 사용하여서 학습 데이터를 만들어 해당 문위에서 언급한 문제를 해결하였습니다.
 
       <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/Data%20Distribution.png?raw=true" alt="Data Distribution.png" style="zoom:25%;" />
-
+      
       6. Data Argmentation - ImageDataGenerator
          1. Data Argmentation's detail Parameter : rotation_range=10, width_shift_range=0.1, height_shift_range=0.1.
             Random하게 생성되는 image data의 이해를 돕기위한 시각화 예시 입니다.
          2. 아래의 이미지에서 볼 수 있든 Random하게 문제의 Pixel 위치를 조정하여 Data Argmentation을 진행하였으며, 
          3. 회전, 플립 등 더 다양하게 Data Argmentation을 할 수 있지만, 진행하게 될 경우 회전의 경우 6,9, 플립의 경우 모든 숫자에 사진에 나타나있는 숫자의 정보를 손실시켜 오히려 Train Data set의 혼란을 야기시켜 진행하지 않았습니다.
          4. Train data set 2048개를 train data(1642개), validation data(406개)로 나누어서 Data Argmentation이 진행되었으며, ImageDataGenerator을 사용하여서 2048개의 이미지를 65536개로 증강하여 학습에는 Train image = 52544, Validataion image = 12992가 사용되었습니다. validation imaga는 train에 사용되지 않고 학습이 진행되었습니다.
-
+      
          5. <img src="https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Image/IDG.png?raw=true" alt="IDG.png" style="zoom:25%;" />
-
+   
 6. **관련연구**
 
 7. 1. Image Classification. 
