@@ -8,7 +8,9 @@
 ├── Data Argmentation
 ├── Data visualization
 ├── Data(DACON)
+├── Docs
 ├── EDA(Exploratory Data Analysis)
+├── Image
 ├── Individual model(After parameter optimization)
 ├── Individual model(Before parameter optimization)
 ├── Optimizer optimization
