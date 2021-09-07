@@ -1,15 +1,15 @@
 ![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=%20Lee%20Sangmin's%20Profile%20&fontSize=50)
 
 <div align="center">
-  
+
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fd9249&count_bg=%23F73838&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
-  
+
 ## 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
 [![Tistory Blog Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://github.com/d9249/Portfolio)
-  
+
  </div>
-  
+
 ## :mortar_board: Career
 
 | **Type** | **Date**| **Contents**| **Organization**|
@@ -23,6 +23,15 @@
 |---|---|---|---|
 |2020.06.04 | PoseNet을 활용한 헬스 트레이너 웹 서비스 | 동상 | 한국정보기술학회 대학생논문경진대회 |
 |2020.06.10 | 핏-시방(Fit-sibang) | 장려상 | 경기대학교 컴퓨터공학부 |
+
+## 🗃 Certificate of completion.
+
+| Data       | Contents                                                     | Organization |
+| ---------- | ------------------------------------------------------------ | ------------ |
+| 2021.07.22 | [대학생 코딩 캠프 7기](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EB%8C%80%EC%BD%94%EC%BA%A0_%EC%88%98%EB%A3%8C%EC%A6%9D_7%EA%B8%B0_%EC%9D%B4%EC%83%81%EB%AF%BC.pdf) | Codeit       |
+| 2021.07.27 | [산업인공지능 단기집중 교육과정(일반공통)](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EC%82%B0%EC%97%85%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%8B%A8%EA%B8%B0%EC%A7%91%EC%A4%91%EA%B5%90%EC%9C%A1(%EC%9D%BC%EB%B0%98)%20%EC%88%98%EB%A3%8C%EC%A6%9D.jpg) | KPC, KETI    |
+
+
 
 ## :computer: Tech stacks
 
@@ -45,6 +54,10 @@
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/></a>
+
+<img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=flat-square&logo=Tensorflow&logoColor=white"/></a>
+
+
 
 ## 💡 Research Interests
 
