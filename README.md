@@ -43,6 +43,18 @@ What I felt as an undergraduate researcher.
 
 Summary - [Notion Link](https://www.notion.so/9c9553b1cc63482b989673f72f1c9039)
 
+------
+
+[**2021 FALL 한국인터넷정보학회추계학술발표대회**](https://www.manuscriptlink.com/society/ksii/conference/fall2021)
+
+날 짜 : 2021년 10월 22~24일
+
+장 소 : 하이원호텔리조트, 강원도
+
+주 최 : 한국인터넷정보학회
+
+주 관 : 한국인터넷정보학회
+
 ## External Participation Activities
 
 **산업인공지능 단기집중교육**
