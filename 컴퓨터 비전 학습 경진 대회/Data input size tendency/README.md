@@ -2,27 +2,26 @@
 > Data input size의 증가, 감소에 따라 정확도에 미치는 영향을 파악하기 위한 실험.
 
 ```python
-model = DenseNet121
-datagen = ImageDataGenerator(
-                             rescale=1./255, 
-                             validation_split=0.2,
-                             rotation_range=10,
-                             width_shift_range=0.1,
-                             height_shift_range=0.1)
-                             
+model = DenseNet121 (Input image size = 224)
 Batch_size = 32 (dafault)
 optimizer = Adam(lr=0.002, epsilon=None)
 epochs = 500
+ImageDataGenerator (
+		rescale=1./255, 
+		validation_split=0.2,
+		rotation_range=10,
+		width_shift_range=0.1,
+		height_shift_range=0.1 )
 ```
 
 Data input size
 
-| Input size | acc(one) | acc(two) | acc(thr) | acc(four) | acc(five) | Avg  |
-| ---------- | -------- | -------- | -------- | --------- | --------- | ---- |
-| 32x32      |          |          |          |           |           |      |
-| 64x64      |          |          |          |           |           |      |
-| 128x128    |          |          |          |           |           |      |
-| 224x224    |          |          |          |           |           |      |
-| 256x256    |          |          |          |           |           |      |
-| 299x299    |          |          |          |           |           |      |
+| Input size | acc(one)                                                     | acc(two) | acc(thr) | acc(four) | acc(five) | Avg  |
+| ---------- | ------------------------------------------------------------ | -------- | -------- | --------- | --------- | ---- |
+| 32x32      | [**0.67616**](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20input%20size%20tendency/ImageSize_32_1_DenseNet121(public-0.62745%2C%20private-0.67616).ipynb) |          |          |           |           |      |
+| 64x64      | [**0.87892**](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20input%20size%20tendency/ImageSize_64_1_DenseNet121(public-0.89705%2C%20private-0.87892).ipynb) |          |          |           |           |      |
+| 128x128    | [**0.90609**](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Data%20input%20size%20tendency/ImageSize_128_1_DenseNet121(public-0.93627%2C%20private-0.90609).ipynb) |          |          |           |           |      |
+| 224x224    |                                                              |          |          |           |           |      |
+| 256x256    |                                                              |          |          |           |           |      |
+| 299x299    |                                                              |          |          |           |           |      |
 
