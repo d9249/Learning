@@ -2,7 +2,7 @@
 > Data input size의 증가, 감소에 따라 정확도에 미치는 영향을 파악하기 위한 실험.
 
 ```python
-model = DenseNet121 (Input image size = 224)
+model = DenseNet121 ( Input image size = 224 )
 Batch_size = 32 (dafault)
 optimizer = Adam( lr = 0.002, epsilon = None )
 epochs = 500
