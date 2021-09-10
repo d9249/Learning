@@ -4,14 +4,14 @@
 ```python
 model = DenseNet121 (Input image size = 224)
 Batch_size = 32 (dafault)
-optimizer = Adam(lr=0.002, epsilon=None)
+optimizer = Adam( lr = 0.002, epsilon = None )
 epochs = 500
 ImageDataGenerator (
-		rescale=1./255, 
-		validation_split=0.2,
-		rotation_range=10,
-		width_shift_range=0.1,
-		height_shift_range=0.1 )
+		rescale = 1./255, 
+		validation_split = 0.2,
+		rotation_range = 10,
+		width_shift_range = 0.1,
+		height_shift_range = 0.1 )
 ```
 
 Data input size
