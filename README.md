@@ -14,9 +14,9 @@
 
 | **Type** | **Date**| **Contents**| **Organization**|
 |---|---|---|---|
-| **Education** | 2015.03 ~ Proceeding | Computer Science and Engineering | Kyonggi University |
-| **Research activities** | 2020.01 ~ Proceeding | Undergraduate Research Students | Kyonggi Univ. Smart I.O.T laboratory |
-| **Research activities** | 2021.03 ~ Proceeding | DIYA Computer Vision Team 4th | DIYA. Machine Learning Club. |
+| **Education** | 2015.03 ~ Proceeding | [Computer Science and Engineering](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University](http://www.kyonggi.ac.kr/) |
+| **Research activities** | 2020.01 ~ Proceeding | Undergraduate Research Students | [Kyonggi Univ. Smart I.O.T laboratory](https://netlab.kyonggi.ac.kr/) |
+| **Research activities** | 2021.03 ~ Proceeding | DIYA Computer Vision Team 4th | [DIYA. Machine Learning Club.](https://blog.diyaml.com/) |
 
 ## :trophy: Award
 | **Date** | **Contents** | **Result** | **Organization**|
