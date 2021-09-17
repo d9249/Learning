@@ -29,8 +29,8 @@ Private Score: 나머지 테스트 데이터로 채점
 
 ## Optimization.
 
-[Parameter optimization(ImageDataGenerator)](https://github.com/d9249/DACON/tree/main/컴퓨터 비전 학습 경진 대회/Parameter optimization(ImageDataGenerator)), [Optimizer optimization](https://github.com/d9249/DACON/tree/main/컴퓨터 비전 학습 경진 대회/Optimizer optimization), [Data input size tendency](https://github.com/d9249/DACON/tree/main/컴퓨터 비전 학습 경진 대회/Data input size tendency) 를 통해서
-나온 가장 최적화된 Parameter로 [**Individual model(After parameter optimization)**](https://github.com/d9249/DACON/tree/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Individual%20model(After%20parameter%20optimization)) 을 진행하였습니다.
+Parameter optimization(ImageDataGenerator), Optimizer optimization, Data input size tendency를 통해서
+나온 가장 최적화된 Parameter로 Individual model(After parameter optimization)을 진행하였습니다.
 
 ```
 image size = 224.
