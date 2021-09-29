@@ -43,9 +43,9 @@ ImageDataGenerator (
 |    EfficientNetB1 | score | score | score | score | score |          |         240         |    224     |
 |    EfficientNetB2 | score | score | score | score | score |          |         260         |    224     |
 |    EfficientNetB3 | score | score | Learning | Learning | Learning |          |         300         |    224     |
-|    EfficientNetB4 | score | Learning | Learning | Learning | Learning |          |         380         |    224     |
-|    EfficientNetB5 | score | Learning | Learning |                                                              |                                                              |          |         456         |    224     |
-|    EfficientNetB6 |                                                              |                                                              |                                                              |                                                              |                                                              |          |         528         |    224     |
+|    EfficientNetB4 | score | score | score | score | Learning |          |         380         |    224     |
+|    EfficientNetB5 | score | Learning | Learning | Learning | Learning |          |         456         |    224     |
+|    EfficientNetB6 | Learning |                                                              |                                                              |                                                              |                                                              |          |         528         |    224     |
 |    EfficientNetB7 |                                           |                                                              |                                                              |                                                              |                                                              | Failed at learning. |         600         |    224     |
 
 > VGG16, VGG19의 경우, 학습을 위해서는 Layer의 추가가 필요하며, 추가된 Layer로 인해서 해당 모델에 대한 분석을 진행할 수 없습니다. 
