@@ -43,8 +43,8 @@ ImageDataGenerator (
 |    EfficientNetB1 | score | score | score | score | score |          |         240         |    224     |
 |    EfficientNetB2 | score | score | score | score | score |          |         260         |    224     |
 |    EfficientNetB3 | score | score | Learning | Learning | Learning |          |         300         |    224     |
-|    EfficientNetB4 | Learning | Learning | Learning | Learning | Learning |          |         380         |    224     |
-|    EfficientNetB5 | Learning |                                                              |                                                              |                                                              |                                                              |          |         456         |    224     |
+|    EfficientNetB4 | score | Learning | Learning | Learning | Learning |          |         380         |    224     |
+|    EfficientNetB5 | score | Learning | Learning |                                                              |                                                              |          |         456         |    224     |
 |    EfficientNetB6 |                                                              |                                                              |                                                              |                                                              |                                                              |          |         528         |    224     |
 |    EfficientNetB7 |                                           |                                                              |                                                              |                                                              |                                                              | Failed at learning. |         600         |    224     |
 
