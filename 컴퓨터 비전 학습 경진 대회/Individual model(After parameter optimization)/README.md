@@ -42,10 +42,10 @@ ImageDataGenerator (
 |    EfficientNetB0 | [**0.91867**](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Individual%20model(After%20parameter%20optimization)/EfficientNetB0/EfficientNetB0_1_(public-0.90196%2C%20private-0.91867).ipynb) | score                                                | score                                                | score                                                | score |          |         224         |    224     |
 |    EfficientNetB1 | score | score | score | score | score |          |         240         |    224     |
 |    EfficientNetB2 | score | score | score | score | score |          |         260         |    224     |
-|    EfficientNetB3 | score | score | Learning | Learning | Learning |          |         300         |    224     |
-|    EfficientNetB4 | score | score | score | score | Learning |          |         380         |    224     |
-|    EfficientNetB5 | score | score | score | Learning | Learning |          |         456         |    224     |
-|    EfficientNetB6 | Learning | Learning | Learning |                                                              |                                                              |          |         528         |    224     |
+|    EfficientNetB3 | Learning | Learning | Learning | Learning | Learning |          |         300         |    224     |
+|    EfficientNetB4 | Learning | Learning | Learning | Learning | Learning |          |         380         |    224     |
+|    EfficientNetB5 | Learning | Learning | Learning | Learning | Learning |          |         456         |    224     |
+|    EfficientNetB6 | Learning | Learning | Learning | Learning | Learning |          |         528         |    224     |
 |    EfficientNetB7 |                                           |                                                              |                                                              |                                                              |                                                              | Failed at learning. |         600         |    224     |
 
 > VGG16, VGG19의 경우, 학습을 위해서는 Layer의 추가가 필요하며, 추가된 Layer로 인해서 해당 모델에 대한 분석을 진행할 수 없습니다. 
