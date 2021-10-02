@@ -21,13 +21,14 @@
 ```
 
 # Rules.
+
 Public Score: 전체 테스트 데이터 중 1%로 채점
 
 Private Score: 나머지 테스트 데이터로 채점
 
 외부데이터 사용 불가, 사전학습모델 (pretrained model) 사용 불가
 
-## Optimization.
+# Optimization.
 
 Parameter optimization(ImageDataGenerator), Optimizer optimization, Data input size tendency를 통해서
 나온 가장 최적화된 Parameter로 Individual model(After parameter optimization)을 진행하였습니다.
@@ -45,3 +46,8 @@ ImageDataGenerator (
 		height_shift_range = 0.05 )
 ```
 
+# Result.
+
+Voting ensemble(Before parameter optimization)에서는 **0.93386**에 그쳤지만, 
+Parameter optimization(ImageDataGenerator), Data input size tendency, Optimizer optimization을 진행한 결과 
+private score **0.94599**을 달성하여, 해당 대회가 열린 기간의 점수 중 가장 높은 점수를 달성할 수 있었다.
