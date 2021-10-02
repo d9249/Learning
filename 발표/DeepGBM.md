@@ -363,13 +363,13 @@ More specifically, since there are bijection relations between leaf indices and 
 
 Formally, the learning process of embedding can denote as
 
-![image-20211003082345062](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082345062.png)
+![image-20211003082345062](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/07.png)
 
 where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected net- work with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values. 
 
 After that, instead of sparse high dimensional one-hot representation L, we can use the dense embedding as the targets to approximate the function of tree structure. This new learning process can denote as
 
-![image-20211003082358576](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082358576.png)
+![image-20211003082358576](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/08.png)
 
 where L is the regression loss like L2 loss for fitting dense embedding. 
 
@@ -396,13 +396,13 @@ Secondly, to distill from multiple trees, we can extend the Leaf Embedding Disti
 
 Formally, given a group of trees T, we can extend the Eqn.(7) to learn leaf embedding from multiple trees
 
-![image-20211003082429626](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082429626.png)
+![image-20211003082429626](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/09.png)
 
 where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT  is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T. 
 
 After that, we can use the new embedding as the distillation target of NN model, and the learning process of it can denote as
 
-![image-20211003082441565](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082441565.png)
+![image-20211003082441565](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/10.png)
 
 where IT is the used features in tree group T. 
 
@@ -412,11 +412,11 @@ Therefore, as an alternate, we can only use top features in IT according to feat
 
 To sum up, combined with above methods, the final output of the NN distilled from a  tree  group T  is 
 
-![image-20211003082459848](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082459848.png)
+![image-20211003082459848](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/11.png)
 
 And the output of a GBDT model, which contains k tree groups, is
 
-![image-20211003082511943](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082511943.png)
+![image-20211003082511943](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/12.png)
 
 In summary, owing to Leaf Embedding Distillation and Tree Grouping, GBDT2NN can efficiently distill many trees of GBDT into a compact NN model. 
 
@@ -434,13 +434,13 @@ To train DeepGBM, we first need to use offline data to train a GBDT model and th
 
 After that, we can train DeepGBM end-to-end. Formally, we denote the output of DeepGBM as
 
-![image-20211003082732071](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082732071.png)
+![image-20211003082732071](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/13.png)
 
 where w1  and w2  are  the  trainable parameters  used  for  combining is  GBDT2NN  and  CatNN, σ' is the  output  transformation,  such  as sigmoid  for  binary  classification.  
 
 Then,  we  can  use  the  following loss function for the  end-to-end training
 
-![image-20211003082858256](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082858256.png)
+![image-20211003082858256](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/14.png)
 
 where y is the training target of sample x , L corresponding tasks such as cross-entropy for classification tasks, L T is the embedding loss for tree group T and defined in Eqn.(10), k is the number of tree groups, α and β are hyper-parameters given in advance and used for controlling the strength of end-to-end loss and embedding loss, respectively.
 
@@ -452,7 +452,7 @@ As the GBDT model is trained offline, using it for embedding learning in the onl
 
 Thus, we do not include the LT in the online update, and the loss for the online update can denote as
 
-![image-20211003082937510](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082937510.png)
+![image-20211003082937510](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/15.png)
 
 which only uses the end-to-end loss. Thus, when using DeepGBM online, we only need the new data to update the model by L-online , without involving GBDT and retraining from scratch. 
 
@@ -460,7 +460,7 @@ In short, DeepGBM will be very efficient for online tasks.
 
 Furthermore, it is also very effective since it can well handle both the dense numerical features and sparse categorical features.
 
-![image-20211003083018353](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003083018353.png)
+![image-20211003083018353](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab2.png)
 
 Table 2: Details of the datasets used in experiments. All these datasets are publicly available. #Sample is the number of data samples, #Num is the number of numerical features, and #Cat is the number of categorical features
 
@@ -493,7 +493,7 @@ Furthermore, as time-stamp is available in most of these datasets, we can use th
 - DeepFM  [22],  which  improves  Wide&Deep  by  adding  an  addi- tional  FM component.
 - PNN  [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical  features.
 
-![image-20211003083324949](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003083324949.png)
+![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
 
 Table 3: Offline performance comparison. AUC (higher is better) is used for binary classification tasks, and MSE (lower is better) is used for regression tasks. All experiments are run 5 times with different random seeds, and the mean ± std results are shown in  this table.  The  top-2 results are marked  bold.
 
@@ -556,13 +556,13 @@ All the comparison results are summarized in Fig 5, and we have following  obser
 - GBDT cannot perform well in the online scenarios as expected. Although GBDT yields good result in the first batch (offline stage), it declines obviously in the later (online) batches.
 - The online performance of GBDT2NN is good. In particular, GBDT2NN (DeepGBM (D2)) can significantly outperform GBDT. Furthermore, DeepGBM outperforms DeepGBM (D1), which uses GBDT instead of GBDT2NN, by a non-trivial gain. It indicates that the distilled NN model by GBDT could be further improved and effectively used in the online scenarios.
 
-![image-20211003083742532](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003083742532.png)
+![image-20211003083742532](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig4.png)
 
 Figure  4:  Epoch-AUC  curves  over  test  data,  in  the  offline  classification  experiments.  
 We  can  find  that  DeepGBM  converges much  faster  than other  baselines. 
 Moreover, the convergence points of  DeepGBM  are  also  much  better.
 
-![image-20211003083802341](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003083802341.png)
+![image-20211003083802341](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig5.png)
 
 Figure  5:  Online  performance  comparison.  
 For  the  models  that  cannot  be  online  updated,  we  did  not  update  them  during  the online  simulation.  
