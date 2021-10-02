@@ -30,6 +30,6 @@
 
 > 19개의 model을 voting ensemble 한 결과로 public-0.94607, private-0.94599로성능 향상을 보였다.
 
-![image-20211003024509154](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003024509154.png)
+![image-20211003024509154](https://github.com/d9249/DACON/blob/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Voting%20ensemble(After%20parameter%20optimization)/image-20211003024509154.png)
 
 이는 대회가 진행된 기간동안 1위의 점수가 0.93889보다 0.0071 점수가 높지만, Voting ensemble(Before parameter optimization)에서는 0.93386에 그쳤기 때문에 Parameter optimization(ImageDataGenerator), Data input size tendency, Optimizer optimization을 진행한 결과가 유의미하다고 볼 수 있었다.
