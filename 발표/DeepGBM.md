@@ -29,7 +29,7 @@ Neural Network; Gradient Boosting Decision Tree
 
 
 
-![image-20211003071445128](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003071445128.png)
+![image-20211003071445128](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig1.png)
 
 Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse cat- egorical and dense numerical features, respectively.
 
@@ -89,7 +89,7 @@ On the other side, NN’s advantages consist of its efficient learning over larg
 
 Some recent studies have revealed the success of employing NN in those online prediction tasks, including click pre- diction [22, 36, 51] and recommender systems [9, 10, 32, 38, 47]. Nevertheless, the main challenge of NN lies in its weakness in learning over dense numerical tabular features. 
 
-![image-20211003084741816](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003084741816.png)
+![image-20211003084741816](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab1.png)
 
 **Table  1: Comparison over  different models**
 
@@ -251,24 +251,24 @@ Besides, in this paper, we also leverage FM component and Deep component from pr
 
 Embedding  is  the  low-dimensional  dense  representation  of  a high-dimensional  sparse  vector,  and can denote as
 
-![image-20211003072322485](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003072322485.png)
+![image-20211003072322485](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/01.png)
 
 where xi is the value of i -th feature, Vi stores all embeddings of the i - th feature and can be learned by back-propagation, and EVi (xi ) will return the corresponding embedding vector for xi . 
 
 Based on that, we can use FM component to learn linear (order-1) and pair-wise (order-2) feature interactions, and denote as
 
-![image-20211003072345248](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003072345248.png)
+![image-20211003072345248](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/02.png)
 
 where d is the number of features, w0 and w are the parameters of linear part, and ⟨·, ·⟩ is the inner product operation. 
 Then, Deep component is used to learn the high-order feature interactions:
 
-![image-20211003072400561](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003072400561.png)
+![image-20211003072400561](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/03.png)
 
 where N (x ; θ ) is a multi-layered NN model with input x and pa- rameter θ . 
 
 Combined with two components, the final output of CatNN is
 
-![image-20211003072415607](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003072415607.png)
+![image-20211003072415607](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/04.png)
 
 ### 3.2 GBDT2NN for  Dense  Numerical  Features
 
@@ -312,7 +312,7 @@ Formally, we denote the structure function of a tree t as Ct (x ), which returns
 
 Then, we can use an NN model to approximate the structure function Ct (·) and the learning process can denote as
 
-![image-20211003072441217](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003072441217.png)
+![image-20211003072441217](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/05.png)
 
 where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN  model  N  and  can  be  updated  by  back-propagation,  L is  the loss function for the multiclass problem like cross entropy. 
 
@@ -330,7 +330,7 @@ Then we can map Lt to the tree output by pt = Lt × qt .
 
 Combined  with  the  above  methods  for  single  tree  distillation, the  output of  NN distilled from  tree t  can  denote as
 
-![image-20211003082058073](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082058073.png)
+![image-20211003082058073](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/06.png)
 
 ![image-20211003082114527](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082114527.png)
 
