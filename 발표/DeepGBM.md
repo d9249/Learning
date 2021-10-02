@@ -89,6 +89,10 @@ On the other side, NN’s advantages consist of its efficient learning over larg
 
 Some recent studies have revealed the success of employing NN in those online prediction tasks, including click pre- diction [22, 36, 51] and recommender systems [9, 10, 32, 38, 47]. Nevertheless, the main challenge of NN lies in its weakness in learning over dense numerical tabular features. 
 
+![image-20211003084741816](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003084741816.png)
+
+**Table  1: Comparison over  different models**
+
 Although a Fully Connected Neural Network (FCNN) could be used for dense numer- ical features directly, it usually leads to unsatisfactory performance, because its fully connected model structure leads to very complex optimization hyper-planes with a high risk of falling into local optimums [15]. 
 
 Thus, in many tasks with dense numerical tabu- lar features, NN often cannot outperform GBDT [8]. 
