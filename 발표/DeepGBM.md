@@ -3,29 +3,55 @@
 
 Online prediction has become one of the most essential tasks in many real-world applications.
 
+> 온라인 예측은 많은 실제 애플리케이션에서 가장 필수적인 작업 중 하나가 되었다.
+
 Two main characteristics of typical online prediction tasks include tabular input space and online data generation.
+
+> 대표적인 온라인 예측 작업의 두 가지 주요 특징은 표 입력 공간과 온라인 데이터 생성이다.
 
  Specifically, tabular input space indicates the existence of both sparse categorical features and dense numerical ones, while online data generation implies continuous task-generated data with potentially dynamic distribution.
 
+> 특히 표 입력 공간은 희박한 범주형 특징과 밀도가 높은 수치 형상의 존재를 나타내는 반면, 
+>
+> 온라인 데이터 생성은 잠재적으로 동적 분포가 있는 연속 작업 생성 데이터를 의미한다.
+
 Consequently, effective learning with tabular input space as well as fast adaption to online data gen- eration become two vital challenges for obtaining the online pre- diction model.
 
-Although Gradient Boosting Decision Tree (GBDT) and Neural Network (NN) have been widely used in practice, ei- ther of them yields their own weaknesses.
+> 따라서 표 형식 입력 공간을 이용한 효과적인 학습과 온라인 데이터 생성에 대한 빠른 적응은 온라인 사전 사전 모델을 얻는 데 있어 두 가지 중요한 과제가 된다.
+
+Although Gradient Boosting Decision Tree (GBDT) and Neural Network (NN) have been widely used in practice, either of them yields their own weaknesses.
+
+> 그레이디언트 부스팅 의사 결정 트리(GBDT)와 신경 네트워크(NN)가 실제로 널리 사용되었지만, 둘 중 어느 것이든 자신의 약점을 산출한다.
 
 Particularly, GBDT can hardly be adapted to dynamic online data generation, and it tends to be ineffective when facing sparse categorical features; NN, on the other hand, is quite difficult to achieve satisfactory performance when facing dense numerical features.
 
-In this paper, we propose a new learning framework, DeepGBM, which integrates the advan- tages of the both NN and GBDT by using two corresponding NN components: 
+> 특히 GBDT는 동적 온라인 데이터 생성에 거의 적응할 수 없으며 희박한 범주형 특징에 직면할 경우 비효율적인 경향이 있다. 반면에 NN은 밀도가 높은 수치 특징에 직면할 경우 만족스러운 성능을 달성하기가 매우 어렵다.
+
+In this paper, we propose a new learning framework, DeepGBM, which integrates the advantages of the both NN and GBDT by using two corresponding NN components: 
+
+> 본 논문에서 우리는 두 개의 해당 NN 구성 요소를 사용하여 NN과 GBDT의 장점을 통합하는 새로운 학습 프레임워크인 DeepGBM을 제안한다.
 
 (1) CatNN, focusing on handling sparse categorical features. 
 
-(2) GBDT2NN, focusing on dense numerical features with distilled knowledge from GBDT. 
+> CatNN, 희박한 범주형 특징 처리에 중점을 둔다.
+
+(2) GBDT2NN, focusing on dense numerical features with distilled knowledge from GBDT.
+
+> GBDT2NN, GBDT에서 증류된 지식을 가진 고밀도 수치 특징에 초점을 맞춘다.
 
 Powered by these two components, DeepGBM can leverage both categorical and numerical features while retaining the ability of efficient online update. 
 
-Comprehen- sive experiments on a variety of publicly available datasets have demonstrated that DeepGBM can outperform other well-recognized baselines in various online prediction tasks.
+> 이 두 가지 구성 요소를 기반으로 하는 DeepGBM은 효율적인 온라인 업데이트 기능을 유지하면서 범주 및 수치 기능을 모두 활용할 수 있습니다.
+
+Comprehensive experiments on a variety of publicly available datasets have demonstrated that DeepGBM can outperform other well-recognized baselines in various online prediction tasks.
+
+> 공개적으로 사용 가능한 다양한 데이터 세트에 대한 종합적인 실험은 DeepGBM이 다양한 온라인 예측 작업에서 다른 잘 알려진 기준선을 능가할 수 있다는 것을 입증했다.
 
 ## KEYWORDS
 
 Neural Network; Gradient Boosting Decision Tree
+
+> 신경망; 기울기 부스팅 의사 결정 트리
 
 
 
@@ -33,43 +59,79 @@ Neural Network; Gradient Boosting Decision Tree
 
 Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse cat- egorical and dense numerical features, respectively.
 
+> DeepGBM의 프레임워크는 CatNN과 GBDT2NN의 두 가지 구성 요소로 구성되어 있으며, 각각 희박한 고양이 등극 및 고밀도 수치 특징을 처리한다.
+
 Data Mining  (KDD ’19), August  4–8,  2019,  Anchorage, AK,  USA.  ACM, New York, NY, USA,  11 pages. https://doi.org/10.1145/3292500.3330858
 
 ## 1. INTRODUCTION
 
 Online prediction represents a certain type of tasks playing the essential role in many real-world industrial applications, such as click prediction [21, 22, 36, 51] in sponsored search, content ranking [1, 6, 7] in Web search, content optimization [9, 10, 47] in recom- mender systems, travel time estimation [31, 49] in transportation planning, etc.
 
-A typical online prediction task usually yields two specific char- acteristics in terms of the tabular input space and the online data generation. 
+> 온라인 예측은 클릭 예측 [21, 22, 36, 51], 웹 검색의 콘텐츠 순위 [1, 6, 7], 리컴 벤더 시스템의 콘텐츠 최적화 [9, 10, 47], 이동 시간 추정 [31, 49]과 같은 많은 실제 산업 애플리케이션에서 필수적인 역할을 하는 특정 유형의 작업을 나타낸다.
 
-In particular, the tabular input space means that the input features of an online prediction task can include both categor- ical and numerical tabular features. 
+A typical online prediction task usually yields two specific characteristics in terms of the tabular input space and the online data generation. 
+
+> 일반적인 온라인 예측 작업은 일반적으로 표 입력 공간과 온라인 데이터 생성 측면에서 두 가지 특정 특성을 산출한다.
+
+In particular, the tabular input space means that the input features of an online prediction task can include both categorical and numerical tabular features. 
+
+> 특히, 표 입력 공간은 온라인 예측 작업의 입력 기능이 범주형 및 숫자형 특징을 모두 포함할 수 있음을 의미한다.
 
 For example, the feature space of the click prediction task in sponsored search usually contains categorical ones like the ad category as well as numerical ones like the textual similarity between the query and the ad.
 
-In the mean- time, the online data generation implies that the real data of those tasks are generated in the online mode and the data distribution could be dynamic in real time. 
+> 예를 들어, 후원 검색에서 클릭 예측 작업의 특징 공간은 일반적으로 쿼리와 광고 사이의 텍스트 유사성과 같은 숫자 범주뿐만 아니라 광고 범주와 같은 범주형도 포함한다.
+
+In the meantime, the online data generation implies that the real data of those tasks are generated in the online mode and the data distribution could be dynamic in real time. 
+
+> 한편, 온라인 데이터 생성은 이러한 작업의 실제 데이터가 온라인 모드에서 생성되고 데이터 배포가 실시간으로 동적일 수 있음을 암시한다.
 
 For instance, the news recommender system can generate a massive amount of data in real time, and the ceaseless emerging news could give rise to dynamic feature distribution at a different time.
 
+> 예를 들어, 뉴스 추천자 시스템은 엄청난 양의 데이터를 실시간으로 생성할 수 있으며, 끊임없이 등장하는 뉴스는 다른 시간에 동적 기능 배포를 발생시킬 수 있습니다.
+
 Therefore, to pursue an effective learning-based model for the online prediction tasks, it becomes a necessity to address two main challenges: 
+
+> 따라서 온라인 예측 과제에 대한 효과적인 학습 기반 모델을 추구하기 위해서는 다음과 같은 두 가지 주요 과제를 해결해야 한다.
 
 (1) how to learn an effective model with tabular input space; and 
 
+> 표 형식 입력 공간을 사용하여 효과적인 모델을 학습하는 방법.
+
 (2) how to adapt the model to the online data generation. 
+
+> 온라인 데이터 생성에 맞게 모델을 조정하는 방법
 
 Currently, two types of machine learning models are widely used to solve online prediction tasks, i.e., Gradient Boosting Decision Tree (GBDT) and Neural Network (NN)1 . 
 
+> 현재 온라인 예측 작업을 해결하는 데 널리 사용되는 두 가지 유형의 기계 학습 모델, 즉 GBDT(Gradient Boosting Decision Tree)와 신경망(NN)1이 있다.
+
 Unfortunately, neither of them can simultaneously address both of those two main challenges well. In other words, either GBDT or NN yields its own pros and cons when being used to solve the online prediction tasks.
+
+> 안타깝게도 두 가지 주요 과제를 동시에 해결할 수는 없습니다. 다시 말해, 온라인 예측 작업을 해결하는 데 사용할 때 GBDT 또는 NN 중 하나가 장단점을 산출한다.
 
 On one side, GBDT’s main advantage lies in its capability in handling dense numerical features effectively.
 
+> 한편으로 GBDT의 주요 장점은 고밀도 수치 특징을 효과적으로 처리할 수 있는 능력에 있다.
+
 Since it can iteratively pick the features with the largest statistical information gain to build the trees [20, 45], GBDT can automatically choose and combine the useful numerical features to fit the training targets well 2. 
+
+> 트리를 구축하기 위해 통계 정보 이득이 가장 큰 특징을 반복적으로 선택할 수 있기 때문에 GBDT는 훈련 목표에 잘 맞도록 유용한 수치 특징을 자동으로 선택하고 결합할 수 있다.
 
 That is why GBDT has demonstrated its effectiveness in click prediction [33], web search ranking [6], and other well-recognized prediction tasks [8]. 
 
-Meanwhile, GBDT has two main weaknesses in online prediction tasks. 
+> 그렇기 때문에 GBDT는 클릭 예측[33], 웹 검색 순위[6] 및 기타 잘 알려진 예측 작업에서 그 효과를 입증했다[8].
 
-First, as the learned trees in GBDT are not differentiable, it is hard to update the GBDT model in the on- line mode. Frequent retraining from scratch makes GBDT quite inefficient in learning over online prediction tasks. 
+Meanwhile, GBDT has two main weaknesses in online prediction tasks.
+
+> 한편, GBDT는 온라인 예측 작업에서 두 가지 주요 약점을 가지고 있다.
+
+First, as the learned trees in GBDT are not differentiable, it is hard to update the GBDT model in the on- line mode. Frequent retraining from scratch makes GBDT quite inefficient in learning over online prediction tasks.
+
+> 첫째, GBDT에서 학습된 트리는 차별화할 수 없으므로 온라인 모드에서 GBDT 모델을 업데이트하기가 어렵다. 처음부터 재교육을 자주 하면 온라인 예측 작업에 대한 학습에서 GBDT가 상당히 비효율적이다.
 
 This weakness, moreover, prevents GBDT from learning over very large scale data, since it is usually impractical to load a huge amount of data into the memory for learning 3.
+
+> 게다가 이 약점은 GBDT가 대규모 데이터를 학습하는 것을 방해한다. 학습 3을 위해 메모리에 엄청난 양의 데이터를 로드하는 것은 일반적으로 비현실적이기 때문이다.
 
 The second weakness of GBDT is its ineffectiveness in learn- ing over sparse categorical features4 . 
 
