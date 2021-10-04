@@ -1,4 +1,4 @@
-# DeepGBM: A Deep Learning Framework Distilled by GBDT for Online Prediction  Tasks
+# DeepGBM: A Deep Learning Framework Distilled by GBDT for Online Prediction Tasks
 ## ABSTRACT
 
 Online prediction has become one of the most essential tasks in many real-world applications.
@@ -61,7 +61,7 @@ Figure 1: The framework of DeepGBM, which consists of two components, CatNN and 
 
 > DeepGBM의 프레임워크는 CatNN과 GBDT2NN의 두 가지 구성 요소로 구성되어 있으며, 각각 희박한 고양이 등극 및 고밀도 수치 특징을 처리한다.
 
-Data Mining  (KDD ’19), August  4–8,  2019,  Anchorage, AK,  USA.  ACM, New York, NY, USA,  11 pages. https://doi.org/10.1145/3292500.3330858
+Data Mining (KDD ’19), August 4–8, 2019, Anchorage, AK, USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3292500.3330858
 
 ## 1. INTRODUCTION
 
@@ -171,7 +171,7 @@ Some recent studies have revealed the success of employing NN in those online pr
 
 ![image-20211003084741816](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab1.png)
 
-**Table  1: Comparison over  different models**
+**Table 1: Comparison over different models**
 
 > **표 1: 여러 모델에 대한 비교**
 
@@ -223,7 +223,7 @@ To illustrate the effectiveness of the proposed DeepGBM, we conduct extensive ex
 
 > 제안된 DeepGBM의 효과를 설명하기 위해 표 형식의 데이터를 사용하여 공개적으로 사용할 수 있는 다양한 데이터 세트에 대해 광범위한 실험을 수행한다. 종합적인 실험 결과는 DeepGBM이 다양한 예측 작업에서 다른 솔루션을 능가할 수 있음을 보여준다.
 
-In summary,  the contributions of this paper are multi-fold:
+In summary, the contributions of this paper are multi-fold:
 
 > 요약하면, 본 논문의 기여는 여러 배이다.
 
@@ -235,7 +235,7 @@ In summary,  the contributions of this paper are multi-fold:
 
   > GBDT 모델의 학습 트리에서 선택한 입력, 구조 및 출력 지식을 고려하여 GBDT 모델의 학습된 지식을 NN 모델로 증류하는 효과적인 솔루션을 제안한다.
 
-- Extensive  experiments  show  that  DeepGBM  is  an  off-the-shelf model,  which  can  be  ready  to  use  in  all  kinds  of  prediction tasks and  achieves state-of-the-art performance.
+- Extensive experiments show that DeepGBM is an off-the-shelf model, which can be ready to use in all kinds of prediction tasks and achieves state-of-the-art performance.
 
   > 광범위한 실험에 따르면 DeepGBM은 모든 종류의 예측 작업에 사용할 수 있고 최첨단 성능을 달성할 수 있는 기성 모델입니다.
 
@@ -253,47 +253,85 @@ In the following of this section, we will briefly review the related work in add
 
 > 이 절의 다음 부분에서는 GBDT 또는 NN의 각각의 약점을 해결하는 관련 작업을 간략히 검토한 후 온라인 예측 작업에 보다 효과적인 모델을 구축하기 위해 GBDT와 NN의 장점을 결합하기 위한 이전의 노력을 검토한다.
 
-### 2.1 Applying GBDT for Online  Prediction Tasks
+### 2.1 Applying GBDT for Online Prediction Tasks
 
-Applying  GBDT  for  online  prediction  tasks  yields  two  main  weak- nesses.  
+Applying GBDT for online prediction tasks yields two main weaknesses.
 
-First,  the  non-differentiable  nature  of  trees  makes  it  hard  to update the model in the online mode. 
+> 온라인 예측 작업에 GBDT를 적용하면 두 가지 주요 약점이 발생한다.
+
+First, the non-differentiable nature of trees makes it hard to update the model in the online mode. 
+
+> 첫째, 트리의 차별화 불가능한 특성으로 인해 온라인 모드에서 모델을 업데이트하기가 어렵다.
 
 Additionally, GBDT fails to effectively leverage sparse categorical features to grow trees. 
 
-There are  some  related  works that tried to  address these problems. 
+> 또한 GBDT는 희소 범주 기능을 효과적으로 활용하여 트리를 성장시키지 못한다.
 
-**Online  Update  in  Trees.**  
+There are some related works that tried to address these problems. 
 
-Some  studies  have  tried  to  train  tree- based models from streaming data [4, 11, 18, 28], however, they are specifically  designed for  the single  tree model or multiple parallel trees  without  dependency,  like  Random  Forest  [3],  and  are  not easy to apply to GBDT directly. 
+> 이러한 문제를 해결하기 위해 노력한 관련 연구들이 있다.
 
-Moreover, they can hardly perform better  than  learning  from  all  data  at  once.  
+**Online Update in Trees.** 
 
-Two  well-recognized open-sourced  tools  for  GBDT,  i.e.,  XGBoost  [8]  and  LightGBM [29],  also  provide  a  simple  solution  for  updating  trees  by  online generated  data.  
+> 트리의 온라인 업데이트.
 
-In  particular,  they  keep  the  tree  structures  fixed and update the leaf outputs by the new data. However, this solution can cause performance far below satisfaction. 
+Some studies have tried to train tree based models from streaming data [4, 11, 18, 28], however, they are specifically designed for the single tree model or multiple parallel trees without dependency, like Random Forest [3], and are not easy to apply to GBDT directly. 
 
-Further efforts Son et al.  [44] attempted to re-find the split points on tree nodes only by  the  newly generated  data.  
+> 일부 연구에서는 스트리밍 데이터[4, 11, 18, 28]에서 트리 기반 모델을 훈련시키려고 시도했지만, 랜덤 포레스트[3]와 같이 단일 트리 모델 또는 종속성이 없는 다중 병렬 트리를 위해 특별히 설계되었으며 GBDT에 직접 적용하기가 쉽지 않다.
 
-But,  as  such  a  solution abandons  the statistical information over historical data, the split points found by the  new data  is biased and thus the performance is unstable. 
+Moreover, they can hardly perform better than learning from all data at once. 
 
-**Categorical  Features  in  Trees.**  
+> Moreover, they can hardly perform better than learning from all data at once. 
 
-Since  the  extremely  sparse  and high-dimensional features, representing high cardinality categories, may  cause very small  statistical  information  gain from imbalance partitions,  GBDT  cannot  effectively  use  sparse  features  to  grow trees. 
+Two well-recognized open-sourced tools for GBDT, i.e., XGBoost [8] and LightGBM [29], also provide a simple solution for updating trees by online generated data. 
 
-Some other encoding methods [41] tried to convert a categorical value into a dense numerical value such that they can be well handled by decision trees. CatBoost [12] also used the similar numerical  encoding  solution  for  categorical  features.  
+> GBDT에 대해 잘 알려진 두 개의 오픈 소스 툴(예: XGBoost[8] 및 LightGBM[29)도 온라인 생성 데이터에 의한 트리 업데이트를 위한 간단한 솔루션을 제공합니다.
 
-However,  it  will cause information loss.  Categorical  features also could be directly used  in  tree  learning,  by  enumerating  possible  binary  partitions [16]. 
+In particular, they keep the tree structures fixed and update the leaf outputs by the new data. However, this solution can cause performance far below satisfaction. 
 
-However, this method often over-fits to the training data when with sparse categorical features, since there is too little data in each category  and thus  the statistical information is biased [29].
+> 특히, 그들은 트리 구조를 고정시키고 새로운 데이터로 리프 출력을 업데이트한다. 그러나 이 솔루션은 만족도에 훨씬 못 미치는 성능을 유발할 수 있습니다.
+
+Further efforts Son et al. [44] attempted to re-find the split points on tree nodes only by the newly generated data. 
+
+> Son 등[44]은 추가로 새로 생성된 데이터만으로 트리 노드에서 분할점을 다시 찾으려고 시도했다.
+
+But, as such a solution abandons the statistical information over historical data, the split points found by the new data is biased and thus the performance is unstable. 
+
+> 그러나 이러한 솔루션은 과거 데이터에 대한 통계 정보를 포기하므로 새 데이터에 의해 발견된 분할점이 편향되어 성능이 불안정합니다.
+
+**Categorical Features in Trees.** 
+
+> 트리의 범주 특성.
+
+Since the extremely sparse and high-dimensional features, representing high cardinality categories, may cause very small statistical information gain from imbalance partitions, GBDT cannot effectively use sparse features to grow trees. 
+
+> 높은 카디널리티 범주를 나타내는 극도로 희박하고 고차원적인 특징은 불균형 파티션에서 매우 작은 통계 정보 이득을 야기할 수 있기 때문에 GBDT는 희소 특징을 효과적으로 사용하여 트리를 성장시킬 수 없다.
+
+Some other encoding methods [41] tried to convert a categorical value into a dense numerical value such that they can be well handled by decision trees. CatBoost [12] also used the similar numerical encoding solution for categorical features. 
+
+> 일부 다른 인코딩 방법[41]은 의사결정 트리가 잘 처리할 수 있도록 범주형 값을 고밀도 숫자 값으로 변환하려고 시도했다. CatBoost[12]도 범주형 특징에 유사한 숫자 인코딩 솔루션을 사용했습니다.
+
+However, it will cause information loss. Categorical features also could be directly used in tree learning, by enumerating possible binary partitions [16]. 
+
+> 하지만, 그것은 정보 손실을 일으킬 것이다. 범주형 특성은 가능한 이진 파티션을 열거하여 트리 학습에도 직접 사용될 수 있다[16].
+
+However, this method often over-fits to the training data when with sparse categorical features, since there is too little data in each category and thus the statistical information is biased [29].
+
+> 그러나 이 방법은 각 범주에 데이터가 너무 적어서 통계 정보가 편향되기 때문에 범주적 특성이 희박한 경우 훈련 데이터에 과도하게 적합되는 경우가 많다[29].
 
 There are some other works, such as DeepForest [52] and mGBDT [14], that use trees as building blocks to build multi-layered trees. 
 
+> DeepForest[52]와 mGBDT[14]와 같은 다른 작품들도 있습니다. 나무를 빌딩 블록으로 사용하여 다층 트리를 만드는 것입니다.
+
 However, they cannot be employed to address either the challenge of online update or that of learning over the categorical feature. 
+
+> 그러나 온라인 업데이트 또는 범주적 기능에 대한 학습 과제를 해결하기 위해 이러한 기능을 사용할 수는 없다.
 
 In a word, while there were continuous efforts in applying GBDT to online prediction tasks, most of them cannot effectively address the critical challenges in terms of how to handle online data generation and how to learn over categorical features.
 
-### 2.2 Applying  NN for  Online  Prediction Tasks
+> 한마디로, 온라인 예측 작업에 GBDT를 적용하는 지속적인 노력이 있었지만, 대부분은 온라인 데이터 생성 처리 방법과 범주형 특징에 대한 학습 방법 측면에서 중요한 과제를 효과적으로 해결할 수 없다.
+
+### 2.2 Applying NN for Online Prediction Tasks
 
 Applying NN for online prediction tasks yields one crucial chal- lenge, i.e. NN cannot learn effectively over the dense numerical features. 
 
@@ -311,19 +349,19 @@ And discretization will increase the model complexity and may cause over-fitting
 
 To summarize, applying NN to online prediction tasks still suffers from the incapability in learning an effective model over dense numerical features.
 
-### 2.3 Combining  NN  and  GBDT
+### 2.3 Combining NN and GBDT
 
-Due to the respective pros and cons of NN and GBDT, there have been emerging efforts that proposed to  combine their advantages. 
+Due to the respective pros and cons of NN and GBDT, there have been emerging efforts that proposed to combine their advantages. 
 
-In general, these efforts  can be categorized into three  classes: 
+In general, these efforts can be categorized into three classes: 
 
-**Tree-like  NN.**
+**Tree-like NN.**
 
-As  pointed  by  Ioannou  et  al.  [26],  tree-like  NNs, e.g.  GoogLeNet  [46],  have  decision  ability  like  trees  to  some  extent. There  are  some  other  works  [30,  40]  that  introduce  decision  ability into NN. 
+As pointed by Ioannou et al. [26], tree-like NNs, e.g. GoogLeNet [46], have decision ability like trees to some extent. There are some other works [30, 40] that introduce decision ability into NN. 
 
-However, these works mainly focused on computer vision tasks without attention to online prediction tasks with tabular input space. Yang et al. [50] proposed the soft binning function to simu- late decision trees in NN, which is, however, very inefficient as it enumerates  all  possible  decisions.  Wang  et  al. [48]  proposed  NNRF, which  used tree-like  NN  and random  feature  selection  to  improve the  learning  from  tabular  data.  
+However, these works mainly focused on computer vision tasks without attention to online prediction tasks with tabular input space. Yang et al. [50] proposed the soft binning function to simu- late decision trees in NN, which is, however, very inefficient as it enumerates all possible decisions. Wang et al. [48] proposed NNRF, which used tree-like NN and random feature selection to improve the learning from tabular data. 
 
-Nevertheless,  NNRF  simply  uses random  feature  combinations,  without  leveraging  the  statistical information  over training data  like GBDT.
+Nevertheless, NNRF simply uses random feature combinations, without leveraging the statistical information over training data like GBDT.
 
 **Convert Trees to NN.** 
 
@@ -345,7 +383,7 @@ Microsoft [33] used GBDT to fit the residual errors of NN.
 
 However, as the online update problem in GBDT is not resolved, these works cannot be efficiently used online. 
 
-In fact, Facebook also pointed up this problem in their paper [23], for the GBDT model in their framework needs to be retrained every day to  achieve  the  good online  performance.
+In fact, Facebook also pointed up this problem in their paper [23], for the GBDT model in their framework needs to be retrained every day to achieve the good online performance.
 
 As a summary, while there are increasing efforts that explored to combine the advantages of GBDT and NN to build a more effective model for online prediction tasks, most of them cannot totally address the challenges related to tabular input space and online data generation. 
 
@@ -359,7 +397,7 @@ Specifically, the whole DeepGBM framework, as shown in Fig. 1, consists of two m
 
 We will describe the details of each component in the following subsections.
 
-### 3.1 CatNN  for Sparse Categorical  Features
+### 3.1 CatNN for Sparse Categorical Features
 
 To solve online prediction tasks, NN has been widely employed to learn the prediction model over categorical features, such as Wide & Deep [9], PNN [36], DeepFM [22] and xDeepFM [32]. 
 
@@ -369,7 +407,7 @@ In particular, the same as previous works, CatNN mainly relies on the embedding 
 
 Besides, in this paper, we also leverage FM component and Deep component from previous works [9, 22], to learn the interactions over features. Please note CatNN is not limited by these two components, since it can use any other NN components with similar functions.
 
-Embedding  is  the  low-dimensional  dense  representation  of  a high-dimensional  sparse  vector,  and can denote as
+Embedding is the low-dimensional dense representation of a high-dimensional sparse vector, and can denote as
 
 ![image-20211003072322485](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/01.png)
 
@@ -390,7 +428,7 @@ Combined with two components, the final output of CatNN is
 
 ![image-20211003072415607](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/04.png)
 
-### 3.2 GBDT2NN for  Dense  Numerical  Features
+### 3.2 GBDT2NN for Dense Numerical Features
 
 In this subsection, we will describe the details about how we dis- till the learned trees in GBDT into an NN model. 
 
@@ -434,7 +472,7 @@ Then, we can use an NN model to approximate the structure function Ct (·) and t
 
 ![image-20211003072441217](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/05.png)
 
-where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN  model  N  and  can  be  updated  by  back-propagation,  L is  the loss function for the multiclass problem like cross entropy. 
+where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN model N and can be updated by back-propagation, L is the loss function for the multiclass problem like cross entropy. 
 
 Thus, after learning, we can get an NN model N (· ; θ ). Due to the strong expressiveness ability of NN, the learned NN model should perfectly approximate the structure function of decision tree.
 
@@ -442,19 +480,19 @@ Thus, after learning, we can get an NN model N (· ; θ ). Due to the strong exp
 
 Since the mapping from tree inputs to tree struc- tures is learned in the previous step, to distill tree outputs, we only need to know the mapping from tree structures to tree outputs. 
 
-As there  is  a  corresponding  leaf  value  for  a  leaf  index,  this  mapping is actually not needed to learn. 
+As there is a corresponding leaf value for a leaf index, this mapping is actually not needed to learn. 
 
 In particular, we denote the leaf values of tree t as qt and qit represents the leaf value of i -th leaf. 
 
 Then we can map Lt to the tree output by pt = Lt × qt .
 
-Combined  with  the  above  methods  for  single  tree  distillation, the  output of  NN distilled from  tree t  can  denote as
+Combined with the above methods for single tree distillation, the output of NN distilled from tree t can denote as
 
 ![image-20211003082058073](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/06.png)
 
 ![image-20211003082114527](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082114527.png)
 
-Figure  2:  Tree  structure  distillation  by  leaf  index.  NN  will approximate  the tree  structure by fitting its leaf index.
+Figure 2: Tree structure distillation by leaf index. NN will approximate the tree structure by fitting its leaf index.
 
 ![image-20211003082127367](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082127367.png)
 
@@ -518,7 +556,7 @@ Formally, given a group of trees T, we can extend the Eqn.(7) to learn leaf embe
 
 ![image-20211003082429626](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/09.png)
 
-where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT  is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T. 
+where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T. 
 
 After that, we can use the new embedding as the distillation target of NN model, and the learning process of it can denote as
 
@@ -530,7 +568,7 @@ When the number of trees in T is large, IT may contains many features and thus h
 
 Therefore, as an alternate, we can only use top features in IT according to feature importance. 
 
-To sum up, combined with above methods, the final output of the NN distilled from a  tree  group T  is 
+To sum up, combined with above methods, the final output of the NN distilled from a tree group T is 
 
 ![image-20211003082459848](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/11.png)
 
@@ -556,9 +594,9 @@ After that, we can train DeepGBM end-to-end. Formally, we denote the output of D
 
 ![image-20211003082732071](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/13.png)
 
-where w1  and w2  are  the  trainable parameters  used  for  combining is  GBDT2NN  and  CatNN, σ' is the  output  transformation,  such  as sigmoid  for  binary  classification.  
+where w1 and w2 are the trainable parameters used for combining is GBDT2NN and CatNN, σ' is the output transformation, such as sigmoid for binary classification. 
 
-Then,  we  can  use  the  following loss function for the  end-to-end training
+Then, we can use the following loss function for the end-to-end training
 
 ![image-20211003082858256](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/14.png)
 
@@ -592,7 +630,7 @@ Particularly, we will start with details about experimental setup, including dat
 
 After that, we will analyze the performance of DeepGBM in both offline and online settings to demonstrate its effectiveness and advantage over baseline models.
 
-### 4.1 Experimental  Setup
+### 4.1 Experimental Setup
 
 **Datasets**: To illustrate the effective of DeepGBM, we conduct ex- periments on a couple of public datasets, as listed in Table 2. 
 
@@ -604,18 +642,18 @@ More details about these datasets can be found in Appendix A.1. As these dataset
 
 Furthermore, as time-stamp is available in most of these datasets, we can use them to simulate the online scenarios.
 
-**Compared Models**:   In our experiments, we will compare Deep- GBM with the following baseline models:
+**Compared Models**:  In our experiments, we will compare Deep- GBM with the following baseline models:
 
 - GBDT [17], which is a widely used tree-based learning algo- rithm for modeling tabular data. We use LightGBM [29] for its high efficiency.
-- LR, which is Logistic  Regression,  a generalized linear model.
-- FM  [38], which contains a  linear model  and a FM component.
-- Wide&Deep  [9], which combines a shallow linear model with deep  neural network.
-- DeepFM  [22],  which  improves  Wide&Deep  by  adding  an  addi- tional  FM component.
-- PNN  [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical  features.
+- LR, which is Logistic Regression, a generalized linear model.
+- FM [38], which contains a linear model and a FM component.
+- Wide&Deep [9], which combines a shallow linear model with deep neural network.
+- DeepFM [22], which improves Wide&Deep by adding an addi- tional FM component.
+- PNN [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical features.
 
 ![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
 
-Table 3: Offline performance comparison. AUC (higher is better) is used for binary classification tasks, and MSE (lower is better) is used for regression tasks. All experiments are run 5 times with different random seeds, and the mean ± std results are shown in  this table.  The  top-2 results are marked  bold.
+Table 3: Offline performance comparison. AUC (higher is better) is used for binary classification tasks, and MSE (lower is better) is used for regression tasks. All experiments are run 5 times with different random seeds, and the mean ± std results are shown in this table. The top-2 results are marked bold.
 
 Besides, to further analyze the performance of DeepGBM, we use additional two degenerated versions of DeepGBM in experiments:
 
@@ -642,7 +680,7 @@ We first evaluate the offline performance for the proposed Deep- GBM in this sub
 
 To simulate the real-world scenarios, we partition each benchmark dataset into the training set and test set according to the time-stamp, i.e., the older data samples (about 90%) are used for the training and the newer samples (about 10%) are used for the test. More details are available in Appendix A.
 
-The  overall  comparison  results  could  be  found  in  Table  3.  From the  table, we  have following observations:
+The overall comparison results could be found in Table 3. From the table, we have following observations:
 
 - GBDT can outperform other NN baselines, which explicitly shows the advantage of GBDT on the tabular data. Therefore, distilling GBDT knowledge will definitely benefit DeepGBM.
 - GBDT2NN (DeepGBM (D2)) can further improve GBDT, which indicates that GBDT2NN can effectively distill the trained GBDT model into NN. Furthermore, it implies that the distilled NN model can be further improved and even outperform GBDT.
@@ -653,7 +691,7 @@ To investigate the convergence of DeepGBM, Fig. 4 demonstrates the performance i
 
 From these figures, we can find that DeepGBM also converges much faster than other models.
 
-### 4.3 Online  Performance
+### 4.3 Online Performance
 
 To evaluate the online performance of DeepGBM, we use Flight, Criteo and AutoML-1 datasets as the online benchmark. 
 
@@ -671,22 +709,22 @@ Note that, as the data distribution may change along with different batches duri
 
 Thus, we also check the performance of offline DeepGBM as another baseline to compare with the online learned DeepGBM.
 
-All the comparison results are summarized in Fig 5, and we have following  observations:
+All the comparison results are summarized in Fig 5, and we have following observations:
 
 - GBDT cannot perform well in the online scenarios as expected. Although GBDT yields good result in the first batch (offline stage), it declines obviously in the later (online) batches.
 - The online performance of GBDT2NN is good. In particular, GBDT2NN (DeepGBM (D2)) can significantly outperform GBDT. Furthermore, DeepGBM outperforms DeepGBM (D1), which uses GBDT instead of GBDT2NN, by a non-trivial gain. It indicates that the distilled NN model by GBDT could be further improved and effectively used in the online scenarios.
 
 ![image-20211003083742532](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig4.png)
 
-Figure  4:  Epoch-AUC  curves  over  test  data,  in  the  offline  classification  experiments.  
-We  can  find  that  DeepGBM  converges much  faster  than other  baselines. 
-Moreover, the convergence points of  DeepGBM  are  also  much  better.
+Figure 4: Epoch-AUC curves over test data, in the offline classification experiments. 
+We can find that DeepGBM converges much faster than other baselines. 
+Moreover, the convergence points of DeepGBM are also much better.
 
 ![image-20211003083802341](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig5.png)
 
-Figure  5:  Online  performance  comparison.  
-For  the  models  that  cannot  be  online  updated,  we  did  not  update  them  during  the online  simulation.  
-All  experiments are run 5 times with different random  seeds,  and  the  mean  results (AUC) are  used.
+Figure 5: Online performance comparison. 
+For the models that cannot be online updated, we did not update them during the online simulation. 
+All experiments are run 5 times with different random seeds, and the mean results (AUC) are used.
 
 - DeepGBM outperforms all other baselines, including its offline version (the dotted lines). It explicitly proves the proposed Deep- GBM indeed yields strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning.
 
@@ -710,13 +748,13 @@ Comprehensive experimental results demonstrate that DeepGBM can outperform other
 
 [1] Eugene Agichtein, Eric Brill, and Susan Dumais. 2006. Improving web search rank- ing by incorporating user behavior information. In Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval. ACM, 19–26.
 
-[2]    Arunava  Banerjee.  1997.  Initializing  neural  networks  using  decision  trees.  Com- putational learning theory and natural learning  systems  4 (1997), 3–15.
+[2]  Arunava Banerjee. 1997. Initializing neural networks using decision trees. Com- putational learning theory and natural learning systems 4 (1997), 3–15.
 
-[3]    Iñigo Barandiaran. 1998.  The random subspace method for constructing decision
-forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (1998). [4]    Yael  Ben-Haim  and  Elad  Tom-Tov.  2010.     A  streaming  parallel  decision  tree algorithm.  Journal of Machine  Learning Research  11, Feb  (2010), 849–872.
+[3]  Iñigo Barandiaran. 1998. The random subspace method for constructing decision
+forests. IEEE transactions on pattern analysis and machine intelligence 20, 8 (1998). [4]  Yael Ben-Haim and Elad Tom-Tov. 2010.   A streaming parallel decision tree algorithm. Journal of Machine Learning Research 11, Feb (2010), 849–872.
 
-[5]    Gérard Biau, Erwan Scornet, and Johannes Welbl. 2016.  Neural random forests. Sankhya A  (2016),  1–40.
-[6]    Christopher JC Burges. 2010.  From ranknet to lambdarank to lambdamart: An overview.  Learning  11, 23-581 (2010),  81.
+[5]  Gérard Biau, Erwan Scornet, and Johannes Welbl. 2016. Neural random forests. Sankhya A (2016), 1–40.
+[6]  Christopher JC Burges. 2010. From ranknet to lambdarank to lambdamart: An overview. Learning 11, 23-581 (2010), 81.
 
 [7] Zhe Cao, Tao Qin, Tie-Yan Liu, Ming-Feng Tsai, and Hang Li. 2007. Learning to rank: from pairwise approach to listwise approach. In Proceedings of the 24th international conference on Machine learning. ACM, 129–136.
 
@@ -730,21 +768,21 @@ forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (
 
 [12] Anna Veronika Dorogush, Vasily Ershov, and Andrey Gulin. 2018. CatBoost: gra- dient boosting with categorical features support. arXiv preprint arXiv:1810.11363 (2018).
 
-[13]    James  Dougherty,  Ron  Kohavi,  and  Mehran  Sahami.  1995.  Supervised  and  unsu- pervised  discretization  of  continuous  features.  In  Machine  Learning  Proceedings 1995. Elsevier,  194–202.
+[13]  James Dougherty, Ron Kohavi, and Mehran Sahami. 1995. Supervised and unsu- pervised discretization of continuous features. In Machine Learning Proceedings 1995. Elsevier, 194–202.
 
-[14]    Ji  Feng,  Yang  Yu,  and  Zhi-Hua  Zhou.  2018.   Multi-Layered  Gradient  Boosting Decision Trees.  arXiv preprint  arXiv:1806.00007  (2018).
+[14]  Ji Feng, Yang Yu, and Zhi-Hua Zhou. 2018.  Multi-Layered Gradient Boosting Decision Trees. arXiv preprint arXiv:1806.00007 (2018).
 
-[15] Manuel Fernández-Delgado, Eva Cernadas, Senén Barro, and Dinani Amorim. Do  we  need  hundreds  of  classifiers  to  solve  real  world  classification problems?  The  Journal of Machine  Learning Research  15, 1 (2014), 3133–3181.
+[15] Manuel Fernández-Delgado, Eva Cernadas, Senén Barro, and Dinani Amorim. Do we need hundreds of classifiers to solve real world classification problems? The Journal of Machine Learning Research 15, 1 (2014), 3133–3181.
 
-[16]    Jerome  Friedman,  Trevor  Hastie,  and  Robert  Tibshirani.  2001.   The  elements  of statistical learning.  Vol.  1.  Springer  series in  statistics New  York,  NY, USA:.
+[16]  Jerome Friedman, Trevor Hastie, and Robert Tibshirani. 2001.  The elements of statistical learning. Vol. 1. Springer series in statistics New York, NY, USA:.
 
-[17]    Jerome  H  Friedman.  2001.  Greedy function  approximation:  a gradient boosting machine.  Annals of statistics  (2001), 1189–1232.
+[17]  Jerome H Friedman. 2001. Greedy function approximation: a gradient boosting machine. Annals of statistics (2001), 1189–1232.
 
-[18]    Mohamed Medhat Gaber, Arkady Zaslavsky, and Shonali Krishnaswamy. 2005. Mining  data  streams:  a review.  ACM Sigmod  Record  34, 2 (2005), 18–26.
+[18]  Mohamed Medhat Gaber, Arkady Zaslavsky, and Shonali Krishnaswamy. 2005. Mining data streams: a review. ACM Sigmod Record 34, 2 (2005), 18–26.
 
-[19]    Ian Goodfellow, Yoshua Bengio, Aaron Courville, and  Yoshua Bengio. 2016.  Deep learning.  Vol.  1.  MIT press Cambridge.
+[19]  Ian Goodfellow, Yoshua Bengio, Aaron Courville, and Yoshua Bengio. 2016. Deep learning. Vol. 1. MIT press Cambridge.
 
-[20]    Krzysztof  Grabczewski  and  Norbert  Jankowski.  2005.    Feature  selection  with decision tree  criterion. In  null. IEEE,  212–217.
+[20]  Krzysztof Grabczewski and Norbert Jankowski. 2005.  Feature selection with decision tree criterion. In null. IEEE, 212–217.
 
 [21] Thore Graepel, Joaquin Quinonero Candela, Thomas Borchert, and Ralf Herbrich. 2010. Web-scale bayesian click-through rate prediction for sponsored search advertising in microsoft’s bing search engine. Omnipress.
 
@@ -752,9 +790,9 @@ forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (
 
 [23] Xinran He, Junfeng Pan, Ou Jin, Tianbing Xu, Bo Liu, Tao Xu, Yanxin Shi, Antoine Atallah, Ralf Herbrich, Stuart Bowers, et al. 2014. Practical lessons from predicting clicks on ads at facebook. In Proceedings of the Eighth International Workshop on Data Mining for Online Advertising. ACM, 1–9.
 
-[24]    Geoffrey  Hinton,  Oriol  Vinyals,  and  Jeff  Dean.  2015.  Distilling  the  knowledge  in a neural  network.  arXiv  preprint arXiv:1503.02531  (2015).
+[24]  Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. 2015. Distilling the knowledge in a neural network. arXiv preprint arXiv:1503.02531 (2015).
 
-[25]    K. D. Humbird, J. L. Peterson, and R. G. McClarren. 2017.  Deep neural network initialization with decision trees.  ArXiv e-prints  (July  2017).  arXiv:1707.00784
+[25]  K. D. Humbird, J. L. Peterson, and R. G. McClarren. 2017. Deep neural network initialization with decision trees. ArXiv e-prints (July 2017). arXiv:1707.00784
 
 [26] Yani Ioannou, Duncan Robertson, Darko Zikic, Peter Kontschieder, Jamie Shotton, Matthew Brown, and Antonio Criminisi. 2016. Decision forests, convolutional networks and the models in-between. arXiv preprint arXiv:1603.01250 (2016).
 
@@ -764,7 +802,7 @@ forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (
 
 [29] Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. 2017. LightGBM: A highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems. 3146–3154.
 
-[30] Peter Kontschieder, Madalina Fiterau, Antonio Criminisi, and Samuel Rota Bulo. 2015 Deep  neural  decision  forests.  In  Proceedings  of  the  IEEE  international conference  on  computer vision. 1467–1475.
+[30] Peter Kontschieder, Madalina Fiterau, Antonio Criminisi, and Samuel Rota Bulo. 2015 Deep neural decision forests. In Proceedings of the IEEE international conference on computer vision. 1467–1475.
 
 [31] Yaguang Li, Kun Fu, Zheng Wang, Cyrus Shahabi, Jieping Ye, and Yan Liu. 2018. Multi-task representation learning for travel time estimation. In International Conference on Knowledge Discovery and Data Mining,(KDD).
 
@@ -774,22 +812,22 @@ forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (
 
 [34] Qi Meng, Guolin Ke, Taifeng Wang, Wei Chen, Qiwei Ye, Zhi-Ming Ma, and Tie-Yan Liu. 2016. A communication-efficient parallel algorithm for decision tree. In Advances in Neural Information Processing Systems. 1279–1287.
 
-[35]    Tomas  Mikolov,  Kai  Chen,  Greg  Corrado,  and  Jeffrey  Dean.  2013.      Efficient estimation of word representations in vector space.  arXiv preprint arXiv:1301.3781
+[35]  Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013.   Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781
 (2013).
 
 [36] Yanru Qu, Han Cai, Kan Ren, Weinan Zhang, Yong Yu, Ying Wen, and Jun Wang. 2016. Product-based neural networks for user response prediction. In Data Mining (ICDM), 2016 IEEE 16th International Conference on. IEEE, 1149–1154.
 
 [37] Yao Quanming, Wang Mengshuo, Jair Escalante Hugo, Guyon Isabelle, Hu Yi-Qi, Li Yu-Feng, Tu Wei-Wei, Yang Qiang, and Yu Yang. 2018. Taking human out of learning applications: A survey on automated machine learning. arXiv preprint arXiv:1810.13306 (2018).
 
-[38]    Steffen  Rendle.  2010.  Factorization  machines.  In  Data  Mining  (ICDM),  2010  IEEE 10th  International  Conference  on. IEEE, 995–1000.
+[38]  Steffen Rendle. 2010. Factorization machines. In Data Mining (ICDM), 2010 IEEE 10th International Conference on. IEEE, 995–1000.
 
 [39] David L Richmond, Dagmar Kainmueller, Michael Y Yang, Eugene W Myers, and Carsten Rother. 2015. Relating cascaded random forests to deep convolutional neural networks for semantic segmentation. arXiv preprint arXiv:1507.07583 (2015).
 
 [40] Samuel Rota Bulo and Peter Kontschieder. 2014. Neural decision forests for semantic image labelling. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 81–88.
 
-[41]    Scikit-learn. 2018.  categorical_encoding.  https://github.com/scikit- learn- contrib/ categorical- encoding.
+[41]  Scikit-learn. 2018. categorical_encoding. https://github.com/scikit- learn- contrib/ categorical- encoding.
 
-[42]    Ishwar Krishnan Sethi. 1990. Entropy nets: from decision trees to neural networks. Proc.  IEEE  78, 10 (1990), 1605–1613.
+[42]  Ishwar Krishnan Sethi. 1990. Entropy nets: from decision trees to neural networks. Proc. IEEE 78, 10 (1990), 1605–1613.
 
 [43] Ira Shavitt and Eran Segal. 2018. Regularization Learning Networks: Deep Learn- ing for Tabular Datasets. In Advances in Neural Information Processing Systems. 1386–1396.
 
@@ -805,10 +843,10 @@ forests.  IEEE transactions on pattern analysis and machine intelligence 20, 8 (
 
 [49] Zheng Wang, Kun Fu, and Jieping Ye. 2018. Learning to estimate the travel time. In Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. ACM, 858–866.
 
-[50]    Yongxin  Yang,  Irene  Garcia  Morillo,  and  Timothy  M  Hospedales.  2018.   Deep Neural  Decision  Trees.  arXiv  preprint  arXiv:1806.06988  (2018).
+[50]  Yongxin Yang, Irene Garcia Morillo, and Timothy M Hospedales. 2018.  Deep Neural Decision Trees. arXiv preprint arXiv:1806.06988 (2018).
 
 [51] Weinan Zhang, Tianming Du, and Jun Wang. 2016. Deep learning over multi-field
-categorical data. In European conference on information retrieval. Springer, 45–57. [52]    Zhi-Hua  Zhou  and  Ji  Feng.  2017.   Deep  forest:  Towards  an  alternative  to  deep
-neural  networks.  arXiv  preprint  arXiv:1702.08835  (2017).
+categorical data. In European conference on information retrieval. Springer, 45–57. [52]  Zhi-Hua Zhou and Ji Feng. 2017.  Deep forest: Towards an alternative to deep
+neural networks. arXiv preprint arXiv:1702.08835 (2017).
 
 [53] Jie Zhu, Ying Shan, JC Mao, Dong Yu, Holakou Rahmanian, and Yi Zhang. 2017. Deep embedding forest: Forest-based serving with deep embedding features. In Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 1703–1711.
