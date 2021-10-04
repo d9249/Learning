@@ -53,9 +53,7 @@ Neural Network; Gradient Boosting Decision Tree
 
 > 신경망; 기울기 부스팅 의사 결정 트리
 
-
-
-![image-20211003071445128](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig1.png)
+![Fig1](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig1.png)
 
 Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse cat- egorical and dense numerical features, respectively.
 
@@ -333,61 +331,119 @@ In a word, while there were continuous efforts in applying GBDT to online predic
 
 ### 2.2 Applying NN for Online Prediction Tasks
 
-Applying NN for online prediction tasks yields one crucial chal- lenge, i.e. NN cannot learn effectively over the dense numerical features. 
+> 온라인 예측 작업에 NN 적용
+
+Applying NN for online prediction tasks yields one crucial challenge, i.e. NN cannot learn effectively over the dense numerical features. 
+
+> 온라인 예측 작업에 NN을 적용하면 한 가지 중요한 과제가 발생한다. 즉, NN은 밀도가 높은 수치 특징을 효과적으로 학습할 수 없다.
 
 Although there are many recent works that have employed NN into prediction tasks, such as click prediction [22, 36, 51] and recommender systems [9, 10, 32, 47], they all mainly focused on the sparse categorical features, and far less attention has been put on adopting NN over dense numerical features, which yet remains quite challenging. 
 
+> 클릭 예측[22, 36, 51] 및 추천자 시스템[9, 10, 32, 47]과 같은 예측 작업에 NN을 채택한 많은 최근 연구가 있지만, 이들은 모두 희박한 범주적 특징에 초점을 맞췄고, 아직까지는 상당히 어려운 고밀도 수치 특징에 비해 NN 채택에 훨씬 덜 주의를 기울였다.
+
 Traditionally, Fully Connected Neural Network (FCNN) is often used for dense numerical features. 
 
-Nevertheless, FCNN usually fails to reach satisfactory performance [15], because its fully connected model structure leads to very complex optimiza- tion hyper-planes with a high risk of falling into local optimums. Even after employing the certain normalization [27] and regular- ization [43] techniques, FCNN still cannot outperform GBDT in many tasks with dense numerical features [8]. 
+> 전통적으로 FCNN(Fully Connected Neural Network)은 종종 고밀도 수치 형상에 사용된다.
+
+Nevertheless, FCNN usually fails to reach satisfactory performance [15], because its fully connected model structure leads to very complex optimization hyper-planes with a high risk of falling into local optimums. Even after employing the certain normalization [27] and regularization [43] techniques, FCNN still cannot outperform GBDT in many tasks with dense numerical features [8]. 
+
+> 그럼에도 불구하고 FCNN은 완전히 연결된 모델 구조가 로컬 최적에 빠질 위험이 높은 매우 복잡한 최적화 하이퍼 평면으로 이어지기 때문에 대개 만족스러운 성능에 도달하지 못한다[15]. 특정 정규화[27] 및 정규화[43] 기법을 사용한 후에도 FCNN은 여전히 밀도가 높은 수치 특징을 가진 많은 작업에서 GBDT를 능가할 수 없다[8].
 
 Another widely used solution facing dense numerical features is discretization [13], which can bucketize numerical features into categorical formats and thus can be better handled by previous works on categorical features. 
 
-However, since the bucketized outputs will still connect to fully connected layers, discretization actually cannot improve the effectiveness in handling numerical features. 
+> 밀도가 높은 수치 형상에 직면하는 또 다른 널리 사용되는 솔루션은 이산화[13]로, 수치 형상을 범주형 형식으로 버킷화할 수 있으므로 범주형 형상에 대한 이전 연구에서 더 잘 처리할 수 있다.
 
-And discretization will increase the model complexity and may cause over-fitting due to the increase of model parameters. 
+However, since the bucketized outputs will still connect to fully connected layers, discretization actually cannot improve the effectiveness in handling numerical features.
+
+> 그러나 버킷화된 출력은 여전히 완전히 연결된 레이어에 연결되기 때문에 이산화는 실제로 수치 형상의 처리 효과를 향상시킬 수 없다.
+
+And discretization will increase the model complexity and may cause over-fitting due to the increase of model parameters.
+
+> 또한 이산화는 모델 복잡성을 증가시키고 모델 매개변수의 증가로 인해 과적합을 유발할 수 있다.
 
 To summarize, applying NN to online prediction tasks still suffers from the incapability in learning an effective model over dense numerical features.
 
+> 요약하면, 온라인 예측 작업에 NN을 적용하는 것은 여전히 밀도가 높은 수치 특징에 대해 효과적인 모델을 학습할 수 없는 어려움을 겪고 있다.
+
 ### 2.3 Combining NN and GBDT
+
+> NN과 GBDT 결합
 
 Due to the respective pros and cons of NN and GBDT, there have been emerging efforts that proposed to combine their advantages. 
 
+> NN과 GBDT의 장단점 때문에 이들의 장점을 결합할 것을 제안하는 새로운 노력이 있었다.
+
 In general, these efforts can be categorized into three classes: 
+
+> 일반적으로 이러한 노력은 세 가지 클래스로 분류될 수 있습니다.
 
 **Tree-like NN.**
 
+> **나무 같은 NN.**
+
 As pointed by Ioannou et al. [26], tree-like NNs, e.g. GoogLeNet [46], have decision ability like trees to some extent. There are some other works [30, 40] that introduce decision ability into NN. 
 
-However, these works mainly focused on computer vision tasks without attention to online prediction tasks with tabular input space. Yang et al. [50] proposed the soft binning function to simu- late decision trees in NN, which is, however, very inefficient as it enumerates all possible decisions. Wang et al. [48] proposed NNRF, which used tree-like NN and random feature selection to improve the learning from tabular data. 
+> Ioannou 등이 지적한 바와 같이. [26], 나무와 같은 NN(예: GoogLeNet[46])은 어느 정도 나무와 같은 의사 결정 능력을 가지고 있다. 의사 결정 능력을 NN에 도입하는 다른 작업[30, 40]도 있다.
+
+However, these works mainly focused on computer vision tasks without attention to online prediction tasks with tabular input space. Yang et al. [50] proposed the soft binning function to simulate decision trees in NN, which is, however, very inefficient as it enumerates all possible decisions. Wang et al. [48] proposed NNRF, which used tree-like NN and random feature selection to improve the learning from tabular data. 
+
+> 그러나 이러한 작업은 표 입력 공간이 있는 온라인 예측 작업에 주의를 기울이지 않고 주로 컴퓨터 비전 작업에 초점을 맞췄다. 양 외 연구진 [50]은 NN에서 의사 결정 트리를 시뮬레이션하기 위한 소프트 비닝 함수를 제안했지만, 가능한 모든 의사 결정을 열거하기 때문에 매우 비효율적이다. 왕 외 연구진 [48] 표 형식 데이터에서 학습을 개선하기 위해 트리형 NN과 무작위 기능 선택을 사용한 NNRF를 제안했다.
 
 Nevertheless, NNRF simply uses random feature combinations, without leveraging the statistical information over training data like GBDT.
 
+> 그럼에도 불구하고 NRF는 GBDT와 같은 훈련 데이터에 대한 통계 정보를 활용하지 않고 무작위의 기능 조합을 사용한다.
+
 **Convert Trees to NN.** 
+
+> **트리를 NN으로 변환합니다.**
 
 Another track of works tried to convert the trained decision trees to NN [2, 5, 25, 39, 42]. 
 
+> 다른 작업 트랙은 훈련된 의사 결정 트리를 NN[2, 5, 25, 39, 42]으로 변환하려고 시도했다.
+
 However, these works are inefficient as they use a redundant and usually very sparse NN to represent a simple decision tree. 
+
+> 그러나 이러한 작업은 중복되고 대개 매우 희박한 NN을 사용하여 단순한 의사 결정 트리를 나타내기 때문에 비효율적이다.
 
 When there are many trees, such conversion solution has to construct a very wide NN to represent them, which is unfortunately hard to be applied to realistic scenarios. 
 
+> 트리가 많은 경우 이러한 변환 솔루션은 트리를 나타내기 위해 매우 넓은 NN을 구성해야 하며, 이는 유감스럽게도 현실적인 시나리오에 적용되기 어렵다.
+
 Furthermore, these methods use the complex rules to convert a single tree and thus are not easily used in practice. 
+
+> 또한 이러한 방법은 하나의 트리를 변환하기 위해 복잡한 규칙을 사용하므로 실제로 쉽게 사용되지 않습니다.
 
 **Combining NN and GBDT.** 
 
+> **NN과 GBDT를 결합합니다.**
+
 There are some practical works that directly used GBDT and NN together [23, 33, 53]. 
 
-Facebook [23] used the leaf index predictions as the input categorical features of a Logistic Regression. 
+> GBDT와 NN을 직접 사용한 몇 가지 실제 작업이 있다[23, 33, 53].
+
+Facebook [23] used the leaf index predictions as the input categorical features of a Logistic Regression.
+
+> Facebook [23]에서는 잎 지수 예측을 로지스틱 회귀 분석의 입력 범주형 특징으로 사용했습니다.
 
 Microsoft [33] used GBDT to fit the residual errors of NN. 
 
+> Microsoft [33]에서는 NN의 잔여 오류를 맞추기 위해 GBDT를 사용했습니다.
+
 However, as the online update problem in GBDT is not resolved, these works cannot be efficiently used online. 
+
+> 그러나 GBDT의 온라인 업데이트 문제가 해결되지 않아 온라인에서 이러한 작업을 효율적으로 사용할 수 없습니다.
 
 In fact, Facebook also pointed up this problem in their paper [23], for the GBDT model in their framework needs to be retrained every day to achieve the good online performance.
 
+> 실제로 Facebook도 논문 [23]에서 이 문제를 지적했는데, 프레임워크의 GBDT 모델은 좋은 온라인 성능을 얻기 위해 매일 재교육을 받아야 한다.
+
 As a summary, while there are increasing efforts that explored to combine the advantages of GBDT and NN to build a more effective model for online prediction tasks, most of them cannot totally address the challenges related to tabular input space and online data generation. 
 
+> 요약하자면, 온라인 예측 작업에 보다 효과적인 모델을 구축하기 위해 GBDT와 NN의 장점을 결합하려는 노력이 증가하고 있지만, 이들 대부분은 표 입력 공간 및 온라인 데이터 생성과 관련된 과제를 완전히 해결할 수 없다.
+
 In this paper, we propose a new learning framework, DeepGBM, to better integrates NN and GBDT together.
+
+> 본 논문에서 우리는 NN과 GBDT를 더 잘 통합하기 위한 새로운 학습 프레임워크인 DeepGBM을 제안한다.
 
 ## 3. DEEPGBM
 
