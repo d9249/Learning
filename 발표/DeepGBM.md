@@ -135,65 +135,123 @@ This weakness, moreover, prevents GBDT from learning over very large scale data,
 
 The second weakness of GBDT is its ineffectiveness in learn- ing over sparse categorical features4 . 
 
+> GBDT의 두 번째 약점은 희소 범주적 특징4에 대한 학습의 비효율성이다.
+
 Particularly, after converting categorical features into sparse and high-dimensional one-hot en- codings, the statistical information gain will become very small on sparse features, since the gain of imbalance partitions by sparse features is almost the same as non-partition. 
+
+> 특히 범주형 특징을 희소 및 고차원 단일 핫 코딩으로 변환한 후 희소 형상에 의한 불균형 파티션 이득이 비 파티션과 거의 같기 때문에 희소 형상에서 통계 정보 이득은 매우 작아진다.
 
 As a result, GBDT fails to use sparse features to grow trees effectively. 
 
+> 따라서 GBDT는 희소 기능을 사용하여 트리를 효과적으로 성장시키지 못합니다.
+
 Although there are some other categorical encoding methods [41] that can directly convert a categorical value into a dense numerical value, the raw information will be hurt in these methods as the encode values of different categories could be similar and thus we cannot distinguish them. 
+
+> 범주형 값을 조밀한 숫자 값으로 직접 변환할 수 있는 다른 범주형 인코딩 방법[41]이 있지만, 서로 다른 범주의 인코딩 값이 비슷할 수 있으므로 이러한 방법에서는 원시 정보가 손상될 수 있다.
 
 Categorical features also could be directly used in tree learning, by enumerating possible binary partitions [16]. 
 
+> 범주형 특성은 가능한 이진 파티션을 열거하여 트리 학습에도 직접 사용될 수 있다[16].
+
 However, this method often over-fits to the training data when with sparse cate- gorical features, since there is too little data in each category and thus the statistical information is biased [29]. 
 
-In short, while GBDT can learn well over dense numerical features, the two weaknesses, i.e., the difficulty in adapting to online data generation and the ineffectiveness in learning over sparse categorical features, cause GBDT to fail in many online prediction tasks, especially those re- quiring the model being online adapted and those containing many sparse categorical features.
+> 그러나 이 방법은 각 범주에 데이터가 너무 적어서 통계 정보가 편향되기 때문에 교리학적 특성이 희박한 경우 훈련 데이터에 과도하게 적합되는 경우가 많다[29].
 
-On the other side, NN’s advantages consist of its efficient learning over large scale data in online tasks since the batch-mode back- propagation algorithm as well as its capability in learning over sparse categorical features by the well-recognized embedding struc- ture [35, 38]. 
+In short, while GBDT can learn well over dense numerical features, the two weaknesses, i.e., the difficulty in adapting to online data generation and the ineffectiveness in learning over sparse categorical features, cause GBDT to fail in many online prediction tasks, especially those requiring the model being online adapted and those containing many sparse categorical features.
+
+> 간단히 말해서, GBDT는 밀도가 높은 수치적 특징, 즉 온라인 데이터 생성에 적응하는 어려움과 희박한 범주적 특징에 대한 학습의 비효과적인 두 가지 약점은 많은 온라인 예측 작업, 특히 모델이 온라인에 적용되고 사람이 포함된 작업에서 GBDT가 실패하게 한다.y 희소 범주형 특성.
+
+On the other side, NN’s advantages consist of its efficient learning over large scale data in online tasks since the batch-mode back- propagation algorithm as well as its capability in learning over sparse categorical features by the well-recognized embedding structure [35, 38]. 
+
+> 반면에 NN의 장점은 배치 모드 역 전파 알고리즘 이후 온라인 작업에서 대규모 데이터에 대한 효율적인 학습과 잘 알려진 내장 구조에 의한 희소 범주적 특징에 대한 학습 능력[35, 38]으로 구성된다.
 
 Some recent studies have revealed the success of employing NN in those online prediction tasks, including click pre- diction [22, 36, 51] and recommender systems [9, 10, 32, 38, 47]. Nevertheless, the main challenge of NN lies in its weakness in learning over dense numerical tabular features. 
+
+> 클릭 사전 사전 사전 사전 사전 사전 사전 [22, 36, 51] 및 추천자 시스템 [9, 10, 32, 38, 47]을 포함하여 온라인 예측 작업에서 NN을 채택하는 데 성공했음을 일부 최근 연구에서 밝혀냈다. 그럼에도 불구하고 NN의 주요 과제는 밀도가 높은 수치 표 형상에 대한 학습의 약점에 있다.
 
 ![image-20211003084741816](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab1.png)
 
 **Table  1: Comparison over  different models**
 
-Although a Fully Connected Neural Network (FCNN) could be used for dense numer- ical features directly, it usually leads to unsatisfactory performance, because its fully connected model structure leads to very complex optimization hyper-planes with a high risk of falling into local optimums [15]. 
+> **표 1: 여러 모델에 대한 비교**
 
-Thus, in many tasks with dense numerical tabu- lar features, NN often cannot outperform GBDT [8]. 
+Although a Fully Connected Neural Network (FCNN) could be used for dense numerical features directly, it usually leads to unsatisfactory performance, because its fully connected model structure leads to very complex optimization hyper-planes with a high risk of falling into local optimums [15]. 
+
+> 완전 연결 신경망(FCNN)은 밀도가 높은 수치 형상에 직접 사용될 수 있지만, 완전 연결 모델 구조는 국부 최적값으로 떨어질 위험이 높은 매우 복잡한 최적화 초평면으로 이어지기 때문에 대개 만족스럽지 못한 성능을 초래한다[15].
+
+Thus, in many tasks with dense numerical tabular features, NN often cannot outperform GBDT [8]. 
+
+> 따라서 밀도가 높은 표 형상이 있는 많은 작업에서 NN은 종종 GBDT[8]를 능가할 수 없다.
 
 To sum up, despite NN can effectively handle sparse categorical features and be adapted to online data generation efficiently, it is still difficult to result in an effective model by learning over dense numerical tabular features.
 
+> 요약하자면, NN은 희소 범주적 특징을 효과적으로 처리하고 온라인 데이터 생성에 효율적으로 적응할 수 있지만, 밀도가 높은 수치 표 형상에 대해 학습하여 효과적인 모델을 도출하기는 여전히 어렵다.
+
 As summarized in Table 1, either NN or GBDT yields its own pros and cons for obtaining the model for online prediction tasks. 
+
+> 표 1에 요약된 바와 같이, NN 또는 GBDT는 온라인 예측 작업에 대한 모델을 획득하는 데 자체적인 장단점을 산출한다.
 
 Intuitively, it will be quite beneficial to explore how to combine the advantages of both NN and GBDT together, to address the two major challenges in online prediction tasks, i.e., tabular input space and online data generation, simultaneously.
 
-In this paper, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together, to obtain a more effec- tive model for generic online prediction tasks. 
+> 직관적으로, 온라인 예측 작업, 즉 표 입력 공간과 온라인 데이터 생성의 두 가지 주요 과제를 동시에 해결하기 위해 NN과 GBDT의 장점을 결합하는 방법을 탐구하는 것이 매우 유익할 것이다.
+
+In this paper, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together, to obtain a more effective model for generic online prediction tasks. 
+
+> 본 논문에서 우리는 일반적인 온라인 예측 작업에 보다 효과적인 모델을 얻기 위해 NN과 GBDT를 통합하는 새로운 학습 프레임워크인 DeepGBM을 제안한다.
 
 In particular, the whole DeepGBM framework, as shown in Fig. 1, consists of two major components: CatNN being an NN structure with the input of categorical features and GBDT2NN being another NN structure with the input of numerical features. 
 
+> 특히, 그림 1에 나타난 바와 같이 전체 DeepGBM 프레임워크는 두 가지 주요 구성 요소로 구성된다. CatNN은 범주형 형상의 입력이 있는 NN 구조이고 GBDT2NN은 수치 형상의 입력이 있는 또 다른 NN 구조이다.
+
 To take advantage of GBDT’s strength in learning over numerical features, GBDT2NN attempts to distill the knowledge learned by GBDT into an NN modeling process. 
 
-Specifically, to boost the effectiveness of knowledge distil- lation [24], GBDT2NN does not only transfer the output knowledge of the pre-trained GBDT but also incorporates the knowledge of both feature importance and data partition implied by tree struc- tures from obtained trees. 
+> 수치적 특징을 학습하는 GBDT의 강점을 이용하기 위해 GBDT2NN은 GBDT가 학습한 지식을 NN 모델링 프로세스로 증류하려고 한다.
+
+Specifically, to boost the effectiveness of knowledge distil- lation [24], GBDT2NN does not only transfer the output knowledge of the pre-trained GBDT but also incorporates the knowledge of both feature importance and data partition implied by tree structures from obtained trees. 
+
+> 특히, 지식 증류[24]의 효과를 높이기 위해 GBDT2NN은 사전 훈련된 GBDT의 출력 지식을 전달할 뿐만 아니라 획득한 트리의 트리 구조에 의해 암시되는 기능 중요성과 데이터 파티션에 대한 지식을 통합한다.
 
 In this way, in the meantime achieving the comparable performance with GBDT, GBDT2NN, with the NN structure, can be easily updated by continuous emerging data when facing the online data generation.
 
-Powered by two NN based components, CatNN and GBDT2NN, DeepGBM can indeed yield strong learning capacity over both cat- egorical and numerical features while retaining the vital ability of efficient online learning. 
+> 이러한 방식으로 GBDT와 유사한 성능을 달성하는 한편, NN 구조를 가진 GBDT2NN은 온라인 데이터 생성에 직면할 때 지속적으로 등장하는 데이터를 통해 쉽게 업데이트할 수 있다.
 
-To illustrate the effectiveness of the proposed DeepGBM, we conduct extensive experiments on various publicly available datasets with tabular data. Comprehensive exper- imental results demonstrate that DeepGBM can outperform other solutions in various prediction tasks.
+Powered by two NN based components, CatNN and GBDT2NN, DeepGBM can indeed yield strong learning capacity over both categorical and numerical features while retaining the vital ability of efficient online learning. 
+
+> CatNN과 GBDT2NN이라는 두 NN 기반 구성요소로 구동되는 DeepGBM은 효율적인 온라인 학습의 중요한 능력을 유지하면서 범주 및 수치적 특징 모두에 대해 강력한 학습 용량을 제공할 수 있다.
+
+To illustrate the effectiveness of the proposed DeepGBM, we conduct extensive experiments on various publicly available datasets with tabular data. Comprehensive experimental results demonstrate that DeepGBM can outperform other solutions in various prediction tasks.
+
+> 제안된 DeepGBM의 효과를 설명하기 위해 표 형식의 데이터를 사용하여 공개적으로 사용할 수 있는 다양한 데이터 세트에 대해 광범위한 실험을 수행한다. 종합적인 실험 결과는 DeepGBM이 다양한 예측 작업에서 다른 솔루션을 능가할 수 있음을 보여준다.
 
 In summary,  the contributions of this paper are multi-fold:
 
-- We propose DeepGBM to leverage both categorical and nu- merical features while retaining the ability of efficient online update, for all kinds of prediction tasks with tabular data, by combining the advantages of GBDT and NN.
+> 요약하면, 본 논문의 기여는 여러 배이다.
 
-- We propose an effective solution to distill the learned knowl- edge of a GBDT model into an NN model, by considering the se- lected inputs, structures and outputs knowledge in the learned tree of GBDT model.
+- We propose DeepGBM to leverage both categorical and numerical features while retaining the ability of efficient online update, for all kinds of prediction tasks with tabular data, by combining the advantages of GBDT and NN.
+
+  > 우리는 GBDT와 NN의 장점을 결합하여 모든 종류의 예측 작업에 대해 효율적인 온라인 업데이트 기능을 유지하면서 범주 및 수치 기능을 모두 활용할 것을 DeepGBM을 제안한다.
+
+- We propose an effective solution to distill the learned knowledge of a GBDT model into an NN model, by considering the selected inputs, structures and outputs knowledge in the learned tree of GBDT model.
+
+  > GBDT 모델의 학습 트리에서 선택한 입력, 구조 및 출력 지식을 고려하여 GBDT 모델의 학습된 지식을 NN 모델로 증류하는 효과적인 솔루션을 제안한다.
 
 - Extensive  experiments  show  that  DeepGBM  is  an  off-the-shelf model,  which  can  be  ready  to  use  in  all  kinds  of  prediction tasks and  achieves state-of-the-art performance.
+
+  > 광범위한 실험에 따르면 DeepGBM은 모든 종류의 예측 작업에 사용할 수 있고 최첨단 성능을 달성할 수 있는 기성 모델입니다.
 
 ## 2. RELATED WORK
 
 As aforementioned, both GBDT and NN have been widely used to learn the models for online prediction tasks. 
 
+> 앞서 언급한 것처럼 GBDT와 NN은 온라인 예측 작업의 모델을 학습하는 데 널리 사용되어 왔다.
+
 Nonetheless, either of them yields respective weaknesses when facing the tabular input space and online data generation. 
 
+> 그럼에도 불구하고 표 형식 입력 공간과 온라인 데이터 생성에 직면할 때 이들 중 어느 쪽이든 각각의 약점을 산출한다.
+
 In the following of this section, we will briefly review the related work in addressing the respective weaknesses of either GBDT or NN, followed by previous efforts that explored to combine the advantages of GBDT and NN to build a more effective model for online prediction tasks.
+
+> 이 절의 다음 부분에서는 GBDT 또는 NN의 각각의 약점을 해결하는 관련 작업을 간략히 검토한 후 온라인 예측 작업에 보다 효과적인 모델을 구축하기 위해 GBDT와 NN의 장점을 결합하기 위한 이전의 노력을 검토한다.
 
 ### 2.1 Applying GBDT for Online  Prediction Tasks
 
