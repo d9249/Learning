@@ -449,106 +449,199 @@ In this paper, we propose a new learning framework, DeepGBM, to better integrate
 
 In this section, we will elaborate on how the new proposed learning framework, DeepGBM, integrates NN and GBDT together to obtain a more effective model for generic online prediction tasks. 
 
+> 이 절에서는 새로운 제안된 학습 프레임워크인 DeepGBM이 NN과 GBDT를 통합하여 일반적인 온라인 예측 작업에 보다 효과적인 모델을 얻는 방법에 대해 자세히 설명하겠다.
+
 Specifically, the whole DeepGBM framework, as shown in Fig. 1, consists of two major components: CatNN being an NN structure with the input of categorical features and GBDT2NN being another NN structure distilled from GBDT with focusing on learning over dense numerical features. 
+
+> 구체적으로, 그림 1에 표시된 바와 같이 전체 DeepGBM 프레임워크는 두 가지 주요 구성 요소로 구성된다. CatNN은 범주형 특징을 입력하는 NN 구조이고 GBDT2NN은 고밀도 수치 특징을 학습하는 데 초점을 맞춘 GBDT에서 증류된 또 다른 NN 구조이다.
 
 We will describe the details of each component in the following subsections.
 
+> 각 구성 요소의 세부 사항은 다음 하위 절에서 설명하겠습니다.
+
 ### 3.1 CatNN for Sparse Categorical Features
+
+> 희소 범주형 특징을 위한 CatNN
 
 To solve online prediction tasks, NN has been widely employed to learn the prediction model over categorical features, such as Wide & Deep [9], PNN [36], DeepFM [22] and xDeepFM [32]. 
 
-Since the target of CatNN is the same as these works, we can directly leverage any of existing successful NN structures to play as the CatNN, without reinventing the wheel. 
+> 온라인 예측 작업을 해결하기 위해 NN은 Wide & Deep [9], PNN [36], DeepFM [22] 및 xDeep과 같은 범주적 기능에 대한 예측 모델을 학습하기 위해 널리 사용되어 왔다.FM [32].
+
+Since the target of CatNN is the same as these works, we can directly leverage any of existing successful NN structures to play as the CatNN, without reinventing the wheel.
+
+> CatNN의 대상이 이러한 작업과 동일하기 때문에, 우리는 바퀴를 재창조하지 않고도 기존의 성공적인 NN 구조를 CatNN으로 플레이하기 위해 직접 활용할 수 있다.
 
 In particular, the same as previous works, CatNN mainly relies on the embedding technology, which can effectively convert the high dimensional sparse vectors into dense ones. 
 
+> 특히 이전 작업과 마찬가지로 CatNN은 고차원 희소 벡터를 고밀도 벡터로 효과적으로 변환할 수 있는 임베딩 기술에 주로 의존한다.
+
 Besides, in this paper, we also leverage FM component and Deep component from previous works [9, 22], to learn the interactions over features. Please note CatNN is not limited by these two components, since it can use any other NN components with similar functions.
 
+> 또한 본 논문에서는 이전 작업[9, 22]의 FM 구성 요소와 Deep 구성 요소를 활용하여 특징에 대한 상호 작용을 학습한다. CatNN은 유사한 기능을 가진 다른 NN 구성 요소를 사용할 수 있으므로 이 두 구성 요소에 의해 제한되지 않습니다.
+
 Embedding is the low-dimensional dense representation of a high-dimensional sparse vector, and can denote as
+
+> 임베딩은 고차원 희소 벡터의 저차원 밀도 표현이며 다음과 같이 나타낼 수 있다.
 
 ![image-20211003072322485](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/01.png)
 
 where xi is the value of i -th feature, Vi stores all embeddings of the i - th feature and can be learned by back-propagation, and EVi (xi ) will return the corresponding embedding vector for xi . 
 
+> 여기서 xi는 i -th 형상의 값이며 Vi는 i - th 형상의 모든 임베딩을 저장하고 역전파를 통해 학습할 수 있으며 EVi(xi )는 xi 에 해당하는 임베딩 벡터를 반환합니다.
+
 Based on that, we can use FM component to learn linear (order-1) and pair-wise (order-2) feature interactions, and denote as
+
+> 이를 바탕으로 FM 구성요소를 사용하여 선형(차수-1) 및 쌍방향(차수-2) 특징 상호작용을 학습할 수 있으며, 다음과 같이 나타낼 수 있다.
 
 ![image-20211003072345248](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/02.png)
 
 where d is the number of features, w0 and w are the parameters of linear part, and ⟨·, ·⟩ is the inner product operation. 
+
+> 여기서 d는 형상의 수이고, w0과 w는 선형 부품의 매개변수이며, ··, ·d는 내부 제품 연산이다.
+
 Then, Deep component is used to learn the high-order feature interactions:
+
+> 그런 다음 Deep 구성 요소를 사용하여 고차 기능 상호 작용을 학습합니다.
 
 ![image-20211003072400561](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/03.png)
 
-where N (x ; θ ) is a multi-layered NN model with input x and pa- rameter θ . 
+where N (x ; θ ) is a multi-layered NN model with input x and parameter θ.
+
+여기서 N(x; θ )은 입력 x와 파라미터 . 를 가진 다중 레이어 NN 모델이다. 
 
 Combined with two components, the final output of CatNN is
+
+> CatNN의 최종 출력은 다음과 같다.
 
 ![image-20211003072415607](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/04.png)
 
 ### 3.2 GBDT2NN for Dense Numerical Features
 
-In this subsection, we will describe the details about how we dis- till the learned trees in GBDT into an NN model. 
+> 고밀도 수치 특징을 위한 GBDT2NN
+
+In this subsection, we will describe the details about how we distill the learned trees in GBDT into an NN model. 
+
+> 이 하위 절에서는 GBDT에서 학습된 트리를 NN 모델로 증류하는 방법에 대한 세부 정보를 설명한다.
 
 Firstly, we will introduce how to distill a single tree into an NN. 
 
+> 먼저 단일 트리를 NN으로 증류하는 방법을 소개한다.
+
 Then, we will generalize the idea to the distillation from multiple trees in GBDT. 
+
+> 그런 다음 GBDT의 여러 나무에서 추출하여 아이디어를 일반화합니다.
 
 #### 3.2.1 
 
 **Single Tree Distillation.** 
 
+> **단일 트리 증류.**
+
 Most of the previous distillation works only transfer model knowledge in terms of the learned function, in order to ensure the new model generates a similar output compared to the transferred one.
 
-However, since tree and NN are naturally different, beyond traditional model distillation, there is more knowledge in the tree model could be distilled and transferred into NN. 
+> 대부분의 이전 증류는 학습된 함수 측면에서 모델 지식만 전송하여 새 모델이 전송된 모델과 유사한 출력을 생성하도록 한다.
+
+However, since tree and NN are naturally different, beyond traditional model distillation, there is more knowledge in the tree model could be distilled and transferred into NN.
+
+> 그러나 트리와 NN은 기존 모델 증류를 넘어 자연적으로 다르기 때문에 트리 모델에 더 많은 지식이 증류되어 NN으로 전달될 수 있다.
 
 In particular, the feature selection and importance in learned trees, as well as data partition implied by learned tree structures, are indeed other types of important knowledge in trees.
 
+> 특히 학습된 나무 구조에 의해 암시되는 데이터 파티션뿐만 아니라 학습된 나무의 특징 선택과 중요성은 실제로 나무의 다른 유형의 중요한 지식이다.
+
 **Tree-Selected Features.**
 
-Compared to NN, a special characteristic of the tree-based model is that it may not use all input features, as its learning will greedily choose the useful features to fit the training targets, based on the statistical information. 
+> 트리가 선택한 기능.
 
-Therefore, we can transfer such knowledge in terms of tree-selected features to improve the learning efficiency of the NN model, rather than using all input features. 
+Compared to NN, a special characteristic of the tree-based model is that it may not use all input features, as its learning will greedily choose the useful features to fit the training targets, based on the statistical information.
 
-In particular, we can merely use the tree-selected features as the inputs of NN. Formally, we define It as the indices of the used features in a tree t . 
+> NN과 비교하여 트리 기반 모델의 특별한 특징은 학습이 통계 정보를 기반으로 훈련 목표에 맞는 유용한 특징을 탐욕스럽게 선택하기 때문에 모든 입력 기능을 사용하지 않을 수 있다는 것이다.
+
+Therefore, we can transfer such knowledge in terms of tree-selected features to improve the learning efficiency of the NN model, rather than using all input features.
+
+> 따라서 모든 입력 기능을 사용하는 대신 NN 모델의 학습 효율성을 개선하기 위해 트리 선택 기능 측면에서 이러한 지식을 전달할 수 있다.
+
+In particular, we can merely use the tree-selected features as the inputs of NN.
+
+> 특히 트리 선택 기능을 NN의 입력으로 사용할 수 있다.
+
+Formally, we define It as the indices of the used features in a tree t.
+
+> 공식적으로, 우리는 그것을 트리 t에서 사용된 형상의 지수로 정의한다.
 
 Then we can only use x [It ] as the input of NN.
 
+> 그러면 NN의 입력으로 x [It]만 사용할 수 있습니다.
+
 **Tree Structure.** 
+
+> **트리 구조.**
 
 Essentially, the knowledge of tree structure of a decision tree indicates how to partition data into many non- overlapping regions (leaves), i.e., it clusters data into different classes and the data in the same leaf belongs to the same class. 
 
-It is not easy to directly transfer such tree structure into NN, as their structures are naturally different. 
+> 기본적으로 의사 결정 트리의 트리 구조에 대한 지식은 데이터를 중복되지 않는 많은 영역(리브)으로 분할하는 방법을 나타냅니다. 즉, 데이터를 다른 클래스로 클러스터링하고 동일한 리프의 데이터는 동일한 클래스에 속합니다.
 
-Fortunately, as NN has been proven powerful enough to approximate any functions [19], we can use an NN model to approximate the function of the tree struc- ture and achieve the structure knowledge distillation. 
+It is not easy to directly transfer such tree structure into NN, as their structures are naturally different.
+
+> 이러한 트리 구조를 NN으로 직접 전송하는 것은 쉽지 않다. 그 구조는 본질적으로 다르기 때문이다.
+
+Fortunately, as NN has been proven powerful enough to approximate any functions [19], we can use an NN model to approximate the function of the tree structure and achieve the structure knowledge distillation. 
+
+> 다행히도, NN은 모든 기능에 근사할 만큼 충분히 강력하다는 것이 입증되었기 때문에, 우리는 NN 모델을 사용하여 트리 구조의 기능을 근사화하고 구조 지식 증류를 달성할 수 있다.
 
 Therefore, as illustrated in Fig.2, we can use NN to fit the cluster results produced by the tree, to let NN approximate the structure function of decision tree. 
 
+> 따라서 그림 2에서 설명한 것처럼 NN을 사용하여 트리에서 생성된 클러스터 결과를 적합시켜 NN이 의사 결정 트리의 구조 기능을 근사하게 만들 수 있다.
+
 Formally, we denote the structure function of a tree t as Ct (x ), which returns the output leaf index, i.e. the cluster result produced by the tree, of sample x . 
+
+> 공식적으로, 우리는 트리 t의 구조 함수를 Ct (x)로 나타내며, 이는 샘플 x의 출력 리프 색인, 즉 트리에 의해 생성된 클러스터 결과를 반환한다.
 
 Then, we can use an NN model to approximate the structure function Ct (·) and the learning process can denote as
 
+> 그런 다음 NN 모델을 사용하여 구조 함수 Ct (·)를 근사할 수 있으며 학습 과정은 다음과 같이 나타낼 수 있다.
+
 ![image-20211003072441217](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/05.png)
 
-where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN model N and can be updated by back-propagation, L is the loss function for the multiclass problem like cross entropy. 
+where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN model N and can be updated by back-propagation, L is the loss function for the multiclass problem like cross entropy.
+
+> 여기서 n은 훈련 샘플의 수, x i는 i번째 훈련 샘플, Lt , i는 x i에 대한 잎 지수 Ct (x i )의 원핫 표현, 이는 트리 t에서 사용된 형상의 지수이며 is는 NN 모델 N의 매개 변수이며 교차 엔트로피와 같은 다중 클래스 문제에 대한 손실 함수이다.
 
 Thus, after learning, we can get an NN model N (· ; θ ). Due to the strong expressiveness ability of NN, the learned NN model should perfectly approximate the structure function of decision tree.
 
+> 따라서 학습 후 NN 모델 N(· ; ). )을 얻을 수 있다. NN의 강력한 표현 능력 때문에, 학습된 NN 모델은 의사결정 트리의 구조 기능과 완벽하게 유사해야 한다.
+
 **Tree Outputs.** 
 
-Since the mapping from tree inputs to tree struc- tures is learned in the previous step, to distill tree outputs, we only need to know the mapping from tree structures to tree outputs. 
+> **트리 출력.**
 
-As there is a corresponding leaf value for a leaf index, this mapping is actually not needed to learn. 
+Since the mapping from tree inputs to tree structures is learned in the previous step, to distill tree outputs, we only need to know the mapping from tree structures to tree outputs.
 
-In particular, we denote the leaf values of tree t as qt and qit represents the leaf value of i -th leaf. 
+> 트리 입력에서 트리 구조로의 매핑은 이전 단계에서 학습되었으므로 트리 출력을 증류하려면 트리 구조에서 트리 출력으로의 매핑만 알면 된다.
 
-Then we can map Lt to the tree output by pt = Lt × qt .
+As there is a corresponding leaf value for a leaf index, this mapping is actually not needed to learn.
+
+> 리프 인덱스에 해당하는 리프 값이 있으므로 이 매핑은 실제로 학습에 필요하지 않습니다.
+
+In particular, we denote the leaf values of tree t as qt and qit represents the leaf value of i-th leaf.
+
+> 특히 qt와 qit는 i-th leaf의 잎 값을 나타내므로 트리 t의 잎 값을 나타낸다.
+
+Then we can map Lt to the tree output by pt = Lt × qt.
+
+> 그러면 우리는 pt = Lt × qt로 Lt를 트리 출력에 매핑할 수 있다.
 
 Combined with the above methods for single tree distillation, the output of NN distilled from tree t can denote as
+
+> 단일 트리 증류를 위한 위의 방법과 결합하여, 트리 t에서 증류된 NN의 출력은 다음과 같이 나타낼 수 있다.
 
 ![image-20211003082058073](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/06.png)
 
 ![image-20211003082114527](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082114527.png)
 
 Figure 2: Tree structure distillation by leaf index. NN will approximate the tree structure by fitting its leaf index.
+
+> 그림 2: 잎 지수에 의한 나무 구조 증류. NN은 리프 인덱스를 맞춤으로써 트리 구조의 근사치를 구한다.
 
 ![image-20211003082127367](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082127367.png)
 
@@ -557,218 +650,430 @@ The leaf index is first transformed to leaf embedding.
 Then NN will approximate tree structure by fitting the leaf embed- ding. 
 Since the dimension of leaf embedding can be significantly smaller than the leaf index, this distillation method will be much more efficient.
 
+> 그림 3: 잎을 내장하여 나무 구조를 증류합니다. 
+> 리프 인덱스는 먼저 리프 임베딩으로 변환됩니다. 
+> 그런 다음 NN은 리프 임베드-딩에 적합하여 트리 구조를 근사화한다. 
+> 잎 내장 치수는 잎 지수보다 상당히 작을 수 있기 때문에, 이 증류 방법은 훨씬 더 효율적일 것이다.
+
 #### 3.2.2 
 
 **Multiple Tree Distillation.** 
 
-Since there are multiple trees in GBDT, we should generalize the distillation solution for the multiple trees. 
+Since there are multiple trees in GBDT, we should generalize the distillation solution for the multiple trees.
 
-A straight-forward solution is using #N N = #tr ee NN models, each of them distilled from one tree. 
+> GBDT에는 여러 트리가 있으므로 여러 트리의 증류액을 일반화해야 합니다.
 
-However, this solution is very inefficient due to the high dimension of structure distillation targets, which is O(|L| ×#N N ). 
+A straight-forward solution is using #NN = #tree NN models, each of them distilled from one tree.
 
-To improve the efficiency, we propose Leaf Embedding Distillation and Tree Grouping to reduce |L| and #N N respectively.
+> 간단한 해결책은 #N N = #tree NN 모델을 사용하는 것이며, 각 모델은 하나의 트리에서 증류된다.
 
-**Leaf Embedding Distillation.** 
+However, this solution is very inefficient due to the high dimension of structure distillation targets, which is O(|L| ×#NN ). 
 
-As illustrated in Fig.3, we adopt embedding technology to reduce the dimension of structure distil- lation targets L while retraining the information in this step. 
+> 그러나, 이 용액은 O(|L| ×#NN)인 구조 증류 대상의 높은 차원 때문에 매우 비효율적이다.
 
-More specifically, since there are bijection relations between leaf indices and leaf values, we use the leaf values to learn the embedding. 
+To improve the efficiency, we propose Leaf Embedding Distillation and Tree Grouping to reduce |L| and #NN respectively.
+
+> 효율성을 개선하기 위해 |L|과 #NN을 각각 줄이기 위한 리프 임베딩 증류 및 트리 그룹을 제안한다.
+
+**Leaf Embedding Distillation.**
+
+> **리프 내장 증류.**
+
+As illustrated in Fig.3, we adopt embedding technology to reduce the dimension of structure distillation targets L while retraining the information in this step.
+
+> 그림 3에서 설명한 것처럼, 우리는 이 단계에서 정보를 재교육하면서 구조 증류 대상 L의 치수를 줄이기 위해 임베딩 기술을 채택한다.
+
+More specifically, since there are bijection relations between leaf indices and leaf values, we use the leaf values to learn the embedding.
+
+> 좀 더 구체적으로, 잎 지수와 잎 값 사이에는 상호 투영 관계가 있기 때문에, 우리는 잎 값을 사용하여 임베딩을 학습한다.
 
 Formally, the learning process of embedding can denote as
 
+> 공식적으로, 임베딩의 학습 과정은 다음과 같이 나타낼 수 있다.
+
 ![image-20211003082345062](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/07.png)
 
-where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected net- work with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values. 
+where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected net- work with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values.
+
+> 여기서 H t , i = H (Lt , i ; tt )는 단일 핫 리프 지수 Lt , i를 밀집 임베딩 H t , i , pt 로 변환하는 매개변수 µt 를 가진 1개의 완전 연결 네트 작업이며, 표본 x i , i , pt 는 트리 학습에 사용되는 것과 동일한 리프 매핑의 손실 함수이다.
 
 After that, instead of sparse high dimensional one-hot representation L, we can use the dense embedding as the targets to approximate the function of tree structure. This new learning process can denote as
 
+> 그 후, 희박한 고차원 원핫 표현 L 대신, 고밀도 임베딩을 대상으로 사용하여 트리 구조의 기능을 근사화할 수 있다. 이 새로운 학습 과정은 다음과 같이 나타낼 수 있다.
+
 ![image-20211003082358576](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/08.png)
 
-where L is the regression loss like L2 loss for fitting dense embedding. 
+where L is the regression loss like L2 loss for fitting dense embedding.
 
-Since the dimension of H t , i should be much smaller than L, Leaf Embedding Distillation will be more efficient in the multiple tree distillation. 
+> 여기서 L은 조밀한 임베딩 장착을 위한 L2 손실과 같은 회귀 손실이다.
+
+Since the dimension of H t , i should be much smaller than L, Leaf Embedding Distillation will be more efficient in the multiple tree distillation.
+
+> H t의 치수, i는 L보다 훨씬 작아야 하기 때문에, 잎 내장 증류는 다중 나무 증류에서 더 효율적일 것입니다.
 
 Furthermore, it will use much fewer NN parameters and thus is more efficient.
 
+> 또한 훨씬 적은 NN 매개변수를 사용하기 때문에 더 효율적이다.
+
 **Tree Grouping.** 
+
+> **트리 그룹화.**
 
 To reduce the #N N , we can group the trees and use an NN model to distill from a group of trees.
 
+> #NN을 줄이기 위해 트리를 그룹화하고 NN 모델을 사용하여 트리 그룹에서 증류할 수 있다.
+
 Subsequently, there are two problems for grouping: 
-(1) how to group the trees and (2) how to distill from a group of trees. 
 
-Firstly, for the grouping strategies, there are many solutions. 
+> 이후 그룹화에는 두 가지 문제가 있습니다.
 
-For example, the equally randomly grouping, equally sequentially grouping, grouping based on importance or similarity, etc. 
+(1) how to group the trees and (2) how to distill from a group of trees.
 
-In this paper, we use the equally randomly grouping. 
+> (1) 나무를 그룹화하는 방법 및 (2) 나무 그룹에서 증류하는 방법
 
-Formally, assuming there are m trees and we want to divide them into k groups, there are s = ⌈m/k ⌉ trees in each group and the trees in j -th group are Tj , which contains random s trees from GBDT. 
+Firstly, for the grouping strategies, there are many solutions.
 
-Secondly, to distill from multiple trees, we can extend the Leaf Embedding Distillation for multiple trees. 
+> 첫째, 그룹화 전략에는 많은 해결책이 있다.
+
+For example, the equally randomly grouping, equally sequentially grouping, grouping based on importance or similarity, etc.
+
+> 예를 들어, 균등 랜덤 그룹화, 균등 순차 그룹화, 중요도 또는 유사성을 기준으로 그룹화 등입니다.
+
+In this paper, we use the equally randomly grouping.
+
+> 이 문서에서는 균등하게 랜덤하게 그룹화하는 방법을 사용합니다.
+
+Formally, assuming there are m trees and we want to divide them into k groups, there are s = ⌈m/k ⌉ trees in each group and the trees in j -th group are Tj , which contains random s trees from GBDT.
+
+> 공식적으로, m개의 트리가 있고 그것들을 k개의 그룹으로 나누고 싶다고 가정하면, 각 그룹에는 s = µm/k ÷ 트리가 있고 j번째 그룹의 트리는 GBDT의 임의의 s 트리를 포함하는 Tj이다.
+
+Secondly, to distill from multiple trees, we can extend the Leaf Embedding Distillation for multiple trees.
+
+> 둘째, 여러 나무에서 증류하기 위해 여러 트리에 대한 잎 내장 증류를 확장할 수 있습니다.
 
 Formally, given a group of trees T, we can extend the Eqn.(7) to learn leaf embedding from multiple trees
 
+> 공식적으로, 나무 그룹 T가 주어지면, 우리는 Eqn.(7)을 확장하여 여러 나무에서 잎 임베딩을 배울 수 있다.
+
 ![image-20211003082429626](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/09.png)
 
-where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T. 
+where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T.
+
+> 여기서 (( · )는 연결 연산이고, G T, i = H tt tT (Lt, i ); tT는 다중 핫 벡터를 다중 핫 리프 인덱스 벡터의 결합인 고밀도 내장 G T로 변환하는 1개의 완전 연결 네트워크이다.
 
 After that, we can use the new embedding as the distillation target of NN model, and the learning process of it can denote as
 
+> 그 후에, 우리는 NN 모델의 증류 대상으로 새로운 임베딩을 사용할 수 있고, 그것의 학습 과정은 다음과 같이 나타낼 수 있다.
+
 ![image-20211003082441565](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/10.png)
 
-where IT is the used features in tree group T. 
+where IT is the used features in tree group T.
 
-When the number of trees in T is large, IT may contains many features and thus hurt the feature selection ability. 
+> 여기서 IT는 트리 그룹 T에서 사용되는 기능이다.
 
-Therefore, as an alternate, we can only use top features in IT according to feature importance. 
+When the number of trees in T is large, IT may contains many features and thus hurt the feature selection ability.
 
-To sum up, combined with above methods, the final output of the NN distilled from a tree group T is 
+> T의 트리 수가 많은 경우 IT는 많은 기능을 포함하므로 기능 선택 기능에 손상을 줄 수 있습니다.
+
+Therefore, as an alternate, we can only use top features in IT according to feature importance.
+
+> 따라서 대신 기능 중요도에 따라 IT의 상위 기능만 사용할 수 있습니다.
+
+To sum up, combined with above methods, the final output of the NN distilled from a tree group T is
+
+> 위의 방법과 결합하면 트리 그룹 T에서 증류된 NN의 최종 출력은 다음과 같다.
 
 ![image-20211003082459848](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/11.png)
 
 And the output of a GBDT model, which contains k tree groups, is
 
+> 그리고 k개의 트리 그룹을 포함하는 GBDT 모델의 출력은
+
 ![image-20211003082511943](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/12.png)
 
-In summary, owing to Leaf Embedding Distillation and Tree Grouping, GBDT2NN can efficiently distill many trees of GBDT into a compact NN model. 
+In summary, owing to Leaf Embedding Distillation and Tree Grouping, GBDT2NN can efficiently distill many trees of GBDT into a compact NN model.
+
+> 요약하면, 잎 내장 증류 및 트리 그룹화로 인해 GBDT2NN은 GBDT의 많은 트리를 소형 NN 모델로 효율적으로 증류할 수 있다.
 
 Furthermore, besides tree outputs, the feature selection and structure knowledge in trees are effectively distilled into the NN model as well.
 
+> 또한 트리 출력 외에도 트리의 특징 선택과 구조 지식도 NN 모델로 효과적으로 증류된다.
+
 ### 3.3 Training for DeepGBM
+
+> DeepGBM 교육
 
 We will describe how to train the DeepGBM in this subsection, including how to train it end-to-end offline and how to efficiently update it online.
 
-3.3.1 
+> 우리는 이 하위섹션에서 DeepGBM을 오프라인으로 교육하는 방법과 온라인에서 효율적으로 업데이트하는 방법을 설명할 것이다.
+
+**3.3.1** 
 
 **End-to-End Offline Training.** 
 
-To train DeepGBM, we first need to use offline data to train a GBDT model and then use Eqn.(9) to get the leaf embedding for the trees in GBDT. 
+> **단대단 오프라인 교육.**
+
+To train DeepGBM, we first need to use offline data to train a GBDT model and then use Eqn.(9) to get the leaf embedding for the trees in GBDT.
+
+> DeepGBM을 교육하려면 먼저 오프라인 데이터를 사용하여 GVDT 모델을 교육한 다음 Eqn.(9)을 사용하여 GVDT의 트리에 대한 리프 임베딩을 받아야 합니다.
 
 After that, we can train DeepGBM end-to-end. Formally, we denote the output of DeepGBM as
 
+> 그런 다음 DeepGBM을 처음부터 끝까지 교육할 수 있습니다. 공식적으로, 우리는 다음과 같이 DeepGBM의 출력을 나타낸다.
+
 ![image-20211003082732071](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/13.png)
 
-where w1 and w2 are the trainable parameters used for combining is GBDT2NN and CatNN, σ' is the output transformation, such as sigmoid for binary classification. 
+where w1 and w2 are the trainable parameters used for combining is GBDT2NN and CatNN, σ' is the output transformation, such as sigmoid for binary classification.
+
+> 여기서 w1과 w2는 결합에 사용되는 훈련 가능한 파라미터이며, ''는 이진 분류를 위한 시그모이드와 같은 출력 변환이다.
 
 Then, we can use the following loss function for the end-to-end training
+
+> 그런 다음 다음 손실 함수를 엔드 투 엔드 교육에 사용할 수 있습니다.
 
 ![image-20211003082858256](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/14.png)
 
 where y is the training target of sample x , L corresponding tasks such as cross-entropy for classification tasks, L T is the embedding loss for tree group T and defined in Eqn.(10), k is the number of tree groups, α and β are hyper-parameters given in advance and used for controlling the strength of end-to-end loss and embedding loss, respectively.
 
+> 여기서 y는 분류 작업을 위한 교차 엔트로피와 같은 샘플 x , L 해당 작업의 훈련 대상이며, L T는 트리 그룹 T에 대한 내장 손실이며 Eqn(10), k는 트리 그룹 수, α 및 β는 미리 주어진 초 매개 변수이며 각각 엔드 투 엔드 손실 및 임베딩 손실의 강도를 제어하기 위해 사용된다..
+
 3.3.2 
 
-**Online Update.** 
+**Online Update.**
 
-As the GBDT model is trained offline, using it for embedding learning in the online update will hurt the online real-time performance. 
+> **온라인 업데이트.**
+
+As the GBDT model is trained offline, using it for embedding learning in the online update will hurt the online real-time performance.
+
+> GBDT 모델은 오프라인으로 교육되므로 온라인 업데이트에 학습을 포함시키는 데 사용할 경우 온라인 실시간 성능이 저하될 수 있습니다.
 
 Thus, we do not include the LT in the online update, and the loss for the online update can denote as
 
+> 따라서 온라인 업데이트에 LT를 포함하지 않으며, 온라인 업데이트의 손실은 다음과 같이 나타낼 수 있다.
+
 ![image-20211003082937510](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/15.png)
 
-which only uses the end-to-end loss. Thus, when using DeepGBM online, we only need the new data to update the model by L-online , without involving GBDT and retraining from scratch. 
+which only uses the end-to-end loss. Thus, when using DeepGBM online, we only need the new data to update the model by L-online , without involving GBDT and retraining from scratch.
 
-In short, DeepGBM will be very efficient for online tasks. 
+> 단대단 손실만 사용합니다. 따라서 DeepGBM을 온라인으로 사용할 경우 GBDT를 포함하고 처음부터 다시 교육하지 않고 L-online으로 모델을 업데이트하기 위해 새로운 데이터만 필요합니다.
+
+In short, DeepGBM will be very efficient for online tasks.
+
+> 간단히 말해서 DeepGBM은 온라인 작업에 매우 효율적일 것입니다.
 
 Furthermore, it is also very effective since it can well handle both the dense numerical features and sparse categorical features.
+
+> 또한 밀도가 높은 수치적 특징과 희박한 범주적 특징을 모두 잘 처리할 수 있기 때문에 매우 효과적이다.
 
 ![image-20211003083018353](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab2.png)
 
 Table 2: Details of the datasets used in experiments. All these datasets are publicly available. #Sample is the number of data samples, #Num is the number of numerical features, and #Cat is the number of categorical features
 
+> 표 2: 실험에 사용된 데이터 세트의 세부 정보. 이러한 모든 데이터 세트는 공개적으로 사용할 수 있습니다. #샘플은 데이터 샘플의 수, #Num은 숫자 형상의 수, #Cat은 범주 형상의 수입니다.
+
 ## 4. EXPERIMENT
 
-In this section, we will conduct thorough evaluations on Deep- GBM5 over a couple of public tabular datasets and compares its performance with several widely used baseline models. 
+> 실험
 
-Particularly, we will start with details about experimental setup, including data description, compared models and some specific experiments set- tings. 
+In this section, we will conduct thorough evaluations on DeepGBM5 over a couple of public tabular datasets and compares its performance with several widely used baseline models. 
+
+> 이 섹션에서는 몇 개의 공개 표 형식 데이터 세트에 대해 DeepGBM5에 대한 철저한 평가를 수행하고 그 성능을 널리 사용되는 여러 기준선 모델과 비교한다.
+
+Particularly, we will start with details about experimental setup, including data description, compared models and some specific experiments settings.
+
+> 특히, 데이터 설명, 비교 모델 및 일부 특정 실험 설정 등 실험 설정에 대한 세부 사항부터 시작하겠습니다.
 
 After that, we will analyze the performance of DeepGBM in both offline and online settings to demonstrate its effectiveness and advantage over baseline models.
 
+> 이후 오프라인 및 온라인 환경에서 DeepGBM의 성능을 분석하여 기준선 모델에 대한 효과와 이점을 입증할 것입니다.
+
 ### 4.1 Experimental Setup
 
-**Datasets**: To illustrate the effective of DeepGBM, we conduct ex- periments on a couple of public datasets, as listed in Table 2. 
+> 실험 설정
 
-In particular, Flight6 is an airline dataset and used to predict the flights are delayed or not. Criteo7, Malware8 and Zillow9 are the datasets from Kaggle competitions. 
+**Datasets**: To illustrate the effective of DeepGBM, we conduct experiments on a couple of public datasets, as listed in Table 2. 
 
-AutoML-1, AutoML-2 and AutoML-3 are datasets from “AutoML for Lifelong Machine Learning” Challenge in NeurIPS 201810. 
+> **Dataset**: DeepGBM의 효과를 설명하기 위해 표 2에 나열된 것처럼 몇 개의 공개 데이터 세트에 대해 실험을 수행합니다.
 
-More details about these datasets can be found in Appendix A.1. As these datasets are from real-world tasks, they contain both categorical and numerical features. 
+In particular, Flight6 is an airline dataset and used to predict the flights are delayed or not. Criteo7, Malware8 and Zillow9 are the datasets from Kaggle competitions.
+
+> 특히, Flight6는 항공사 데이터 집합이며 비행이 지연되거나 지연되지 않는 것을 예측하는 데 사용된다. Criteo7, Malware8 및 Zillow9은 Kaggle 경쟁의 데이터 세트입니다.
+
+AutoML-1, AutoML-2 and AutoML-3 are datasets from “AutoML for Lifelong Machine Learning” Challenge in NeurIPS 201810.
+
+> AutoML-1, AutoML-2 및 AutoML-3은 Neur의 "평생 기계 학습을 위한 AutoML" 챌린지의 데이터 세트이다.IPS 201810.
+
+More details about these datasets can be found in Appendix A.1. 
+
+> 이러한 데이터셋에 대한 자세한 내용은 부록 A.1에서 확인할 수 있습니다.
+
+As these datasets are from real-world tasks, they contain both categorical and numerical features. 
+
+> 이러한 데이터 세트는 실제 작업에서 가져온 것이므로 범주형 및 숫자형 특징을 모두 포함하고 있다.
 
 Furthermore, as time-stamp is available in most of these datasets, we can use them to simulate the online scenarios.
 
+> 또한 대부분의 데이터 세트에서 타임 스탬프를 사용할 수 있으므로 온라인 시나리오를 시뮬레이션하는 데 사용할 수 있습니다.
+
 **Compared Models**:  In our experiments, we will compare Deep- GBM with the following baseline models:
 
-- GBDT [17], which is a widely used tree-based learning algo- rithm for modeling tabular data. We use LightGBM [29] for its high efficiency.
+> **비교 모델**: 실험에서 Deep- GBM을 다음 기준 모델과 비교합니다.
+
+- GBDT [17], which is a widely used tree-based learning algorithm for modeling tabular data. We use LightGBM [29] for its high efficiency.
+
+  > 표 형식의 데이터를 모델링하기 위해 널리 사용되는 트리 기반 학습 알고리즘인 GBDT[17]입니다. 높은 효율성을 위해 LightGBM[29]을 사용합니다.
+
 - LR, which is Logistic Regression, a generalized linear model.
+
+  > LR, 일반화된 선형 모형인 로지스틱 회귀 분석입니다.
+
 - FM [38], which contains a linear model and a FM component.
+
+  > FM [38]은 선형 모델과 FM 구성 요소를 포함합니다.
+
 - Wide&Deep [9], which combines a shallow linear model with deep neural network.
-- DeepFM [22], which improves Wide&Deep by adding an addi- tional FM component.
+
+  > 얕은 선형 모델과 심층 신경망을 결합한 Wide&Deep[9].
+
+- DeepFM [22], which improves Wide&Deep by adding an additional FM component.
+
+  > DeepFM[22] - FM 구성 요소를 추가하여 Wide&Deep를 개선합니다.
+
 - PNN [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical features.
+
+  > PNN [36] - 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 상호 작용을 캡처합니다.
 
 ![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
 
 Table 3: Offline performance comparison. AUC (higher is better) is used for binary classification tasks, and MSE (lower is better) is used for regression tasks. All experiments are run 5 times with different random seeds, and the mean ± std results are shown in this table. The top-2 results are marked bold.
 
+> 표 3: 오프라인 성능 비교. 이진 분류 작업에 AUC(높은 것이 더 좋음)가 사용되고 회귀 작업에 MSE(낮은 것이 더 좋음)가 사용된다. 모든 실험은 다른 랜덤 시드로 5회 실행되며 평균 ± 표준 결과는 이 표에 나와 있습니다. 상위 2개 결과는 굵게 표시됩니다.
+
 Besides, to further analyze the performance of DeepGBM, we use additional two degenerated versions of DeepGBM in experiments:
+
+> 또한 DeepGBM의 성능을 추가로 분석하기 위해 실험에서 다음과 같은 두 가지 DeepGBM의 퇴화 버전을 추가로 사용합니다.
 
 - DeepGBM (D1), which uses GBDT directly in DeepGBM, rather than GBDT2NN. 
   As GBDT cannot be online updated, we can use this model to check the improvement brought by DeepGBM in online scenarios.
-- DeepGBM (D2), which only uses GBDT2NN in DeepGBM, with- out CatNN. 
+  
+  > DeepGBM(D1)은 GBDT2NN이 아닌 DeepGBM에서 직접 GVDT를 사용합니다. 
+  > GBDT는 온라인 업데이트가 불가능하므로 이 모델을 사용하여 온라인 시나리오에서 DeepGBM이 개선한 내용을 확인할 수 있습니다.
+  
+- DeepGBM (D2), which only uses GBDT2NN in DeepGBM, without CatNN. 
   This model is to examine the standalone performance of GBDT2NN.
+  
+  > DeepGBM(D2)은 CatNN 없이 DeepGBM에서 GBDT2NN만 사용합니다. 
+  > 이 모델은 GBDT2NN의 독립 실행형 성능을 검사하기 위한 것이다.
 
-**Experiments Settings **: To improve the baseline performance, we introduce some basic feature engineering in the experiments. 
+**Experiments Settings **: To improve the baseline performance, we introduce some basic feature engineering in the experiments.
 
-Specifically, for the models which cannot handle numerical features well, such as LR, FM, Wide&Deep, DeepFM and PNN, we discrete the numerical features into categorical ones. 
+> **실험 설정 **: 기본 성능을 향상시키기 위해 실험에서 몇 가지 기본 기능 엔지니어링을 소개합니다.
 
-Meanwhile, for the models which cannot handle categorical feature well, such as GBDT and the models based on it, we convert the categorical features into numerical ones, by label-encoding [12] and binary-encoding [41]. 
+Specifically, for the models which cannot handle numerical features well, such as LR, FM, Wide&Deep, DeepFM and PNN, we discrete the numerical features into categorical ones.
 
-Based on this basic feature engineering, all models can use the information from both categorical and numerical features, such that the comparisons are more reliable. 
+> 특히 LR, FM, Wide&Deep, DeepFM 및 PNN과 같은 수치 특징을 잘 처리할 수 없는 모델의 경우 수치 특징을 범주형 특징으로 구분한다.
 
-Moreover, all experiments are run five times with different random seeds to ensure a fair comparison. 
+Meanwhile, for the models which cannot handle categorical feature well, such as GBDT and the models based on it, we convert the categorical features into numerical ones, by label-encoding [12] and binary-encoding [41].
+
+> 한편, GBDT 및 이를 기반으로 하는 모델과 같이 범주형 특징을 잘 처리할 수 없는 모델의 경우 레이블 인코딩 [12] 및 이진 인코딩 [41]을 통해 범주형 특징을 숫자형 특징으로 변환한다.
+
+Based on this basic feature engineering, all models can use the information from both categorical and numerical features, such that the comparisons are more reliable.
+
+> 이 기본 형상 공학을 기반으로 모든 모델은 범주형 및 수치 형상 모두의 정보를 사용할 수 있으므로 비교가 보다 신뢰할 수 있다.
+
+Moreover, all experiments are run five times with different random seeds to ensure a fair comparison.
+
+> 또한 공정한 비교를 위해 모든 실험은 서로 다른 무작위 시드로 다섯 번 실행된다.
 
 For the purpose of reproducibility, all the details of experiments settings including hyper-parameter settings will be described in Appendix A and the released codes.
 
+> 재현성을 위해, 하이퍼 파라미터 설정을 포함한 모든 실험 설정의 세부 사항은 부록 A와 공개된 코드에 설명될 것이다.
+
 ### 4.2 Offline Performance
 
-We first evaluate the offline performance for the proposed Deep- GBM in this subsection. 
+> 오프라인 성능
+
+We first evaluate the offline performance for the proposed DeepGBM in this subsection. 
+
+> 먼저 이 하위 절에서 제안된 DeepGBM에 대한 오프라인 성능을 평가한다.
 
 To simulate the real-world scenarios, we partition each benchmark dataset into the training set and test set according to the time-stamp, i.e., the older data samples (about 90%) are used for the training and the newer samples (about 10%) are used for the test. More details are available in Appendix A.
 
+> 실제 시나리오를 시뮬레이션하기 위해 각 벤치마크 데이터 세트를 시간 스탬프에 따라 훈련 세트와 테스트 세트로 분할한다. 즉, 교육에 오래된 데이터 샘플(약 90%)이 사용되고 테스트에 새로운 샘플(약 10%)이 사용된다. 자세한 내용은 부록 A에서 확인할 수 있습니다.
+
 The overall comparison results could be found in Table 3. From the table, we have following observations:
 
+> 전체 비교 결과는 표 3에서 확인할 수 있다. 표에 다음과 같은 관찰 결과가 나와 있습니다.
+
 - GBDT can outperform other NN baselines, which explicitly shows the advantage of GBDT on the tabular data. Therefore, distilling GBDT knowledge will definitely benefit DeepGBM.
+
+  > GBDT는 다른 NN 기준선을 능가할 수 있으며 표 형식 데이터에서 GBDT의 장점을 명시적으로 보여줍니다. 따라서 GBDT 지식을 습득하면 DeepGBM에 확실히 도움이 될 것입니다.
+
 - GBDT2NN (DeepGBM (D2)) can further improve GBDT, which indicates that GBDT2NN can effectively distill the trained GBDT model into NN. Furthermore, it implies that the distilled NN model can be further improved and even outperform GBDT.
-- Combining GBDT and NN can further improve the performance. The hybrid models, including DeepGBM (D1) and DeepGBM, can all reach better performance than single model baselines, which indicates that using two components to handle categorical features and numerical features respectively can benefit perfor- mance for online prediction tasks.
+
+  > GBDT2NN(Deep GBM(D2))은 GBDT를 더욱 개선할 수 있으며, 이는 GBDT2NN이 훈련된 GBDT 모델을 NN으로 효과적으로 증류할 수 있음을 나타낸다. 또한 증류된 NN 모델을 더욱 개선하고 GBDT를 능가할 수 있음을 의미한다.
+
+- Combining GBDT and NN can further improve the performance. The hybrid models, including DeepGBM (D1) and DeepGBM, can all reach better performance than single model baselines, which indicates that using two components to handle categorical features and numerical features respectively can benefit performance for online prediction tasks.
+
+  > GBDT와 NN을 결합하면 성능을 더욱 향상시킬 수 있습니다. DeepGBM(D1)과 DeepGBM을 포함한 하이브리드 모델은 모두 단일 모델 기준선보다 더 나은 성능에 도달할 수 있으며, 이는 두 구성 요소를 사용하여 각각 범주형 특징과 수치적 특징을 처리하면 온라인 예측 작업의 성능에 도움이 될 수 있음을 나타낸다.
+
 - DeepGBM outperforms all baselines on all datasets. In particular, DeepGBM can boost the accuracy over the best baseline GBDT by 0.3% to 4.4%. as well as the best of NN baselines by 1% to 6.3%.
 
-To investigate the convergence of DeepGBM, Fig. 4 demonstrates the performance in terms of AUC on the test data by the model trained with increasing epochs. 
+  > DeepGBM은 모든 데이터 세트의 모든 기준선을 능가합니다. 특히 DeepGBM은 최상의 기준 GBDT에 비해 정확도를 0.3%-4.4% 높이고 NN 기준선의 최고치를 1%-6.3% 높일 수 있습니다.
+
+To investigate the convergence of DeepGBM, Fig. 4 demonstrates the performance in terms of AUC on the test data by the model trained with increasing epochs.
+
+> DeepGBM의 수렴을 조사하기 위해 그림 4는 증가하는 에포크로 훈련된 모델에 의한 테스트 데이터에 대한 AUC의 성능을 보여준다.
 
 From these figures, we can find that DeepGBM also converges much faster than other models.
 
+> 이러한 수치를 보면 DeepGBM이 다른 모델보다 훨씬 빠르게 수렴된다는 것을 알 수 있습니다.
+
 ### 4.3 Online Performance
 
-To evaluate the online performance of DeepGBM, we use Flight, Criteo and AutoML-1 datasets as the online benchmark. 
+To evaluate the online performance of DeepGBM, we use Flight, Criteo and AutoML-1 datasets as the online benchmark.
 
-To simulate the online scenarios, we refer to the setting of the “AutoML for Lifelong Machine Learning” Challenge in NeurIPS 2018 [37]. 
+> DeepGBM의 온라인 성능을 평가하기 위해 Flight, Criteo 및 AutoML-1 데이터 세트를 온라인 벤치마크로 사용한다.
 
-Specifically, we partition each dataset into multiple consecutive batches along with the time. 
+To simulate the online scenarios, we refer to the setting of the “AutoML for Lifelong Machine Learning” Challenge in NeurIPS 2018 [37].
 
-We will train the model for each batch from the oldest to latest in sequence. 
+> 온라인 시나리오를 시뮬레이션하기 위해 뉴런의 "평생 기계 학습을 위한 자동 ML" 과제 설정을 참조한다.IPS 2018 [37].
 
-And, at i -th batch, it only allows to use the samples in that batch to train or update the model; after that, the (i + 1)-th batch is used for the evaluation. 
+Specifically, we partition each dataset into multiple consecutive batches along with the time.
+
+> 특히, 우리는 시간과 함께 각 데이터 세트를 여러 개의 연속적인 배치로 분할한다.
+
+We will train the model for each batch from the oldest to latest in sequence.
+
+> 우리는 각 배치에 대한 모델을 가장 오래된 것부터 가장 최근의 것 순으로 훈련시킬 것이다.
+
+And, at i-th batch, it only allows to use the samples in that batch to train or update the model; after that, the (i + 1)-th batch is used for the evaluation.
+
+> 그리고 i-th 배치에서는 해당 배치의 샘플만 사용하여 모델을 훈련하거나 업데이트할 수 있습니다. 그 이후에는 (i + 1)-th 배치가 평가에 사용됩니다.
 
 More details are available in Appendix A.
 
-Note that, as the data distribution may change along with different batches during the online simulation, we would like to examine if the online learned models can perform better than their offline versions, i.e., the models without the online update. 
+> 자세한 내용은 부록 A에서 확인할 수 있습니다.
+
+Note that, as the data distribution may change along with different batches during the online simulation, we would like to examine if the online learned models can perform better than their offline versions, i.e., the models without the online update.
+
+> 참고로 온라인 시뮬레이션 중에 데이터 배포가 다른 배치와 함께 변경될 수 있으므로 온라인 학습 모델이 오프라인 버전, 즉 온라인 업데이트가 없는 모델보다 더 나은 성능을 발휘할 수 있는지 검사하려고 한다.
 
 Thus, we also check the performance of offline DeepGBM as another baseline to compare with the online learned DeepGBM.
 
+> 따라서 온라인 학습 DeepGBM과 비교할 수 있는 또 다른 기준으로서 오프라인 DeepGBM의 성능도 점검한다.
+
 All the comparison results are summarized in Fig 5, and we have following observations:
 
+> 모든 비교 결과는 그림 5에 요약되어 있으며, 다음과 같은 관측 결과가 있습니다.
+
 - GBDT cannot perform well in the online scenarios as expected. Although GBDT yields good result in the first batch (offline stage), it declines obviously in the later (online) batches.
+
+  > GBDT는 예상대로 온라인 시나리오에서 제대로 수행할 수 없습니다. GBDT는 첫 번째 배치(오프라인 단계)에서 좋은 결과를 산출하지만, 이후(온라인) 배치에서는 분명히 감소합니다.
+
 - The online performance of GBDT2NN is good. In particular, GBDT2NN (DeepGBM (D2)) can significantly outperform GBDT. Furthermore, DeepGBM outperforms DeepGBM (D1), which uses GBDT instead of GBDT2NN, by a non-trivial gain. It indicates that the distilled NN model by GBDT could be further improved and effectively used in the online scenarios.
+
+  > GBDT2NN의 온라인 실적 좋다.특히 GBDT2NN(DeepGBM(D2)) 크게 GBDT을 능가할 수 있다.게다가, DeepGBM는은 오름에 따라 GBDT 대신 GBDT2NN를 사용한다 DeepGBM(D1),를 압도한다.그것은 GBDT에 의해 증류한 잘 자라 모델 더 효과적으로 온라인 시나리오에서 사용되 개선될 수 있는지 여부를 나타냅니다.
 
 ![image-20211003083742532](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig4.png)
 
@@ -776,27 +1081,51 @@ Figure 4: Epoch-AUC curves over test data, in the offline classification experim
 We can find that DeepGBM converges much faster than other baselines. 
 Moreover, the convergence points of DeepGBM are also much better.
 
+> Figure 4: Epoch-AUC curves over test data, in the offline classification experiments. 
+> We can find that DeepGBM converges much faster than other baselines. 
+> Moreover, the convergence points of DeepGBM are also much better.
+
 ![image-20211003083802341](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig5.png)
 
 Figure 5: Online performance comparison. 
 For the models that cannot be online updated, we did not update them during the online simulation. 
 All experiments are run 5 times with different random seeds, and the mean results (AUC) are used.
 
+> 그림 5: 온라인 성능 비교. 
+> 온라인 업데이트가 불가능한 모델의 경우 온라인 시뮬레이션 중에 업데이트하지 않았습니다. 
+> 모든 실험은 서로 다른 랜덤 씨앗을 사용하여 5번 실행되며 평균 결과(AUC)가 사용됩니다.
+
 - DeepGBM outperforms all other baselines, including its offline version (the dotted lines). It explicitly proves the proposed Deep- GBM indeed yields strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning.
+
+  > DeepGBM은 오프라인 버전(점선)을 포함하여 다른 모든 기준선을 능가합니다. 이는 제안된 DeepGBM이 효율적인 온라인 학습의 필수적인 능력을 유지하면서 범주형 및 수치형 특징 모두에 대해 강력한 학습 능력을 제공한다는 것을 분명히 입증한다.
 
 In short, all above experimental results demonstrate that DeepGBM can significantly outperform all kinds of baselines in both offline and online scenarios.
 
+> 간단히 말해서 위의 모든 실험 결과는 DeepGBM이 오프라인 및 온라인 시나리오 모두에서 모든 종류의 기준선을 크게 능가할 수 있음을 보여준다.
+
 ## 5. CONCLUSION
 
-To address the challenges of tabular input space, which indicates the existence of both sparse categorical features and dense numerical ones, and online data generation, which implies continuous task- generated data with potentially dynamic distribution, in online prediction tasks, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together. 
+> 결론
 
-Specifically, DeepGBM consists of two major components: CatNN being an NN structure with the input of sparse categorical features and GBDT2NN being another NN structure with the input of dense numerical features. 
+To address the challenges of tabular input space, which indicates the existence of both sparse categorical features and dense numerical ones, and online data generation, which implies continuous task- generated data with potentially dynamic distribution, in online prediction tasks, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together.
 
-To further take advantage of GBDT’s strength in learning over dense numerical features, GBDT2NN attempts to distill the knowledge learned by GBDT into an NN modeling process. 
+> 온라인 예측 작업에서 희박한 범주형 특징과 밀도가 높은 수치적 특징의 존재를 나타내는 표 입력 공간과 잠재적으로 동적 분포가 있는 지속적인 작업 생성 데이터를 의미하는 온라인 데이터 생성의 과제를 해결하기 위해 NN A를 통합하는 새로운 학습 프레임워크인 DeepGBM을 제안한다.GBDT를 함께 사용합니다.
 
-Powered by these two NN based components, DeepGBM can indeed yield the strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning. 
+Specifically, DeepGBM consists of two major components: CatNN being an NN structure with the input of sparse categorical features and GBDT2NN being another NN structure with the input of dense numerical features.
+
+> 특히 DeepGBM은 두 가지 주요 구성 요소로 구성된다. CatNN은 희소 범주 형상의 입력이 있는 NN 구조이고 GBDT2NN은 밀도가 높은 수치 형상의 입력이 있는 또 다른 NN 구조이다.
+
+To further take advantage of GBDT’s strength in learning over dense numerical features, GBDT2NN attempts to distill the knowledge learned by GBDT into an NN modeling process.
+
+> GBDT2NN은 고밀도 수치 특징을 학습하는 GBDT의 강점을 더욱 활용하기 위해 GBDT에서 학습한 지식을 NN 모델링 프로세스로 증류하려고 한다.
+
+Powered by these two NN based components, DeepGBM can indeed yield the strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning.
+
+> 이 두 NN 기반 구성 요소에 의해 구동되는 DeepGBM은 효율적인 온라인 학습의 중요한 능력을 유지하면서 범주형 및 수치형 특징 모두에 대해 강력한 학습 용량을 제공할 수 있다.
 
 Comprehensive experimental results demonstrate that DeepGBM can outperform other solutions in various prediction tasks, in both offline and online scenarios.
+
+> 종합적인 실험 결과는 DeepGBM이 오프라인 및 온라인 시나리오 모두에서 다양한 예측 작업에서 다른 솔루션을 능가할 수 있음을 보여준다.
 
 
 
