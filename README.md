@@ -24,12 +24,19 @@
 |2021.06.04 | [PoseNet을 활용한 헬스 트레이너 웹 서비스](https://github.com/KGU-Code-15/fit-sibang/blob/main/Develop%20docs/PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf) | [동상](https://github.com/d9249/Portfolio/blob/main/Attachment/%5B16%5D%20%EB%8F%99%EC%83%81_%EC%9D%B4%EC%83%81%EB%AF%BC_PoseNet%EC%9D%84%20%ED%99%9C%EC%9A%A9%ED%95%9C%20%ED%97%AC%EC%8A%A4%20%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4.pdf) | 한국정보기술학회 대학생논문경진대회 |
 |2021.06.10 | [핏-시방(Fit-sibang)](https://www.youtube.com/watch?v=GJUjvelC5Ys) | [장려상](https://github.com/KGU-Code-15/fit-sibang/blob/main/Develop%20docs/Code-15%20AI%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%B2%E1%84%90%E1%85%A5%E1%84%80%E1%85%A9%E1%86%BC%E1%84%92%E1%85%A1%E1%86%A8%E1%84%87%E1%85%AE%20%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%85%E1%85%A7%E1%84%89%E1%85%A1%E1%86%BC.jpeg) | 경기대학교 컴퓨터공학부 |
 
-## 🗃 Certificate of completion.
+## 🗃 Certificate of completion
 
-| Data       | Contents                                                     | Organization |
+| Date       | Contents                                                     | Organization |
 | ---------- | ------------------------------------------------------------ | ------------ |
 | 2021.07.22 | [대학생 코딩 캠프 7기](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EB%8C%80%EC%BD%94%EC%BA%A0_%EC%88%98%EB%A3%8C%EC%A6%9D_7%EA%B8%B0_%EC%9D%B4%EC%83%81%EB%AF%BC.pdf) | Codeit       |
 | 2021.07.27 | [산업인공지능 단기집중 교육과정(일반공통)](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EC%82%B0%EC%97%85%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%8B%A8%EA%B8%B0%EC%A7%91%EC%A4%91%EA%B5%90%EC%9C%A1(%EC%9D%BC%EB%B0%98)%20%EC%88%98%EB%A3%8C%EC%A6%9D.jpg) | KPC, KETI    |
+
+## 🗃 My thesis
+
+| Date       | Korean title                                                 | Organization                        |
+| ---------- | ------------------------------------------------------------ | ----------------------------------- |
+| 2021.06.04 | PoseNet을 활용한 헬스 트레이너 웹 서비스                     | 한국정보기술학회 대학생논문경진대회 |
+| 2021.10.23 | 겹친 문자 이미지 분류를 위한 합성곱 신경망 모델의 정확도 분석 | 한국인터넷정보학회 추계학술발표대회 |
 
 
 
