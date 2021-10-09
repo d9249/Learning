@@ -637,13 +637,13 @@ Combined with the above methods for single tree distillation, the output of NN d
 
 ![image-20211003082058073](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/06.png)
 
-![image-20211003082114527](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082114527.png)
+![image-20211003082114527](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig2.png)
 
 Figure 2: Tree structure distillation by leaf index. NN will approximate the tree structure by fitting its leaf index.
 
 > 그림 2: 잎 지수에 의한 나무 구조 증류. NN은 리프 인덱스를 맞춤으로써 트리 구조의 근사치를 구한다.
 
-![image-20211003082127367](C:\Users\이상민\AppData\Roaming\Typora\typora-user-images\image-20211003082127367.png)
+![image-20211003082127367](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig3.png)
 
 Figure 3: Tree structure distillation by leaf embedding. 
 The leaf index is first transformed to leaf embedding. 
