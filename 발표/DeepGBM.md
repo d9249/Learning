@@ -279,7 +279,7 @@ Some studies have tried to train tree based models from streaming data [4, 11, 1
 
 Moreover, they can hardly perform better than learning from all data at once. 
 
-> Moreover, they can hardly perform better than learning from all data at once. 
+> 또한, 한 번에 모든 데이터에서 학습하는 것보다 더 나은 성능을 발휘하기는 어렵다. 
 
 Two well-recognized open-sourced tools for GBDT, i.e., XGBoost [8] and LightGBM [29], also provide a simple solution for updating trees by online generated data. 
 
