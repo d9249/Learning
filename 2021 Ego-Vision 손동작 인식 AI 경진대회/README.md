@@ -6,7 +6,12 @@
 
 ```Egp-Vision
 ├── Baseline(DACON)
-└── EDA
+├── DenseNet121
+├── DenseNet201
+├── Reference
+├── pytorch_python
+├── ResNet18
+└── ResNet34
 ```
 
 # Rules.
@@ -39,13 +44,13 @@
 | densenet201        | 0.2786221306 |
 | densenet161        |              |
 | inception_v3       |              |
-| googlenet          |              |
-| shufflenet_v2_x1_0 |              |
-| alexnet            |              |
-| squeezenet1_0      |              |
-| squeezenet1_1      |              |
-| vgg11              |              |
-| vgg13              |              |
-| vgg16              |              |
-| vgg19              |              |
+| googlenet          | going        |
+| shufflenet_v2_x1_0 | going        |
+| alexnet            | going        |
+| squeezenet1_0      | going        |
+| squeezenet1_1      | going        |
+| vgg11              | going        |
+| vgg13              | going        |
+| vgg16              | going        |
+| vgg19              | going        |
 
