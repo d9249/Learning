@@ -24,3 +24,28 @@
 ## 사전학습모델 사용
 
 ⅰ)	누구나 얻을 수 있고 법적 제약이 없는 사전학습 모델 사용 가능 (코드 제출시 사전학습에 사용된 모델 명시 필요)
+
+# Result.
+
+| model              | score        |
+| ------------------ | ------------ |
+| resnet18           | 0.2994078162 |
+| resnet34           | 0.361390325  |
+| resnet50           |              |
+| resnet101          |              |
+| resnet152          |              |
+| densenet121        | 0.2414113323 |
+| densenet169        |              |
+| densenet201        | 0.2786221306 |
+| densenet161        |              |
+| inception_v3       |              |
+| googlenet          |              |
+| shufflenet_v2_x1_0 |              |
+| alexnet            |              |
+| squeezenet1_0      |              |
+| squeezenet1_1      |              |
+| vgg11              |              |
+| vgg13              |              |
+| vgg16              |              |
+| vgg19              |              |
+
