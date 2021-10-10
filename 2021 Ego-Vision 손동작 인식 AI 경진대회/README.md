@@ -37,13 +37,12 @@
 | resnet18           | 0.2994078162     |
 | resnet34           | 0.3613903250     |
 | resnet50           | going            |
-| resnet101          | going            |
-| resnet152          | going            |
+| resnet101          | 0.4248803836     |
+| resnet152          | 0.351421641      |
 | **densenet121**    | **0.2414113323** |
 | densenet169        | 0.4418508527     |
 | densenet201        | 0.2786221306     |
 | densenet161        | 0.2575585124     |
-| inception_v3       |                  |
 | googlenet          | 0.3528536391     |
 | shufflenet_v2_x1_0 | going            |
 | alexnet            | going            |
