@@ -42,9 +42,9 @@
 | densenet121        | 0.2414113323 |
 | densenet169        |              |
 | densenet201        | 0.2786221306 |
-| densenet161        |              |
+| densenet161        | going        |
 | inception_v3       |              |
-| googlenet          | going        |
+| googlenet          | score        |
 | shufflenet_v2_x1_0 | going        |
 | alexnet            | going        |
 | squeezenet1_0      | score        |
