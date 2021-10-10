@@ -32,25 +32,25 @@
 
 # Result.
 
-| model              | score        |
-| ------------------ | ------------ |
-| resnet18           | 0.2994078162 |
-| resnet34           | 0.3613903250 |
-| resnet50           |              |
-| resnet101          |              |
-| resnet152          |              |
-| densenet121        | 0.2414113323 |
-| densenet169        |              |
-| densenet201        | 0.2786221306 |
-| densenet161        | 0.2575585124 |
-| inception_v3       |              |
-| googlenet          | 0.3528536391 |
-| shufflenet_v2_x1_0 | going        |
-| alexnet            | going        |
-| squeezenet1_0      | 1.7984093391 |
-| squeezenet1_1      | 1.5959589286 |
-| vgg11              | 1.4910493616 |
-| vgg13              | 1.8825040228 |
-| vgg16              | 1.8191852852 |
-| vgg19              | 2.0701736357 |
+| model              | score            |
+| ------------------ | ---------------- |
+| resnet18           | 0.2994078162     |
+| resnet34           | 0.3613903250     |
+| resnet50           | going            |
+| resnet101          | going            |
+| resnet152          | going            |
+| **densenet121**    | **0.2414113323** |
+| densenet169        | 0.4418508527     |
+| densenet201        | 0.2786221306     |
+| densenet161        | 0.2575585124     |
+| inception_v3       |                  |
+| googlenet          | 0.3528536391     |
+| shufflenet_v2_x1_0 | going            |
+| alexnet            | going            |
+| squeezenet1_0      | 1.7984093391     |
+| squeezenet1_1      | 1.5959589286     |
+| vgg11              | 1.4910493616     |
+| vgg13              | 1.8825040228     |
+| vgg16              | 1.8191852852     |
+| vgg19              | 2.0701736357     |
 
