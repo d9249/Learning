@@ -44,13 +44,13 @@
 | densenet201        | 0.2786221306 |
 | densenet161        | going        |
 | inception_v3       |              |
-| googlenet          | score        |
+| googlenet          | 0.3528536391 |
 | shufflenet_v2_x1_0 | going        |
 | alexnet            | going        |
-| squeezenet1_0      | score        |
-| squeezenet1_1      | score        |
-| vgg11              | score        |
+| squeezenet1_0      | 1.7984093391 |
+| squeezenet1_1      | 1.5959589286 |
+| vgg11              | 1.4910493616 |
 | vgg13              | 1.8825040228 |
 | vgg16              | 1.8191852852 |
-| vgg19              | score        |
+| vgg19              | 2.0701736357 |
 
