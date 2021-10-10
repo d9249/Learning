@@ -47,10 +47,10 @@
 | googlenet          | going        |
 | shufflenet_v2_x1_0 | going        |
 | alexnet            | going        |
-| squeezenet1_0      | going        |
-| squeezenet1_1      | going        |
-| vgg11              | going        |
+| squeezenet1_0      | score        |
+| squeezenet1_1      | score        |
+| vgg11              | score        |
 | vgg13              | 1.8825040228 |
 | vgg16              | 1.8191852852 |
-| vgg19              | going        |
+| vgg19              | score        |
 
