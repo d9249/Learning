@@ -35,14 +35,14 @@
 | model              | score        |
 | ------------------ | ------------ |
 | resnet18           | 0.2994078162 |
-| resnet34           | 0.361390325  |
+| resnet34           | 0.3613903250 |
 | resnet50           |              |
 | resnet101          |              |
 | resnet152          |              |
 | densenet121        | 0.2414113323 |
 | densenet169        |              |
 | densenet201        | 0.2786221306 |
-| densenet161        | going        |
+| densenet161        | 0.2575585124 |
 | inception_v3       |              |
 | googlenet          | 0.3528536391 |
 | shufflenet_v2_x1_0 | going        |
