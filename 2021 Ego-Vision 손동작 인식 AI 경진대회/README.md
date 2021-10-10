@@ -50,7 +50,7 @@
 | squeezenet1_0      | going        |
 | squeezenet1_1      | going        |
 | vgg11              | going        |
-| vgg13              | going        |
-| vgg16              | going        |
+| vgg13              | 1.8825040228 |
+| vgg16              | 1.8191852852 |
 | vgg19              | going        |
 
