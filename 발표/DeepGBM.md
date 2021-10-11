@@ -3,21 +3,31 @@
 
 Online prediction has become one of the most essential tasks in many real-world applications.
 
-> 온라인 예측은 많은 실제 애플리케이션에서 가장 필수적인 작업 중 하나가 되었다.
+> **온라인 예측은 많은 실제 애플리케이션에서 가장 필수적인 작업 중 하나**가 되었다.
 
 Two main characteristics of typical online prediction tasks include tabular input space and online data generation.
 
-> 대표적인 온라인 예측 작업의 두 가지 주요 특징은 표 입력 공간과 온라인 데이터 생성이다.
+> 대표적인 온라인 예측 작업의 **두 가지 주요 특징은 표 입력 공간과 온라인 데이터 생성**이다.
 
  Specifically, tabular input space indicates the existence of both sparse categorical features and dense numerical ones, while online data generation implies continuous task-generated data with potentially dynamic distribution.
 
-> 특히 표 입력 공간은 희박한 범주형 특징과 밀도가 높은 수치 형상의 존재를 나타내는 반면, 
+> 특히 **표 입력 공간**은 **희박한 범주형 특징과 밀도가 높은 수치 형상의 존재**를 나타내는 반면, 
 >
-> 온라인 데이터 생성은 잠재적으로 동적 분포가 있는 연속 작업 생성 데이터를 의미한다.
+> **온라인 데이터 생성**은 **잠재적으로 동적 분포가 있는 연속 작업 생성 데이터**를 의미한다.
 
-Consequently, effective learning with tabular input space as well as fast adaption to online data gen- eration become two vital challenges for obtaining the online pre- diction model.
+범주형 : 몇 개의 범주로 나누어진 자료를 의미
 
-> 따라서 표 형식 입력 공간을 이용한 효과적인 학습과 온라인 데이터 생성에 대한 빠른 적응은 온라인 사전 사전 모델을 얻는 데 있어 두 가지 중요한 과제가 된다.
+sparse categorical features(희박한 범주형 특징) : 몇 개의 범주로 나누어진 특징
+
+dense numerical ones(빽빽한 숫자) :  빽빽한 수치가 적혀있는 
+
+표 입력 공간 : 몇 개의 범주로 나누어져 빽빽한 수치가 가득 적혀있다.
+
+온라인 데이터 생성 : 동적 분포, 연속적인 데이터이다.
+
+Consequently, effective learning with tabular input space as well as fast adaption to online data generation become two vital challenges for obtaining the online prediction model.
+
+>  따라서 표 형식 입력 공간을 이용한 효과적인 학습과 온라인 데이터 생성에 대한 빠른 적응은 온라인 사전 사전 모델을 얻는 데 있어 두 가지 중요한 과제가 된다.
 
 Although Gradient Boosting Decision Tree (GBDT) and Neural Network (NN) have been widely used in practice, either of them yields their own weaknesses.
 
@@ -63,7 +73,7 @@ Data Mining (KDD ’19), August 4–8, 2019, Anchorage, AK, USA. ACM, New York, 
 
 ## 1. INTRODUCTION
 
-Online prediction represents a certain type of tasks playing the essential role in many real-world industrial applications, such as click prediction [21, 22, 36, 51] in sponsored search, content ranking [1, 6, 7] in Web search, content optimization [9, 10, 47] in recom- mender systems, travel time estimation [31, 49] in transportation planning, etc.
+Online prediction represents a certain type of tasks playing the essential role in many real-world industrial applications, such as click prediction [21, 22, 36, 51] in sponsored search, content ranking [1, 6, 7] in Web search, content optimization [9, 10, 47] in recommender systems, travel time estimation [31, 49] in transportation planning, etc.
 
 > 온라인 예측은 클릭 예측 [21, 22, 36, 51], 웹 검색의 콘텐츠 순위 [1, 6, 7], 리컴 벤더 시스템의 콘텐츠 최적화 [9, 10, 47], 이동 시간 추정 [31, 49]과 같은 많은 실제 산업 애플리케이션에서 필수적인 역할을 하는 특정 유형의 작업을 나타낸다.
 
@@ -123,7 +133,7 @@ Meanwhile, GBDT has two main weaknesses in online prediction tasks.
 
 > 한편, GBDT는 온라인 예측 작업에서 두 가지 주요 약점을 가지고 있다.
 
-First, as the learned trees in GBDT are not differentiable, it is hard to update the GBDT model in the on- line mode. Frequent retraining from scratch makes GBDT quite inefficient in learning over online prediction tasks.
+First, as the learned trees in GBDT are not differentiable, it is hard to update the GBDT model in the online mode. Frequent retraining from scratch makes GBDT quite inefficient in learning over online prediction tasks.
 
 > 첫째, GBDT에서 학습된 트리는 차별화할 수 없으므로 온라인 모드에서 GBDT 모델을 업데이트하기가 어렵다. 처음부터 재교육을 자주 하면 온라인 예측 작업에 대한 학습에서 GBDT가 상당히 비효율적이다.
 
@@ -135,7 +145,7 @@ The second weakness of GBDT is its ineffectiveness in learn- ing over sparse cat
 
 > GBDT의 두 번째 약점은 희소 범주적 특징4에 대한 학습의 비효율성이다.
 
-Particularly, after converting categorical features into sparse and high-dimensional one-hot en- codings, the statistical information gain will become very small on sparse features, since the gain of imbalance partitions by sparse features is almost the same as non-partition. 
+Particularly, after converting categorical features into sparse and high-dimensional one-hot encodings, the statistical information gain will become very small on sparse features, since the gain of imbalance partitions by sparse features is almost the same as non-partition. 
 
 > 특히 범주형 특징을 희소 및 고차원 단일 핫 코딩으로 변환한 후 희소 형상에 의한 불균형 파티션 이득이 비 파티션과 거의 같기 때문에 희소 형상에서 통계 정보 이득은 매우 작아진다.
 
@@ -151,7 +161,7 @@ Categorical features also could be directly used in tree learning, by enumeratin
 
 > 범주형 특성은 가능한 이진 파티션을 열거하여 트리 학습에도 직접 사용될 수 있다[16].
 
-However, this method often over-fits to the training data when with sparse cate- gorical features, since there is too little data in each category and thus the statistical information is biased [29]. 
+However, this method often overfits to the training data when with sparse categorical features, since there is too little data in each category and thus the statistical information is biased [29]. 
 
 > 그러나 이 방법은 각 범주에 데이터가 너무 적어서 통계 정보가 편향되기 때문에 교리학적 특성이 희박한 경우 훈련 데이터에 과도하게 적합되는 경우가 많다[29].
 
