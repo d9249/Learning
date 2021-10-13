@@ -1085,9 +1085,17 @@ All the comparison results are summarized in Fig 5, and we have following observ
 
   > GBDT는 예상대로 온라인 시나리오에서 제대로 수행할 수 없습니다. GBDT는 첫 번째 배치(오프라인 단계)에서 좋은 결과를 산출하지만, 이후(온라인) 배치에서는 분명히 감소합니다.
 
-- The online performance of GBDT2NN is good. In particular, GBDT2NN (DeepGBM (D2)) can significantly outperform GBDT. Furthermore, DeepGBM outperforms DeepGBM (D1), which uses GBDT instead of GBDT2NN, by a non-trivial gain. It indicates that the distilled NN model by GBDT could be further improved and effectively used in the online scenarios.
+- The online performance of GBDT2NN is good. In particular, GBDT2NN (DeepGBM (D2)) can significantly outperform GBDT.
 
-  > GBDT2NN의 온라인 실적 좋다.특히 GBDT2NN(DeepGBM(D2)) 크게 GBDT을 능가할 수 있다.게다가, DeepGBM는은 오름에 따라 GBDT 대신 GBDT2NN를 사용한다 DeepGBM(D1),를 압도한다.그것은 GBDT에 의해 증류한 잘 자라 모델 더 효과적으로 온라인 시나리오에서 사용되 개선될 수 있는지 여부를 나타냅니다.
+  > GBDT2NN의 온라인 성능은 좋습니다. 특히, GBDT2NN(DeepGBM)은 GBDT를 크게 능가할 수 있습니다.
+  
+- Furthermore, DeepGBM outperforms DeepGBM (D1), which uses GBDT instead of GBDT2NN, by a non-trivial gain.
+
+  > 또한 DeepGBM은 GBDT2NN 대신 GBDT를 사용하는 DeepGBM(D1)을 훨씬 능가합니다.
+  
+- It indicates that the distilled NN model by GBDT could be further improved and effectively used in the online scenarios.
+
+  > 이는 GBDT에 의한 증류 NN 모델이 온라인 시나리오에서 더욱 개선되고 효과적으로 사용될 수 있음을 나타낸다.
 
 ![image-20211003083742532](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig4.png)
 
