@@ -65,7 +65,7 @@ Neural Network; Gradient Boosting Decision Tree
 
 ![Fig1](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig1.png)
 
-Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse cat- egorical and dense numerical features, respectively.
+Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse categorical and dense numerical features, respectively.
 
 > DeepGBM의 프레임워크는 CatNN과 GBDT2NN의 두 가지 구성 요소로 구성되어 있으며, 각각 희박한 고양이 등극 및 고밀도 수치 특징을 처리한다.
 
@@ -141,7 +141,7 @@ This weakness, moreover, prevents GBDT from learning over very large scale data,
 
 > 게다가 이 약점은 GBDT가 대규모 데이터를 학습하는 것을 방해한다. 학습 3을 위해 메모리에 엄청난 양의 데이터를 로드하는 것은 일반적으로 비현실적이기 때문이다.
 
-The second weakness of GBDT is its ineffectiveness in learn- ing over sparse categorical features4 . 
+The second weakness of GBDT is its ineffectiveness in learning over sparse categorical features4 . 
 
 > GBDT의 두 번째 약점은 희소 범주적 특징4에 대한 학습의 비효율성이다.
 
@@ -169,13 +169,17 @@ In short, while GBDT can learn well over dense numerical features, the two weakn
 
 > 간단히 말해서, GBDT는 밀도가 높은 수치적 특징, 즉 온라인 데이터 생성에 적응하는 어려움과 희박한 범주적 특징에 대한 학습의 비효과적인 두 가지 약점은 많은 온라인 예측 작업, 특히 모델이 온라인에 적용되고 사람이 포함된 작업에서 GBDT가 실패하게 한다.y 희소 범주형 특성.
 
-On the other side, NN’s advantages consist of its efficient learning over large scale data in online tasks since the batch-mode back- propagation algorithm as well as its capability in learning over sparse categorical features by the well-recognized embedding structure [35, 38]. 
+On the other side, NN’s advantages consist of its efficient learning over large scale data in online tasks since the batch-mode backpropagation algorithm as well as its capability in learning over sparse categorical features by the well-recognized embedding structure [35, 38]. 
 
 > 반면에 NN의 장점은 배치 모드 역 전파 알고리즘 이후 온라인 작업에서 대규모 데이터에 대한 효율적인 학습과 잘 알려진 내장 구조에 의한 희소 범주적 특징에 대한 학습 능력[35, 38]으로 구성된다.
 
-Some recent studies have revealed the success of employing NN in those online prediction tasks, including click pre- diction [22, 36, 51] and recommender systems [9, 10, 32, 38, 47]. Nevertheless, the main challenge of NN lies in its weakness in learning over dense numerical tabular features. 
+Some recent studies have revealed the success of employing NN in those online prediction tasks, including click prediction [22, 36, 51] and recommender systems [9, 10, 32, 38, 47].
 
-> 클릭 사전 사전 사전 사전 사전 사전 사전 [22, 36, 51] 및 추천자 시스템 [9, 10, 32, 38, 47]을 포함하여 온라인 예측 작업에서 NN을 채택하는 데 성공했음을 일부 최근 연구에서 밝혀냈다. 그럼에도 불구하고 NN의 주요 과제는 밀도가 높은 수치 표 형상에 대한 학습의 약점에 있다.
+> 클릭 예측 [22, 36, 51] 및 추천자 시스템 [9, 10, 32, 38, 47]을 포함하여 온라인 예측 작업에서 NN을 채택하는 데 성공했음을 일부 최근 연구에서 밝혀냈다. 
+
+Nevertheless, the main challenge of NN lies in its weakness in learning over dense numerical tabular features. 
+
+> 그럼에도 불구하고 NN의 주요 과제는 밀도가 높은 수치 표 형상에 대한 학습의 약점에 있다.
 
 ![image-20211003084741816](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab1.png)
 
@@ -215,7 +219,7 @@ To take advantage of GBDT’s strength in learning over numerical features, GBDT
 
 > 수치적 특징을 학습하는 GBDT의 강점을 이용하기 위해 GBDT2NN은 GBDT가 학습한 지식을 NN 모델링 프로세스로 증류하려고 한다.
 
-Specifically, to boost the effectiveness of knowledge distil- lation [24], GBDT2NN does not only transfer the output knowledge of the pre-trained GBDT but also incorporates the knowledge of both feature importance and data partition implied by tree structures from obtained trees. 
+Specifically, to boost the effectiveness of knowledge distillation [24], GBDT2NN does not only transfer the output knowledge of the pre-trained GBDT but also incorporates the knowledge of both feature importance and data partition implied by tree structures from obtained trees. 
 
 > 특히, 지식 증류[24]의 효과를 높이기 위해 GBDT2NN은 사전 훈련된 GBDT의 출력 지식을 전달할 뿐만 아니라 획득한 트리의 트리 구조에 의해 암시되는 기능 중요성과 데이터 파티션에 대한 지식을 통합한다.
 
@@ -293,7 +297,7 @@ Moreover, they can hardly perform better than learning from all data at once.
 
 Two well-recognized open-sourced tools for GBDT, i.e., XGBoost [8] and LightGBM [29], also provide a simple solution for updating trees by online generated data. 
 
-> GBDT에 대해 잘 알려진 두 개의 오픈 소스 툴(예: XGBoost[8] 및 LightGBM[29)도 온라인 생성 데이터에 의한 트리 업데이트를 위한 간단한 솔루션을 제공합니다.
+> GBDT에 대해 잘 알려진 두 개의 오픈 소스 툴(예: XGBoost[8] 및 LightGBM[29])도 온라인 생성 데이터에 의한 트리 업데이트를 위한 간단한 솔루션을 제공합니다.
 
 In particular, they keep the tree structures fixed and update the leaf outputs by the new data. However, this solution can cause performance far below satisfaction. 
 
@@ -401,7 +405,7 @@ However, these works mainly focused on computer vision tasks without attention t
 
 Nevertheless, NNRF simply uses random feature combinations, without leveraging the statistical information over training data like GBDT.
 
-> 그럼에도 불구하고 NRF는 GBDT와 같은 훈련 데이터에 대한 통계 정보를 활용하지 않고 무작위의 기능 조합을 사용한다.
+> 그럼에도 불구하고 NNRF는 GBDT와 같은 훈련 데이터에 대한 통계 정보를 활용하지 않고 무작위의 기능 조합을 사용한다.
 
 **Convert Trees to NN.** 
 
@@ -495,9 +499,9 @@ Embedding is the low-dimensional dense representation of a high-dimensional spar
 
 ![image-20211003072322485](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/01.png)
 
-where xi is the value of i -th feature, Vi stores all embeddings of the i - th feature and can be learned by back-propagation, and EVi (xi ) will return the corresponding embedding vector for xi . 
+where xi is the value of i -th feature, Vi stores all embeddings of the i th feature and can be learned by back-propagation, and EVi (xi ) will return the corresponding embedding vector for xi . 
 
-> 여기서 xi는 i -th 형상의 값이며 Vi는 i - th 형상의 모든 임베딩을 저장하고 역전파를 통해 학습할 수 있으며 EVi(xi )는 xi 에 해당하는 임베딩 벡터를 반환합니다.
+> 여기서 xi는 i -th 형상의 값이며 Vi는 i th 형상의 모든 임베딩을 저장하고 역전파를 통해 학습할 수 있으며 EVi(xi )는 xi 에 해당하는 임베딩 벡터를 반환합니다.
 
 Based on that, we can use FM component to learn linear (order-1) and pair-wise (order-2) feature interactions, and denote as
 
@@ -587,7 +591,7 @@ Then we can only use x [It ] as the input of NN.
 
 > **트리 구조.**
 
-Essentially, the knowledge of tree structure of a decision tree indicates how to partition data into many non- overlapping regions (leaves), i.e., it clusters data into different classes and the data in the same leaf belongs to the same class. 
+Essentially, the knowledge of tree structure of a decision tree indicates how to partition data into many nonoverlapping regions (leaves), i.e., it clusters data into different classes and the data in the same leaf belongs to the same class. 
 
 > 기본적으로 의사 결정 트리의 트리 구조에 대한 지식은 데이터를 중복되지 않는 많은 영역(리브)으로 분할하는 방법을 나타냅니다. 즉, 데이터를 다른 클래스로 클러스터링하고 동일한 리프의 데이터는 동일한 클래스에 속합니다.
 
@@ -657,12 +661,12 @@ Figure 2: Tree structure distillation by leaf index. NN will approximate the tre
 
 Figure 3: Tree structure distillation by leaf embedding. 
 The leaf index is first transformed to leaf embedding. 
-Then NN will approximate tree structure by fitting the leaf embed- ding. 
+Then NN will approximate tree structure by fitting the leaf embedding. 
 Since the dimension of leaf embedding can be significantly smaller than the leaf index, this distillation method will be much more efficient.
 
 > 그림 3: 잎을 내장하여 나무 구조를 증류합니다. 
 > 리프 인덱스는 먼저 리프 임베딩으로 변환됩니다. 
-> 그런 다음 NN은 리프 임베드-딩에 적합하여 트리 구조를 근사화한다. 
+> 그런 다음 NN은 리프 임베딩에 적합하여 트리 구조를 근사화한다. 
 > 잎 내장 치수는 잎 지수보다 상당히 작을 수 있기 때문에, 이 증류 방법은 훨씬 더 효율적일 것이다.
 
 #### 3.2.2 
@@ -703,7 +707,7 @@ Formally, the learning process of embedding can denote as
 
 ![image-20211003082345062](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/07.png)
 
-where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected net- work with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values.
+where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected network with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values.
 
 > 여기서 H t , i = H (Lt , i ; tt )는 단일 핫 리프 지수 Lt , i를 밀집 임베딩 H t , i , pt 로 변환하는 매개변수 µt 를 가진 1개의 완전 연결 네트 작업이며, 표본 x i , i , pt 는 트리 학습에 사용되는 것과 동일한 리프 매핑의 손실 함수이다.
 
@@ -767,7 +771,7 @@ Formally, given a group of trees T, we can extend the Eqn.(7) to learn leaf embe
 
 ![image-20211003082429626](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/09.png)
 
-where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multi- hot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T.
+where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multihot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T.
 
 > 여기서 (( · )는 연결 연산이고, G T, i = H tt tT (Lt, i ); tT는 다중 핫 벡터를 다중 핫 리프 인덱스 벡터의 결합인 고밀도 내장 G T로 변환하는 1개의 완전 연결 네트워크이다.
 
@@ -925,9 +929,9 @@ Furthermore, as time-stamp is available in most of these datasets, we can use th
 
 > 또한 대부분의 데이터 세트에서 타임 스탬프를 사용할 수 있으므로 온라인 시나리오를 시뮬레이션하는 데 사용할 수 있습니다.
 
-**Compared Models**:  In our experiments, we will compare Deep- GBM with the following baseline models:
+**Compared Models**:  In our experiments, we will compare DeepGBM with the following baseline models:
 
-> **비교 모델**: 실험에서 Deep- GBM을 다음 기준 모델과 비교합니다.
+> **비교 모델**: 실험에서 DeepGBM을 다음 기준 모델과 비교합니다.
 
 - GBDT [17], which is a widely used tree-based learning algorithm for modeling tabular data. We use LightGBM [29] for its high efficiency.
 
@@ -947,11 +951,11 @@ Furthermore, as time-stamp is available in most of these datasets, we can use th
 
 - DeepFM [22], which improves Wide&Deep by adding an additional FM component.
 
-  > DeepFM[22] - FM 구성 요소를 추가하여 Wide&Deep를 개선합니다.
+  > DeepFM[22] FM 구성 요소를 추가하여 Wide&Deep를 개선합니다.
 
 - PNN [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical features.
 
-  > PNN [36] - 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 상호 작용을 캡처합니다.
+  > PNN [36] 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 상호 작용을 캡처합니다.
 
 ![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
 
@@ -1105,7 +1109,7 @@ All experiments are run 5 times with different random seeds, and the mean result
 > 온라인 업데이트가 불가능한 모델의 경우 온라인 시뮬레이션 중에 업데이트하지 않았습니다. 
 > 모든 실험은 서로 다른 랜덤 씨앗을 사용하여 5번 실행되며 평균 결과(AUC)가 사용됩니다.
 
-- DeepGBM outperforms all other baselines, including its offline version (the dotted lines). It explicitly proves the proposed Deep- GBM indeed yields strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning.
+- DeepGBM outperforms all other baselines, including its offline version (the dotted lines). It explicitly proves the proposed DeepGBM indeed yields strong learning capacity over both categorical and numerical tabular features while retaining the vital ability of efficient online learning.
 
   > DeepGBM은 오프라인 버전(점선)을 포함하여 다른 모든 기준선을 능가합니다. 이는 제안된 DeepGBM이 효율적인 온라인 학습의 필수적인 능력을 유지하면서 범주형 및 수치형 특징 모두에 대해 강력한 학습 능력을 제공한다는 것을 분명히 입증한다.
 
@@ -1117,7 +1121,7 @@ In short, all above experimental results demonstrate that DeepGBM can significan
 
 > 결론
 
-To address the challenges of tabular input space, which indicates the existence of both sparse categorical features and dense numerical ones, and online data generation, which implies continuous task- generated data with potentially dynamic distribution, in online prediction tasks, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together.
+To address the challenges of tabular input space, which indicates the existence of both sparse categorical features and dense numerical ones, and online data generation, which implies continuous taskgenerated data with potentially dynamic distribution, in online prediction tasks, we propose a new learning framework, DeepGBM, which integrates NN and GBDT together.
 
 > 온라인 예측 작업에서 희박한 범주형 특징과 밀도가 높은 수치적 특징의 존재를 나타내는 표 입력 공간과 잠재적으로 동적 분포가 있는 지속적인 작업 생성 데이터를 의미하는 온라인 데이터 생성의 과제를 해결하기 위해 NN A를 통합하는 새로운 학습 프레임워크인 DeepGBM을 제안한다.GBDT를 함께 사용합니다.
 
@@ -1141,9 +1145,9 @@ Comprehensive experimental results demonstrate that DeepGBM can outperform other
 
 ## REFERENCES
 
-[1] Eugene Agichtein, Eric Brill, and Susan Dumais. 2006. Improving web search rank- ing by incorporating user behavior information. In Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval. ACM, 19–26.
+[1] Eugene Agichtein, Eric Brill, and Susan Dumais. 2006. Improving web search ranking by incorporating user behavior information. In Proceedings of the 29th annual international ACM SIGIR conference on Research and development in information retrieval. ACM, 19–26.
 
-[2]  Arunava Banerjee. 1997. Initializing neural networks using decision trees. Com- putational learning theory and natural learning systems 4 (1997), 3–15.
+[2]  Arunava Banerjee. 1997. Initializing neural networks using decision trees. Computational learning theory and natural learning systems 4 (1997), 3–15.
 
 [3]  Iñigo Barandiaran. 1998. The random subspace method for constructing decision
 forests. IEEE transactions on pattern analysis and machine intelligence 20, 8 (1998). [4]  Yael Ben-Haim and Elad Tom-Tov. 2010.   A streaming parallel decision tree algorithm. Journal of Machine Learning Research 11, Feb (2010), 849–872.
@@ -1161,9 +1165,9 @@ forests. IEEE transactions on pattern analysis and machine intelligence 20, 8 (1
 
 [11] Pedro Domingos and Geoff Hulten. 2000. Mining high-speed data streams. In Proceedings of the sixth ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 71–80.
 
-[12] Anna Veronika Dorogush, Vasily Ershov, and Andrey Gulin. 2018. CatBoost: gra- dient boosting with categorical features support. arXiv preprint arXiv:1810.11363 (2018).
+[12] Anna Veronika Dorogush, Vasily Ershov, and Andrey Gulin. 2018. CatBoost: gradient boosting with categorical features support. arXiv preprint arXiv:1810.11363 (2018).
 
-[13]  James Dougherty, Ron Kohavi, and Mehran Sahami. 1995. Supervised and unsu- pervised discretization of continuous features. In Machine Learning Proceedings 1995. Elsevier, 194–202.
+[13]  James Dougherty, Ron Kohavi, and Mehran Sahami. 1995. Supervised and unsupervised discretization of continuous features. In Machine Learning Proceedings 1995. Elsevier, 194–202.
 
 [14]  Ji Feng, Yang Yu, and Zhi-Hua Zhou. 2018.  Multi-Layered Gradient Boosting Decision Trees. arXiv preprint arXiv:1806.00007 (2018).
 
@@ -1220,13 +1224,13 @@ forests. IEEE transactions on pattern analysis and machine intelligence 20, 8 (1
 
 [40] Samuel Rota Bulo and Peter Kontschieder. 2014. Neural decision forests for semantic image labelling. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 81–88.
 
-[41]  Scikit-learn. 2018. categorical_encoding. https://github.com/scikit- learn- contrib/ categorical- encoding.
+[41]  Scikit-learn. 2018. categorical_encoding. https://github.com/scikitlearncontrib/ categoricalencoding.
 
 [42]  Ishwar Krishnan Sethi. 1990. Entropy nets: from decision trees to neural networks. Proc. IEEE 78, 10 (1990), 1605–1613.
 
-[43] Ira Shavitt and Eran Segal. 2018. Regularization Learning Networks: Deep Learn- ing for Tabular Datasets. In Advances in Neural Information Processing Systems. 1386–1396.
+[43] Ira Shavitt and Eran Segal. 2018. Regularization Learning Networks: Deep Learning for Tabular Datasets. In Advances in Neural Information Processing Systems. 1386–1396.
 
-[44] Jeany Son, Ilchae Jung, Kayoung Park, and Bohyung Han. 2015. Tracking-by- segmentation with online gradient boosting decision tree. In Proceedings of the IEEE International Conference on Computer Vision. 3056–3064.
+[44] Jeany Son, Ilchae Jung, Kayoung Park, and Bohyung Han. 2015. Tracking-bysegmentation with online gradient boosting decision tree. In Proceedings of the IEEE International Conference on Computer Vision. 3056–3064.
 
 [45] V Sugumaran, V Muralidharan, and KI Ramachandran. 2007. Feature selection using decision tree and classification through proximal support vector machine for fault diagnostics of roller bearing. Mechanical systems and signal processing 21, 2 (2007), 930–942.
 
