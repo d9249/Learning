@@ -829,7 +829,7 @@ We will describe how to train the DeepGBM in this subsection, including how to t
 
 To train DeepGBM, we first need to use offline data to train a GBDT model and then use Eqn.(9) to get the leaf embedding for the trees in GBDT.
 
-> DeepGBM을 교육하려면 먼저 오프라인 데이터를 사용하여 GVDT 모델을 교육한 다음 Eqn.(9)을 사용하여 GVDT의 트리에 대한 리프 임베딩을 받아야 합니다.
+> DeepGBM을 교육하려면 먼저 오프라인 데이터를 사용하여 GBDT 모델을 교육한 다음 Eqn.(9)을 사용하여 GBDT의 트리에 대한 리프 임베딩을 받아야 합니다.
 
 After that, we can train DeepGBM end-to-end. Formally, we denote the output of DeepGBM as
 
@@ -955,7 +955,7 @@ Furthermore, as time-stamp is available in most of these datasets, we can use th
 
 - PNN [36], which uses pair-wise product layer to capture the pair-wise interactions over categorical features.
 
-  > PNN [36] 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 상호 작용을 캡처합니다.
+  > PNN [36] 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 교호작용을 캡처합니다.
 
 ![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
 
@@ -970,7 +970,7 @@ Besides, to further analyze the performance of DeepGBM, we use additional two de
 - DeepGBM (D1), which uses GBDT directly in DeepGBM, rather than GBDT2NN. 
   As GBDT cannot be online updated, we can use this model to check the improvement brought by DeepGBM in online scenarios.
   
-  > DeepGBM(D1)은 GBDT2NN이 아닌 DeepGBM에서 직접 GVDT를 사용합니다. 
+  > DeepGBM(D1)은 GBDT2NN이 아닌 DeepGBM에서 직접 GBDT를 사용합니다. 
   > GBDT는 온라인 업데이트가 불가능하므로 이 모델을 사용하여 온라인 시나리오에서 DeepGBM이 개선한 내용을 확인할 수 있습니다.
   
 - DeepGBM (D2), which only uses GBDT2NN in DeepGBM, without CatNN. 
