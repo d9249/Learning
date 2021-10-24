@@ -38,6 +38,7 @@ Osteoarthritis is deemed present at grade 2 although of minimal severity 1.
 ### Date
 
 1st Progress Report (2021.11.10 (수))
+> 발표자료 (PPT)
 
 Final Report (2021.12.08 (수))
 
