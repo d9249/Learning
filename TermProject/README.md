@@ -12,6 +12,10 @@
 
 ### Classification
 
+![KL grade explanation](https://github.com/d9249/MDL/blob/main/TermProject/KL-grade%20explanation.png)
+
+![KL grade example](https://github.com/d9249/MDL/blob/main/TermProject/KL-grade%20example.png)
+
 Numerous variations of the Kellgren and Lawrence classification system have been used in research 3. Below is the original description 1-3:
 
 grade 0 (none): definite absence of x-ray changes of osteoarthritis
