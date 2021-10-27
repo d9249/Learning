@@ -29,3 +29,9 @@ grade 3 (moderate): moderate multiple osteophytes, definite narrowing of joint s
 grade 4 (severe): large osteophytes, marked narrowing of joint space, severe sclerosis and definite deformity of bone ends
 
 Osteoarthritis is deemed present at grade 2 although of minimal severity 1.
+
+### Ref
+
+https://www.kaggle.com/akashkewar/data-sprint-35-osteoarthritis-kneexray
+
+https://github.com/PingjunChen/GradingKneeOA
