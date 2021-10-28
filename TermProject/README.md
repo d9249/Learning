@@ -60,3 +60,7 @@ https://www.kaggle.com/akashkewar/data-sprint-35-osteoarthritis-kneexray
 https://github.com/PingjunChen/GradingKneeOA
 
 https://www.kaggle.com/gpiosenka/notebookf03b3b1161
+
+### A competition site for accuracy estimation
+
+https://dphi.tech/challenges/data-sprint-35-osteoarthritis-knee-x-ray/81/overview/about
