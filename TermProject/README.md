@@ -47,10 +47,15 @@ http://www.snuh.org/health/nMedInfo/nView.do?category=DIS&medid=AA000196
 ### idea
 
 1. https://kmhana.tistory.com/27
+   
    ![img](https://blog.kakaocdn.net/dn/um3iU/btq8R0EvnO7/foZAXe9cpW7ycFzL9K5lO1/img.png)
+   
    Attention을 활용하여서 무릎 관절 사이의 정보를 주의 깊게 활용.
+   
    https://arxiv.org/abs/1706.03762
+   
    https://glee1228.tistory.com/3
+
 2. Pycaret을 통한 모델 최적화
 
 ### Ref
