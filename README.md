@@ -40,11 +40,12 @@
 
 ## :trophy: Competition.
 
-| Period             | name                                                         | Ranking                                                      | Organization               | Participation classification. |
-| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------------- | ----------------------------- |
-| 2020.08.03 ~ 09.14 | [컴퓨터 비전 학습 경진 대회](https://dacon.io/competitions/official/235626/overview/description) | [Private 1](https://github.com/d9249/DACON/tree/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Voting%20ensemble(After%20parameter%20optimization)) | [DACON](https://dacon.io/) | Non-regular participation.    |
-| 2021.09.15 ~ 10.14 | [2021 Ego-Vision 손동작 인식 AI 경진대회](https://dacon.io/competitions/official/235805/overview/description) | [5/348](https://dacon.io/codeshare/3596)               | [DACON](https://dacon.io/) | Regular competition           |
-| 2021.10.13 ~ 10.22 | [작물 병해 분류 AI 경진대회](https://dacon.io/competitions/official/235842/overview/description) |       [37/175](https://dacon.io/competitions/official/235842/leaderboard)                                                       | [DACON](https://dacon.io/) | Regular competition           |
+| Period           | name                                                         | Ranking                                                      | Organization                         | Participation classification. |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------ | ----------------------------- |
+| 2020.08.03~09.14 | [컴퓨터 비전 학습 경진 대회](https://dacon.io/competitions/official/235626/overview/description) | [SOTA 1](https://github.com/d9249/DACON/tree/main/%EC%BB%B4%ED%93%A8%ED%84%B0%20%EB%B9%84%EC%A0%84%20%ED%95%99%EC%8A%B5%20%EA%B2%BD%EC%A7%84%20%EB%8C%80%ED%9A%8C/Voting%20ensemble(After%20parameter%20optimization)) | [DACON](https://dacon.io/)           | Non-regular participation.    |
+| 2021.09.15~10.14 | [2021 Ego-Vision 손동작 인식 AI 경진대회](https://dacon.io/competitions/official/235805/overview/description) | [5/348](https://dacon.io/codeshare/3596)                     | [DACON](https://dacon.io/)           | Regular competition           |
+| 2021.10.13~10.22 | [작물 병해 분류 AI 경진대회](https://dacon.io/competitions/official/235842/overview/description) | [37/175](https://dacon.io/competitions/official/235842/leaderboard) | [DACON](https://dacon.io/)           | Regular competition           |
+| 2021.05.21~06.01 | [Data Sprint #35: Osteoarthritis Knee X-ray](https://dphi.tech/challenges/data-sprint-35-osteoarthritis-knee-x-ray/81/overview/about) | [1/27](https://dphi.tech/challenges/data-sprint-35-osteoarthritis-knee-x-ray/81/leaderboard/practice/) | [DPhi](https://dphi.tech/community/) | Non-regular participation.    |
 
 ## :computer: Tech stacks
 
