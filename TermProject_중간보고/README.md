@@ -12,9 +12,9 @@
 
 ### Classification
 
-![KL grade explanation](https://github.com/d9249/MDL/blob/main/TermProject/KL-grade%20explanation.png)
+![KL grade explanation](https://github.com/d9249/MDL/blob/main/TermProject_%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0/KL-grade%20explanation.png)
 
-![KL grade example](https://github.com/d9249/MDL/blob/main/TermProject/KL-grade%20example.png)
+![KL grade example](https://github.com/d9249/MDL/blob/main/TermProject_%EC%A4%91%EA%B0%84%EB%B3%B4%EA%B3%A0/KL-grade%20example.png)
 
 Numerous variations of the Kellgren and Lawrence classification system have been used in research 3. Below is the original description 1-3:
 
