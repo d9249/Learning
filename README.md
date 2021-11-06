@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=%20Lee%20Sangmin's%20Profile%20&fontSize=50)
+![header](https://capsule-render.vercel.app/api?type=soft&color=auto&height=170&section=header&text=%20Lee%20Sangmin%20&fontSize=50)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fd9249&count_bg=%23F73838&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
