@@ -1,0 +1,2 @@
+model_checkpoint_path: "xception_best.ckpt"
+all_model_checkpoint_paths: "xception_best.ckpt"
