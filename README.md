@@ -4,12 +4,12 @@
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fd9249&count_bg=%23F73838&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=Hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-## 💁🏻 Portfolio
+### 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
 [![Tistory Blog Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://github.com/d9249/Portfolio)
 [![Tistory Blog Badge](http://img.shields.io/badge/-DACON-black?style=flat-square&link=https://dacon.io/myprofile/423689/home/)](https://dacon.io/myprofile/423689/home)
 
- :mortar_board: Career
+### :mortar_board: Career
 
 | **Type** | **Date**| **Contents**| **Organization**|
 |---|---|---|---|
