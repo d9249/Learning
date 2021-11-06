@@ -48,12 +48,12 @@
 
 <div align="center">
   
-### 💁🏻 Portfolio
+## 💁🏻 Portfolio
 [![Tistory Blog Badge](http://img.shields.io/badge/-Notion-black?style=flat-square&logo=notion&link=https://d9249.github.io/)](https://www.notion.so/Portfolio-428c68302b6b430c98caca3293edb3bc)
 [![Tistory Blog Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://github.com/d9249/Portfolio)
 [![Tistory Blog Badge](http://img.shields.io/badge/-DACON-black?style=flat-square&link=https://dacon.io/myprofile/423689/home/)](https://dacon.io/myprofile/423689/home)
 
-### :computer: Tech stacks
+## :computer: Tech stacks
 
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/JAVA-007396?style=flat-square&logo=Java&logoColor=white"/></a>
@@ -67,7 +67,7 @@
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a>
 
-### 🧑🏻‍💻 Learning
+## 🧑🏻‍💻 Learning
 
 <img src="https://img.shields.io/badge/flask-000000?style=flat-square&logo=Flask&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/></a>
@@ -76,14 +76,14 @@
 <img src="https://img.shields.io/badge/Numpy-013243?style=flat-square&logo=Numpy&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Tensorflow-FF6F00?style=flat-square&logo=Tensorflow&logoColor=white"/></a>
 
-### 💡 Research Interests
+## 💡 Research Interests
 
 <img src="https://img.shields.io/badge/Deep_Learing-000000?style=flat-square&logo=Deep_Learing&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Generative_Adversarial_Network-000000?style=flat-square&logo=Generative_Adversarial_Network&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Convolutional_Neural_Network-000000?style=flat-square&logo=Convolutional_Neural_Network&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Computer_Vision-000000?style=flat-square&logo=Computer_Vision&logoColor=white"/></a>
 
-### :globe_with_meridians: Stats
+## :globe_with_meridians: Stats
 
 [![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
