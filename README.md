@@ -24,11 +24,6 @@
 
 [![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
-## :mailbox_with_mail: Contacts
-[![Tistory Blog Badge](http://img.shields.io/badge/-Tistory%20blog-black?style=flat-square&logo=blog&link=https://d9249.github.io/)](https://d9249.tistory.com)
-[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:d9249@kyonggi.ac.kr)](mailto:d9249@kyonggi.ac.kr)
-[![Github blog Badge](http://img.shields.io/badge/-Github%20blog-black?style=flat-square&logo=github&link=https://d9249.github.io/)](https://d9249.github.io/)
-
 </div>
   
 ### :mortar_board: Career
