@@ -15,10 +15,6 @@
 <img src="https://img.shields.io/badge/Convolutional_Neural_Network-000000?style=flat-square&logo=Convolutional_Neural_Network&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Computer_Vision-000000?style=flat-square&logo=Computer_Vision&logoColor=white"/></a>
 
-## :globe_with_meridians: Stats
-
-[![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
 </div>
   
 ### :mortar_board: Career
@@ -59,3 +55,11 @@
 | ---------- | ------------------------------------------------------------ | ------------ |
 | 2021.07.22 | [대학생 코딩 캠프 7기](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EB%8C%80%EC%BD%94%EC%BA%A0_%EC%88%98%EB%A3%8C%EC%A6%9D_7%EA%B8%B0_%EC%9D%B4%EC%83%81%EB%AF%BC.pdf) | Codeit       |
 | 2021.07.27 | [산업인공지능 단기집중 교육과정(일반공통)](https://github.com/d9249/Undergraduate_researcher/blob/main/Certificate%20of%20completion/%EC%82%B0%EC%97%85%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5%20%EB%8B%A8%EA%B8%B0%EC%A7%91%EC%A4%91%EA%B5%90%EC%9C%A1(%EC%9D%BC%EB%B0%98)%20%EC%88%98%EB%A3%8C%EC%A6%9D.jpg) | KPC, KETI    |
+
+<div align="center">
+  
+## :globe_with_meridians: Stats
+
+[![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+  
+</div>
