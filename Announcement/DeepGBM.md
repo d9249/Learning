@@ -1,4 +1,5 @@
 # DeepGBM: A Deep Learning Framework Distilled by GBDT for Online Prediction Tasks
+
 ## ABSTRACT
 
 Online prediction has become one of the most essential tasks in many real-world applications.
@@ -63,13 +64,15 @@ Neural Network; Gradient Boosting Decision Tree
 
 > 신경망; 기울기 부스팅 의사 결정 트리
 
-![Fig1](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig1.png)
+![Fig1](DeepGBM_IMG/Fig1.png)
 
 Figure 1: The framework of DeepGBM, which consists of two components, CatNN and GBDT2NN, to handle the sparse categorical and dense numerical features, respectively.
 
 > DeepGBM의 프레임워크는 CatNN과 GBDT2NN의 두 가지 구성 요소로 구성되어 있으며, 각각 희박한 고양이 등극 및 고밀도 수치 특징을 처리한다.
 
-Data Mining (KDD ’19), August 4–8, 2019, Anchorage, AK, USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3292500.3330858
+Data Mining (KDD ’19), August 4–8, 2019, Anchorage, AK, USA. ACM, New York, NY, USA, 11 pages. 
+
+https://doi.org/10.1145/3292500.3330858
 
 ## 1. INTRODUCTION
 
@@ -181,7 +184,7 @@ Nevertheless, the main challenge of NN lies in its weakness in learning over den
 
 > 그럼에도 불구하고 NN의 주요 과제는 밀도가 높은 수치 표 형상에 대한 학습의 약점에 있다.
 
-![image-20211003084741816](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab1.png)
+<img src="DeepGBM_IMG/Tab1.png" alt="image-20211003084741816" style="zoom: 150%;" />
 
 **Table 1: Comparison over different models**
 
@@ -497,7 +500,7 @@ Embedding is the low-dimensional dense representation of a high-dimensional spar
 
 > 임베딩은 고차원 희소 벡터의 저차원 밀도 표현이며 다음과 같이 나타낼 수 있다.
 
-![image-20211003072322485](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/01.png)
+<img src="DeepGBM_IMG/01.png" alt="image-20211003072322485" style="zoom:150%;" />
 
 where xi is the value of i -th feature, Vi stores all embeddings of the i th feature and can be learned by back-propagation, and EVi (xi ) will return the corresponding embedding vector for xi . 
 
@@ -507,7 +510,7 @@ Based on that, we can use FM component to learn linear (order-1) and pair-wise (
 
 > 이를 바탕으로 FM 구성요소를 사용하여 선형(차수-1) 및 쌍방향(차수-2) 특징 상호작용을 학습할 수 있으며, 다음과 같이 나타낼 수 있다.
 
-![image-20211003072345248](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/02.png)
+<img src="DeepGBM_IMG/02.png" alt="image-20211003072345248" style="zoom:150%;" />
 
 where d is the number of features, w0 and w are the parameters of linear part, and ⟨·, ·⟩ is the inner product operation. 
 
@@ -517,7 +520,7 @@ Then, Deep component is used to learn the high-order feature interactions:
 
 > 그런 다음 Deep 구성 요소를 사용하여 고차 기능 상호 작용을 학습합니다.
 
-![image-20211003072400561](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/03.png)
+<img src="DeepGBM_IMG/03.png" alt="image-20211003072400561" style="zoom:150%;" />
 
 where N (x ; θ ) is a multi-layered NN model with input x and parameter θ.
 
@@ -527,7 +530,7 @@ Combined with two components, the final output of CatNN is
 
 > CatNN의 최종 출력은 다음과 같다.
 
-![image-20211003072415607](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/04.png)
+<img src="DeepGBM_IMG/04.png" alt="image-20211003072415607" style="zoom:150%;" />
 
 ### 3.2 GBDT2NN for Dense Numerical Features
 
@@ -615,7 +618,7 @@ Then, we can use an NN model to approximate the structure function Ct (·) and t
 
 > 그런 다음 NN 모델을 사용하여 구조 함수 Ct (·)를 근사할 수 있으며 학습 과정은 다음과 같이 나타낼 수 있다.
 
-![image-20211003072441217](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/05.png)
+<img src="DeepGBM_IMG/05.png" alt="image-20211003072441217" style="zoom:150%;" />
 
 where n is the number of training samples, x i is the i -th training sample, Lt , i is the one-hot representation of leaf index Ct (x i ) for x i, It is the indices of used features in tree t , θ is the parameter of NN model N and can be updated by back-propagation, L is the loss function for the multiclass problem like cross entropy.
 
@@ -649,15 +652,15 @@ Combined with the above methods for single tree distillation, the output of NN d
 
 > 단일 트리 증류를 위한 위의 방법과 결합하여, 트리 t에서 증류된 NN의 출력은 다음과 같이 나타낼 수 있다.
 
-![image-20211003082058073](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/06.png)
+![image-20211003082058073](DeepGBM_IMG/06.png)
 
-![image-20211003082114527](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig2.png)
+<img src="DeepGBM_IMG/Fig2.png" alt="image-20211003082114527" style="zoom:150%;" />
 
 Figure 2: Tree structure distillation by leaf index. NN will approximate the tree structure by fitting its leaf index.
 
 > 그림 2: 잎 지수에 의한 나무 구조 증류. NN은 리프 인덱스를 맞춤으로써 트리 구조의 근사치를 구한다.
 
-![image-20211003082127367](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig3.png)
+<img src="DeepGBM_IMG/Fig3.png" alt="image-20211003082127367" style="zoom:150%;" />
 
 Figure 3: Tree structure distillation by leaf embedding. 
 The leaf index is first transformed to leaf embedding. 
@@ -705,7 +708,7 @@ Formally, the learning process of embedding can denote as
 
 > 공식적으로, 임베딩의 학습 과정은 다음과 같이 나타낼 수 있다.
 
-![image-20211003082345062](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/07.png)
+<img src="DeepGBM_IMG/07.png" alt="image-20211003082345062" style="zoom:150%;" />
 
 where H t , i = H (Lt , i ; ωt ) is an one-layered fully connected network with parameter ωt that converts the one-hot leaf index Lt , i to the dense embedding H t , i , pt , i is the predict leaf value of sample x i, L ′′ is the same loss function as used in tree learning, w and w0 are the parameters for mapping embedding to leaf values.
 
@@ -715,7 +718,7 @@ After that, instead of sparse high dimensional one-hot representation L, we can 
 
 > 그 후, 희박한 고차원 원핫 표현 L 대신, 고밀도 임베딩을 대상으로 사용하여 트리 구조의 기능을 근사화할 수 있다. 이 새로운 학습 과정은 다음과 같이 나타낼 수 있다.
 
-![image-20211003082358576](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/08.png)
+<img src="DeepGBM_IMG/08.png" alt="image-20211003082358576" style="zoom:150%;" />
 
 where L is the regression loss like L2 loss for fitting dense embedding.
 
@@ -769,7 +772,7 @@ Formally, given a group of trees T, we can extend the Eqn.(7) to learn leaf embe
 
 > 공식적으로, 나무 그룹 T가 주어지면, 우리는 Eqn.(7)을 확장하여 여러 나무에서 잎 임베딩을 배울 수 있다.
 
-![image-20211003082429626](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/09.png)
+<img src="DeepGBM_IMG/09.png" alt="image-20211003082429626" style="zoom:150%;" />
 
 where ∥(·) is the concatenate operation, G T, i = H ∥t ∈T (Lt , i ) ; ωT is an one-layered fully connected network that convert the multihot vectors, which is the concatenate of multiple one-hot leaf index vectors, to a dense embedding G T, i for the trees in T.
 
@@ -779,7 +782,7 @@ After that, we can use the new embedding as the distillation target of NN model,
 
 > 그 후에, 우리는 NN 모델의 증류 대상으로 새로운 임베딩을 사용할 수 있고, 그것의 학습 과정은 다음과 같이 나타낼 수 있다.
 
-![image-20211003082441565](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/10.png)
+<img src="DeepGBM_IMG/10.png" alt="image-20211003082441565" style="zoom:150%;" />
 
 where IT is the used features in tree group T.
 
@@ -797,13 +800,13 @@ To sum up, combined with above methods, the final output of the NN distilled fro
 
 > 위의 방법과 결합하면 트리 그룹 T에서 증류된 NN의 최종 출력은 다음과 같다.
 
-![image-20211003082459848](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/11.png)
+<img src="DeepGBM_IMG/11.png" alt="image-20211003082459848" style="zoom:150%;" />
 
 And the output of a GBDT model, which contains k tree groups, is
 
 > 그리고 k개의 트리 그룹을 포함하는 GBDT 모델의 출력은
 
-![image-20211003082511943](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/12.png)
+<img src="DeepGBM_IMG/12.png" alt="image-20211003082511943" style="zoom:150%;" />
 
 In summary, owing to Leaf Embedding Distillation and Tree Grouping, GBDT2NN can efficiently distill many trees of GBDT into a compact NN model.
 
@@ -835,7 +838,7 @@ After that, we can train DeepGBM end-to-end. Formally, we denote the output of D
 
 > 그런 다음 DeepGBM을 처음부터 끝까지 교육할 수 있습니다. 공식적으로, 우리는 다음과 같이 DeepGBM의 출력을 나타낸다.
 
-![image-20211003082732071](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/13.png)
+<img src="DeepGBM_IMG/13.png" alt="image-20211003082732071" style="zoom:150%;" />
 
 where w1 and w2 are the trainable parameters used for combining is GBDT2NN and CatNN, σ' is the output transformation, such as sigmoid for binary classification.
 
@@ -845,7 +848,7 @@ Then, we can use the following loss function for the end-to-end training
 
 > 그런 다음 다음 손실 함수를 엔드 투 엔드 교육에 사용할 수 있습니다.
 
-![image-20211003082858256](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/14.png)
+<img src="DeepGBM_IMG/14.png" alt="image-20211003082858256" style="zoom:150%;" />
 
 where y is the training target of sample x , L corresponding tasks such as cross-entropy for classification tasks, L T is the embedding loss for tree group T and defined in Eqn.(10), k is the number of tree groups, α and β are hyper-parameters given in advance and used for controlling the strength of end-to-end loss and embedding loss, respectively.
 
@@ -865,7 +868,7 @@ Thus, we do not include the LT in the online update, and the loss for the online
 
 > 따라서 온라인 업데이트에 LT를 포함하지 않으며, 온라인 업데이트의 손실은 다음과 같이 나타낼 수 있다.
 
-![image-20211003082937510](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/15.png)
+<img src="DeepGBM_IMG/15.png" alt="image-20211003082937510" style="zoom:200%;" />
 
 which only uses the end-to-end loss. Thus, when using DeepGBM online, we only need the new data to update the model by L-online , without involving GBDT and retraining from scratch.
 
@@ -879,7 +882,7 @@ Furthermore, it is also very effective since it can well handle both the dense n
 
 > 또한 밀도가 높은 수치적 특징과 희박한 범주적 특징을 모두 잘 처리할 수 있기 때문에 매우 효과적이다.
 
-![image-20211003083018353](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab2.png)
+<img src="DeepGBM_IMG/Tab2.png" alt="image-20211003083018353" style="zoom:150%;" />
 
 Table 2: Details of the datasets used in experiments. All these datasets are publicly available. #Sample is the number of data samples, #Num is the number of numerical features, and #Cat is the number of categorical features
 
@@ -957,7 +960,7 @@ Furthermore, as time-stamp is available in most of these datasets, we can use th
 
   > PNN [36] 쌍별 제품 계층을 사용하여 범주형 특징에 대한 쌍별 교호작용을 캡처합니다.
 
-![image-20211003083324949](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Tab3.png)
+![image-20211003083324949](DeepGBM_IMG/Tab3.png)
 
 Table 3: Offline performance comparison. AUC (higher is better) is used for binary classification tasks, and MSE (lower is better) is used for regression tasks. All experiments are run 5 times with different random seeds, and the mean ± std results are shown in this table. The top-2 results are marked bold.
 
@@ -1097,7 +1100,7 @@ All the comparison results are summarized in Fig 5, and we have following observ
 
   > 이는 GBDT에 의한 증류 NN 모델이 온라인 시나리오에서 더욱 개선되고 효과적으로 사용될 수 있음을 나타낸다.
 
-![image-20211003083742532](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig4.png)
+![image-20211003083742532](DeepGBM_IMG/Fig4.png)
 
 Figure 4: Epoch-AUC curves over test data, in the offline classification experiments. 
 We can find that DeepGBM converges much faster than other baselines. 
@@ -1107,7 +1110,7 @@ Moreover, the convergence points of DeepGBM are also much better.
 > We can find that DeepGBM converges much faster than other baselines. 
 > Moreover, the convergence points of DeepGBM are also much better.
 
-![image-20211003083802341](https://github.com/d9249/Data-analysis-programming/blob/main/%EB%B0%9C%ED%91%9C/Img/Fig5.png)
+![image-20211003083802341](DeepGBM_IMG/Fig5.png)
 
 Figure 5: Online performance comparison. 
 For the models that cannot be online updated, we did not update them during the online simulation. 
