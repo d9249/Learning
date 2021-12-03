@@ -14,6 +14,10 @@ USAD : UnSupervised Anomaly Detection on Multivariate Time Series
 
 **Keywords**: Anomaly detection, Multivariate Time Series, Neural networks, Autoencoders, Adversarial Network, Unsupervised learning, Supervision
 
+## Background
+
+![img](USAD_IMG/fig2image.png)
+
 ## 1. Introduction
 
 ## 2. Related work
