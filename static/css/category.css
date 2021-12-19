@@ -1,0 +1,74 @@
+.btn-primary {
+  background-color: #4472c4;
+  border-color: #4472c4;
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* 데스크탑 / 패드에 적용될 스타일*/
+@media screen and (min-width: 769px) {
+  .section {
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .card-view {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  /* 모바일에 사용될 스타일 */
+  @media screen and (max-width: 768px) {
+    .section {
+      width: 100%;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .card-view {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .card {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      margin-bottom: 1rem;
+    }
+
+    .card img {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.7rem;
+    }
+  }
+}
