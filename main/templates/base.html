@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Crack</title>
+    <link rel="apple-touch-icon" href="{% static 'image/favicon.png' %}" />
+    <link rel="icon" href="{% static 'image/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="item-wrap">
+        <img class="nav-logo" src="{% static 'image/logo.png' %}" alt="logo" />
+        <ul class="menu-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Data</a></li>
+        </ul>
+      </div>
+    </nav>
+    {% block content %} {% endblock %} {% block script %} {% endblock %}
+  </body>
+</html>
