@@ -1,23 +1,21 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/category.css' %}" />
-  </head>
-  <body></body>
-</html>
+{% extends 'base.html' %} 
 
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+{% endblock %} 
+
+{% block content %}
 <section class="section">
+  <div class="input-group">
+    <input type="search" placeholder="Search...">
+  </div>
   <article class="card-view">
     <div class="card">
       <img src="{% static 'image/test007.jpg' %}" alt="image" />
       <div class="container">
-        <h4><strong>카테고리 이름</strong></h4>
+        <h4><strong>정부춘천지방합동청사</strong></h4>
         <button type="button" class="btn-primary" onclick="location.href='#'">
           더보기
         </button>
@@ -27,7 +25,7 @@
     <div class="card">
       <img src="{% static 'image/test007.jpg' %}" alt="image" />
       <div class="container">
-        <h4><strong>카테고리 이름</strong></h4>
+        <h4><strong>정부춘천지방합동청사</strong></h4>
         <button type="button" class="btn-primary" onclick="location.href='#'">
           더보기
         </button>
@@ -37,7 +35,7 @@
     <div class="card">
       <img src="{% static 'image/test007.jpg' %}" alt="image" />
       <div class="container">
-        <h4><strong>카테고리 이름</strong></h4>
+        <h4><strong>정부춘천지방합동청사</strong></h4>
         <button type="button" class="btn-primary" onclick="location.href='#'">
           더보기
         </button>
@@ -47,7 +45,7 @@
     <div class="card">
       <img src="{% static 'image/test007.jpg' %}" alt="image" />
       <div class="container">
-        <h4><strong>카테고리 이름</strong></h4>
+        <h4><strong>정부춘천지방합동청사</strong></h4>
         <button type="button" class="btn-primary" onclick="location.href='#'">
           더보기
         </button>
@@ -55,3 +53,4 @@
     </div>
   </article>
 </section>
+{% endblock %}
