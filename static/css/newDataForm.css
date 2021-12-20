@@ -1,0 +1,95 @@
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+    .rwd-table {
+        line-height: 1.38;
+    }
+    .rwd-table td:before {
+        display: none;
+        text-align: center;
+      }
+    .rwd-table th, .rwd-table td {
+        display: table-cell;
+        /* padding: .25em .5em; */
+        /* font-size: 11px; */
+        line-height: 1.38;
+    }
+    .rwd-table th:first-child, .rwd-table td:first-child {
+        padding-left: 1em;
+    }
+    .rwd-table th:last-child, .rwd-table td:last-child {
+        padding-right: 1em;
+    }
+    .rwd-table th,.rwd-table td {
+        padding: 0.5em !important;
+    }
+    .rwd-table tr {
+        padding-left: 2.5rem;
+    }
+    .string {
+        padding-left: 2.5rem;
+    }
+    form > td {
+        text-align: center;
+    }
+}
+
+/* 데스크탑 / 패드에 적용될 스타일*/
+@media screen and (min-width: 769px) {
+
+}
+
+.rwd-table {
+    margin: 1em 0;
+    /* min-width: 300px; */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2.38;
+    font-size: 1.25rem;
+}
+.rwd-table tr {
+    /* border-top: 1px solid #ddd; */
+    /* border-bottom: 1px solid #ddd; */
+}
+.rwd-table th {
+    display: none;
+}
+.rwd-table td {
+    display: block;
+}
+.rwd-table td:first-child {
+    padding-top: .5em;
+}
+.rwd-table td:last-child {
+    padding-bottom: .5em;
+}
+.rwd-table td:before {
+    content: attr(data-th) " : ";
+    /* font-weight: bold; */
+    width: 13em;
+    display:inline-flex;
+}
+
+.rwd-table th, .rwd-table td:before {
+    /* color: #dd5; */
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: -1px;
+    /* color: #909090; */
+}
+  
+.rwd-table {
+    /* background: #909090; */
+    /* color: #fff; */
+    /* border-radius: .4em; */
+    /* overflow: hidden; */
+}
+
+.rwd-table tr {
+    /* border-color: ; */
+}
+
+.rwd-table th, .rwd-table td {
+    text-align: left;
+}

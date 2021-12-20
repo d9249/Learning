@@ -53,6 +53,7 @@
 }
 
 .button-54 {
+    display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
