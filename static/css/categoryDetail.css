@@ -1,0 +1,57 @@
+.tr {
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* 데스크탑 / 패드에 적용될 스타일*/
+@media screen and (min-width: 769px) {
+  .article {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .article img {
+    width: 768px;
+  }
+
+  .table {
+    width: 768px;
+    border: 1px solid #444444;
+  }
+}
+
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .article {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article img {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #444444;
+  }
+
+  .tr .overflow {
+    white-space: nowrap;
+  }
+}

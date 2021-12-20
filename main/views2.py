@@ -6,3 +6,7 @@ def category(request):
 
 def createCategory(request):
   return render(request, 'newDataForm.html')
+
+
+def categoryDetail(request):
+    return render(request, 'categoryDetail.html')

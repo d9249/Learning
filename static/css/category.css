@@ -36,12 +36,6 @@
 
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
-  .section {
-    width: 100%;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .card-view {
     width: 80%;
     margin: 0 auto;
@@ -62,12 +56,6 @@
 
 /* 모바일에 사용될 스타일 */
 @media screen and (max-width: 768px) {
-  .section {
-    width: 100%;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .card-view {
     display: flex;
     justify-content: flex-start;
