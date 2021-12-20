@@ -5,5 +5,6 @@ from .import views2
 urlpatterns = [
     path('', views.index, name='index'),
     # ---------
-    path('category', views2.category, name="category")
+    path('category', views2.category, name="category"),
+    path('categoryDetail', views2.categoryDetail, name="categoryDetail")
 ]
