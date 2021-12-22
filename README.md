@@ -21,8 +21,8 @@
 
 | **Type** | **Date**| **Contents**| **Organization**|
 |---|---|---|---|
-| **Education** | 2015.03 ~ 2022.03 | [Computer Science and Engineering](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University](http://www.kyonggi.ac.kr/) |
-| **Education** | 2022.03 ~ Proceeding | [Computer Science](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University Graduate school](http://www.kyonggi.ac.kr/) |
+| **Education** | 2015.03 ~ 2022.02 | [Computer Science and Engineering](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University](http://www.kyonggi.ac.kr/) |
+| **Education** | 2022.01 ~ Proceeding | [Computer Science](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University Graduate school](http://www.kyonggi.ac.kr/) |
 | **Research activities** | 2020.01 ~ Proceeding | Undergraduate Research Students | [Kyonggi Univ. Smart I.O.T laboratory](https://netlab.kyonggi.ac.kr/) |
 | **Research activities** | 2021.03 ~ Proceeding | DIYA Computer Vision Team 4th | [DIYA. Machine Learning Club.](https://blog.diyaml.com/) |
   
