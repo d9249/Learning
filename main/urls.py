@@ -6,6 +6,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     # ---------
     path('category', views2.category, name="category"),
-    path('createCategory', views2.createCategory, name="createCategory")
+    path('createCategory', views2.createCategory, name="createCategory"),
     path('categoryDetail', views2.categoryDetail, name="categoryDetail")
 ]
