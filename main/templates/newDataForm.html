@@ -3,57 +3,98 @@
 {% load static %} 
 
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/newDataForm.css' %}" />
 <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-{% endblock %}
+<link rel="stylesheet" href="{% static 'css/newDataForm.css' %}" />
+{% endblock %} 
 
 {% block content %} 
 <section class="section">
-    <article class="card-index">
-        <h1>세부정보를 입력해주세요.</h1>
-        <table class="rwd-table">
-            <tr>
-                <th>시설물명(FMS등록기준)</th>
-                <th>시설물번호(FMS등록기준)</th>
-                <th>시설물위치(주소)</th>
-                <th>준공일지(연,월,일)</th>
-                <th>대지면적</th>
-                <th>건축면적</th>
-                <th>건축연면적</th>
-                <th>최고높이</th>
-                <th>용도</th>
-                <th>시설물구조</th>
-                <th>구조형식</th>
-                <th>부대시설</th>
-                <th>층별</th>
-                <th>전차안전등급</th>
-                <th>점검결과 안전등급</th>
-                <th>규모 및 제원 추가사항</th>
-            </tr>
-            <tr>
-                <form>
-                    <td data-th="시설물명(FMS등록기준)" style="text-align: center;"><input type="text"></td>
-                    <td data-th="시설물번호(FMS등록기준)" style="text-align: center;"><input type="text"></td>
-                    <td data-th="시설물위치(주소)" style="text-align: center;"><input type="text"></td>
-                    <td data-th="준공일지(연,월,일)" style="text-align: center;"><input type="text"></td>
-                    <td data-th="대지면적" style="text-align: center;"><input type="text"></td>
-                    <td data-th="건축면적" style="text-align: center;"><input type="text"></td>
-                    <td data-th="건축연면적" style="text-align: center;"><input type="text"></td>
-                    <td data-th="최고높이" style="text-align: center;"><input type="text"></td>
-                    <td data-th="용도" style="text-align: center;"><input type="text"></td>
-                    <td data-th="시설물구조" style="text-align: center;"><input type="text"></td>
-                    <td data-th="구조형식" style="text-align: center;"><input type="text"></td>
-                    <td data-th="부대시설" style="text-align: center;"><input type="text"></td>
-                    <td data-th="층별" style="text-align: center;"><input type="text"></td>
-                    <td data-th="전차안전등급" style="text-align: center;"><input type="text"></td>
-                    <td data-th="점검결과 안전등급" style="text-align: center;"><input type="text"></td>
-                    <td data-th="규모 및 제원 추가사항" style="text-align: center;"><input type="text"></td>
-                </form>
-            </tr>
-        </table>
-        <button type="button" class="button-54" onclick="location.href='#'">
-            등록하기
-        </button>
-    </article>
+    <h2>세부 정보를 입력해주세요</h2>
+    <form action="" method="post" class="input-wrap">
+        {% csrf_token %}
+        <div class="detail">
+            <label for="name">시설물명</label>
+            <input type="text" name="name" />
+        </div>
+
+        <div class="detail">
+            <label for="number">시설물번호</label>
+            <input type="text" name="number" />
+        </div>
+
+
+        <div class="detail">
+            <label for="location">시설물위치 (주소)</label>
+            <input type="text" name="location" />
+        </div>
+
+        <div class="detail">
+            <label for="date">준공일지(연,월,일)</label>
+            <input type="date" name="date" />
+        </div>
+
+        <div class="detail">
+            <label for="site-area">대지면적</label>
+            <input type="text" name="site-area" />
+        </div>
+
+        <div class="detail">
+            <label for="building-area">건축면적</label>
+            <input type="text" name="building-area" />
+        </div>
+
+        <div class="detail">
+            <label for="year-area">건축연면적</label>
+            <input type="text" name="year-area" />
+        </div>
+        
+        <div class="detail">
+            <label for="max-height">최고높이</label>
+            <input type="text" name="max-height" />
+        </div>
+
+        <div class="detail">
+            <label for="use">용도</label>
+            <input type="text" name="use" />
+        </div>
+
+        <div class="detail">
+            <label for="structure">시설물구조</label>
+            <input type="text" name="structur" />
+        </div>
+
+        <div class="detail">
+            <label for="format">구조형식</label>
+            <input type="text" name="format" />
+        </div>
+        
+        <div class="detail">
+            <label for="facility">부대시설</label>
+            <input type="text" name="facility" />
+        </div>
+
+        <div class="detail">
+            <label for="floor">층별</label>
+            <input type="text" name="floor" />
+        </div>
+
+        <div class="detail">
+            <label for="grade">전차안전등급</label>
+            <input type="text" name="grade" />
+        </div>
+
+        <div class="detail">
+            <label for="result">점검결과</label>
+            <input type="text" name="result" />
+        </div>
+
+        <div class="detail">
+            <label for="plus">규모 및 제원 추가사항</label>
+            <input type="text" name="plus" />
+        </div>
+        <div class="submit">
+            <button type="submit">등록하기</button>
+        </div>
+    </form>
 </section>
 {% endblock %}

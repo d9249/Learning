@@ -1,0 +1,146 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.location-upload {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  background-color: #4472c4;
+  border-radius: 10em;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-preview ol {
+  margin-top: 1rem;
+}
+
+.first-preview ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-preview ol li img {
+  width: 80%;
+  height: 150px;
+}
+
+.view-upload {
+  position: relative;
+  top: 50%;
+  width: 150px;
+  height: 50px;
+  background-color: #4472c4;
+  border-radius: 10em;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-preview ol {
+  margin-top: 1rem;
+}
+
+.second-preview ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-preview ol li img {
+  width: 80%;
+  height: 150px;
+}
+
+/* 데스크탑 / 패드에 적용될 스타일*/
+@media screen and (min-width: 769px) {
+  .first-preview ol li img {
+    width: 80%;
+    height: 250px;
+  }
+
+  .second-preview ol li img {
+    width: 80%;
+    height: 250px;
+  }
+
+  .first-blank-img {
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 300px;
+    height: 250px;
+  }
+
+  .second-blank-img {
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 300px;
+    height: 250px;
+  }
+}
+
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .first-preview ol li img {
+    width: 80%;
+    height: 150px;
+  }
+
+  .second-preview ol li img {
+    width: 80%;
+    height: 150px;
+  }
+
+  .first-blank-img {
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 200px;
+    height: 150px;
+  }
+
+  .second-blank-img {
+    background-color: #e0e0e0;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 200px;
+    height: 150px;
+  }
+
+  .location-upload {
+    width: 120px;
+    height: 40px;
+  }
+
+  .view-upload {
+    width: 120px;
+    height: 40px;
+  }
+}
