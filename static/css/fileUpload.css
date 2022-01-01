@@ -77,6 +77,11 @@ input[type="file"] {
   height: 150px;
 }
 
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
 .submit button {
   width: 150px;
   margin-top: 0.85rem;
