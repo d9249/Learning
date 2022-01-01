@@ -9,4 +9,5 @@ urlpatterns = [
     path('createCategory', views2.createCategory, name="createCategory"),
     path('categoryDetail', views2.categoryDetail, name="categoryDetail"),
     path('fileUpload', views2.fileUpload, name="fileUplad"),
+    path('detailCrack', views2.detailCrack, name="detailCrack"),
 ]

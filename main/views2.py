@@ -15,3 +15,7 @@ def categoryDetail(request):
 
 def fileUpload(request):
     return render(request, 'fileUpload.html')
+
+
+def detailCrack(request):
+    return render(request, 'detailCrack.html')

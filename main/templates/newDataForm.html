@@ -10,7 +10,7 @@
 {% block content %} 
 <section class="section">
     <h2>세부 정보를 입력해주세요</h2>
-    <form action="" method="post" class="input-wrap">
+    <form action="{% url 'fileUplad' %}" method="post" class="input-wrap">
         {% csrf_token %}
         <div class="detail">
             <label for="name">시설물명</label>
@@ -21,7 +21,6 @@
             <label for="number">시설물번호</label>
             <input type="text" name="number" />
         </div>
-
 
         <div class="detail">
             <label for="location">시설물위치 (주소)</label>
