@@ -25,6 +25,21 @@ input[type="text"] {
   padding-bottom: 0;
 }
 
+.preview ol {
+  margin-top: 1rem;
+}
+
+.preview ol li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview ol li img {
+  width: 400px;
+  height: 400px;
+}
+
 .blank-img {
   display: flex;
   width: 250px;
@@ -65,7 +80,7 @@ input[type="text"] {
 }
 
 .submit button {
-  width: 250px;
+  width: 720px;
   margin-top: 0.85rem;
   background-color: #0d6efd;
   color: #ffffff;
@@ -116,5 +131,14 @@ input[type="text"] {
   .upload {
     width: 130px;
     height: 30px;
+  }
+
+  .preview ol li img {
+    width: 80%;
+    height: 250px;
+  }
+
+  .submit button {
+    width: 250px;
   }
 }

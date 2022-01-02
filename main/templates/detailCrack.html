@@ -10,9 +10,10 @@
 <section class="section">
   <div class="desk-flex">
   <div class="blank-img"></div>
+  <div class="preview"></div>
   <div class="upload">
     <span>균열이미지</span>
-    <input type="file" class="view-input" accept="image/*" />
+    <input type="file" class="crack-input" accept="image/*" />
   </div>
 </div>
   <div class="detail-input">
@@ -66,4 +67,8 @@
 <section class="submit">
   <button type="submit">등록하기</button>
 </section>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/inputCrack.js' %}"></script>
 {% endblock %}
