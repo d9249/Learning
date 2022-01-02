@@ -19,3 +19,15 @@ def fileUpload(request):
 
 def detailCrack(request):
     return render(request, 'detailCrack.html')
+
+
+def flatting(request):
+    return render(request, 'flatting.html')
+
+
+def flattingResult(request):
+    return render(request, 'flattingResult.html')
+
+
+def area(request):
+    return render(request, 'area.html')

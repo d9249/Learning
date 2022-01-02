@@ -10,4 +10,8 @@ urlpatterns = [
     path('categoryDetail', views2.categoryDetail, name="categoryDetail"),
     path('fileUpload', views2.fileUpload, name="fileUplad"),
     path('detailCrack', views2.detailCrack, name="detailCrack"),
+    path('flatting', views2.flatting, name="flatitng"),
+    path('flattingResult', views2.flattingResult, name="flattingResult"),
+    path('area', views2.area, name="area"),
+
 ]

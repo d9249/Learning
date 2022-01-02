@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/flatting.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<section class="section">
+  <form action="{% url 'flattingResult' %}">
+    <div class="image">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" id="image">
+    </div>
+
+    <div class="submit">
+      <button type="submit">등록하기</button>
+    </div>
+</form>
+</section>
+{% endblock %}

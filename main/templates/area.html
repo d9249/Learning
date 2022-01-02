@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/area.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<section class="section">
+    <div class="image">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" id="image">
+    </div>
+    <div class="area">
+      <div class="rule">  
+        <span class="tooltip-text">마우스를 이용해서 점을 찍으면 넓이를 계산합니다.</span>
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <h2>넓이 : 111㎠</h2>
+    </div>
+</section>
+{% endblock %}

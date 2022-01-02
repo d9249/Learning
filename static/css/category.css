@@ -1,6 +1,23 @@
-.btn-primary {
-  background-color: #4472c4;
-  border-color: #4472c4;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.title {
+  font-weight: 600;
+  width: 250px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button button {
   border: 0;
   cursor: pointer;
   font-weight: 400;
@@ -9,13 +26,32 @@
   border-radius: 5px;
   color: #fff;
   font-weight: 500;
+  margin-right: 0.3rem;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem;
+.btn-primary {
+  background-color: #4472c4;
+  border-color: #4472c4;
+}
+
+.btn-primary:hover {
+  background-color: #4172aa;
+}
+.btn-flatting {
+  background-color: #28a745;
+  opacity: 0.5;
+}
+
+.btn-flatting:hover {
+  background-color: #218838;
+}
+
+.btn-area {
+  background-color: #ffc107;
+}
+
+.btn-area:hover {
+  background-color: #e0a800;
 }
 
 .input-group {
@@ -37,10 +73,10 @@
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
   .card-view {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card {
@@ -60,7 +96,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 

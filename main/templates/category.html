@@ -15,42 +15,21 @@
     <div class="card">
       <img src="{% static 'image/test007.jpg' %}" alt="image" />
       <div class="container">
-        <h4><strong>정부춘천지방합동청사</strong></h4>
-        <button type="button" class="btn-primary" onclick="location.href='#'">
-          더보기
-        </button>
+        <h4 class="title"><strong>정부춘천지방합동청사</strong></h4>
+        <div class="button">        
+          <button type="button" class="btn-area" onclick="location.href='/area'">
+            넓이
+          </button>
+          <button type="button" class="btn-flatting" onclick="location.href='/flatting'">
+            평탄화
+          </button>
+          <button type="button" class="btn-primary" onclick="location.href='/categoryDetail'">
+            더보기
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="card">
-      <img src="{% static 'image/test007.jpg' %}" alt="image" />
-      <div class="container">
-        <h4><strong>정부춘천지방합동청사</strong></h4>
-        <button type="button" class="btn-primary" onclick="location.href='#'">
-          더보기
-        </button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static 'image/test007.jpg' %}" alt="image" />
-      <div class="container">
-        <h4><strong>정부춘천지방합동청사</strong></h4>
-        <button type="button" class="btn-primary" onclick="location.href='#'">
-          더보기
-        </button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="{% static 'image/test007.jpg' %}" alt="image" />
-      <div class="container">
-        <h4><strong>정부춘천지방합동청사</strong></h4>
-        <button type="button" class="btn-primary" onclick="location.href='#'">
-          더보기
-        </button>
-      </div>
-    </div>
   </article>
 </section>
 {% endblock %}
