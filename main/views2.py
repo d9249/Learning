@@ -9,6 +9,10 @@ def createCategory(request):
     return render(request, 'newDataForm.html')
 
 
+def categoryList(request):
+    return render(request, 'categoryList.html')
+
+
 def categoryDetail(request):
     return render(request, 'categoryDetail.html')
 

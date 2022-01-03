@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/categoryList.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <div class="card-view">
+    <div class="card">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" />
+      <div class="btn-group">
+        <button type="button" class="btn-area" onclick="location.href='/area'">
+          넓이
+        </button>
+        <button type="button" class="btn-flatting" onclick="location.href='/flatting'">
+          평탄화
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" />
+      <div class="btn-group">
+        <button type="button" class="btn-area" onclick="location.href='/area'">
+          넓이
+        </button>
+        <button type="button" class="btn-flatting" onclick="location.href='/flatting'">
+          평탄화
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" />
+      <div class="btn-group">
+        <button type="button" class="btn-area" onclick="location.href='/area'">
+          넓이
+        </button>
+        <button type="button" class="btn-flatting" onclick="location.href='/flatting'">
+          평탄화
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

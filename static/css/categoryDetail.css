@@ -12,7 +12,7 @@
 
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
-  .article {
+  .wrapper {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
   }
-  .article img {
+  .wrapper img {
     width: 768px;
   }
 
@@ -32,7 +32,7 @@
 
 /* 모바일에 사용될 스타일 */
 @media screen and (max-width: 768px) {
-  .article {
+  .wrapper {
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -41,7 +41,7 @@
     justify-content: center;
   }
 
-  .article img {
+  .wrapper img {
     margin-bottom: 1rem;
     width: 100%;
   }
