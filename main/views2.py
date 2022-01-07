@@ -1,12 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 def category(request):
     return render(request, 'category.html')
 
 
-def createCategory(request):
-    return render(request, 'newDataForm.html')
+def input(request):
+    return render(request, 'input.html')
+
+
+def save(request):
+    return redirect("/")
 
 
 def categoryList(request):
@@ -15,14 +19,6 @@ def categoryList(request):
 
 def categoryDetail(request):
     return render(request, 'categoryDetail.html')
-
-
-def fileUpload(request):
-    return render(request, 'fileUpload.html')
-
-
-def detailCrack(request):
-    return render(request, 'detailCrack.html')
 
 
 def flatting(request):
