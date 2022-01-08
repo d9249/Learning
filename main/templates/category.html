@@ -12,20 +12,24 @@
     <input type="search" placeholder="Search...">
   </div>
   <article class="card-view">
+    {% for category in categorys %}
     <div class="card">
-      <img src="{% static 'image/test007.jpg' %}" alt="image" />
+      <img src="{{category.frontView.url}}" alt="image" />
       <div class="container">
-        <h4 class="title"><strong>정부춘천지방합동청사</strong></h4>
+        <h4 class="title"><strong>{{category.facilityName}}</strong></h4>
         <div class="button">        
-          <button type="button" class="btn-primary" onclick="location.href='/categoryList'">
-            더보기
-          </button>
+          <a href="{% url 'categoryList' %}">
+            <button type="button" class="btn-primary">
+              더보기
+            </button>
+          </a>
           <button type="button" class="btn-detail" onclick="location.href='/categoryDetail'">
             세부정보
           </button>
         </div>
       </div>
     </div>
+    {% endfor %}
   </article>
 </section>
 {% endblock %}

@@ -8,7 +8,14 @@
 
 {% block content %}
 <section class="section">
-  <form action="{% url 'flattingResult' %}">
+  <form action="{% url 'flattingResult' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" id="topLeft" name="x" value="0,0">
+    <input type="hidden" id="topLeft" name="y" value="0,0">
+    <input type="hidden" id="topLeft" name="w" value="0,0">
+    <input type="hidden" id="topLeft" name="z" value="0,0">
+    <input type="hidden" name="pk" value="{{img.id}}">
+    
     <div class="image">
       <img src="{% static 'image/test007.jpg' %}" alt="image" id="image">
     </div>
