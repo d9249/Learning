@@ -1,186 +1,183 @@
-{% extends 'base.html'%}
-
-{% load static %}
-
-{% block style %}
+{% extends 'base.html'%} {% load static %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/input.css' %}" />
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <button onclick="previous()" class="previous round">&#8249;</button>
 <button onclick="next()" class="next round">&#8250;</button>
-<div class="slide">
+<form action="{% url 'input' %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %} {{error}}
+  <div class="slide">
     <ul>
-        <section class="detail-section">
-            <h2>세부 정보를 입력해주세요</h2>
-            <div class="detail">
-                <label for="name">시설물명</label>
-                <input type="text" name="name" />
-            </div>
+      <section class="detail-section">
+        <h2>세부 정보를 입력해주세요</h2>
+        <div class="detail">
+          <label for="name">시설물명</label>
+          <input type="text" name="name" />
+        </div>
+        <div class="detail">
+          <label for="number">시설물번호</label>
+          <input type="text" name="number" />
+        </div>
 
-            <div class="detail">
-                <label for="number">시설물번호</label>
-                <input type="text" name="number" />
-            </div>
+        <div class="detail">
+          <label for="location">시설물위치 (주소)</label>
+          <input type="text" name="location" />
+        </div>
 
-            <div class="detail">
-                <label for="location">시설물위치 (주소)</label>
-                <input type="text" name="location" />
-            </div>
+        <div class="detail">
+          <label for="date">준공일지(연,월,일)</label>
+          <input type="date" name="date" />
+        </div>
 
-            <div class="detail">
-                <label for="date">준공일지(연,월,일)</label>
-                <input type="date" name="date" />
-            </div>
+        <div class="detail">
+          <label for="site-area">대지면적</label>
+          <input type="text" name="site-area" />
+        </div>
 
-            <div class="detail">
-                <label for="site-area">대지면적</label>
-                <input type="text" name="site-area" />
-            </div>
+        <div class="detail">
+          <label for="building-area">건축면적</label>
+          <input type="text" name="building-area" />
+        </div>
 
-            <div class="detail">
-                <label for="building-area">건축면적</label>
-                <input type="text" name="building-area" />
-            </div>
+        <div class="detail">
+          <label for="year-area">건축연면적</label>
+          <input type="text" name="year-area" />
+        </div>
 
-            <div class="detail">
-                <label for="year-area">건축연면적</label>
-                <input type="text" name="year-area" />
-            </div>
+        <div class="detail">
+          <label for="max-height">최고높이</label>
+          <input type="text" name="max-height" />
+        </div>
 
-            <div class="detail">
-                <label for="max-height">최고높이</label>
-                <input type="text" name="max-height" />
-            </div>
+        <div class="detail">
+          <label for="use">용도</label>
+          <input type="text" name="use" />
+        </div>
 
-            <div class="detail">
-                <label for="use">용도</label>
-                <input type="text" name="use" />
-            </div>
+        <div class="detail">
+          <label for="structure">시설물구조</label>
+          <input type="text" name="structure" />
+        </div>
 
-            <div class="detail">
-                <label for="structure">시설물구조</label>
-                <input type="text" name="structur" />
-            </div>
+        <div class="detail">
+          <label for="format">구조형식</label>
+          <input type="text" name="format" />
+        </div>
 
-            <div class="detail">
-                <label for="format">구조형식</label>
-                <input type="text" name="format" />
-            </div>
+        <div class="detail">
+          <label for="facility">부대시설</label>
+          <input type="text" name="facility" />
+        </div>
 
-            <div class="detail">
-                <label for="facility">부대시설</label>
-                <input type="text" name="facility" />
-            </div>
+        <div class="detail">
+          <label for="floor">층별</label>
+          <input type="text" name="floor" />
+        </div>
 
-            <div class="detail">
-                <label for="floor">층별</label>
-                <input type="text" name="floor" />
-            </div>
+        <div class="detail">
+          <label for="grade">전차안전등급</label>
+          <input type="text" name="grade" />
+        </div>
 
-            <div class="detail">
-                <label for="grade">전차안전등급</label>
-                <input type="text" name="grade" />
-            </div>
+        <div class="detail">
+          <label for="result">점검결과</label>
+          <input type="text" name="result" />
+        </div>
 
-            <div class="detail">
-                <label for="result">점검결과</label>
-                <input type="text" name="result" />
-            </div>
+        <div class="detail">
+          <label for="plus">규모 및 제원 추가사항</label>
+          <input type="text" name="plus" />
+        </div>
+      </section>
 
-            <div class="detail">
-                <label for="plus">규모 및 제원 추가사항</label>
-                <input type="text" name="plus" />
-            </div>
-        </section>
+      <section class="img-section">
+        <div class="first-blank-img"></div>
+        <div class="first-preview"></div>
+        <div class="location-upload">
+          <span>위치도</span>
+          <input
+            type="file"
+            class="location-input"
+            accept="image/*"
+            name="locationMap"
+          />
+        </div>
 
-        <section class="img-section">
-            <div class="first-blank-img"></div>
-            <div class="first-preview"></div>
-            <div class="location-upload">
-                <span>위치도</span>
-                <input type="file" class="location-input" accept="image/*" />
-            </div>
+        <div class="second-blank-img"></div>
+        <div class="second-preview"></div>
+        <div class="view-upload">
+          <span>전경도</span>
+          <input
+            type="file"
+            class="view-input"
+            accept="image/*"
+            name="frontView"
+          />
+        </div>
+        <div class="submit">
+          <button type="submit">저장하기</button>
+        </div>
+      </section>
 
-            <div class="second-blank-img"></div>
-            <div class="second-preview"></div>
-            <div class="view-upload">
-                <span>전경도</span>
-                <input type="file" class="view-input" accept="image/*" />
-            </div>
-        </section>
+      <!-- <section class="crack-section">
+        <div class="desk-flex">
+          <div class="blank-img"></div>
+          <div class="preview"></div>
+          <div class="crack-upload">
+            <span>균열이미지</span>
+            <input type="file" class="crack-input" accept="image/*" />
+          </div>
+        </div>
+        <div class="crack-input">
+          <div class="detail">
+            <label for="floor">층수</label>
+            <input type="text" name="floor" />
+          </div>
 
-        <section class="crack-section">
-            <form action="{% url 'save' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-            <div class="desk-flex">
-                <div class="blank-img"></div>
-                <div class="preview"></div>
-                <div class="crack-upload">
-                    <span>균열이미지</span>
-                    <input type="file" class="crack-input" accept="image/*" />
-                </div>
-            </div>
-            <div class="crack-input">
-                <div class="detail">
-                    <label for="floor">층수</label>
-                    <input type="text" name="floor">
-                </div>
+          <div class="detail">
+            <label for="location">위치</label>
+            <input type="text" name="location" />
+          </div>
 
-                <div class="detail">
-                    <label for="location">위치</label>
-                    <input type="text" name="location">
-                </div>
+          <div class="detail">
+            <label for="absence">부재</label>
+            <input type="text" name="absence" />
+          </div>
 
-                <div class="detail">
-                    <label for="absence">부재</label>
-                    <input type="text" name="absence">
-                </div>
+          <div class="detail">
+            <label for="desc">점검내용</label>
+            <input type="text" name="desc" />
+          </div>
 
-                <div class="detail">
-                    <label for="desc">점검내용</label>
-                    <input type="text" name="desc">
-                </div>
+          <div class="detail">
+            <label for="place">개소</label>
+            <input type="text" name="place" />
+          </div>
 
-                <div class="detail">
-                    <label for="place">개소</label>
-                    <input type="text" name="place">
-                </div>
+          <div class="detail">
+            <label for="number">현황번호</label>
+            <input type="text" name="number" />
+          </div>
 
-                <div class="detail">
-                    <label for="number">현황번호</label>
-                    <input type="text" name="number">
-                </div>
+          <div class="detail">
+            <label for="progress">진행유무</label>
+            <input type="text" name="progress" />
+          </div>
 
-                <div class="detail">
-                    <label for="progress">진행유무</label>
-                    <input type="text" name="progress">
-                </div>
-
-                <div class="detail">
-                    <label for="cause">발생원인</label>
-                    <input type="text" name="cause">
-                </div>
-
-                <div class="detail">
-                    <label for="note">비고</label>
-                    <input type="text" name="note">
-                </div>
-
-                <div class="submit">
-                    <button type="submit">저장하기</button>
-                </div>
-            </form>
-            </div>
-
-        </section>
+          <div class="detail">
+            <label for="cause">발생원인</label>
+            <input type="text" name="cause" />
+          </div>
+          <div class="detail">
+            <label for="note">비고</label>
+            <input type="text" name="note" />
+          </div>
+        </div>
+      </section> -->
     </ul>
-</div>
-
-{% endblock %}
-
-{% block script %}
+  </div>
+</form>
+{% endblock %} {% block script %}
 <script src="{% static 'js/slide.js' %}"></script>
 <script src="{% static 'js/inputFile.js' %}"></script>
 <script src="{% static 'js/inputCrack.js' %}"></script>
