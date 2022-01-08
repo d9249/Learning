@@ -61,10 +61,6 @@ def input(request):
     return render(request, 'input.html')
 
 
-def save(request):
-    return redirect("/")
-
-
 def categoryList(request):
     return render(request, 'categoryList.html')
 
