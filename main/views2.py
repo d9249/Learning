@@ -65,7 +65,7 @@ def categoryList(request):
     return render(request, 'categoryList.html')
 
 
-def categoryDetail(request):
+def categoryDetail(request,pk):
     return render(request, 'categoryDetail.html')
 
 def flatting(request):

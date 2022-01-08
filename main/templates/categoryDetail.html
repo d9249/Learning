@@ -1,16 +1,10 @@
-{% extends 'base.html' %}
-
-{% load static %}
-
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/categoryDetail.css' %}">
-{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/categoryDetail.css' %}" />
+{% endblock %} {% block content %}
 <section class="section">
   <div class="wrapper">
     <div class="img">
-      <img src="{% static 'image/test007.jpg' %}" alt="image">
+      <img src="{% static 'image/test007.jpg' %}" alt="image" />
     </div>
 
     <table class="table">
@@ -19,7 +13,7 @@
           <td class="td" colspan="3">시설물명 (FMS 등록기준)</td>
           <td class="td" colspan="3">정부춘천지방합동청사</td>
         </tr>
-        
+
         <tr class="tr">
           <td class="td" colspan="3">시설물번호 (FMS 등록기준)</td>
           <td class="td" colspan="3">AR2003-0009511</td>
@@ -32,8 +26,7 @@
 
         <tr class="tr">
           <td class="td" colspan="3">준공일지 (연,월,일)</td>
-          <td class="td" colspan="3">2003년 12월 26일
-            (경과년수 : 17년)</td>
+          <td class="td" colspan="3">2003년 12월 26일 (경과년수 : 17년)</td>
         </tr>
 
         <tr class="tr">
@@ -70,7 +63,7 @@
           <td class="td" colspan="3">구조형식</td>
           <td class="td" colspan="3">철근콘트리트구조</td>
         </tr>
-       
+
         <tr class="tr">
           <td class="td" colspan="3">부대시설</td>
           <td class="td" colspan="3"></td>
@@ -83,7 +76,6 @@
           <td class="td"><p class="overflow">B등급</p></td>
           <td class="td"><p class="overflow">점검결과 안전등급</p></td>
           <td class="td"><p class="overflow">B등급 (8.7점)</p></td>
-          
         </tr>
       </tbody>
     </table>
