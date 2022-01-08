@@ -66,7 +66,8 @@ def categoryList(request):
 
 
 def categoryDetail(request,pk):
-    return render(request, 'categoryDetail.html')
+    category = Category.objects.get(pk=pk)
+    return render(request, 'categoryDetail.html',{'obj':category})
 
 def flatting(request):
     return render(request, 'flatting.html')

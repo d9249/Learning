@@ -4,78 +4,78 @@
 <section class="section">
   <div class="wrapper">
     <div class="img">
-      <img src="{% static 'image/test007.jpg' %}" alt="image" />
+      <img src="{{obj.frontView.url}}" alt="image" />
+      <img src="{{obj.locationMap.url}}" alt="image" />
     </div>
-
     <table class="table">
       <tbody>
         <tr class="tr">
           <td class="td" colspan="3">시설물명 (FMS 등록기준)</td>
-          <td class="td" colspan="3">정부춘천지방합동청사</td>
+          <td class="td" colspan="3">{{obj.facilityName}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">시설물번호 (FMS 등록기준)</td>
-          <td class="td" colspan="3">AR2003-0009511</td>
+          <td class="td" colspan="3">{{obj.facilityNo}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">시설물위치 (주소)</td>
-          <td class="td" colspan="3">강원도 춘천시 후평동 후석로 440번길 64</td>
+          <td class="td" colspan="3">{{obj.address}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">준공일지 (연,월,일)</td>
-          <td class="td" colspan="3">2003년 12월 26일 (경과년수 : 17년)</td>
+          <td class="td" colspan="3">{{obj.completionDate}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">대지면적</td>
-          <td class="td" colspan="3">6,281㎡</td>
+          <td class="td" colspan="3">{{obj.landArea}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">건축면적</td>
-          <td class="td" colspan="3">1,581,95㎡</td>
+          <td class="td" colspan="3">{{obj.buildingArea}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">건축연면적</td>
-          <td class="td" colspan="3">7,845,12㎡</td>
+          <td class="td" colspan="3">{{obj.totalBuildingArea}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">최고높이</td>
-          <td class="td" colspan="3">26.9m</td>
+          <td class="td" colspan="3">{{obj.highestHeight}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">용도</td>
-          <td class="td" colspan="3">공공업무시설</td>
+          <td class="td" colspan="3">{{obj.usage}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">시설물구조</td>
-          <td class="td" colspan="3">지하1층, 지상5층</td>
+          <td class="td" colspan="3">{{obj.facilityStructure}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">구조형식</td>
-          <td class="td" colspan="3">철근콘트리트구조</td>
+          <td class="td" colspan="3">{{obj.structuralForm}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td" colspan="3">부대시설</td>
-          <td class="td" colspan="3"></td>
+          <td class="td" colspan="3">{{obj.amenities}}</td>
         </tr>
 
         <tr class="tr">
           <td class="td"><p class="overflow">층별</p></td>
-          <td class="td"><p class="overflow">3층</p></td>
+          <td class="td"><p class="overflow">{{obj.floors}}</p></td>
           <td class="td"><p class="overflow">전차안전등급</p></td>
-          <td class="td"><p class="overflow">B등급</p></td>
+          <td class="td"><p class="overflow">{{obj.grade}}</p></td>
           <td class="td"><p class="overflow">점검결과 안전등급</p></td>
-          <td class="td"><p class="overflow">B등급 (8.7점)</p></td>
+          <td class="td"><p class="overflow">{{obj.testResults}}</p></td>
         </tr>
       </tbody>
     </table>
