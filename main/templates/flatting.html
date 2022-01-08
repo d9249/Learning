@@ -8,18 +8,14 @@
 
 {% block content %}
 <section class="section">
-  <canvas id="canvas"></canvas>
+  <canvas id="canvas" onclick="clickEvent(event)"></canvas>
   <form action="{% url 'flattingResult' %}" method="post">
     {% csrf_token %}
     <input type="hidden" id="topLeft" name="x" value="0,0" />
-    <input type="hidden" id="topLeft" name="y" value="0,0" />
-    <input type="hidden" id="topLeft" name="w" value="0,0" />
-    <input type="hidden" id="topLeft" name="z" value="0,0" />
+    <input type="hidden" id="topRight" name="y" value="0,0" />
+    <input type="hidden" id="bottomRight" name="w" value="0,0" />
+    <input type="hidden" id="bottomLeft" name="z" value="0,0" />
     <input type="hidden" name="pk" value="{{img.id}}" />
-
-    <!-- <div class="image">
-      <img src="{{crack.image.url}}" alt="image" id="image" />
-    </div> -->
 
     <div class="submit">
       <button id="button" type="submit">등록하기</button>
@@ -37,7 +33,6 @@
   const image = new Image();
 
   image.src = '{{crack.image.url}}'
-  console.log(image.src)
   image.addEventListener('load', function() {
     const width = image.width;
     const height = image.height;
@@ -48,5 +43,28 @@
   })
   
 
+  function clickEvent(event) {
+    if (points.length < 4) {
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 3;
+
+      ctx.beginPath();
+      ctx.arc(event.offsetX, event.offsetY, 2, 0, Math.PI * 2);
+      ctx.stroke();
+
+      const x = [event.offsetX, event.offsetY];
+      points.push(x)
+
+      ctx.closePath();
+    }
+
+    if (points.length === 4) {
+      console.log(points)
+      document.getElementById("topLeft").value = points[0]
+      document.getElementById("topRight").value = points[1]
+      document.getElementById("bottomRight").value = points[2]
+      document.getElementById("bottomLeft").value = points[3]
+    }
+  } 
 </script>
 {% endblock %}
