@@ -11,11 +11,11 @@
   <canvas id="canvas" onclick="clickEvent(event)"></canvas>
   <form action="{% url 'flattingResult' %}" method="post">
     {% csrf_token %}
-    <input type="hidden" id="topLeft" name="x" value="0,0" />
-    <input type="hidden" id="topRight" name="y" value="0,0" />
-    <input type="hidden" id="bottomRight" name="w" value="0,0" />
-    <input type="hidden" id="bottomLeft" name="z" value="0,0" />
-    <input type="hidden" name="pk" value="{{img.id}}" />
+    <input type="hidden" id="topLeft" name="tl" value="0,0" />
+    <input type="hidden" id="topRight" name="tr" value="0,0" />
+    <input type="hidden" id="bottomRight" name="br" value="0,0" />
+    <input type="hidden" id="bottomLeft" name="bl" value="0,0" />
+    <input type="hidden" name="pk" value="{{crack.id}}" />
 
     <div class="submit">
       <button id="button" type="submit">등록하기</button>
