@@ -12,12 +12,16 @@
       <div class="container">
         <h4 class="title"><strong>{{category.facilityName}}</strong></h4>
         <div class="button">
-          <a href="{% url 'categoryList' %}">
+          <a href="{% url 'categoryList' category.id %}">
             <button type="button" class="btn-primary">더보기</button>
           </a>
-          <a href="{% url 'categoryDetail' category.id %}">
-            <button type="button" class="btn-detail">세부정보</button>
-          </a>
+          <button
+            type="button"
+            class="btn-detail"
+            onclick="location.href='/categoryDetail'"
+          >
+            세부정보
+          </button>
         </div>
       </div>
     </div>
