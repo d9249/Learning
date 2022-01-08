@@ -1,8 +1,9 @@
 from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render, redirect
 from .models import Category, Crack
+import numpy as np
+import cv2
 
-from .models import Category
 
 def category(request):
     categorys = Category.objects.all()
@@ -63,7 +64,7 @@ def input(request):
 
 def categoryList(request,pk):
     category = Category.objects.get(pk=pk)
-    cracks = Crack.objects.filter(category = category)
+    cracks = Crack.objects.filter(category=category)
     return render(request, 'categoryList.html', {
         'cracks': cracks
     })
@@ -74,15 +75,62 @@ def categoryDetail(request,pk):
     category = Category.objects.get(pk=pk)
     return render(request, 'categoryDetail.html',{'obj':category})
 
-def flatting(request,pk):
+
+def flatting(request, pk):
     crack = Crack.objects.get(pk=pk)
-    return render(request, 'flatting.html',{
-        'crack':crack
+    return render(request, 'flatting.html', {
+        'crack': crack
     })
 
-def flattingResult(request):
 
-    return render(request, 'flattingResult.html')
+def flattingResult(request):
+    if request.method == 'POST':
+        pk = request.POST['pk']
+        crack = get_object_or_404(Crack, pk=pk)
+        print(crack)
+        temp = cv2.imread(crack.image.url[1:])
+
+        width = crack.originWidth
+        height = crack.originHeight
+
+        topLeft = request.POST['tl'].split(',')
+        topRight = request.POST['tr'].split(',')
+        bottomLeft = request.POST['bl'].split(',')
+        bottomRight = request.POST['br'].split(',')
+
+        pts1 = np.float32([
+            [int(int(topLeft[0])), int(int(topLeft[1]))],
+            [int(int(topRight[0])), int(int(topRight[1]))],
+            [int(int(bottomRight[0])), int(int(bottomRight[1]))],
+            [int(int(bottomLeft[0])), int(int(bottomLeft[1]))]
+        ])
+
+        pixelHeight = max(np.linalg.norm(
+            pts1[0] - pts1[3]), np.linalg.norm(pts1[1] - pts1[2]))
+        width_ratio = width/height
+        height_ratio = 1
+
+        pts2 = np.array([
+            [0, 0],
+            [int(width_ratio*pixelHeight), 0],
+            [int(width_ratio*pixelHeight), int(height_ratio*pixelHeight)],
+            [0, int(height_ratio*pixelHeight)]
+        ], dtype=np.float32)
+
+        M = cv2.getPerspectiveTransform(pts1, pts2)
+        dst = cv2.warpPerspective(temp, M=M, dsize=(
+            int(width_ratio*pixelHeight), int(height_ratio*pixelHeight)))
+
+        cv2.imwrite(crack.flatting_image.url[1:], dst)
+        crack.isFlattened = True
+        crack.save()
+
+        return render(request, 'flattingResult.html', {
+            'crack': crack,
+            'height': height,
+            'imgWidth': int(width_ratio*pixelHeight),
+            'imgHeight': int(height_ratio*pixelHeight),
+        })
 
 
 def area(request):

@@ -5,3 +5,27 @@
 {% block style %}
 <link rel="stylesheet" href="{% static 'css/flattingResult.css' %}" />
 {% endblock %} 
+
+{% block content %}
+<canvas id="canvas"></canvas>
+{% endblock %}
+
+{% block script %}
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  const image = new Image();
+  image.src = '{{crack.flatting_image.url}}'
+  
+  let points = [];
+  let length = [];
+
+  image.addEventListener('load', function() {
+    const width = image.width;
+    const height = image.height;
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(image,0,0,width,height)
+  })
+</script>
+{% endblock %}
