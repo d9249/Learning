@@ -1,8 +1,13 @@
-from django.shortcuts import render, redirect
+from django.http.response import Http404
+from django.shortcuts import get_object_or_404, render, redirect
+from .models import Category, Crack
 
 
 def category(request):
-    return render(request, 'category.html')
+    categorys = Category.objects.all()
+    return render(request, 'category.html', {
+        'categorys': categorys
+    })
 
 
 def input(request):
@@ -26,6 +31,7 @@ def flatting(request):
 
 
 def flattingResult(request):
+
     return render(request, 'flattingResult.html')
 
 
