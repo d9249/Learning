@@ -1,13 +1,31 @@
+.table {
+  box-shadow: 10px 13px 31px -7px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  overflow: hidden;
+}
 .tr {
   font-size: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .td {
   text-align: center;
   vertical-align: middle;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+th {
+  font-weight: bold;
+  background-color: #f8f8f8;
+}
+
+.table img {
+  /* width: 50%; */
+  height: 300px;
+}
+
+.table:nth-child(2) {
+  margin-top: 20px;
 }
 
 /* 데스크탑 / 패드에 적용될 스타일*/
@@ -19,9 +37,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  .wrapper img {
-    width: 768px;
   }
 
   .table {
@@ -41,13 +56,8 @@
     justify-content: center;
   }
 
-  .wrapper img {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-
   .table {
-    width: 100%;
+    width: 90%;
     border: 1px solid #444444;
   }
 

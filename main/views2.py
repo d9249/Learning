@@ -61,10 +61,6 @@ def input(request):
     return render(request, 'input.html')
 
 
-def save(request):
-    return redirect("/")
-
-
 def categoryList(request,pk):
     category = Category.objects.get(pk=pk)
     cracks = Crack.objects.filter(category = category)
@@ -73,8 +69,10 @@ def categoryList(request,pk):
     })
 
 
-def categoryDetail(request):
-    return render(request, 'categoryDetail.html')
+
+def categoryDetail(request,pk):
+    category = Category.objects.get(pk=pk)
+    return render(request, 'categoryDetail.html',{'obj':category})
 
 def flatting(request,pk):
     crack = Crack.objects.get(pk=pk)
