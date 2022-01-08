@@ -65,15 +65,22 @@ def save(request):
     return redirect("/")
 
 
-def categoryList(request):
-    return render(request, 'categoryList.html')
+def categoryList(request,pk):
+    category = Category.objects.get(pk=pk)
+    cracks = Crack.objects.filter(category = category)
+    return render(request, 'categoryList.html', {
+        'cracks': cracks
+    })
 
 
 def categoryDetail(request):
     return render(request, 'categoryDetail.html')
 
-def flatting(request):
-    return render(request, 'flatting.html')
+def flatting(request,pk):
+    crack = Crack.objects.get(pk=pk)
+    return render(request, 'flatting.html',{
+        'crack':crack
+    })
 
 def flattingResult(request):
 

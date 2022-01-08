@@ -9,8 +9,8 @@ urlpatterns = [
     path('input-data', views2.input, name="input"),
     path('save', views2.save, name="save"),
     path('categoryDetail', views2.categoryDetail, name="categoryDetail"),
-    path('categoryList', views2.categoryList, name="categoryList"),
-    path('flatting', views2.flatting, name="flatitng"),
+    path('categoryList/<pk>', views2.categoryList, name="categoryList"),
+    path('flatting/<pk>', views2.flatting, name="flatting"),
     path('flattingResult', views2.flattingResult, name="flattingResult"),
     path('area', views2.area, name="area"),
 

@@ -1,15 +1,9 @@
-{% extends 'base.html' %} 
-
-{% load static %}
-
-{% block style %}
+{% extends 'base.html' %} {% load static %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/category.css' %}" />
-{% endblock %} 
-
-{% block content %}
+{% endblock %} {% block content %}
 <section class="section">
   <div class="input-group">
-    <input type="search" placeholder="Search...">
+    <input type="search" placeholder="Search..." />
   </div>
   <article class="card-view">
     {% for category in categorys %}
@@ -17,13 +11,15 @@
       <img src="{{category.frontView.url}}" alt="image" />
       <div class="container">
         <h4 class="title"><strong>{{category.facilityName}}</strong></h4>
-        <div class="button">        
-          <a href="{% url 'categoryList' %}">
-            <button type="button" class="btn-primary">
-              더보기
-            </button>
+        <div class="button">
+          <a href="{% url 'categoryList' category.id %}">
+            <button type="button" class="btn-primary">더보기</button>
           </a>
-          <button type="button" class="btn-detail" onclick="location.href='/categoryDetail'">
+          <button
+            type="button"
+            class="btn-detail"
+            onclick="location.href='/categoryDetail'"
+          >
             세부정보
           </button>
         </div>
