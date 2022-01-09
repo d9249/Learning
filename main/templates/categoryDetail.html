@@ -9,6 +9,34 @@
     <table class="table">
       <tbody>
         <tr class="tr">
+          <th>층수</th>
+          <th>위치</th>
+          <th>부재</th>
+          <th>점검내용</th>
+          <th>개소</th>
+          <th>현황번호</th>
+          <th>진행유무</th>
+          <th>발생원인</th>
+          <th>비고</th>
+        </tr>
+        {% for crack in crack %}
+        <tr class="tr">
+          <td class="td">{{crack.floor}}</td>
+          <td class="td">{{crack.location}}</td>
+          <td class="td">{{crack.absence}}</td>
+          <td class="td">{{crack.desc}}</td>
+          <td class="td">{{crack.place}}</td>
+          <td class="td">{{crack.number}}</td>
+          <td class="td">{{crack.progress}}</td>
+          <td class="td">{{crack.cause}}</td>
+          <td class="td">{{crack.note}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <table class="table">
+      <tbody>
+        <tr class="tr">
           <th class="td" colspan="6">전경도</th>
         </tr>
         <tr class="tr">
@@ -26,6 +54,7 @@
         </tr>
       </tbody>
     </table>
+    <br />
     <table class="table">
       <tbody>
         <tr class="tr">

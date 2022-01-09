@@ -72,7 +72,8 @@ def categoryList(request,pk):
 
 def categoryDetail(request,pk):
     category = Category.objects.get(pk=pk)
-    return render(request, 'categoryDetail.html',{'obj':category})
+    crack = Crack.objects.filter(category=category)
+    return render(request, 'categoryDetail.html',{'obj':category,'crack':crack})
 
 
 def flatting(request, pk):
