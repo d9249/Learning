@@ -1,0 +1,49 @@
+.section {
+  width: 100%;
+  padding: 0 2em;
+}
+.detail-input {
+  max-width: 500px;
+  margin: 5rem auto;
+  padding: 1em;
+  border: 0.5px solid #bdbdbd;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.detail {
+  margin-bottom: 2em;
+}
+label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: #767676;
+}
+input {
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+input::placeholder {
+  color: #dbdbdb;
+  line-height: 14px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 20px;
+  cursor: pointer;
+}

@@ -1,14 +1,37 @@
-const input = document.querySelector(".crack-input");
-const preview = document.querySelector(".preview");
-const blankImage = document.querySelector(".blank-img");
+const fileTypes = [
+  "image/apng",
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon",
+];
 
-input.addEventListener("change", updateImageDisplay);
+const locationInput = document.querySelector(".location-input");
+const firstPreview = document.querySelector(".first-preview");
+const firstBlankImage = document.querySelector(".first-blank-img");
+
+const viewInput = document.querySelector(".view-input");
+const secondPreview = document.querySelector(".second-preview");
+const secondBlankImage = document.querySelector(".second-blank-img");
+
+locationInput.addEventListener("change", () =>
+  imageDisplay(locationInput, firstPreview, firstBlankImage)
+);
+
+viewInput.addEventListener("change", () =>
+  imageDisplay(viewInput, secondPreview, secondBlankImage)
+);
 
 function validFileType(file) {
   return fileTypes.includes(file.type);
 }
 
-function updateImageDisplay() {
+function imageDisplay(input, preview, blank) {
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
@@ -30,10 +53,9 @@ function updateImageDisplay() {
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
         listItem.appendChild(image);
-        blankImage.style.display = "none";
+        blank.style.display = "none";
       } else {
         para.textContent = `File name ${file.name} : 파일의 형식이 옳지 않습니다.`;
-        console.log(file.name);
         listItem.appendChild(para);
       }
 

@@ -1,0 +1,25 @@
+section {
+  display: flex;
+  padding: 2em;
+  gap: 10px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1em;
+  gap: 1em;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 1s;
+}
+article:hover {
+  transform: scale(1.1);
+}
+
+.obj-img {
+  width: 100px;
+}
