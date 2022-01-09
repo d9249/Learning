@@ -8,7 +8,9 @@
 
 {% block content %}
 <section class="section">
-  <canvas id="canvas" onclick="clickEvent(event)"></canvas>
+  <canvas id="canvas" onclick="clickEvent(event)">
+  </canvas>
+
   <form action="{% url 'flattingResult' %}" method="post">
     {% csrf_token %}
     <input type="hidden" id="topLeft" name="tl" value="0,0" />
