@@ -155,7 +155,9 @@ def createCrack(request,pk):
     return render(request, 'createCrack.html',{'objData':{'pk':pk}})
 
 def crackDetail(request,pk):
-    return render(request, 'crackDetail.html', {'crackData':{'pk':pk}})
+    crack = Crack.objects.get(pk=pk)
+    crackObj = CrackObj.objects.filter(parent=crack)
+    return render(request, 'crackDetail.html', {'crackData':{'pk':pk},'crackObj': crackObj})
 
 
 def createCrackObj(request,pk):

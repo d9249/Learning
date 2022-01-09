@@ -1,11 +1,26 @@
 {% extends 'base.html'%} {% load static %}
 <!--  -->
-{% block style %} {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/crackDetail.css' %}" />
+{% endblock %}
 <!--  -->
 {% block content %}
 <a href="{% url 'createCrackObj' crackData.pk %}">
   <button>등록</button>
 </a>
+<section>
+  {% for crackObj in crackObj %}
+  <article>
+    <img class="obj-img" src="{{crackObj.image.url}}" alt="" />
+    {% if crackObj.isFlattened %}
+    <p>🆗</p>
+    {% else %}
+    <p>❌</p>
+    {% endif %}
+    <p>{{crackObj.date}}</p>
+  </article>
+  {% endfor %}
+</section>
 {% endblock %}
 <!--  -->
 {% block script %}
