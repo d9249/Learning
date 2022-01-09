@@ -153,3 +153,6 @@ def createCrack(request,pk):
         crack.save()
         return redirect('/categoryDetail/'+str(pk))
     return render(request, 'createCrack.html',{'objData':{'pk':pk}})
+
+def crackDetail(req,pk):
+    return render(req, 'crackDetail.html')

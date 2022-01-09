@@ -31,7 +31,9 @@
           <td class="td">{{crack.progress}}</td>
           <td class="td">{{crack.cause}}</td>
           <td class="td">{{crack.note}}</td>
-          <td class="td"><a href="">detail...</a></td>
+          <td class="td">
+            <a href="{% url 'crackDetail' crack.id %}">detail...</a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
