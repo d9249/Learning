@@ -7,13 +7,25 @@
 {% endblock %} 
 
 {% block content %}
-<canvas id="canvas"></canvas>
+<section class="section">
+  <canvas id="canvas"></canvas>
+  <form action="">
+    <div class="length">
+      <p>길이 : 0㎜</p>
+    </div>
+    <button id="button" class="submit" type="submit">저장하기</button>
+  </form>
+  
+ 
+</section>
+
 {% endblock %}
 
 {% block script %}
 <script>
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
+  const button = document.getElementById("button")
   const image = new Image();
   image.src = '{{crack.flatting_image.url}}'
   
@@ -25,6 +37,7 @@
     const height = image.height;
     canvas.width = width;
     canvas.height = height;
+    button.style.width = width + 'px';
     ctx.drawImage(image,0,0,width,height)
   })
 </script>

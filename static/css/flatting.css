@@ -4,6 +4,13 @@
   align-items: center;
 }
 
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .submit {
   display: flex;
   justify-content: center;
