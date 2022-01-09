@@ -1,6 +1,6 @@
 from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render, redirect
-from .models import Category, Crack
+from .models import Category, Crack, CrackObj
 import numpy as np
 import cv2
 
@@ -154,9 +154,18 @@ def createCrack(request,pk):
         return redirect('/categoryDetail/'+str(pk))
     return render(request, 'createCrack.html',{'objData':{'pk':pk}})
 
-def crackDetail(req,pk):
-    return render(req, 'crackDetail.html')
+def crackDetail(request,pk):
+    return render(request, 'crackDetail.html', {'crackData':{'pk':pk}})
 
 
-def createCrackObj(req):
-    return render(req,'createCrackObj.html')
+def createCrackObj(request,pk):
+    if request.method == 'POST':
+        crack = Crack.objects.get(pk=pk)
+        crackObj = CrackObj()
+        crackObj.image = request.FILES['image']
+        crackObj.date = request.POST['date']
+        crackObj.parent = crack
+        crackObj.save()
+        return redirect('/crackDetail/'+str(pk))
+
+    return render(request,'createCrackObj.html',{'crackData':{'pk':pk}})

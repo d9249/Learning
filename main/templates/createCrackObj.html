@@ -1,8 +1,27 @@
 {% extends 'base.html'%} {% load static %}
 <!--  -->
-{% block style %} {% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/createCrackObj.css' %}" />
+{% endblock %}
 <!--  -->
-{% block content %} 크랙등록하셈 {% endblock %}
+{% block content %}
+<section class="section">
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="detail-input">
+      <div class="detail">
+        <label for="image">이미지</label>
+        <input id="image" type="file" name="image" />
+      </div>
+      <div class="detail">
+        <label for="date">날짜</label>
+        <input id="date" type="date" name="date" />
+      </div>
+      <button class="submit-btn" type="submit">등록하기</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
 <!--  -->
 {% block script %}
 <!--  -->

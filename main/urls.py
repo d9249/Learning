@@ -14,6 +14,6 @@ urlpatterns = [
     path('area', views2.area, name="area"),
     path('createCrack/<pk>', views2.createCrack,name='createCrack'),
     path('crackDetail/<pk>',views2.crackDetail, name='crackDetail'),
-    path('crackCrackObj',views2.createCrackObj, name='createCrackObj'),
+    path('crackCrackObj/<pk>',views2.createCrackObj, name='createCrackObj')
 
 ]

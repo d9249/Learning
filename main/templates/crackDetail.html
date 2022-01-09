@@ -3,7 +3,7 @@
 {% block style %} {% endblock %}
 <!--  -->
 {% block content %}
-<a href="{% url 'createCrackObj' %}">
+<a href="{% url 'createCrackObj' crackData.pk %}">
   <button>등록</button>
 </a>
 {% endblock %}
