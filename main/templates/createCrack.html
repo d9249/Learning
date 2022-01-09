@@ -2,7 +2,8 @@
 <link rel="stylesheet" href="{% static 'css/createCrack.css' %}" />
 {% endblock %} {% block content %}
 <section class="section">
-  <form>
+  <form action="{% url 'createCrack' objData.pk %}" method="POST">
+    {% csrf_token %}
     <div class="detail-input">
       <div class="detail">
         <label for="floor">층수</label>

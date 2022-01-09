@@ -31,7 +31,6 @@ class Category(models.Model):
 
 
 class Crack(models.Model):
-    
     floor = models.CharField(null=True, max_length=255)  # 층수
     location = models.CharField(null=True, max_length=255)  # 위치
     absence = models.CharField(null=True, max_length=255)  # 부재

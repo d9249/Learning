@@ -139,5 +139,16 @@ def area(request):
 def createCrack(request,pk):
     if request.method == 'POST':
         crack = Crack()
-        
-    return render(request, 'createCrack.html')
+        crack.floor = request.POST['floor']
+        crack.location = request.POST['location']
+        crack.absence = request.POST['absence']
+        crack.desc = request.POST['desc']
+        crack.place = request.POST['place']
+        crack.number = request.POST['number']
+        crack.progress = request.POST['progress']
+        crack.cause = request.POST['cause']
+        crack.note = request.POST['note']
+        crack.category = Category.objects.get(pk=pk)
+        crack.save()
+        return redirect('/categoryDetail/'+str(pk))
+    return render(request, 'createCrack.html',{'objData':{'pk':pk}})
