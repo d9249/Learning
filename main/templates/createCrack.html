@@ -1,69 +1,55 @@
-{% extends 'base.html'%} 
-
-{% load static %} 
-
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/detailCrack.css' %}" />
-{% endblock %} 
-
-{% block content %}
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/createCrack.css' %}" />
+{% endblock %} {% block content %}
 <section class="section">
-  <div class="desk-flex">
-  <div class="blank-img"></div>
-  <div class="preview"></div>
-  <div class="detail-input">
+  <form>
+    <div class="detail-input">
+      <div class="detail">
+        <label for="floor">층수</label>
+        <input type="text" name="floor" />
+      </div>
 
-    <div class="detail">
-      <label for="floor">층수</label>
-      <input type="text" name="floor">
-    </div>
+      <div class="detail">
+        <label for="location">위치</label>
+        <input type="text" name="location" />
+      </div>
 
-    <div class="detail">
-      <label for="location">위치</label>
-      <input type="text" name="location">
-    </div>
+      <div class="detail">
+        <label for="absence">부재</label>
+        <input type="text" name="absence" />
+      </div>
 
-    <div class="detail">
-      <label for="absence">부재</label>
-      <input type="text" name="absence">
-    </div>
+      <div class="detail">
+        <label for="desc">점검내용</label>
+        <input type="text" name="desc" />
+      </div>
 
-    <div class="detail">
-      <label for="desc">점검내용</label>
-      <input type="text" name="desc">
-    </div>
+      <div class="detail">
+        <label for="place">개소</label>
+        <input type="text" name="place" />
+      </div>
 
-    <div class="detail">
-      <label for="place">개소</label>
-      <input type="text" name="place">
-    </div>
+      <div class="detail">
+        <label for="number">현황번호</label>
+        <input type="text" name="number" />
+      </div>
 
-    <div class="detail">
-      <label for="number">현황번호</label>
-      <input type="text" name="number">
-    </div>
+      <div class="detail">
+        <label for="progress">진행유무</label>
+        <input type="text" name="progress" />
+      </div>
 
-    <div class="detail">
-      <label for="progress">진행유무</label>
-      <input type="text" name="progress">
+      <div class="detail">
+        <label for="cause">발생원인</label>
+        <input type="text" name="cause" />
+      </div>
+      <div class="detail">
+        <label for="note">비고</label>
+        <input type="text" name="note" />
+      </div>
+      <button class="submit-btn" type="submit">등록하기</button>
     </div>
-    
-    <div class="detail">
-      <label for="cause">발생원인</label>
-      <input type="text" name="cause">
-    </div>
-
-    <div class="detail">
-      <label for="note">비고</label>
-      <input type="text" name="note">
-    </div>
-  </div>
+  </form>
 </section>
-<section class="submit">
-  <button type="submit">등록하기</button>
-</section>
-{% endblock %}
 
-{% block script %}
-<script src="{% static 'js/inputCrack.js' %}"></script>
-{% endblock %}
+{% endblock %} {% block script %} {% endblock %}

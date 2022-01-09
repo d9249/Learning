@@ -138,4 +138,7 @@ def area(request):
 
 
 def createCrack(request,pk):
+    if request.method == 'POST':
+        crack = Crack()
+        
     return render(request, 'createCrack.html')

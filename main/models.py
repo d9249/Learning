@@ -31,14 +31,7 @@ class Category(models.Model):
 
 
 class Crack(models.Model):
-    image = models.ImageField(
-        upload_to='images/crack_img/origin/%Y/%m/%d/', null=False, blank=False)
-    flatting_image = models.ImageField(
-        upload_to='images/crack_img/flatting/%Y/%m/%d/', null=True)
-    isFlattened = models.BooleanField(default=False)
-    originWidth = models.FloatField(null=True)
-    originHeight = models.FloatField(null=True)
-    crackLength = models.FloatField(null=True)
+    
     floor = models.CharField(null=True, max_length=255)  # 층수
     location = models.CharField(null=True, max_length=255)  # 위치
     absence = models.CharField(null=True, max_length=255)  # 부재
@@ -49,7 +42,22 @@ class Crack(models.Model):
     cause = models.CharField(null=True, max_length=255)  # 발생원인
     note = models.CharField(null=True, max_length=255)  # 비고
     category = models.ForeignKey(
-        'Category', null=True, on_delete=models.SET_NULL)
+        'Category', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.id)
+
+
+class CrackObj(models.Model):
+    image = models.ImageField(upload_to='images/crack_img/origin/%Y/%m/%d/', null=False, blank=False)
+    flatting_image = models.ImageField(upload_to='images/crack_img/flatting/%Y/%m/%d/', null=True)
+    isFlattened = models.BooleanField(default=False)
+    originWidth = models.FloatField(null=True)
+    originHeight = models.FloatField(null=True)
+    crackLength = models.FloatField(null=True)
+    date = models.DateField(null=True)
+    parent = models.ForeignKey('Crack', on_delete=models.CASCADE)
+
 
     def __str__(self):
         return str(self.id)
