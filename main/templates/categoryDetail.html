@@ -18,6 +18,7 @@
           <th>진행유무</th>
           <th>발생원인</th>
           <th>비고</th>
+          <th>detail</th>
         </tr>
         {% for crack in crack %}
         <tr class="tr">
@@ -30,6 +31,7 @@
           <td class="td">{{crack.progress}}</td>
           <td class="td">{{crack.cause}}</td>
           <td class="td">{{crack.note}}</td>
+          <td class="td"><a href="">detail...</a></td>
         </tr>
         {% endfor %}
       </tbody>
