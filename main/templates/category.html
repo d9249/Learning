@@ -15,13 +15,9 @@
           <a href="{% url 'categoryList' category.id %}">
             <button type="button" class="btn-primary">더보기</button>
           </a>
-          <button
-            type="button"
-            class="btn-detail"
-            onclick="location.href='/categoryDetail'"
-          >
-            세부정보
-          </button>
+          <a href="{% url 'categoryDetail' category.id %}">
+            <button type="button" class="btn-detail">세부정보</button>
+          </a>
         </div>
       </div>
     </div>

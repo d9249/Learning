@@ -7,7 +7,6 @@ urlpatterns = [
     # ---------
     path('category', views2.category, name="category"),
     path('input-data', views2.input, name="input"),
-    path('save', views2.save, name="save"),
     path('categoryDetail/<pk>', views2.categoryDetail, name="categoryDetail"),
     path('categoryList/<pk>', views2.categoryList, name="categoryList"),
     path('flatting/<pk>', views2.flatting, name="flatting"),
