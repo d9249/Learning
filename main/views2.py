@@ -57,8 +57,7 @@ def input(request):
         category.frontView = frontView
         category.locationMap = locationMap
         category.save()
-        print(category)
-        return render(request, 'input.html')
+        return redirect('categoryDetail/'+str(category.id))
     return render(request, 'input.html')
 
 

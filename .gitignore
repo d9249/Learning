@@ -215,3 +215,5 @@ cython_debug/
 # Cython debug symbols
 
 # End of https://www.toptal.com/developers/gitignore/api/django,python
+
+migrations/
