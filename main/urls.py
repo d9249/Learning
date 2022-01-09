@@ -12,5 +12,6 @@ urlpatterns = [
     path('flatting/<pk>', views2.flatting, name="flatting"),
     path('flattingResult', views2.flattingResult, name="flattingResult"),
     path('area', views2.area, name="area"),
+    path('createCrack/<pk>', views2.createCrack,name='createCrack')
 
 ]

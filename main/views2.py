@@ -135,3 +135,7 @@ def flattingResult(request):
 
 def area(request):
     return render(request, 'area.html')
+
+
+def createCrack(request,pk):
+    return render(request, 'createCrack.html')
