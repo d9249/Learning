@@ -156,3 +156,7 @@ def createCrack(request,pk):
 
 def crackDetail(req,pk):
     return render(req, 'crackDetail.html')
+
+
+def createCrackObj(req):
+    return render(req,'createCrackObj.html')
