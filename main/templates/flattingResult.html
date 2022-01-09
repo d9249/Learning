@@ -9,12 +9,12 @@
 {% block content %}
 <section class="section">
   <canvas id="canvas" onclick="clickEvent(event)"></canvas>
-  <form action="">
+  
     <div class="length">
       <p id="crack-length">길이 : 0㎜</p>
     </div>
-    <button id="button" class="submit" type="submit">저장하기</button>
-  </form>
+    <button id="button" class="submit" type="submit" onclick="save()">저장하기</button>
+  
 </section>
 
 {% endblock %} 
@@ -68,6 +68,22 @@
       ctx.lineTo(y[0], y[1]);
       ctx.stroke();
     }
+  }
+
+  function save() {
+    const dataURL = canvas.toDataURL("image/png");
+    let crackLength = document.getElementById("crack-length").innerText;
+    crackLength = crackLength.replace(/[a-z]/g,'')
+    fetch("/save/{{crack.id}}", {
+      body:JSON.stringify({dataURL: dataURL, crackLength: crackLength}),
+      method: "POST",
+      redirect: 'follow'
+    })
+    .then(response => {
+      if(response.redirected) {
+        window.location.href = response.url
+      }
+    })
   }
 </script>
 {% endblock %}

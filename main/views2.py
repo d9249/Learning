@@ -1,8 +1,21 @@
-from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render, redirect
-from .models import Category, Crack
+from .models import Category, Crack, CrackObj
+#-- 이미지 변환 --#
+from io import BytesIO
+import json
+import re
+import base64
+from PIL import Image
+#--------------#
+
+#-- 평탄화 --#
 import numpy as np
 import cv2
+#----------#
+
+
+def error(request):
+    return render(request, 'error.html')
 
 
 def category(request):
@@ -62,7 +75,7 @@ def input(request):
     return render(request, 'input.html')
 
 
-def categoryList(request,pk):
+def categoryList(request, pk):
     category = Category.objects.get(pk=pk)
     cracks = Crack.objects.filter(category=category)
     return render(request, 'categoryList.html', {
@@ -70,10 +83,9 @@ def categoryList(request,pk):
     })
 
 
-
-def categoryDetail(request,pk):
+def categoryDetail(request, pk):
     category = Category.objects.get(pk=pk)
-    return render(request, 'categoryDetail.html',{'obj':category})
+    return render(request, 'categoryDetail.html', {'obj': category})
 
 
 def flatting(request, pk):
@@ -86,7 +98,7 @@ def flatting(request, pk):
 def flattingResult(request):
     if request.method == 'POST':
         pk = request.POST['pk']
-        crack = get_object_or_404(Crack, pk=pk)
+        crack = get_object_or_404(CrackObj, pk=pk)
         print(crack)
         temp = cv2.imread(crack.image.url[1:])
 
@@ -137,8 +149,27 @@ def area(request):
     return render(request, 'area.html')
 
 
-def createCrack(request,pk):
+def createCrack(request, pk):
     if request.method == 'POST':
         crack = Crack()
-        
+
     return render(request, 'createCrack.html')
+
+
+def save(request, pk):
+    if request.method == "POST":
+        crack = get_object_or_404(CrackObj, pk=pk)
+        print('crack', crack)
+        crackLength = json.loads(request.body).get("crackLength")
+        dataURL = json.loads(request.body).get("dataURL")
+        dataURL = re.sub("^data:image/png;base64,", "", dataURL)
+        dataURL = base64.b64decode(dataURL)
+        dataURL = BytesIO(dataURL)
+        temp = Image.open(dataURL)
+        temp = np.array(temp)
+        crack.crackLength = crackLength
+        crack.save()
+        cv2.imwrite(crack.flatting_image.url[1:], temp)
+        return redirect('category')
+    else:
+        return render(request, 'error.html')
