@@ -1,5 +1,30 @@
+.button {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem;
+}
+
+.button button {
+  background: linear-gradient(
+    rgba(27, 188, 194, 1) 0%,
+    rgba(24, 163, 168, 1) 100%
+  );
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
 section {
   display: flex;
+  flex-wrap: wrap;
   padding: 2em;
   gap: 10px;
 }
@@ -21,5 +46,5 @@ article:hover {
 }
 
 .obj-img {
-  width: 100px;
+  width: 300px;
 }

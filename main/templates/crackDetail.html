@@ -5,9 +5,12 @@
 {% endblock %}
 <!--  -->
 {% block content %}
-<a href="{% url 'createCrackObj' crackData.pk %}">
-  <button>등록</button>
-</a>
+
+<div class="button">
+  <a href="{% url 'createCrackObj' crackData.pk %}">
+    <button>등록</button>
+  </a>
+</div>
 <section>
   {% for crackObj in crackObj %}
   <article>

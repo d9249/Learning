@@ -1,9 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/categoryDetail.css' %}" />
 {% endblock %} {% block content %}
-<a href="{% url 'createCrack' obj.pk %}">
-  <button>등록</button>
-</a>
+<div class="button">
+  <a href="{% url 'createCrack' obj.pk %}">
+    <button>등록</button>
+  </a>
+</div>
 <section class="section">
   <div class="wrapper">
     <table class="table">
