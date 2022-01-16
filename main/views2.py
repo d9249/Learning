@@ -89,7 +89,7 @@ def categoryDetail(request, pk):
 
 
 def flatting(request, pk):
-    crack = Crack.objects.get(pk=pk)
+    crack = CrackObj.objects.get(pk=pk)
     return render(request, 'flatting.html', {
         'crack': crack
     })

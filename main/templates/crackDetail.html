@@ -20,7 +20,15 @@
     {% else %}
     <p>❌</p>
     {% endif %}
-    <p>{{crackObj.date}}</p>
+    <div class="wrapper">
+      <p>{{crackObj.date}}</p>
+      <button
+        class="button"
+        onclick="location.href='/flatting/{{crackObj.id}}'"
+      >
+        평탄화
+      </button>
+    </div>
   </article>
   {% endfor %}
 </section>

@@ -23,6 +23,8 @@
 }
 
 section {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   padding: 2em;
@@ -41,10 +43,40 @@ article {
   border-radius: 10px;
   transition: all 1s;
 }
+
+article p {
+  font-size: 1.4rem;
+}
 article:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
+.wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper button {
+  background-color: #0d6efd;
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
 .obj-img {
   width: 300px;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    justify-content: center;
+  }
 }

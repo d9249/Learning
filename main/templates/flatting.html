@@ -1,15 +1,8 @@
-{% extends 'base.html' %} 
-
-{% load static %} 
-
-{% block style %}
+{% extends 'base.html' %} {% load static %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/flatting.css' %}" />
-{% endblock %} 
-
-{% block content %}
+{% endblock %} {% block content %}
 <section class="section">
-  <canvas id="canvas" onclick="clickEvent(event)">
-  </canvas>
+  <canvas id="canvas" onclick="clickEvent(event)"> </canvas>
 
   <form action="{% url 'flattingResult' %}" method="post">
     {% csrf_token %}
@@ -20,13 +13,11 @@
     <input type="hidden" name="pk" value="{{crack.id}}" />
 
     <div class="submit">
-      <button id="button" type="submit">평탄화 Go!</button>
+      <button id="button" type="submit">평탄화:)</button>
     </div>
   </form>
 </section>
-{% endblock %}
-
-{% block script %}
+{% endblock %} {% block script %}
 <script>
   let points = [];
   const canvas = document.getElementById("canvas");
@@ -34,16 +25,15 @@
   const button = document.getElementById("button");
   const image = new Image();
 
-  image.src = '{{crack.image.url}}'
-  image.addEventListener('load', function() {
+  image.src = "{{crack.image.url}}";
+  image.addEventListener("load", function () {
     const width = image.width;
     const height = image.height;
     canvas.width = width;
     canvas.height = height;
-    button.style.width = width + 'px';
+    button.style.width = width + "px";
     ctx.drawImage(image, 0, 0, width, height);
-  })
-  
+  });
 
   function clickEvent(event) {
     if (points.length < 4) {
@@ -55,18 +45,18 @@
       ctx.stroke();
 
       const x = [event.offsetX, event.offsetY];
-      points.push(x)
+      points.push(x);
 
       ctx.closePath();
     }
 
     if (points.length === 4) {
-      console.log(points)
-      document.getElementById("topLeft").value = points[0]
-      document.getElementById("topRight").value = points[1]
-      document.getElementById("bottomRight").value = points[2]
-      document.getElementById("bottomLeft").value = points[3]
+      console.log(points);
+      document.getElementById("topLeft").value = points[0];
+      document.getElementById("topRight").value = points[1];
+      document.getElementById("bottomRight").value = points[2];
+      document.getElementById("bottomLeft").value = points[3];
     }
-  } 
+  }
 </script>
 {% endblock %}
