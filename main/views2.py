@@ -15,6 +15,7 @@ import cv2
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
 
+
 def error(request):
     return render(request, 'error.html')
 
@@ -213,19 +214,22 @@ def createExcel(request,pk):
     div = 1
     for obj in crack:
         list=[div,obj.floor, obj.location, obj.absence,obj.desc,obj.place,obj.number,obj.progress,obj.cause,obj.note]
-        div+=1;
+        div+=1
         lists.append(list)
         
     wb = Workbook()
-    ws3 = wb.create_sheet("손상현황표",0)
+    ws3 = wb.create_sheet("손상현황표",2)
     num = 2
     for list in lists:
         alp = 65
+        ws3.column_dimensions['A']
         for i in list:
             ws3[chr(alp)+str(num)] = i
             ws3[chr(alp)+str(num)].alignment = Alignment(horizontal='center',vertical='bottom')
             alp+=1
         num+=1
+    ws3.page_breaks.append()
+    ws3.print_area = 'A2:J'+str(num-1)
 
     wb.save("sample.xlsx")
     return redirect('/')
