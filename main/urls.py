@@ -17,4 +17,5 @@ urlpatterns = [
     path('crackCrackObj/<pk>',views2.createCrackObj, name='createCrackObj'),
     path('save/<pk>', csrf_exempt(views2.save), name="save"),
     path('error', views2.error, name="error"),
+    path('createExcel/<pk>',views2.createExcel,name="createExcel")
 ]

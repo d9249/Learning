@@ -12,7 +12,8 @@ from PIL import Image
 import numpy as np
 import cv2
 #----------#
-
+from openpyxl import Workbook
+from openpyxl.styles import Alignment
 
 def error(request):
     return render(request, 'error.html')
@@ -204,3 +205,27 @@ def save(request, pk):
         return redirect('category')
     else:
         return render(request, 'error.html')
+
+def createExcel(request,pk):
+    category = Category.objects.get(pk=pk)
+    crack = Crack.objects.filter(category=category)
+    lists = [['구분','층수','위치','부재','점검내용','개소','현황번호','진행유무','발생원인','비고']]
+    div = 1
+    for obj in crack:
+        list=[div,obj.floor, obj.location, obj.absence,obj.desc,obj.place,obj.number,obj.progress,obj.cause,obj.note]
+        div+=1;
+        lists.append(list)
+        
+    wb = Workbook()
+    ws3 = wb.create_sheet("손상현황표",0)
+    num = 2
+    for list in lists:
+        alp = 65
+        for i in list:
+            ws3[chr(alp)+str(num)] = i
+            ws3[chr(alp)+str(num)].alignment = Alignment(horizontal='center',vertical='bottom')
+            alp+=1
+        num+=1
+
+    wb.save("sample.xlsx")
+    return redirect('/')

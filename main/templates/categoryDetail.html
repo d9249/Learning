@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="{% static 'css/categoryDetail.css' %}" />
 {% endblock %} {% block content %}
 <div class="button">
+  <a href="{% url 'createExcel' obj.pk %}">
+    <button>엑셀 다운로드</button>
+  </a>
   <a href="{% url 'createCrack' obj.pk %}">
     <button>등록</button>
   </a>
