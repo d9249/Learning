@@ -1,4 +1,8 @@
+from calendar import IllegalMonthError
 from django.shortcuts import get_object_or_404, render, redirect
+
+from main.sheet1 import sheet
+
 from .models import Category, Crack, CrackObj
 #-- 이미지 변환 --#
 from io import BytesIO
@@ -14,6 +18,7 @@ import cv2
 #----------#
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
+from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 
 
 def error(request):
@@ -187,8 +192,6 @@ def createCrackObj(request,pk):
     return render(request,'createCrackObj.html',{'crackData':{'pk':pk}})
 
 
-
-
 def save(request, pk):
     if request.method == "POST":
         crack = get_object_or_404(CrackObj, pk=pk)
@@ -228,8 +231,8 @@ def createExcel(request,pk):
             ws3[chr(alp)+str(num)].alignment = Alignment(horizontal='center',vertical='bottom')
             alp+=1
         num+=1
-    ws3.page_breaks.append()
     ws3.print_area = 'A2:J'+str(num-1)
 
+    wb = sheet(wb,pk)
     wb.save("sample.xlsx")
     return redirect('/')
