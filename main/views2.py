@@ -106,10 +106,8 @@ def flattingResult(request):
     if request.method == 'POST':
         pk = request.POST['pk']
         crack = get_object_or_404(CrackObj, pk=pk)
-        print(crack)
         temp = cv2.imread(crack.image.url[1:])
-
-        width = crack.originWidth
+        width = crack.originWidth        
         height = crack.originHeight
 
         topLeft = request.POST['tl'].split(',')
@@ -184,7 +182,10 @@ def createCrackObj(request,pk):
         crack = Crack.objects.get(pk=pk)
         crackObj = CrackObj()
         crackObj.image = request.FILES['image']
+        crackObj.flatting_image = request.FILES['image']
         crackObj.date = request.POST['date']
+        crackObj.originWidth = request.POST['width']
+        crackObj.originHeight = request.POST['height']
         crackObj.parent = crack
         crackObj.save()
         return redirect('/crackDetail/'+str(pk))
