@@ -14,10 +14,17 @@
 <section>
   {% for crackObj in crackObj %}
   <article>
-    <img class="obj-img" src="{{crackObj.image.url}}" alt="" />
+    <img class="obj-img" src="{{crackObj.image.url}}" alt="image" />
+    {% if crackObj.isFlattened %}
+    <img class="obj-img" src="{{crackObj.flatting_image.url}}" alt="image" />
+    {% else %}
+    <img class="obj-img" src="{% static 'image/noflatten.png' %}" alt="image" />
+    {% endif %}
+    <!--  -->
     {% if crackObj.isFlattened %}
     <p>🆗</p>
     {% else %}
+
     <p>❌</p>
     {% endif %}
     <div class="wrapper">
