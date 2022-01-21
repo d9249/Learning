@@ -1,5 +1,6 @@
 import openpyxl
 from openpyxl.styles import Alignment, PatternFill
+from openpyxl.drawing.image import Image
 from .models import Category
 
 def sheet(wb,pk):
@@ -12,6 +13,15 @@ def sheet(wb,pk):
   ws1 = wb.active
   ws1['B2'] = "□ 시설물 현황"
   ws1['B3'] = "가. 일반현황"
+
+  ws1['B12'] = "나. 전경사진"
+
+  file_path = category.frontView.url
+  path = file_path[1:]
+  file = path.split('/')
+  filename = file[-1]
+  img = Image(path)
+  ws1.add_image(img, "B13")
 
   ws1['B4'] = '시설물명'
   ws1['B5'] = '시설물위치'
