@@ -87,7 +87,7 @@ def facility(wb,pk):
   path = path[1:]
   img = Image(path)
   ws1.add_image(img,"B13")
-
+  ws1.sheet_view.view = "pageBreakPreview"
   for row in ws1.rows:
       for cell in row:
           cell.alignment = Alignment(horizontal="center", vertical="center")
