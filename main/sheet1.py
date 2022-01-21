@@ -1,9 +1,12 @@
 import openpyxl
+from openpyxl.drawing.image import Image
 from openpyxl.styles import Alignment, PatternFill
 from .models import Category
 
+
 def sheet(wb,pk):
   category = Category.objects.get(pk=pk)
+  
   grayFill = PatternFill(start_color='CCCCCC',
                         end_color='CCCCCC', fill_type='solid')
   ws1 = wb.create_sheet("시설물 현황", 0)
@@ -72,6 +75,13 @@ def sheet(wb,pk):
   ws1['B9'].fill = grayFill
 
   ws1['B10'] = category.plus
+
+  ws1['B12'] = '나. 전경사진'
+  path = category.frontView.url
+  path = path[1:]
+  img = Image(path)
+  ws1.add_image(img,"B13")
+
 
   for row in ws1.rows:
       for cell in row:
