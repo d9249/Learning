@@ -269,3 +269,8 @@ def handleUpdateCrack(request,pk):
     crack.save()
 
     return redirect('/categoryDetail/'+str(crack.category.id))
+
+def deleteCategory(request,pk):
+    category = Category.objects.get(pk=pk)
+    category.delete()
+    return redirect('category')

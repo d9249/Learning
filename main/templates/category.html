@@ -16,7 +16,9 @@
             <button type="button" class="btn-detail">세부정보</button>
           </a>
           <button type="button" class="btn-detail">수정</button>
-          <button type="button" class="btn-delete">삭제</button>
+          <a href="{% url 'deleteCategory' category.id %}">
+            <button type="button" class="btn-delete">삭제</button>
+          </a>
         </div>
       </div>
     </div>

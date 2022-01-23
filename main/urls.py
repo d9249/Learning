@@ -22,5 +22,6 @@ urlpatterns = [
     path('deleteCrack/<pk>',views2.deleteCrack, name="deleteCrack"),
     path('updateCrack/<pk>',views2.updateCrack, name="updateCrack"),
     path('handleUpdateCrack/<pk>',views2.handleUpdateCrack, name="handleUpdateCrack"),
+    path('deleteCategory/<pk>',views2.deleteCategory, name="deleteCategory"),
 
 ]
