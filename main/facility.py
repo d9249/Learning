@@ -1,6 +1,8 @@
+from email.mime import base
 import openpyxl
 from openpyxl.drawing.image import Image
 from openpyxl.styles import Alignment, PatternFill
+from PIL import Image as IMG
 from .models import Category,Crack,CrackObj
 
 def facility(wb,pk):
@@ -94,26 +96,38 @@ def facility(wb,pk):
 
 
 def looks(wb,pk):
-  unitCm = 10
-  unitInch = round((unitCm/2.54)*70)
-  
+  baseWidth = 210
   cell = 2
   sheet = wb.create_sheet("외관조사사진", 1)
   sheet = wb['외관조사사진']
-  crack = Crack.objects.get(pk=pk)
-  crackObjs = CrackObj.objects.filter(parent=crack)
-  for crackObj in crackObjs:
-    path = (crackObj.image.url[1:])
-    flatPath = (crackObj.flatting_image.url[1:])
-    image = openpyxl.drawing.image.Image(path)
-    flatImage = openpyxl.drawing.image.Image(flatPath)
-    image.width = unitInch
-    image.height = unitInch
-    flatImage.height = unitInch
-    flatImage.height = unitInch
+  category = Category.objects.get(pk=pk)
+  cracks = Crack.objects.filter(category__facilityName__icontains=category.facilityName)
+  for crack in cracks:
+    crackObj = CrackObj.objects.filter(parent=crack.id)
+    for crackObj in crackObj:
+      path = crackObj.image.url[1:]
+      img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+      wpercent = baseWidth/float(img.size[0])
+      hsize = int((float(img.size[1])* float(wpercent)))
 
-    sheet.add_image(image,'B' + str(cell))
-    sheet.add_image(flatImage, 'G'+ str(cell+1))
-    cell += 5
-  sheet.sheet_view.view = "pageBreakPreview"
+      flatPath =crackObj.flatting_image.url[1:]
+      flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+      flatwPercent = baseWidth/float(img.size[0])
+      flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
+      if flathSize > 165:
+        flathSize= 165
+
+      image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
+      flatImage = openpyxl.drawing.image.Image(flatPath)
+      
+      image.width = baseWidth
+      image.height = hsize
+      
+      flatImage.width = baseWidth
+      flatImage.height = flathSize
+ 
+      sheet.add_image(image,'B' + str(cell))
+      sheet.add_image(flatImage, 'G'+ str(cell))
+      cell += 10
+      sheet.sheet_view.view = "pageBreakPreview"
   return wb
