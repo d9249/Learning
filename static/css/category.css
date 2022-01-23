@@ -58,6 +58,14 @@
   background: rgba(27, 188, 194, 1) 0%;
 }
 
+.btn-delete {
+  background-color: red;
+}
+
+.btn-delete:hover {
+  background-color: brown;
+}
+
 .btn-primary {
   background-color: #4472c4;
   border-color: #4472c4;
