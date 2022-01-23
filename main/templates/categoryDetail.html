@@ -24,6 +24,7 @@
           <th>발생원인</th>
           <th>비고</th>
           <th>detail</th>
+          <th>U-D</th>
         </tr>
         {% for crack in crack %}
         <tr class="tr">
@@ -38,6 +39,9 @@
           <td class="td">{{crack.note}}</td>
           <td class="td">
             <a href="{% url 'crackDetail' crack.id %}">detail...</a>
+          </td>
+          <td class="td">
+            수정 / <a href="{% url 'deleteCrack' crack.id %}">삭제</a>
           </td>
         </tr>
         {% endfor %}

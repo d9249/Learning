@@ -244,3 +244,8 @@ def deleteCrackObj(request,pk):
     obj = CrackObj.objects.get(pk=pk)
     obj.delete()
     return redirect('/crackDetail/'+str(obj.parent.id))
+
+def deleteCrack(request, pk):
+    obj = Crack.objects.get(pk=pk)
+    obj.delete()
+    return redirect('/categoryDetail/'+str(obj.category.id))
