@@ -1,7 +1,7 @@
 from calendar import IllegalMonthError
 from django.shortcuts import get_object_or_404, render, redirect
 
-from main.facility import facility
+from main.facility import facility,looks
 
 from .models import Category, Crack, CrackObj
 #-- 이미지 변환 --#
@@ -232,8 +232,9 @@ def createExcel(request,pk):
             ws3[chr(alp)+str(num)].alignment = Alignment(horizontal='center',vertical='bottom')
             alp+=1
         num+=1
-    ws3.print_area = 'A2:J'+str(num-1)
+        
     ws3.sheet_view.view = "pageBreakPreview"
     wb = facility(wb,pk)
+    wb = looks(wb,pk)
     wb.save("sample.xlsx")
     return redirect('/')
