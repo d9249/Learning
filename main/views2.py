@@ -270,6 +270,31 @@ def handleUpdateCrack(request,pk):
 
     return redirect('/categoryDetail/'+str(crack.category.id))
 
+def updateCategory(request,pk):
+    category = Category.objects.get(pk=pk)
+    return render(request,'updateCategory.html',{'category':category})
+
+def handleUpdateCategory(request, pk):
+    category = Category.objects.get(pk=pk)
+    category.facilityName = request.POST['name']
+    category.facilityNo = request.POST['number']
+    category.address = request.POST['location']
+    category.completionDate = request.POST['date']
+    category.landArea = request.POST['site-area']
+    category.buildingArea = request.POST['building-area']
+    category.totalBuildingArea = request.POST['year-area']
+    category.highestHeight = request.POST['max-height']
+    category.usage = request.POST['use']
+    category.facilityStructure = request.POST['structure']
+    category.structuralForm = request.POST['format']
+    category.amenities = request.POST['facility']
+    category.floors = request.POST['floor']
+    category.grade = request.POST['grade']
+    category.testResults = request.POST['result']
+    category.plus = request.POST['plus']
+    category.save()
+    return redirect('category')
+
 def deleteCategory(request,pk):
     category = Category.objects.get(pk=pk)
     category.delete()

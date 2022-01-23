@@ -1,0 +1,112 @@
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/input.css' %}" />
+{% endblock %} {% block content %}
+
+<form
+  action="{% url 'handleUpdateCategory' category.id %}"
+  method="post"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %} {{error}}
+  <section class="detail-section">
+    <h2>세부 정보를 입력해주세요</h2>
+    <div class="detail">
+      <label for="name">시설물명</label>
+      <input type="text" name="name" value="{{category.facilityName}}" />
+    </div>
+    <div class="detail">
+      <label for="number">시설물번호</label>
+      <input type="text" name="number" value="{{category.facilityNo}}" />
+    </div>
+
+    <div class="detail">
+      <label for="location">시설물위치 (주소)</label>
+      <input type="text" name="location" value="{{category.address}}" />
+    </div>
+
+    <div class="detail">
+      <label for="date">준공일지(연,월,일)</label>
+      <input
+        type="date"
+        name="date"
+        value="{{category.completionDate| date:'Y-m-d'}}"
+      />
+    </div>
+
+    <div class="detail">
+      <label for="site-area">대지면적</label>
+      <input type="text" name="site-area" value="{{category.landArea}}" />
+    </div>
+
+    <div class="detail">
+      <label for="building-area">건축면적</label>
+      <input
+        type="text"
+        name="building-area"
+        value="{{category.buildingArea}}"
+      />
+    </div>
+
+    <div class="detail">
+      <label for="year-area">건축연면적</label>
+      <input
+        type="text"
+        name="year-area"
+        value="{{category.totalBuildingArea}}"
+      />
+    </div>
+
+    <div class="detail">
+      <label for="max-height">최고높이</label>
+      <input type="text" name="max-height" value="{{category.highestHeight}}" />
+    </div>
+
+    <div class="detail">
+      <label for="use">용도</label>
+      <input type="text" name="use" value="{{category.usage}}" />
+    </div>
+
+    <div class="detail">
+      <label for="structure">시설물구조</label>
+      <input
+        type="text"
+        name="structure"
+        value="{{category.facilityStructure}}"
+      />
+    </div>
+
+    <div class="detail">
+      <label for="format">구조형식</label>
+      <input type="text" name="format" value="{{category.structuralForm}}" />
+    </div>
+
+    <div class="detail">
+      <label for="facility">부대시설</label>
+      <input type="text" name="facility" value="{{category.amenities}}" />
+    </div>
+
+    <div class="detail">
+      <label for="floor">층별</label>
+      <input type="text" name="floor" value="{{category.floors}}" />
+    </div>
+
+    <div class="detail">
+      <label for="grade">전차안전등급</label>
+      <input type="text" name="grade" value="{{category.grade}}" />
+    </div>
+
+    <div class="detail">
+      <label for="result">점검결과</label>
+      <input type="text" name="result" value="{{category.testResults}}" />
+    </div>
+
+    <div class="detail">
+      <label for="plus">규모 및 제원 추가사항</label>
+      <input type="text" name="plus" value="{{category.plus}}" />
+    </div>
+    <div class="submit">
+      <button type="submit">수정하기</button>
+    </div>
+  </section>
+</form>
+{% endblock %} {% block script %} {% endblock %}
