@@ -29,12 +29,15 @@
     {% endif %}
     <div class="wrapper">
       <p>{{crackObj.date}}</p>
-      <button
-        class="button"
-        onclick="location.href='/flatting/{{crackObj.id}}'"
-      >
-        평탄화
-      </button>
+      <div class="button_wrap">
+        <button
+          class="button"
+          onclick="location.href='/flatting/{{crackObj.id}}'"
+        >
+          평탄화
+        </button>
+        <button class="delete" type="submit">삭제</button>
+      </div>
     </div>
   </article>
   {% endfor %}

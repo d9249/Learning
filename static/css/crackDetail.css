@@ -48,15 +48,17 @@ article {
 article p {
   font-size: 1.4rem;
 }
-article:hover {
-  transform: scale(1.02);
-}
 
 .wrapper {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.button_wrap {
+  display: flex;
+  justify-content: end;
 }
 
 .wrapper button {
@@ -71,6 +73,11 @@ article:hover {
   font-weight: 500;
   margin-right: 0.3rem;
 }
+
+.wrapper .delete {
+  background-color: red;
+}
+
 .obj-img {
   width: 300px;
   height: 350px;
