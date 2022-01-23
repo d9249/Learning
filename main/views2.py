@@ -238,3 +238,9 @@ def createExcel(request,pk):
     wb = looks(wb,pk)
     wb.save("sample.xlsx")
     return redirect('/')
+
+
+def deleteCrackObj(request,pk):
+    obj = CrackObj.objects.get(pk=pk)
+    obj.delete()
+    return redirect('/crackDetail/'+str(obj.parent.id))
