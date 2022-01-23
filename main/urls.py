@@ -20,5 +20,7 @@ urlpatterns = [
     path('createExcel/<pk>',views2.createExcel,name="createExcel"),
     path('deleteCrackObj/<pk>',views2.deleteCrackObj, name="deleteCrackObj"),
     path('deleteCrack/<pk>',views2.deleteCrack, name="deleteCrack"),
+    path('updateCrack/<pk>',views2.updateCrack, name="updateCrack"),
+    path('handleUpdateCrack/<pk>',views2.handleUpdateCrack, name="handleUpdateCrack"),
 
 ]

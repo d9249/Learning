@@ -41,7 +41,8 @@
             <a href="{% url 'crackDetail' crack.id %}">detail...</a>
           </td>
           <td class="td">
-            수정 / <a href="{% url 'deleteCrack' crack.id %}">삭제</a>
+            <a href="{% url 'updateCrack' crack.id %}">수정</a> /
+            <a href="{% url 'deleteCrack' crack.id %}">삭제</a>
           </td>
         </tr>
         {% endfor %}

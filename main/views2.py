@@ -245,7 +245,27 @@ def deleteCrackObj(request,pk):
     obj.delete()
     return redirect('/crackDetail/'+str(obj.parent.id))
 
+def updateCrack(request, pk):
+    crack = Crack.objects.get(pk=pk)
+    print(crack)
+    return render(request, 'updateCrack.html', {'crack':crack} )
+
 def deleteCrack(request, pk):
-    obj = Crack.objects.get(pk=pk)
-    obj.delete()
-    return redirect('/categoryDetail/'+str(obj.category.id))
+    crack = Crack.objects.get(pk=pk)
+    crack.delete()
+    return redirect('/categoryDetail/'+str(crack.category.id))
+
+def handleUpdateCrack(request,pk):
+    crack = Crack.objects.get(pk=pk)
+    crack.floor = request.POST['floor']
+    crack.location = request.POST['location']
+    crack.absence = request.POST['absence']
+    crack.desc = request.POST['desc']
+    crack.place = request.POST['place']
+    crack.number = request.POST['number']
+    crack.progress = request.POST['progress']
+    crack.cause = request.POST['cause']
+    crack.note = request.POST['note']
+    crack.save()
+
+    return redirect('/categoryDetail/'+str(crack.category.id))
