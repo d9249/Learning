@@ -94,14 +94,26 @@ def facility(wb,pk):
 
 
 def looks(wb,pk):
+  unitCm = 10
+  unitInch = round((unitCm/2.54)*70)
+  
+  cell = 2
   sheet = wb.create_sheet("외관조사사진", 1)
   sheet = wb['외관조사사진']
   crack = Crack.objects.get(pk=pk)
   crackObjs = CrackObj.objects.filter(parent=crack)
   for crackObj in crackObjs:
-    image = Image(crackObj.image.url[1:])
-    flatImage = Image(crackObj.flatting_image.url[1:])
-    sheet.add_image(image,'B2')
-    sheet.add_image(flatImage, 'C2')
+    path = (crackObj.image.url[1:])
+    flatPath = (crackObj.flatting_image.url[1:])
+    image = openpyxl.drawing.image.Image(path)
+    flatImage = openpyxl.drawing.image.Image(flatPath)
+    image.width = unitInch
+    image.height = unitInch
+    flatImage.height = unitInch
+    flatImage.height = unitInch
+
+    sheet.add_image(image,'B' + str(cell))
+    sheet.add_image(flatImage, 'G'+ str(cell+1))
+    cell += 5
   sheet.sheet_view.view = "pageBreakPreview"
   return wb
