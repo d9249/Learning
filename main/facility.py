@@ -97,7 +97,8 @@ def facility(wb,pk):
 
 def looks(wb,pk):
   baseWidth = 210
-  cell = 2
+  imgCell = 2
+  infoCell = 9
   sheet = wb.create_sheet("외관조사사진", 1)
   sheet = wb['외관조사사진']
   category = Category.objects.get(pk=pk)
@@ -114,8 +115,8 @@ def looks(wb,pk):
       flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
       flatwPercent = baseWidth/float(img.size[0])
       flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
-      if flathSize > 165:
-        flathSize= 165
+      if flathSize > 160:
+        flathSize= 160
 
       image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
       flatImage = openpyxl.drawing.image.Image(flatPath)
@@ -126,8 +127,18 @@ def looks(wb,pk):
       flatImage.width = baseWidth
       flatImage.height = flathSize
  
-      sheet.add_image(image,'B' + str(cell))
-      sheet.add_image(flatImage, 'G'+ str(cell))
-      cell += 10
+      sheet.add_image(image,'B' + str(imgCell))
+      sheet.add_image(flatImage, 'C'+ str(imgCell))
+
+      sheet.column_dimensions["B"].width = 27
+      sheet.column_dimensions["C"].width = 27
+
+      sheet['B'+str(infoCell)] = '사진번호: ' + str(crackObj.id)
+      sheet['B'+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
+      sheet['B'+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
+      sheet['B'+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
+      sheet['B'+str(infoCell+4)] = '진행유무: ' + str(crack.progress)
+      imgCell += 11
+      infoCell += 11
       sheet.sheet_view.view = "pageBreakPreview"
   return wb
