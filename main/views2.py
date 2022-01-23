@@ -299,3 +299,8 @@ def deleteCategory(request,pk):
     category = Category.objects.get(pk=pk)
     category.delete()
     return redirect('category')
+
+def searchResult(request):
+    keyword = request.POST['keyword'];
+    results = Category.objects.filter(facilityName__icontains = keyword);
+    return render(request,'searchResult.html', {'results':results})

@@ -25,5 +25,6 @@ urlpatterns = [
     path('deleteCategory/<pk>',views2.deleteCategory, name="deleteCategory"),
     path('updateCategory/<pk>',views2.updateCategory, name="updateCategory"),
     path('handleUpdateCategory/<pk>',views2.handleUpdateCategory, name="handleUpdateCategory"),
+    path('searchResult/', views2.searchResult, name="searchResult")
 
 ]
