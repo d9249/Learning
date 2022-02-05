@@ -192,6 +192,10 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.submit button:disabled {
+  opacity: 0.5;
+}
+
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
 }

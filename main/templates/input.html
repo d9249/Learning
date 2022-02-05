@@ -4,7 +4,13 @@
 
 <button onclick="previous()" class="previous round">&#8249;</button>
 <button onclick="next()" class="next round">&#8250;</button>
-<form action="{% url 'input' %}" method="post" enctype="multipart/form-data">
+<form
+  action="{% url 'input' %}"
+  method="post"
+  enctype="multipart/form-data"
+  id="form"
+  onchange="onChange()"
+>
   {% csrf_token %} {{error}}
   <div class="slide">
     <ul>
@@ -12,81 +18,81 @@
         <h2>세부 정보를 입력해주세요</h2>
         <div class="detail">
           <label for="name">시설물명</label>
-          <input type="text" name="name" />
+          <input type="text" name="name" id="name" />
         </div>
         <div class="detail">
           <label for="number">시설물번호</label>
-          <input type="text" name="number" />
+          <input type="text" name="number" id="number" />
         </div>
 
         <div class="detail">
           <label for="location">시설물위치 (주소)</label>
-          <input type="text" name="location" />
+          <input type="text" name="location" id="location" />
         </div>
 
         <div class="detail">
           <label for="date">준공일지(연,월,일)</label>
-          <input type="date" name="date" />
+          <input type="date" name="date" id="date" />
         </div>
 
         <div class="detail">
           <label for="site-area">대지면적</label>
-          <input type="text" name="site-area" />
+          <input type="text" name="site-area" id="site-area" />
         </div>
 
         <div class="detail">
           <label for="building-area">건축면적</label>
-          <input type="text" name="building-area" />
+          <input type="text" name="building-area" id="building-area" />
         </div>
 
         <div class="detail">
           <label for="year-area">건축연면적</label>
-          <input type="text" name="year-area" />
+          <input type="text" name="year-area" id="year-area" />
         </div>
 
         <div class="detail">
           <label for="max-height">최고높이</label>
-          <input type="text" name="max-height" />
+          <input type="text" name="max-height" id="max-height" />
         </div>
 
         <div class="detail">
           <label for="use">용도</label>
-          <input type="text" name="use" />
+          <input type="text" name="use" id="use" />
         </div>
 
         <div class="detail">
           <label for="structure">시설물구조</label>
-          <input type="text" name="structure" />
+          <input type="text" name="structure" id="structure" />
         </div>
 
         <div class="detail">
           <label for="format">구조형식</label>
-          <input type="text" name="format" />
+          <input type="text" name="format" id="format" />
         </div>
 
         <div class="detail">
           <label for="facility">부대시설</label>
-          <input type="text" name="facility" />
+          <input type="text" name="facility" id="facility" />
         </div>
 
         <div class="detail">
           <label for="floor">층별</label>
-          <input type="text" name="floor" />
+          <input type="text" name="floor" id="floor" />
         </div>
 
         <div class="detail">
           <label for="grade">전차안전등급</label>
-          <input type="text" name="grade" />
+          <input type="text" name="grade" id="grade" />
         </div>
 
         <div class="detail">
           <label for="result">점검결과</label>
-          <input type="text" name="result" />
+          <input type="text" name="result" id="result" />
         </div>
 
         <div class="detail">
           <label for="plus">규모 및 제원 추가사항</label>
-          <input type="text" name="plus" />
+          <input type="text" name="plus" id="plus" />
         </div>
       </section>
 
@@ -100,6 +106,7 @@
             class="location-input"
             accept="image/*"
             name="locationMap"
+            id="locationMap"
           />
         </div>
 
@@ -112,10 +119,11 @@
             class="view-input"
             accept="image/*"
             name="frontView"
+            id="frontView"
           />
         </div>
         <div class="submit">
-          <button type="submit">저장하기</button>
+          <button type="submit" id="save" disabled>저장하기</button>
         </div>
       </section>
 
@@ -180,4 +188,5 @@
 {% endblock %} {% block script %}
 <script src="{% static 'js/slide.js' %}"></script>
 <script src="{% static 'js/validation.js' %}"></script>
+<script src="{% static 'js/valid.js' %}"></script>
 {% endblock %}
