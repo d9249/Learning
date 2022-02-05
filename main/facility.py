@@ -1,3 +1,4 @@
+from calendar import c
 from email.mime import base
 import openpyxl
 from openpyxl.drawing.image import Image
@@ -99,6 +100,8 @@ def looks(wb,pk):
   baseWidth = 210
   imgCell = 2
   infoCell = 10
+  cellB = chr(66)
+  cellC = chr(67)
   sheet = wb.create_sheet("외관조사사진", 1)
   sheet = wb['외관조사사진']
   category = Category.objects.get(pk=pk)
@@ -108,51 +111,62 @@ def looks(wb,pk):
   
   for crack in cracks:
     crackObj = CrackObj.objects.filter(parent=crack.id)
-    print(crackObj)
+   
     numbering = crackObj.count()
     if numbering < 3:
       numbering = 0
     else:
       numbering = numbering-2
     crackObj = crackObj[numbering:]
-    print(numbering)
-    print(crackObj)
-    
-    for crackObj in crackObj:
-      path = crackObj.image.url[1:]
-      img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-      wpercent = baseWidth/float(img.size[0])
-      hsize = int((float(img.size[1])* float(wpercent)))
+  
+    if crackObj.count() == 2:
+      for crackObj in crackObj:
+        path = crackObj.image.url[1:]
+        img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+        wpercent = baseWidth/float(img.size[0])
+        hsize = int((float(img.size[1])* float(wpercent)))
 
-      flatPath = crackObj.flatting_image.url[1:]
-      flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-      flatwPercent = baseWidth/float(img.size[0])
-      flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
-      if flathSize > 160:
-        flathSize= 160
+        flatPath = crackObj.flatting_image.url[1:]
+        flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+        flatwPercent = baseWidth/float(img.size[0])
+        flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
 
-      image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
-      flatImage = openpyxl.drawing.image.Image(flatPath)
-      
-      image.width = baseWidth
-      image.height = hsize
-      
-      flatImage.width = baseWidth
-      flatImage.height = flathSize
- 
-      sheet.add_image(image,'B' + str(imgCell))
-      sheet.add_image(flatImage, 'C'+ str(imgCell))
+        if hsize > 160:
+          hsize = 160
+          baseWidth = baseWidth * wpercent
+        if flathSize > 160:
+          flathSize = 160
 
-      sheet.column_dimensions["B"].width = 27
-      sheet.column_dimensions["C"].width = 27
+        image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
+        flatImage = openpyxl.drawing.image.Image(flatPath)
+        
+        image.width = baseWidth
+        image.height = hsize
+        
+        flatImage.width = baseWidth
+        flatImage.height = flathSize
+  
+        sheet.add_image(image,cellB + str(imgCell))
+        sheet.add_image(flatImage, cellC + str(imgCell))
 
-      sheet['B'+str(infoCell)] = '사진번호: ' + str(crackObj.id)
-      sheet['B'+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
-      sheet['B'+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
-      sheet['C'+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
-      sheet['B'+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
-      sheet['C'+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
-      imgCell += 11
-      infoCell += 11
-      sheet.sheet_view.view = "pageBreakPreview"
-  return wb
+
+
+        sheet.column_dimensions["B"].width = 27
+        sheet.column_dimensions["C"].width = 27
+        sheet.column_dimensions["E"].width = 27
+        sheet.column_dimensions["F"].width = 27
+
+        sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
+        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
+        sheet[cellB+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
+        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
+        sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
+        sheet[cellC+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
+
+        cellB = ord(cellB) + 3
+        cellB = chr(cellB)
+        
+        cellC = ord(cellC) + 3
+        cellC = chr(cellC)
+        sheet.sheet_view.view = "pageBreakPreview"
+    return wb
