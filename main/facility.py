@@ -118,7 +118,6 @@ def looks(wb,pk):
     else:
       numbering = numbering-2
     crackObj = crackObj[numbering:]
-  
     if crackObj.count() == 2:
       for crackObj in crackObj:
         path = crackObj.image.url[1:]
@@ -149,8 +148,6 @@ def looks(wb,pk):
         sheet.add_image(image,cellB + str(imgCell))
         sheet.add_image(flatImage, cellC + str(imgCell))
 
-
-
         sheet.column_dimensions["B"].width = 27
         sheet.column_dimensions["C"].width = 27
         sheet.column_dimensions["E"].width = 27
@@ -168,5 +165,50 @@ def looks(wb,pk):
         
         cellC = ord(cellC) + 3
         cellC = chr(cellC)
+
+        if ord(cellB) > 70:
+          cellB = chr(66)
+          infoCell += 13
+          imgCell +=13
+        if ord(cellC) > 70:
+          cellC = chr(67)
+          imgCell +=13
+          infoCell += 13
         sheet.sheet_view.view = "pageBreakPreview"
-    return wb
+    else:
+      for crackObj in crackObj:
+        path = crackObj.image.url[1:]
+        img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+        wpercent = baseWidth/float(img.size[0])
+        hsize = int((float(img.size[1])* float(wpercent)))
+
+        flatPath = crackObj.flatting_image.url[1:]
+        flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
+        flatwPercent = baseWidth/float(img.size[0])
+        flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
+
+        if hsize > 160:
+          hsize = 160
+          baseWidth = baseWidth * wpercent
+        if flathSize > 160:
+          flathSize = 160
+
+        image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
+        flatImage = openpyxl.drawing.image.Image(flatPath)
+          
+        image.width = baseWidth
+        image.height = hsize
+          
+        flatImage.width = baseWidth
+        flatImage.height = flathSize
+    
+        sheet.add_image(image,cellB + str(imgCell))
+        sheet.add_image(flatImage, cellC + str(imgCell))
+
+        sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
+        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
+        sheet[cellB+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
+        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
+        sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
+        sheet[cellC+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
+  return wb
