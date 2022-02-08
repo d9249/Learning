@@ -1,27 +1,17 @@
-{% extends 'base.html'%} 
-
-{% load static %} 
-
-{% block style %}
+{% extends 'base.html'%} {% load static %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-{% endblock %}
-
-{% block content %} 
+{% endblock %} {% block content %}
 <section class="section">
-    <article class="card-index">
-        <div class="index-div">
-            <div class="index-title">
-                <span>Crack</span>
-            </div>
-            <div class="index-detail">   
-                <h3>영상분석시스템</h3>
-                <h3>자동화의 시작, Crack</h3> 
-            </div>
-        </div>
-        <!-- <button type="button" class="button-54" onclick="location.href=''">
+  <article class="card-index">
+    <div class="index-div">
+      <div class="index-detail">
+        <h3>자동화의 시작, Crack</h3>
+      </div>
+    </div>
+    <!-- <button type="button" class="button-54" onclick="location.href=''">
             등록하기
         </button> -->
-        <a class="button-54" href="{%url 'input' %}">등록하기</a>
-    </article>
+    <a class="button-54" href="{%url 'input' %}">등록하기</a>
+  </article>
 </section>
 {% endblock %}

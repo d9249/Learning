@@ -108,10 +108,13 @@ def looks(wb,pk):
   cracks = Crack.objects.filter(category__facilityName__icontains=category.facilityName)
   sheet.column_dimensions["A"].width = 1
   sheet.column_dimensions["D"].width = 1
-  
+  sheet.column_dimensions["B"].width = 27
+  sheet.column_dimensions["C"].width = 27
+  sheet.column_dimensions["E"].width = 27
+  sheet.column_dimensions["F"].width = 27
+
   for crack in cracks:
     crackObj = CrackObj.objects.filter(parent=crack.id)
-   
     numbering = crackObj.count()
     if numbering < 3:
       numbering = 0
@@ -130,28 +133,17 @@ def looks(wb,pk):
         flatwPercent = baseWidth/float(img.size[0])
         flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
 
-        if hsize > 160:
-          hsize = 160
-          baseWidth = baseWidth * wpercent
-        if flathSize > 160:
-          flathSize = 160
-
         image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
         flatImage = openpyxl.drawing.image.Image(flatPath)
         
         image.width = baseWidth
-        image.height = hsize
+        image.height = 130
         
         flatImage.width = baseWidth
-        flatImage.height = flathSize
+        flatImage.height = 130
   
         sheet.add_image(image,cellB + str(imgCell))
         sheet.add_image(flatImage, cellC + str(imgCell))
-
-        sheet.column_dimensions["B"].width = 27
-        sheet.column_dimensions["C"].width = 27
-        sheet.column_dimensions["E"].width = 27
-        sheet.column_dimensions["F"].width = 27
 
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
@@ -168,12 +160,12 @@ def looks(wb,pk):
 
         if ord(cellB) > 70:
           cellB = chr(66)
-          infoCell += 13
-          imgCell +=13
+          infoCell += 7
+          imgCell +=7
         if ord(cellC) > 70:
           cellC = chr(67)
-          imgCell +=13
-          infoCell += 13
+          imgCell +=7
+          infoCell += 7
         sheet.sheet_view.view = "pageBreakPreview"
     else:
       for crackObj in crackObj:
@@ -211,4 +203,5 @@ def looks(wb,pk):
         sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
         sheet[cellC+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
+        sheet.sheet_view.view = "pageBreakPreview"
   return wb

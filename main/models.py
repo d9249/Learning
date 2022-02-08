@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import datetime
 # Create your models here.
 
 
@@ -26,6 +26,9 @@ class Category(models.Model):
     locationMap = models.ImageField(
         upload_to='images/locationMap/%Y/%m/%d/', null=True)
 
+    def date(self):
+         now = datetime.today().year - self.completionDate.year
+         return "(경과년수 : {}년)".format(now)
     def __str__(self):
         return str(self.facilityName)
 
