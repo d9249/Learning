@@ -17,78 +17,89 @@ def facility(wb,pk):
   sheet = wb['시설물 현황']
   sheet['B2'] = "□ 시설물 현황"
   sheet['B3'] = "가. 일반현황"
-  sheet['B12'] = "나. 전경사진"
-
-  file_path = category.frontView.url
-  path = file_path[1:]
-  img = Image(path)
-  sheet.add_image(img, "B13")
-
   sheet['B4'] = '시설물명'
   sheet['B5'] = '시설물위치'
   sheet['B6'] = '용도'
   sheet['B7'] = '구조형식'
-
-  sheet['B4'].fill = grayFill
-  sheet['B5'].fill = grayFill
-  sheet['B6'].fill = grayFill
-  sheet['B7'].fill = grayFill
-
-  
-  sheet.merge_cells('C4:D4')
-  sheet.merge_cells('C5:D5')
-  sheet.merge_cells('C6:D6')
-  sheet.merge_cells('C7:D7')
-  sheet['C4'] = category.facilityName
-  sheet['C5'] = category.facilityNo
-  sheet['C6'] = category.usage
-  sheet['C7'] = category.structuralForm
+  sheet['B8'] = '종별'
+  sheet['B9'] = '규모 및 제원 추가사항'
+  sheet['B12'] = "나. 전경사진"
 
   sheet['E4'] = "시설물번호"
   sheet['E5'] = "준공일자"
   sheet['E6'] = "시설물규모"
   sheet['E7'] = "부대시설"
 
+  sheet['D8'] = '전차안전등급'
+  sheet['F8'] = '점검결과안전등급'
+
+  sheet['B4'].fill = grayFill
+  sheet['B5'].fill = grayFill
+  sheet['B6'].fill = grayFill
+  sheet['B7'].fill = grayFill
+  sheet['B9'].fill = grayFill
+
   sheet['E4'].fill = grayFill
   sheet['E5'].fill = grayFill
   sheet['E6'].fill = grayFill
   sheet['E7'].fill = grayFill
+
+  sheet['B8'].fill = grayFill
+  sheet['D8'].fill = grayFill
+  sheet['F8'].fill = grayFill
+
+  sheet.merge_cells('C4:D4')
+  sheet.merge_cells('C5:D5')
+  sheet.merge_cells('C6:D6')
+  sheet.merge_cells('C7:D7')
 
   sheet.merge_cells('F4:G4')
   sheet.merge_cells('F5:G5')
   sheet.merge_cells('F6:G6')
   sheet.merge_cells('F7:G7')
 
+  
+  sheet.merge_cells('F4:G4')
+  sheet.merge_cells('F5:G5')
+  sheet.merge_cells('F6:G6')
+  sheet.merge_cells('F7:G7')
+
+  sheet.merge_cells('B9:G9')
+  sheet.merge_cells('B10:G10')
+
+  sheet['C4'] = category.facilityName
+  sheet['C5'] = category.facilityNo
+  sheet['C6'] = category.usage
+  sheet['C7'] = category.structuralForm
+
   sheet['F4'] = category.facilityNo
   sheet['F5'] = category.completionDate
   sheet['F6'] = category.facilityStructure
   sheet['F7'] = category.amenities
 
-  sheet['B8'] = '종별'
-  sheet['D8'] = '전차안전등급'
-  sheet['F8'] = '점검결과안전등급'
-
-  sheet['B8'].fill = grayFill
-  sheet['D8'].fill = grayFill
-  sheet['F8'].fill = grayFill
 
   sheet['C8'] = category.floors
   sheet['E8'] = category.grade
   sheet['G8'] = category.testResults
 
-  sheet.merge_cells('B9:G9')
-  sheet.merge_cells('B10:G10')
-
-  sheet['B9'] = '규모 및 제원 추가사항'
-  sheet['B9'].fill = grayFill
-
   sheet['B10'] = category.plus
 
   sheet['B12'] = '나. 전경사진'
-  path = category.frontView.url
-  path = path[1:]
-  img = Image(path)
-  sheet.add_image(img,"B13")
+  sheet['B30'] = '다. 위치도'
+
+  frontView = category.frontView.url
+  locationMap = category.locationMap.url
+
+  frontView = frontView[1:]
+  locationMap = locationMap[1:]
+
+  front = Image(frontView)
+  location = Image(locationMap)
+
+
+  sheet.add_image(front,"B13")
+  sheet.add_image(location,"B31")
+
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
       for cell in row:
