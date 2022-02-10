@@ -12,10 +12,18 @@
     font-size: 32px;
     line-height: 1.38;
   }
+  .card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
+  }
 }
 
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
+  .card-index > .nav-logo {
+    width: auto; 
+    height: auto;
+  }
   .card-index {
     padding-top: 72px;
   }

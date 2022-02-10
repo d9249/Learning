@@ -9,7 +9,7 @@
 .item-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   padding: 2rem 0;
   max-width: 768px;
   margin-left: auto;
@@ -36,11 +36,19 @@
 .menu-list li a:hover {
   color: #4472c4;
 }
+
+.item-wrap > a {
+    margin-bottom: 10px;
+  }
+
 @media screen and (max-width: 768px) {
   .item-wrap {
     margin: 0;
     max-width: none;
     padding: 1rem 10vw;
+  }
+  .item-wrap > a {
+
   }
   .menu-list {
     gap: 1rem;
