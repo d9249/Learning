@@ -57,6 +57,7 @@ class CrackObj(models.Model):
     originWidth = models.FloatField(null=True)
     originHeight = models.FloatField(null=True)
     crackLength = models.FloatField(null=True)
+    crackArea = models.FloatField(null=True)
     date = models.DateField(null=True)
     parent = models.ForeignKey('Crack', on_delete=models.CASCADE)
 
