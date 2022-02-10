@@ -144,13 +144,20 @@ def flattingResult(request):
         cv2.imwrite(crack.flatting_image.url[1:], dst)
         crack.isFlattened = True
         crack.save()
-
-        return render(request, 'flattingResult.html', {
-            'crack': crack,
-            'height': height,
-            'imgWidth': int(width_ratio*pixelHeight),
-            'imgHeight': int(height_ratio*pixelHeight),
-        })
+        if (request.POST['result'] == 'length'):
+            return render(request, 'flattingResult.html', {
+                'crack': crack,
+                'height': height,
+                'imgWidth': int(width_ratio*pixelHeight),
+                'imgHeight': int(height_ratio*pixelHeight),
+            })
+        else :
+            return render(request, 'areaResult.html',{
+                'crack': crack,
+                'height': height,
+                'flattingArea' : width*height,
+                'pixelArea': int(width_ratio*pixelHeight)*int(height_ratio*pixelHeight),
+            })
 
 
 def area(request):
