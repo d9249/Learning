@@ -1,3 +1,5 @@
+from calendar import c
+from email.mime import base
 import openpyxl
 from openpyxl.drawing.image import Image
 from openpyxl.styles import Alignment, PatternFill
@@ -5,8 +7,6 @@ from PIL import Image as IMG
 from .models import Category,Crack,CrackObj
 
 def facility(wb,pk):
-  baseWidth = 500
-  baseHeight = 400
   category = Category.objects.get(pk=pk)
   
   grayFill = PatternFill(start_color='CCCCCC',
@@ -17,112 +17,78 @@ def facility(wb,pk):
   sheet = wb['시설물 현황']
   sheet['B2'] = "□ 시설물 현황"
   sheet['B3'] = "가. 일반현황"
+  sheet['B12'] = "나. 전경사진"
+
+  file_path = category.frontView.url
+  path = file_path[1:]
+  img = Image(path)
+  sheet.add_image(img, "B13")
+
   sheet['B4'] = '시설물명'
   sheet['B5'] = '시설물위치'
   sheet['B6'] = '용도'
   sheet['B7'] = '구조형식'
-  sheet['B8'] = '종별'
-  sheet['B9'] = '규모 및 제원 추가사항'
-  sheet['B12'] = "나. 전경사진"
+
+  sheet['B4'].fill = grayFill
+  sheet['B5'].fill = grayFill
+  sheet['B6'].fill = grayFill
+  sheet['B7'].fill = grayFill
+
+  
+  sheet.merge_cells('C4:D4')
+  sheet.merge_cells('C5:D5')
+  sheet.merge_cells('C6:D6')
+  sheet.merge_cells('C7:D7')
+  sheet['C4'] = category.facilityName
+  sheet['C5'] = category.facilityNo
+  sheet['C6'] = category.usage
+  sheet['C7'] = category.structuralForm
 
   sheet['E4'] = "시설물번호"
   sheet['E5'] = "준공일자"
   sheet['E6'] = "시설물규모"
   sheet['E7'] = "부대시설"
 
-  sheet['D8'] = '전차안전등급'
-  sheet['F8'] = '점검결과안전등급'
-
-  sheet['B4'].fill = grayFill
-  sheet['B5'].fill = grayFill
-  sheet['B6'].fill = grayFill
-  sheet['B7'].fill = grayFill
-  sheet['B9'].fill = grayFill
-
   sheet['E4'].fill = grayFill
   sheet['E5'].fill = grayFill
   sheet['E6'].fill = grayFill
   sheet['E7'].fill = grayFill
 
-  sheet['B8'].fill = grayFill
-  sheet['D8'].fill = grayFill
-  sheet['F8'].fill = grayFill
-
-  sheet.merge_cells('C4:D4')
-  sheet.merge_cells('C5:D5')
-  sheet.merge_cells('C6:D6')
-  sheet.merge_cells('C7:D7')
-
   sheet.merge_cells('F4:G4')
   sheet.merge_cells('F5:G5')
   sheet.merge_cells('F6:G6')
   sheet.merge_cells('F7:G7')
-
-  
-  sheet.merge_cells('F4:G4')
-  sheet.merge_cells('F5:G5')
-  sheet.merge_cells('F6:G6')
-  sheet.merge_cells('F7:G7')
-
-  sheet.merge_cells('B9:G9')
-  sheet.merge_cells('B10:G10')
-
-  sheet['C4'] = category.facilityName
-  sheet['C5'] = category.facilityNo
-  sheet['C6'] = category.usage
-  sheet['C7'] = category.structuralForm
 
   sheet['F4'] = category.facilityNo
   sheet['F5'] = category.completionDate
   sheet['F6'] = category.facilityStructure
   sheet['F7'] = category.amenities
 
+  sheet['B8'] = '종별'
+  sheet['D8'] = '전차안전등급'
+  sheet['F8'] = '점검결과안전등급'
+
+  sheet['B8'].fill = grayFill
+  sheet['D8'].fill = grayFill
+  sheet['F8'].fill = grayFill
 
   sheet['C8'] = category.floors
   sheet['E8'] = category.grade
   sheet['G8'] = category.testResults
 
+  sheet.merge_cells('B9:G9')
+  sheet.merge_cells('B10:G10')
+
+  sheet['B9'] = '규모 및 제원 추가사항'
+  sheet['B9'].fill = grayFill
+
   sheet['B10'] = category.plus
 
   sheet['B12'] = '나. 전경사진'
-  sheet['B32'] = '다. 위치도'
-
-  frontViewPath = category.frontView.url[1:]
-  locationMapPath = category.locationMap.url[1:]
-
-  frontView = IMG.open(frontViewPath)
-  frontWidth,frontHeight = frontView.size
-
-  if (frontWidth < frontHeight):
-    frontNewWidth = int((frontWidth/frontHeight) * baseHeight)
-    frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
-    frontViewImage.width = frontNewWidth
-    frontViewImage.height = baseHeight
-    sheet.add_image(frontViewImage,"B13")
-  else:
-    frontNewHeight = int((frontHeight/frontWidth) * baseWidth)
-    frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
-    frontViewImage.width = baseWidth
-    frontViewImage.height = frontNewHeight
-    sheet.add_image(frontViewImage,"B13")
-
-  
-  locationMap = IMG.open(locationMapPath)
-  locationWidth,locationHeight = locationMap.size
-
-  if (locationWidth < locationHeight):
-    locationNewWidth = int((frontWidth/frontHeight) * baseHeight)
-    locationMapImage = openpyxl.drawing.image.Image(frontViewPath)
-    locationMapImage.width = locationNewWidth
-    locationMapImage.height = baseHeight
-    sheet.add_image(locationMapImage,"B33")
-  else:
-    locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
-    locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
-    locationMapImage.width = baseWidth
-    locationMapImage.height = locationNewHeight
-    sheet.add_image(locationMapImage,"B33")
-
+  path = category.frontView.url
+  path = path[1:]
+  img = Image(path)
+  sheet.add_image(img,"B13")
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
       for cell in row:
