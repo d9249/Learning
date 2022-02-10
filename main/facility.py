@@ -6,6 +6,7 @@ from .models import Category,Crack,CrackObj
 
 def facility(wb,pk):
   baseWidth = 500
+  baseHeight = 400
   category = Category.objects.get(pk=pk)
   
   grayFill = PatternFill(start_color='CCCCCC',
@@ -84,27 +85,43 @@ def facility(wb,pk):
   sheet['B10'] = category.plus
 
   sheet['B12'] = '나. 전경사진'
-  sheet['B30'] = '다. 위치도'
+  sheet['B32'] = '다. 위치도'
 
   frontViewPath = category.frontView.url[1:]
   locationMapPath = category.locationMap.url[1:]
 
   frontView = IMG.open(frontViewPath)
   frontWidth,frontHeight = frontView.size
-  frointNewHeight = int((frontHeight/frontWidth) * baseWidth)
-  frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
-  frontViewImage.width = baseWidth
-  frontViewImage.height = frointNewHeight
 
+  if (frontWidth < frontHeight):
+    frontNewWidth = int((frontWidth/frontHeight) * baseHeight)
+    frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
+    frontViewImage.width = frontNewWidth
+    frontViewImage.height = baseHeight
+    sheet.add_image(frontViewImage,"B13")
+  else:
+    frontNewHeight = int((frontHeight/frontWidth) * baseWidth)
+    frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
+    frontViewImage.width = baseWidth
+    frontViewImage.height = frontNewHeight
+    sheet.add_image(frontViewImage,"B13")
+
+  
   locationMap = IMG.open(locationMapPath)
   locationWidth,locationHeight = locationMap.size
-  locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
-  locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
-  locationMapImage.width = baseWidth
-  locationMapImage.height = locationNewHeight
 
-  sheet.add_image(frontViewImage,"B13")
-  sheet.add_image(locationMapImage,"B31")
+  if (locationWidth < locationHeight):
+    locationNewWidth = int((frontWidth/frontHeight) * baseHeight)
+    locationMapImage = openpyxl.drawing.image.Image(frontViewPath)
+    locationMapImage.width = locationNewWidth
+    locationMapImage.height = baseHeight
+    sheet.add_image(locationMapImage,"B33")
+  else:
+    locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
+    locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
+    locationMapImage.width = baseWidth
+    locationMapImage.height = locationNewHeight
+    sheet.add_image(locationMapImage,"B33")
 
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
