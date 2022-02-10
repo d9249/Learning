@@ -1,5 +1,3 @@
-from calendar import c
-from email.mime import base
 import openpyxl
 from openpyxl.drawing.image import Image
 from openpyxl.styles import Alignment, PatternFill
@@ -7,6 +5,7 @@ from PIL import Image as IMG
 from .models import Category,Crack,CrackObj
 
 def facility(wb,pk):
+  baseWidth = 500
   category = Category.objects.get(pk=pk)
   
   grayFill = PatternFill(start_color='CCCCCC',
@@ -87,18 +86,25 @@ def facility(wb,pk):
   sheet['B12'] = '나. 전경사진'
   sheet['B30'] = '다. 위치도'
 
-  frontView = category.frontView.url
-  locationMap = category.locationMap.url
+  frontViewPath = category.frontView.url[1:]
+  locationMapPath = category.locationMap.url[1:]
 
-  frontView = frontView[1:]
-  locationMap = locationMap[1:]
+  frontView = IMG.open(frontViewPath)
+  frontWidth,frontHeight = frontView.size
+  frointNewHeight = int((frontHeight/frontWidth) * baseWidth)
+  frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
+  frontViewImage.width = baseWidth
+  frontViewImage.height = frointNewHeight
 
-  front = Image(frontView)
-  location = Image(locationMap)
+  locationMap = IMG.open(locationMapPath)
+  locationWidth,locationHeight = locationMap.size
+  locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
+  locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
+  locationMapImage.width = baseWidth
+  locationMapImage.height = locationNewHeight
 
-
-  sheet.add_image(front,"B13")
-  sheet.add_image(location,"B31")
+  sheet.add_image(frontViewImage,"B13")
+  sheet.add_image(locationMapImage,"B31")
 
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
