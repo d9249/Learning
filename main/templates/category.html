@@ -16,11 +16,8 @@
       <div class="container">
         <h4 class="title"><strong>{{category.facilityName}}</strong></h4>
         <div class="button">
-          <a href="{% url 'buildingDetail' category.id %}">
-            <button type="button" class="btn-detail">건물 정보</button>
-          </a>
           <a href="{% url 'categoryDetail' category.id %}">
-            <button type="button" class="btn-detail">층별 정보</button>
+            <button type="button" class="btn-detail">세부정보</button>
           </a>
           <a href="{% url 'updateCategory' category.id %}">
             <button type="button" class="btn-detail">수정</button>

@@ -8,7 +8,6 @@ urlpatterns = [
     path('category', views.category, name="category"),
     path('input-data', views.input, name="input"),
     path('categoryDetail/<pk>', views.categoryDetail, name="categoryDetail"),
-    path('buildingDetail/<pk>', views.buildingDetail, name="buildingDetail"),
     path('categoryList/<pk>', views.categoryList, name="categoryList"),
     path('flatting/<pk>', views.flatting, name="flatting"),
     path('flattingResult', views.flattingResult, name="flattingResult"),
