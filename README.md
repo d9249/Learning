@@ -60,7 +60,7 @@
 ### 🗃 Project
 
 | Production period       | Contents                                                     | Link | technique |
-| ---------- | ------------------------------------------------------------ | ------------ |  |
+| ---------- | ------------------------------------------------------------ | ------------ | ------------ |
 | 2021.12.28 ~ 2021.04.16 | Smart I.o.T Labratory Homepage | [Link](https://netlab.kyonggi.ac.kr/)    | Vue, JS, Node.js, HTML, CSS |
 | 2021.06.29 ~ 2021.07.10 | Image_crop | [Repo Link](https://github.com/d9249/Image_Crop)       | Python |
 | 2021.10.01 ~ 2022.02.28 | Auto Crack | [Repo Link](https://github.com/HHFEHH/crack-automation)    | Django, opencv, Python, JS, HTML, CSS |
