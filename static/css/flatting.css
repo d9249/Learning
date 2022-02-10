@@ -18,7 +18,7 @@
   margin-top: 1.5rem;
 }
 
-.submit button {
+.submit .area {
   width: 25%;
   background-color: #0d6efd;
   color: #ffffff;
@@ -32,8 +32,26 @@
   cursor: pointer;
 }
 
-.submit button:hover {
-  background-color: #025ce2;
+.submit .length {
+  width: 25%;
+  background: linear-gradient(
+    rgba(27, 188, 194, 1) 0%,
+    rgba(24, 163, 168, 1) 100%
+  );
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: 0.5s;
+  padding: 0.5rem 1rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+.submit .area:hover,
+.submit .length:hover {
+  opacity: 0.9;
 }
 
 /* 모바일에 사용될 스타일 */
