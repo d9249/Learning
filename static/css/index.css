@@ -1,13 +1,10 @@
-.card-index > .nav-logo {
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .card-index > .nav-logo {
     width: auto; 
     height: 300px;
   }
 
-/* 모바일에 사용될 스타일 */
-@media screen and (max-width: 768px) {
-  .card-index {
-    padding-top: 48px;
-  }
   .index-title {
     font-size: 18px;
   }
@@ -17,10 +14,6 @@
     font-size: 32px;
     line-height: 1.38;
   }
-  .card-index > .nav-logo {
-    width: auto; 
-    height: 300px;
-  }
 }
 
 /* 데스크탑 / 패드에 적용될 스타일*/
@@ -28,11 +21,6 @@
   .card-index > .nav-logo {
     width: auto; 
     height: 300px;
-  }
-  .card-index {
-    padding-top: 50px;
-  }
-  .index-title {
   }
 
   .index-detail {
@@ -43,6 +31,14 @@
     padding: 0.25em 0.75em;
   }
 }
+
+/* 데스크탑에 적용될 스타일 */
+
+.card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
+  }
+
 
 .card-index {
   margin: 0 auto;
