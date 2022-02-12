@@ -1,3 +1,8 @@
+.card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
+  }
+
 /* 모바일에 사용될 스타일 */
 @media screen and (max-width: 768px) {
   .card-index {
@@ -22,10 +27,10 @@
 @media screen and (min-width: 769px) {
   .card-index > .nav-logo {
     width: auto; 
-    height: auto;
+    height: 300px;
   }
   .card-index {
-    padding-top: 72px;
+    padding-top: 50px;
   }
   .index-title {
   }
