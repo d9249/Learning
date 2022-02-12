@@ -14,26 +14,8 @@
     <table class="table">
       <tbody>
         <tr class="tr">
-          <th class="td" colspan="6">전경도</th>
+          <th class="td" colspan="6">세부정보</th>
         </tr>
-        <tr class="tr">
-          <td class="td" colspan="6">
-            <img class="img" src="{{obj.frontView.url}}" alt="image" />
-          </td>
-        </tr>
-        <tr class="tr">
-          <th class="td" colspan="3">위치도</th>
-        </tr>
-        <tr class="tr">
-          <td class="td" colspan="3">
-            <img class="img" src="{{obj.locationMap.url}}" alt="image" />
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br />
-    <table class="table">
-      <tbody>
         <tr class="tr">
           <th class="td" colspan="3">시설물명 (FMS 등록기준)</th>
           <td class="td" colspan="3">{{obj.facilityName}}</td>
@@ -101,6 +83,27 @@
           <td class="td"><p class="overflow">{{obj.grade}}</p></td>
           <th class="td"><p class="overflow">점검결과 안전등급</p></th>
           <td class="td"><p class="overflow">{{obj.testResults}}</p></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table class="table">
+      <tbody>
+        <tr class="tr">
+          <th class="td" colspan="6">전경도</th>
+        </tr>
+        <tr class="tr">
+          <td class="td" colspan="6">
+            <img class="img" src="{{obj.frontView.url}}" alt="image" />
+          </td>
+        </tr>
+        <tr class="tr">
+          <th class="td" colspan="3">위치도</th>
+        </tr>
+        <tr class="tr">
+          <td class="td" colspan="3">
+            <img class="img" src="{{obj.locationMap.url}}" alt="image" />
+          </td>
         </tr>
       </tbody>
     </table>
