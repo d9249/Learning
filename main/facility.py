@@ -85,7 +85,7 @@ def facility(wb,pk):
   sheet['B10'] = category.plus
 
   sheet['B12'] = '나. 전경사진'
-  sheet['B32'] = '다. 위치도'
+  sheet['B42'] = '다. 위치도'
 
   frontViewPath = category.frontView.url[1:]
   locationMapPath = category.locationMap.url[1:]
@@ -115,13 +115,13 @@ def facility(wb,pk):
     locationMapImage = openpyxl.drawing.image.Image(frontViewPath)
     locationMapImage.width = locationNewWidth
     locationMapImage.height = baseHeight
-    sheet.add_image(locationMapImage,"B33")
+    sheet.add_image(locationMapImage,"B43")
   else:
     locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
     locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
     locationMapImage.width = baseWidth
     locationMapImage.height = locationNewHeight
-    sheet.add_image(locationMapImage,"B33")
+    sheet.add_image(locationMapImage,"B43")
 
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
@@ -131,7 +131,8 @@ def facility(wb,pk):
 
 
 def looks(wb,pk):
-  baseWidth = 210
+  baseWidth = 215
+  baseHeight = 162
   imgCell = 2
   infoCell = 10
   cellB = chr(66)
@@ -158,26 +159,39 @@ def looks(wb,pk):
     if crackObj.count() == 2:
       for crackObj in crackObj:
         path = crackObj.image.url[1:]
-        img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-        wpercent = baseWidth/float(img.size[0])
-        hsize = int((float(img.size[1])* float(wpercent)))
-
         flatPath = crackObj.flatting_image.url[1:]
+        originImg = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
         flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-        flatwPercent = baseWidth/float(img.size[0])
-        flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
+        
+        imgWidth, imgHeight = originImg.size
+        flatImgWidth, flatImgHeight = flatImg.size
 
-        image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
-        flatImage = openpyxl.drawing.image.Image(flatPath)
-        
-        image.width = baseWidth
-        image.height = 130
-        
-        flatImage.width = baseWidth
-        flatImage.height = 130
-  
-        sheet.add_image(image,cellB + str(imgCell))
-        sheet.add_image(flatImage, cellC + str(imgCell))
+        if (imgWidth < imgHeight):
+          imgNewWidth = int((imgWidth/imgHeight) * baseHeight)
+          img = openpyxl.drawing.image.Image(path)
+          img.width = imgNewWidth
+          img.height = baseHeight
+        else:
+          imgNewHeight = int((imgHeight/imgWidth) * baseWidth)
+          img = openpyxl.drawing.image.Image(path)
+          img.width = baseWidth
+          img.height = imgNewHeight
+
+        if (flatImgWidth < flatImgHeight):
+          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * baseHeight)
+          flatImg = openpyxl.drawing.image.Image(flatPath)
+          flatImg.width = flatImgNewWidth
+          flatImg.height = baseHeight
+        else:
+          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * baseWidth)
+          flatImg = openpyxl.drawing.image.Image(flatPath)
+          flatImg.width = baseWidth
+          flatImg.height = flatImgNewHeight
+
+        print(img)
+        print(flatImg)
+        sheet.add_image(img,cellB + str(imgCell))
+        sheet.add_image(flatImg, cellC + str(imgCell))
 
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
@@ -204,32 +218,39 @@ def looks(wb,pk):
     else:
       for crackObj in crackObj:
         path = crackObj.image.url[1:]
-        img = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-        wpercent = baseWidth/float(img.size[0])
-        hsize = int((float(img.size[1])* float(wpercent)))
-
         flatPath = crackObj.flatting_image.url[1:]
+        originImg = IMG.open(path) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
         flatImg = IMG.open(flatPath) # 사진의 비율을 알기 위한 변수 PIL 라이브러리
-        flatwPercent = baseWidth/float(img.size[0])
-        flathSize = int((float(flatImg.size[1])* float(flatwPercent)))
+        
+        imgWidth, imgHeight = originImg.size
+        flatImgWidth, flatImgHeight = flatImg.size
 
-        if hsize > 160:
-          hsize = 160
-          baseWidth = baseWidth * wpercent
-        if flathSize > 160:
-          flathSize = 160
+        if (imgWidth < imgHeight):
+          imgNewWidth = int((imgWidth/imgHeight) * baseHeight)
+          img = openpyxl.drawing.image.Image(path)
+          img.width = imgNewWidth
+          img.height = baseHeight
+        
+        else:
+          imgNewHeight = int((imgHeight/imgWidth) * baseWidth)
+          img = openpyxl.drawing.image.Image(path)
+          img.width = baseWidth
+          img.height = imgNewHeight
+          
 
-        image = openpyxl.drawing.image.Image(path) # 엑셀에 이미지 삽입을 위한 변수 openpyxl 라이브러리
-        flatImage = openpyxl.drawing.image.Image(flatPath)
-          
-        image.width = baseWidth
-        image.height = hsize
-          
-        flatImage.width = baseWidth
-        flatImage.height = flathSize
-    
-        sheet.add_image(image,cellB + str(imgCell))
-        sheet.add_image(flatImage, cellC + str(imgCell))
+        if (flatImgWidth < flatImgHeight):
+          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * baseHeight)
+          flatImg = openpyxl.drawing.image.Image(flatPath)
+          flatImg.width = flatImgNewWidth
+          flatImg.height = baseHeight
+        else:
+          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * baseWidth)
+          flatImg = openpyxl.drawing.image.Image(flatPath)
+          flatImg.width = baseWidth
+          flatImg.height = flatImgNewHeight
+
+        sheet.add_image(img,cellB + str(imgCell))
+        sheet.add_image(flatImg, cellC + str(imgCell))
 
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
