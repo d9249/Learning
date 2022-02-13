@@ -229,7 +229,7 @@ def save(request, pk):
 def createExcel(request,pk):
     category = Category.objects.get(pk=pk)
     crack = Crack.objects.filter(category=category)
-    lists = [['구분','층수','위치','부재','점검내용','개소','현황번호','진행유무','발생원인','비고']]
+    lists = [['구분','위치1','위치2','결함종류','결함규모','폭','개소','발생원인','비고']]
     div = 1
     for obj in crack:
         list=[div,obj.floor, obj.location, obj.absence,obj.desc,obj.place,obj.number,obj.progress,obj.cause,obj.note]

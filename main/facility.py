@@ -13,6 +13,8 @@ def facility(wb,pk):
                         end_color='CCCCCC', fill_type='solid')
   sheet = wb.worksheets[0]
   sheet.title = '시설물 현황'
+  sheet.column_dimensions["A"].width = 1
+  sheet.column_dimensions['F'].width = 16.33
 
   sheet = wb['시설물 현황']
   sheet['B2'] = "□ 시설물 현황"
@@ -127,6 +129,8 @@ def facility(wb,pk):
   for row in sheet.rows:
       for cell in row:
           cell.alignment = Alignment(horizontal="center", vertical="center")
+  for column in range(66,72):
+    sheet.column_dimensions[chr(column)].bestFit = True
   return wb
 
 
@@ -188,8 +192,6 @@ def looks(wb,pk):
           flatImg.width = baseWidth
           flatImg.height = flatImgNewHeight
 
-        print(img)
-        print(flatImg)
         sheet.add_image(img,cellB + str(imgCell))
         sheet.add_image(flatImg, cellC + str(imgCell))
 
