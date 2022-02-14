@@ -97,6 +97,11 @@ def categoryDetail(request, pk):
     crack = Crack.objects.filter(category=category)
     return render(request, 'categoryDetail.html',{'obj':category,'crack':crack})
 
+def buildingDetail(request, pk):
+    category = Category.objects.get(pk=pk)
+    crack = Crack.objects.filter(category=category)
+    return render(request, 'buildingDetail.html',{'obj':category,'crack':crack})   
+
 
 def flatting(request, pk):
     crack = CrackObj.objects.get(pk=pk)
@@ -154,9 +159,9 @@ def flattingResult(request):
         else :
             return render(request, 'areaResult.html',{
                 'crack': crack,
+                'width' : width,
                 'height': height,
-                'flattingArea' : width*height,
-                'pixelArea': int(width_ratio*pixelHeight)*int(height_ratio*pixelHeight),
+                
             })
 
 

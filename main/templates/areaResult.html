@@ -4,8 +4,9 @@
 <section class="section">
   <canvas id="canvas" onclick="clickEvent(event)"></canvas>
   <div class="length">
-    <p id="crack-length"></p>
-  <button id="button" class="submit" type="submit" onclick="save()">
+    <p id="crack-area"></p>
+    <br/>
+  <button id="button" class="submit" type="submit" onclick="save()" disabled>
     저장하기
   </button>
 </section>
@@ -17,6 +18,7 @@
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
   const button = document.getElementById("button");
+  const areaText = document.querySelector('#crack-area')
   const image = new Image();
   image.src = "{{crack.flatting_image.url}}";
 
@@ -37,9 +39,9 @@
   }
 
   const getArea = (p) => {
-    const first = (p[3][0]*p[2][1])+(p[2][0]*p[1][1])+(p[1][0]*p[0][1]) + (p[0][0]*p[3][1])
-    const last = (p[3][1]*p[2][0]) + (p[2][1]*p[1][0]) + (p[1][1]*p[0][0]) + (p[0][1]*p[3][0])
-    return Math.abs((first-last)/2)
+    const first = (p[3][0]*p[2][1]*(-1))+(p[2][0]*p[1][1]*(-1))+(p[1][0]*p[0][1]*(-1)) + (p[0][0]*p[3][1]*(-1))
+    const last = (p[3][1]*p[2][0]*(-1)) + (p[2][1]*p[1][0]*(-1)) + (p[1][1]*p[0][0]*(-1)) + (p[0][1]*p[3][0]*(-1))
+    return (first-last)/2
   }
 
   function clickEvent(event) {
@@ -62,32 +64,18 @@
         ctx.moveTo(points[points.length -1][0], points[points.length -1][1]);
         ctx.lineTo(points[0][0], points[0][1]);
         ctx.stroke();
-        const realArea = ("{{flattingArea}}"*1)*getArea(points)/("{{pixelArea}}"*1)
-        console.log(realArea)
+        const allRealArea = '{{width}}'* 0.001 * '{{height}}' * 0.001 // m 로 변환한 전체 넓이
+        const localPixelArea = getArea(points)
+        const pixelAllArea = image.width * image.height
+        const realLocalArea = localPixelArea * allRealArea / pixelAllArea
+        areaText.innerText = realLocalArea.toFixed(3) + ' ㎡'
+
+        }
+
+
       }
-
       ctx.closePath();
-    } 
-    // ctx.strokeStyle = "black";
-    // ctx.lineWidth = 3;
-
-    // ctx.beginPath();
-    // ctx.arc(event.offsetX, event.offsetY, 1, 0, Math.PI * 2);
-    // ctx.stroke();
-    // let x = [event.offsetX, event.offsetY];
-    // points.push(x);
-
-    // if (points.length >= 2) {
-    //   let x = points[points.length - 1];
-    //   let y = points[points.length - 2];
-    //   let subLength = ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5;
-    //   let realLength = parseFloat(("{{height}}" * subLength) / "{{imgHeight}}");
-
-    //   length.push(realLength);
-    //   let sum = Math.round(length.reduce((a, n) => a + n, 0) * 100) / 100;
-    //   change(sum);
-
-    // }
+    
   }
 
   function save() {
