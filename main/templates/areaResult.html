@@ -6,7 +6,7 @@
   <div class="length">
     <p id="crack-area"></p>
     <br/>
-  <button id="button" class="submit" type="submit" onclick="save()" disabled>
+  <button id="button" class="disabled" type="submit" onclick="save()" disabled>
     저장하기
   </button>
 </section>
@@ -64,12 +64,13 @@
         ctx.moveTo(points[points.length -1][0], points[points.length -1][1]);
         ctx.lineTo(points[0][0], points[0][1]);
         ctx.stroke();
-        const allRealArea = '{{width}}'* 0.001 * '{{height}}' * 0.001 // m 로 변환한 전체 넓이
-        const localPixelArea = getArea(points)
-        const pixelAllArea = image.width * image.height
-        const realLocalArea = localPixelArea * allRealArea / pixelAllArea
-        areaText.innerText = realLocalArea.toFixed(3) + ' ㎡'
-
+        const allRealArea = '{{width}}'* 0.001 * '{{height}}' * 0.001 ;// m 로 변환한 전체 넓이
+        const localPixelArea = getArea(points);
+        const pixelAllArea = image.width * image.height;
+        const realLocalArea = localPixelArea * allRealArea / pixelAllArea;
+        areaText.innerText = realLocalArea.toFixed(3) + ' ㎡';
+        button.disabled = false;
+        button.className = 'submit'
         }
 
 
