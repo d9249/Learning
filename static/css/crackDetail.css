@@ -23,17 +23,18 @@
 }
 
 section {
-  width: 80%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   padding: 1em;
   gap: 1rem;
-  justify-content: center;
+  align-items: center;
 }
 
 article {
   display: flex;
+  width: 80%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;

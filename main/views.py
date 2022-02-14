@@ -174,11 +174,8 @@ def createCrack(request, pk):
         crack = Crack()
         crack.floor = request.POST['floor']
         crack.location = request.POST['location']
-        crack.absence = request.POST['absence']
-        crack.desc = request.POST['desc']
+        crack.crackType = request.POST['crackType']
         crack.place = request.POST['place']
-        crack.number = request.POST['number']
-        crack.progress = request.POST['progress']
         crack.cause = request.POST['cause']
         crack.note = request.POST['note']
         crack.category = Category.objects.get(pk=pk)
@@ -203,6 +200,9 @@ def createCrackObj(request,pk):
         crackObj.originHeight = request.POST['height']
         crackObj.parent = crack
         crackObj.save()
+        print(crack)
+        crack.date = request.POST['date']
+        crack.save()
         return redirect('/crackDetail/'+str(pk))
 
     return render(request,'createCrackObj.html',{'crackData':{'pk':pk}})
@@ -221,6 +221,9 @@ def save(request, pk):
         temp = np.array(temp)
         crack.crackLength = crackLength
         crack.save()
+        parent = crack.parent
+        parent.crackSize = 'L='+crackLength+'mm'
+        parent.save()
         cv2.imwrite(crack.flatting_image.url[1:], temp)
         return redirect('category')
     else:
@@ -238,6 +241,9 @@ def saveArea(request,pk):
         temp = np.array(temp)
         crack.crackArea = crackArea
         crack.save()
+        parent = crack.parent
+        parent.crackSize = 'A='+crackArea+'㎡'
+        parent.save()
         cv2.imwrite(crack.flatting_image.url[1:], temp)
         return redirect('/crackDetail/'+ str(crack.parent.id))
     else:
@@ -291,11 +297,8 @@ def handleUpdateCrack(request,pk):
     crack = Crack.objects.get(pk=pk)
     crack.floor = request.POST['floor']
     crack.location = request.POST['location']
-    crack.absence = request.POST['absence']
-    crack.desc = request.POST['desc']
+    crack.crackType = request.POST['crackType']
     crack.place = request.POST['place']
-    crack.number = request.POST['number']
-    crack.progress = request.POST['progress']
     crack.cause = request.POST['cause']
     crack.note = request.POST['note']
     crack.save()

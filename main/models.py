@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+
 # Create your models here.
 
 
@@ -33,15 +34,15 @@ class Category(models.Model):
         return str(self.facilityName)
 
 
-class Crack(models.Model):
-    floor = models.CharField(null=True, max_length=255)  # 층수
+class Crack(models.Model): # 결함종류 결함규모 폭 적출년도
+    floor = models.CharField(null=True, max_length=255)  # 층수 
     location = models.CharField(null=True, max_length=255)  # 위치
-    absence = models.CharField(null=True, max_length=255)  # 부재
-    desc = models.CharField(null=True, max_length=255)  # 점검내용
+    crackType = models.CharField(null=True, max_length=255)
+    crackWidth = models.CharField(null=True, default='-', max_length=255)
+    crackSize = models.CharField(null=True, default='-', max_length=255)
     place = models.CharField(null=True, max_length=255)  # 개소
-    number = models.CharField(null=True, max_length=255)  # 현황번호
-    progress = models.CharField(null=True, max_length=255)  # 진행유무
-    cause = models.CharField(null=True, max_length=255)  # 발생원인
+    date = models.DateField(null=True)
+    cause = models.CharField(null=True, max_length=255)  # 발생원인 
     note = models.CharField(null=True, max_length=255)  # 비고
     category = models.ForeignKey(
         'Category', on_delete=models.CASCADE)
@@ -64,3 +65,4 @@ class CrackObj(models.Model):
 
     def __str__(self):
         return str(self.id)
+

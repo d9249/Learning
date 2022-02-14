@@ -6,40 +6,24 @@
     {% csrf_token %}
     <div class="detail-input">
       <div class="detail">
-        <label for="floor">층수</label>
+        <label for="floor">위치1</label>
         <input type="text" name="floor" value="{{crack.floor}}" />
       </div>
 
       <div class="detail">
-        <label for="location">위치</label>
+        <label for="location">위치2</label>
         <input type="text" name="location" value="{{crack.location}}" />
       </div>
-
+      <!--  -->
       <div class="detail">
-        <label for="absence">부재</label>
-        <input type="text" name="absence" value="{{crack.absence}}" />
-      </div>
-
-      <div class="detail">
-        <label for="desc">점검내용</label>
-        <input type="text" name="desc" value="{{crack.desc}}" />
+        <label for="crackType">결함종류</label>
+        <input type="text" name="crackType" value="{{crack.crackType}}" />
       </div>
 
       <div class="detail">
         <label for="place">개소</label>
         <input type="text" name="place" value="{{crack.place}}" />
       </div>
-
-      <div class="detail">
-        <label for="number">현황번호</label>
-        <input type="text" name="number" value="{{crack.number}}" />
-      </div>
-
-      <div class="detail">
-        <label for="progress">진행유무</label>
-        <input type="text" name="progress" value="{{crack.progress}}" />
-      </div>
-
       <div class="detail">
         <label for="cause">발생원인</label>
         <input type="text" name="cause" value="{{crack.cause}}" />
