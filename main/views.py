@@ -226,6 +226,23 @@ def save(request, pk):
     else:
         return render(request, 'error.html')
 
+def saveArea(request,pk):
+    if request.method == "POST":
+        crack = get_object_or_404(CrackObj, pk=pk)
+        crackArea = json.loads(request.body).get("crackArea")
+        dataURL = json.loads(request.body).get("dataURL")
+        dataURL = re.sub("^data:image/png;base64,", "", dataURL)
+        dataURL = base64.b64decode(dataURL)
+        dataURL = BytesIO(dataURL)
+        temp = Image.open(dataURL)
+        temp = np.array(temp)
+        crack.crackArea = crackArea
+        crack.save()
+        cv2.imwrite(crack.flatting_image.url[1:], temp)
+        return redirect('category')
+    else:
+        return render(request, 'error.html')
+
 def createExcel(request,pk):
     category = Category.objects.get(pk=pk)
     crack = Crack.objects.filter(category=category)

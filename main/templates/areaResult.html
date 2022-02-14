@@ -81,10 +81,9 @@
 
   function save() {
     const dataURL = canvas.toDataURL("image/png");
-    let crackLength = document.getElementById("crack-length").innerText;
-    crackLength = crackLength.replace(/[a-z]/g, "");
+    const crackArea = document.getElementById("crack-area").innerText.replace(/[a-z]/g, "");
     fetch("/save/{{crack.id}}", {
-      body: JSON.stringify({ dataURL: dataURL, crackLength: crackLength }),
+      body: JSON.stringify({ dataURL: dataURL, crackArea: crackArea }),
       method: "POST",
       redirect: "follow",
     }).then((response) => {
