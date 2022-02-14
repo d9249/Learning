@@ -39,17 +39,17 @@
   const getArea = (p) => {
     const first = (p[3][0]*p[2][1])+(p[2][0]*p[1][1])+(p[1][0]*p[0][1]) + (p[0][0]*p[3][1])
     const last = (p[3][1]*p[2][0]) + (p[2][1]*p[1][0]) + (p[1][1]*p[0][0]) + (p[0][1]*p[3][0])
-    return (first-last)/2
+    return Math.abs((first-last)/2)
   }
 
   function clickEvent(event) {
     if (points.length < 4) {
       ctx.strokeStyle = "black";
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(event.offsetX, event.offsetY, 2, 0, Math.PI * 2);
       ctx.stroke();
-      const point = [event.offsetX, event.offsetY*(-1)];
+      const point = [event.offsetX, event.offsetY];
       points.push(point);
       if (points.length > 1 && points.length < 5){
         ctx.beginPath();

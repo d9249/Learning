@@ -302,6 +302,8 @@ def handleUpdateCategory(request, pk):
     category.grade = request.POST['grade']
     category.testResults = request.POST['result']
     category.plus = request.POST['plus']
+    category.frontView = request.FILES['fro-view']
+    category.locationMap = request.FILES['loc-map']
     category.save()
     return redirect('category')
 

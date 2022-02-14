@@ -1,8 +1,10 @@
 /* 모바일에 사용될 스타일 */
 @media screen and (max-width: 768px) {
-  .card-index {
-    padding-top: 48px;
+  .card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
   }
+
   .index-title {
     font-size: 18px;
   }
@@ -16,10 +18,9 @@
 
 /* 데스크탑 / 패드에 적용될 스타일*/
 @media screen and (min-width: 769px) {
-  .card-index {
-    padding-top: 72px;
-  }
-  .index-title {
+  .card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
   }
 
   .index-detail {
@@ -30,6 +31,14 @@
     padding: 0.25em 0.75em;
   }
 }
+
+/* 데스크탑에 적용될 스타일 */
+
+.card-index > .nav-logo {
+    width: auto; 
+    height: 300px;
+  }
+
 
 .card-index {
   margin: 0 auto;
