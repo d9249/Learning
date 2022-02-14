@@ -239,7 +239,7 @@ def saveArea(request,pk):
         crack.crackArea = crackArea
         crack.save()
         cv2.imwrite(crack.flatting_image.url[1:], temp)
-        return redirect('category')
+        return redirect('/crackDetail/'+ str(crack.parent.id))
     else:
         return render(request, 'error.html')
 

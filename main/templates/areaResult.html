@@ -81,8 +81,9 @@
 
   function save() {
     const dataURL = canvas.toDataURL("image/png");
-    const crackArea = document.getElementById("crack-area").innerText.replace(/[a-z]/g, "");
-    fetch("/save/{{crack.id}}", {
+    const crackArea = document.getElementById("crack-area").innerText.replace(/[^0-9,.]/g, "");
+    console.log(crackArea)
+    fetch("/saveArea/{{crack.id}}", {
       body: JSON.stringify({ dataURL: dataURL, crackArea: crackArea }),
       method: "POST",
       redirect: "follow",
@@ -91,7 +92,7 @@
         console.log(response.url);
         window.location.href = response.url;
       }
-    });
+    }).catch(err => console.log(err));
   }
 </script>
 {% endblock %}

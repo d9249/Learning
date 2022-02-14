@@ -52,7 +52,7 @@ article p {
 .wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -78,9 +78,37 @@ article p {
   background-color: red;
 }
 
+.img-wrap {
+  text-align: center;
+}
+
 .obj-img {
-  width: 300px;
-  height: 350px;
+  width: 45%;
+  margin-right: 20px;
+}
+
+.after-img-width {
+  width: 45%;
+}
+
+.after-img-height {
+  height: 300px;
+}
+
+table {
+  width: 50%;
+  border: 0.5px solid #bdbdbd;
+}
+
+table tbody tr th {
+  font-weight: 600;
+  padding: 5px;
+  border: 0.5px solid #bdbdbd;
+}
+
+table tbody tr td {
+  border: 0.5px solid #bdbdbd;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
