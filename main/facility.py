@@ -21,8 +21,8 @@ def facility(wb,pk):
   bottom_left_bold_border = Border(bottom=Side(style='medium'), left=Side(style='medium'))
   bottom_right_bold_border = Border(bottom=Side(style='medium'), right=Side(style='medium'))
 
-  baseWidth = 500
-  baseHeight = 400
+  baseWidth = 420
+  baseHeight = 260
   category = Category.objects.get(pk=pk)
   
   grayFill = PatternFill(start_color='CCCCCC',
@@ -143,44 +143,96 @@ def facility(wb,pk):
   sheet['B15'].border = left_bold_border
   sheet['B14'].border = left_bold_border
 
+
+  sheet['B28'].border = top_left_bold_border
+  sheet['C28'].border = top_bold_border
+  sheet['D28'].border = top_bold_border
+  sheet['E28'].border = top_bold_border
+  sheet['F28'].border = top_bold_border
+
+  sheet['G28'].border = top_right_bold_border
+  sheet['G29'].border = right_bold_border
+  sheet['G30'].border = right_bold_border
+  sheet['G31'].border = right_bold_border
+  sheet['G32'].border = right_bold_border
+  sheet['G33'].border = right_bold_border
+  sheet['G34'].border = right_bold_border
+  sheet['G35'].border = right_bold_border
+  sheet['G36'].border = right_bold_border
+  sheet['G37'].border = right_bold_border
+  sheet['G38'].border = right_bold_border
+  sheet['G39'].border = right_bold_border
+
+  sheet['G40'].border = bottom_right_bold_border
+  sheet['F40'].border = bottom_bold_border
+  sheet['E40'].border = bottom_bold_border
+  sheet['D40'].border = bottom_bold_border
+  sheet['C40'].border = bottom_bold_border
+
+  sheet['B40'].border = bottom_left_bold_border
+  sheet['B39'].border = left_bold_border
+  sheet['B38'].border = left_bold_border
+  sheet['B37'].border = left_bold_border
+  sheet['B36'].border = left_bold_border
+  sheet['B35'].border = left_bold_border
+  sheet['B34'].border = left_bold_border
+  sheet['B33'].border = left_bold_border
+  sheet['B32'].border = left_bold_border
+  sheet['B31'].border = left_bold_border
+  sheet['B30'].border = left_bold_border
+  sheet['B29'].border = left_bold_border
+
   sheet['B12'] = '나. 전경사진'
-  sheet['B42'] = '다. 위치도'
+  sheet['B27'] = '다. 위치도'
 
   frontViewPath = category.frontView.url[1:]
   locationMapPath = category.locationMap.url[1:]
 
   frontView = IMG.open(frontViewPath)
   frontWidth,frontHeight = frontView.size
-
   if (frontWidth < frontHeight):
     frontNewWidth = int((frontWidth/frontHeight) * baseHeight)
     frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
     frontViewImage.width = frontNewWidth
     frontViewImage.height = baseHeight
-    sheet.add_image(frontViewImage,"B13")
+    sheet.add_image(frontViewImage,"C14")
   else:
     frontNewHeight = int((frontHeight/frontWidth) * baseWidth)
-    frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
-    frontViewImage.width = baseWidth
-    frontViewImage.height = frontNewHeight
-    sheet.add_image(frontViewImage,"B13")
+    if (frontNewHeight > 260):
+      frontNewWidth = int((frontWidth/frontHeight) * baseHeight)
+      frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
+      frontViewImage.width = frontNewWidth
+      frontViewImage.height = baseHeight
+      
+    else:
+      frontViewImage = openpyxl.drawing.image.Image(frontViewPath)
+      frontViewImage.width = baseWidth
+      frontViewImage.height = frontNewHeight
+    
+    sheet.add_image(frontViewImage,"C14")
 
   
   locationMap = IMG.open(locationMapPath)
   locationWidth,locationHeight = locationMap.size
 
   if (locationWidth < locationHeight):
-    locationNewWidth = int((frontWidth/frontHeight) * baseHeight)
-    locationMapImage = openpyxl.drawing.image.Image(frontViewPath)
+    locationNewWidth = int((locationWidth/locationHeight) * baseHeight)
+    locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
     locationMapImage.width = locationNewWidth
     locationMapImage.height = baseHeight
-    sheet.add_image(locationMapImage,"B43")
+    sheet.add_image(locationMapImage,"C29")
   else:
     locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
-    locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
-    locationMapImage.width = baseWidth
-    locationMapImage.height = locationNewHeight
-    sheet.add_image(locationMapImage,"B43")
+    if (locationNewHeight > 260):
+      locationNewWidth = int((frontWidth/frontHeight) * baseHeight)
+      locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
+      locationMapImage.width = locationNewWidth
+      locationMapImage.height = baseHeight
+    else:
+      locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
+      locationMapImage.width = baseWidth
+      locationMapImage.height = locationNewHeight
+      sheet.add_image(locationMapImage,"C29")
 
   sheet.sheet_view.view = "pageBreakPreview"
   for row in sheet.rows:
