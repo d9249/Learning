@@ -5,22 +5,22 @@ from openpyxl.styles import Alignment, PatternFill
 from PIL import Image as IMG
 from .models import Category,Crack,CrackObj
 
-def facility(wb,pk):
-  thin_border = Border(left=Side(style='thin'),
+thin_border = Border(left=Side(style='thin'),
                       right=Side(style='thin'),
                       top=Side(style='thin'),
                       bottom=Side(style='thin'))
   
-  top_bold_border = Border(top=Side(style='medium'))
-  left_bold_border = Border(left=Side(style='medium'))
-  right_bold_border = Border(right=Side(style='medium'))
-  bottom_bold_border = Border(bottom=Side(style='medium'))
+top_bold_border = Border(top=Side(style='medium'))
+left_bold_border = Border(left=Side(style='medium'))
+right_bold_border = Border(right=Side(style='medium'))
+bottom_bold_border = Border(bottom=Side(style='medium'))
   
-  top_left_bold_border = Border(top=Side(style='medium'), left=Side(style='medium'))
-  top_right_bold_border = Border(top=Side(style='medium'), right=Side(style='medium'))
-  bottom_left_bold_border = Border(bottom=Side(style='medium'), left=Side(style='medium'))
-  bottom_right_bold_border = Border(bottom=Side(style='medium'), right=Side(style='medium'))
+top_left_bold_border = Border(top=Side(style='medium'), left=Side(style='medium'))
+top_right_bold_border = Border(top=Side(style='medium'), right=Side(style='medium'))
+bottom_left_bold_border = Border(bottom=Side(style='medium'), left=Side(style='medium'))
+bottom_right_bold_border = Border(bottom=Side(style='medium'), right=Side(style='medium'))
 
+def facility(wb,pk):
   baseWidth = 420
   baseHeight = 260
   category = Category.objects.get(pk=pk)
@@ -248,20 +248,25 @@ def facility(wb,pk):
 def looks(wb,pk):
   baseWidth = 215
   baseHeight = 162
+  flatBaseWidth = 150
+  flatBaseHeight = 150
   imgCell = 2
   infoCell = 10
   cellB = chr(66)
   cellC = chr(67)
+  cellD = chr(68)
   sheet = wb.create_sheet("외관조사사진", 1)
   sheet = wb['외관조사사진']
   category = Category.objects.get(pk=pk)
   cracks = Crack.objects.filter(category__facilityName__icontains=category.facilityName)
   sheet.column_dimensions["A"].width = 1
-  sheet.column_dimensions["D"].width = 1
   sheet.column_dimensions["B"].width = 27
-  sheet.column_dimensions["C"].width = 27
-  sheet.column_dimensions["E"].width = 27
+  sheet.column_dimensions["C"].width = 1
+  sheet.column_dimensions["D"].width = 27
+  sheet.column_dimensions["E"].width = 1
   sheet.column_dimensions["F"].width = 27
+  sheet.column_dimensions["G"].width = 1
+  sheet.column_dimensions["H"].width = 27
 
   for crack in cracks:
     crackObj = CrackObj.objects.filter(parent=crack.id)
@@ -293,42 +298,75 @@ def looks(wb,pk):
           img.height = imgNewHeight
 
         if (flatImgWidth < flatImgHeight):
-          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * baseHeight)
+          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * flatBaseHeight)
           flatImg = openpyxl.drawing.image.Image(flatPath)
           flatImg.width = flatImgNewWidth
-          flatImg.height = baseHeight
+          flatImg.height = flatBaseHeight
         else:
-          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * baseWidth)
+          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * flatBaseWidth)
           flatImg = openpyxl.drawing.image.Image(flatPath)
-          flatImg.width = baseWidth
+          flatImg.width = flatBaseWidth
           flatImg.height = flatImgNewHeight
 
         sheet.add_image(img,cellB + str(imgCell))
-        sheet.add_image(flatImg, cellC + str(imgCell))
-
-        sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
-        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
-        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
-        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
-        sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
-        sheet[cellC+str(infoCell+3)] = '적출년도: ' + str(crack.date)
-
-        cellB = ord(cellB) + 3
-        cellB = chr(cellB)
+        sheet.add_image(flatImg, cellD + str(imgCell))
         
-        cellC = ord(cellC) + 3
-        cellC = chr(cellC)
+        sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
+        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + ' ' + str(crack.location)
+        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
+        sheet[cellD+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
+        sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
+        sheet[cellD+str(infoCell+3)] = '적출년도: ' + str(crack.date)
+        
+        sheet[cellB+str(imgCell)].border = top_left_bold_border
+        sheet[cellC+str(imgCell)].border = top_bold_border
+        sheet[cellD+str(imgCell)].border = top_right_bold_border
+        sheet[cellD+str(imgCell+1)].border = right_bold_border
+        sheet[cellD+str(imgCell+2)].border = right_bold_border
+        sheet[cellD+str(imgCell+3)].border = right_bold_border
+        sheet[cellD+str(imgCell+4)].border = right_bold_border
+        sheet[cellD+str(imgCell+5)].border = right_bold_border
+        sheet[cellD+str(imgCell+6)].border = right_bold_border
+        sheet[cellD+str(imgCell+7)].border = right_bold_border
+        sheet[cellD+str(imgCell+8)].border = right_bold_border
+        sheet[cellD+str(imgCell+9)].border = right_bold_border
+        sheet[cellD+str(imgCell+10)].border = right_bold_border
+        sheet[cellB+str(infoCell-7)].border = left_bold_border
+        sheet[cellB+str(infoCell-6)].border = left_bold_border
+        sheet[cellB+str(infoCell-5)].border = left_bold_border
+        sheet[cellB+str(infoCell-4)].border = left_bold_border
+        sheet[cellB+str(infoCell-3)].border = left_bold_border
+        sheet[cellB+str(infoCell-2)].border = left_bold_border
+        sheet[cellB+str(infoCell-1)].border = left_bold_border
+        sheet[cellB+str(infoCell)].border = left_bold_border
+        sheet[cellB+str(infoCell+1)].border = left_bold_border
+        sheet[cellB+str(infoCell+2)].border = left_bold_border
+        sheet[cellB+str(infoCell+3)].border = bottom_left_bold_border
+        sheet[cellC+str(infoCell+3)].border = bottom_bold_border
+        sheet[cellD+str(infoCell+3)].border = bottom_right_bold_border
 
-        if ord(cellB) > 70:
+        cellB = ord(cellB) + 4
+        cellB = chr(cellB)
+        cellC = ord(cellC) + 4
+        cellC = chr(cellC)
+        cellD = ord(cellD) + 4
+        cellD = chr(cellD)
+     
+        if ord(cellB) > 72:
           cellB = chr(66)
+          cellC = chr(67)
           infoCell += 7
           imgCell +=7
-        if ord(cellC) > 70:
+        if ord(cellD) > 72:
+          cellD = chr(68)
           cellC = chr(67)
-          imgCell +=7
+          imgCell += 7
           infoCell += 7
         sheet.sheet_view.view = "pageBreakPreview"
     else:
+      cellB = chr(66)
+      cellC = chr(67)
+      cellD = chr(68)
       for crackObj in crackObj:
         path = crackObj.image.url[1:]
         flatPath = crackObj.flatting_image.url[1:]
@@ -352,24 +390,53 @@ def looks(wb,pk):
           
 
         if (flatImgWidth < flatImgHeight):
-          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * baseHeight)
+          flatImgNewWidth = int((flatImgWidth/flatImgHeight) * flatBaseHeight)
           flatImg = openpyxl.drawing.image.Image(flatPath)
           flatImg.width = flatImgNewWidth
-          flatImg.height = baseHeight
+          flatImg.height = flatBaseHeight
         else:
-          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * baseWidth)
+          flatImgNewHeight = int((flatImgHeight/flatImgWidth) * flatBaseWidth)
           flatImg = openpyxl.drawing.image.Image(flatPath)
-          flatImg.width = baseWidth
+          flatImg.width = flatBaseWidth
           flatImg.height = flatImgNewHeight
 
         sheet.add_image(img,cellB + str(imgCell))
-        sheet.add_image(flatImg, cellC + str(imgCell))
-
+        sheet.add_image(flatImg, cellD + str(imgCell))
+        
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
-        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
+        sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + ' ' + str(crack.location)
         sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
-        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
+        sheet[cellD+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
-        sheet[cellC+str(infoCell+3)] = '적출년도: ' + str(crack.date)
+        sheet[cellD+str(infoCell+3)] = '적출년도: ' + str(crack.date)
+
+        print(cellC+str(imgCell))
+        sheet[cellB+str(imgCell)].border = top_left_bold_border
+        sheet[cellC+str(imgCell)].border = top_bold_border
+        sheet[cellD+str(imgCell)].border = top_right_bold_border
+        sheet[cellD+str(imgCell+1)].border = right_bold_border
+        sheet[cellD+str(imgCell+2)].border = right_bold_border
+        sheet[cellD+str(imgCell+3)].border = right_bold_border
+        sheet[cellD+str(imgCell+4)].border = right_bold_border
+        sheet[cellD+str(imgCell+5)].border = right_bold_border
+        sheet[cellD+str(imgCell+6)].border = right_bold_border
+        sheet[cellD+str(imgCell+7)].border = right_bold_border
+        sheet[cellD+str(imgCell+8)].border = right_bold_border
+        sheet[cellD+str(imgCell+9)].border = right_bold_border
+        sheet[cellD+str(imgCell+10)].border = right_bold_border
+        sheet[cellB+str(infoCell-7)].border = left_bold_border
+        sheet[cellB+str(infoCell-6)].border = left_bold_border
+        sheet[cellB+str(infoCell-5)].border = left_bold_border
+        sheet[cellB+str(infoCell-4)].border = left_bold_border
+        sheet[cellB+str(infoCell-3)].border = left_bold_border
+        sheet[cellB+str(infoCell-2)].border = left_bold_border
+        sheet[cellB+str(infoCell-1)].border = left_bold_border
+        sheet[cellB+str(infoCell)].border = left_bold_border
+        sheet[cellB+str(infoCell+1)].border = left_bold_border
+        sheet[cellB+str(infoCell+2)].border = left_bold_border
+        sheet[cellB+str(infoCell+3)].border = bottom_left_bold_border
+        sheet[cellC+str(infoCell+3)].border = bottom_bold_border
+        sheet[cellD+str(infoCell+3)].border = bottom_right_bold_border
+
         sheet.sheet_view.view = "pageBreakPreview"
   return wb
