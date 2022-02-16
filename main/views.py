@@ -252,10 +252,10 @@ def saveArea(request,pk):
 def createExcel(request,pk):
     category = Category.objects.get(pk=pk)
     crack = Crack.objects.filter(category=category)
-    lists = [['구분','위치1','위치2','결함종류','결함규모','폭','개소','발생원인','비고']]
+    lists = [['구분','위치1','위치2','결함종류','결함규모','폭','개소','적출년도', '발생원인','비고']]
     div = 1
     for obj in crack:
-        list=[div,obj.floor, obj.location, obj.absence,obj.desc,obj.place,obj.number,obj.progress,obj.cause,obj.note]
+        list=[div,obj.floor, obj.location, obj.crackType,obj.crackSize,obj.crackWidth,obj.place, obj.date,obj.cause,obj.note]
         div+=1
         lists.append(list)
         

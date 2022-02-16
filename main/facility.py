@@ -1,10 +1,26 @@
 import openpyxl
 from openpyxl.drawing.image import Image
+from openpyxl.styles.borders import Border,Side
 from openpyxl.styles import Alignment, PatternFill
 from PIL import Image as IMG
 from .models import Category,Crack,CrackObj
 
 def facility(wb,pk):
+  thin_border = Border(left=Side(style='thin'),
+                      right=Side(style='thin'),
+                      top=Side(style='thin'),
+                      bottom=Side(style='thin'))
+  
+  top_bold_border = Border(top=Side(style='medium'))
+  left_bold_border = Border(left=Side(style='medium'))
+  right_bold_border = Border(right=Side(style='medium'))
+  bottom_bold_border = Border(bottom=Side(style='medium'))
+  
+  top_left_bold_border = Border(top=Side(style='medium'), left=Side(style='medium'))
+  top_right_bold_border = Border(top=Side(style='medium'), right=Side(style='medium'))
+  bottom_left_bold_border = Border(bottom=Side(style='medium'), left=Side(style='medium'))
+  bottom_right_bold_border = Border(bottom=Side(style='medium'), right=Side(style='medium'))
+
   baseWidth = 500
   baseHeight = 400
   category = Category.objects.get(pk=pk)
@@ -14,7 +30,6 @@ def facility(wb,pk):
   sheet = wb.worksheets[0]
   sheet.title = '시설물 현황'
   sheet.column_dimensions["A"].width = 1
-  sheet.column_dimensions['F'].width = 16.33
 
   sheet = wb['시설물 현황']
   sheet['B2'] = "□ 시설물 현황"
@@ -25,7 +40,6 @@ def facility(wb,pk):
   sheet['B7'] = '구조형식'
   sheet['B8'] = '종별'
   sheet['B9'] = '규모 및 제원 추가사항'
-  sheet['B12'] = "나. 전경사진"
 
   sheet['E4'] = "시설물번호"
   sheet['E5'] = "준공일자"
@@ -33,7 +47,7 @@ def facility(wb,pk):
   sheet['E7'] = "부대시설"
 
   sheet['D8'] = '전차안전등급'
-  sheet['F8'] = '점검결과안전등급'
+  sheet['F8'] = '안전등급결과'
 
   sheet['B4'].fill = grayFill
   sheet['B5'].fill = grayFill
@@ -50,8 +64,8 @@ def facility(wb,pk):
   sheet['D8'].fill = grayFill
   sheet['F8'].fill = grayFill
 
-  sheet.merge_cells('C4:D4')
   sheet.merge_cells('C5:D5')
+  sheet.merge_cells('C4:D4')
   sheet.merge_cells('C6:D6')
   sheet.merge_cells('C7:D7')
 
@@ -85,6 +99,49 @@ def facility(wb,pk):
   sheet['G8'] = category.testResults
 
   sheet['B10'] = category.plus
+
+  # cell 테두리
+  for row in sheet['B4':'G10']:
+      for cell in row:
+          cell.border = thin_border
+
+  sheet['B13'].border = top_left_bold_border
+  sheet['C13'].border = top_bold_border
+  sheet['D13'].border = top_bold_border
+  sheet['E13'].border = top_bold_border
+  sheet['F13'].border = top_bold_border
+
+  sheet['G13'].border = top_right_bold_border
+  sheet['G14'].border = right_bold_border
+  sheet['G15'].border = right_bold_border
+  sheet['G16'].border = right_bold_border
+  sheet['G17'].border = right_bold_border
+  sheet['G18'].border = right_bold_border
+  sheet['G19'].border = right_bold_border
+  sheet['G20'].border = right_bold_border
+  sheet['G21'].border = right_bold_border
+  sheet['G22'].border = right_bold_border
+  sheet['G23'].border = right_bold_border
+  sheet['G24'].border = right_bold_border
+
+  sheet['G25'].border = bottom_right_bold_border
+  sheet['F25'].border = bottom_bold_border
+  sheet['E25'].border = bottom_bold_border
+  sheet['D25'].border = bottom_bold_border
+  sheet['C25'].border = bottom_bold_border
+
+  sheet['B25'].border = bottom_left_bold_border
+  sheet['B24'].border = left_bold_border
+  sheet['B23'].border = left_bold_border
+  sheet['B22'].border = left_bold_border
+  sheet['B21'].border = left_bold_border
+  sheet['B20'].border = left_bold_border
+  sheet['B19'].border = left_bold_border
+  sheet['B18'].border = left_bold_border
+  sheet['B17'].border = left_bold_border
+  sheet['B16'].border = left_bold_border
+  sheet['B15'].border = left_bold_border
+  sheet['B14'].border = left_bold_border
 
   sheet['B12'] = '나. 전경사진'
   sheet['B42'] = '다. 위치도'
@@ -131,6 +188,8 @@ def facility(wb,pk):
           cell.alignment = Alignment(horizontal="center", vertical="center")
   for column in range(66,72):
     sheet.column_dimensions[chr(column)].bestFit = True
+
+
   return wb
 
 
@@ -197,10 +256,10 @@ def looks(wb,pk):
 
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
-        sheet[cellB+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
-        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
+        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
+        sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
-        sheet[cellC+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
+        sheet[cellC+str(infoCell+3)] = '적출년도: ' + str(crack.date)
 
         cellB = ord(cellB) + 3
         cellB = chr(cellB)
@@ -256,9 +315,9 @@ def looks(wb,pk):
 
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + str(crack.location)
-        sheet[cellB+str(infoCell+2)] = '점검내용: ' + str(crack.desc)
+        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
         sheet[cellC+str(infoCell+2)] = '손상규모: ' + str(crackObj.crackLength)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
-        sheet[cellC+str(infoCell+3)] = '진행유무: ' + str(crack.progress)
+        sheet[cellC+str(infoCell+3)] = '적출년도: ' + str(crack.date)
         sheet.sheet_view.view = "pageBreakPreview"
   return wb
