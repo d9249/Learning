@@ -261,7 +261,7 @@ def createExcel(request,pk):
         
     wb = Workbook()
     ws3 = wb.create_sheet("손상현황표",2)
-    num = 2
+    num = 1
     for list in lists:
         alp = 65
         ws3.column_dimensions['A']
@@ -270,7 +270,8 @@ def createExcel(request,pk):
             ws3[chr(alp)+str(num)].alignment = Alignment(horizontal='center',vertical='bottom')
             alp+=1
         num+=1
-        
+    for column in range(65,75):
+        ws3.column_dimensions[chr(column)].bestFit = True
     ws3.sheet_view.view = "pageBreakPreview"
     wb = facility(wb,pk)
     wb = looks(wb,pk)
