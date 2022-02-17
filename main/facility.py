@@ -224,10 +224,11 @@ def facility(wb,pk):
   else:
     locationNewHeight = int((locationHeight/locationWidth) * baseWidth)
     if (locationNewHeight > 260):
-      locationNewWidth = int((frontWidth/frontHeight) * baseHeight)
+      locationNewWidth = int((locationWidth/locationHeight) * baseHeight)
       locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
       locationMapImage.width = locationNewWidth
       locationMapImage.height = baseHeight
+      sheet.add_image(locationMapImage,"C29")
     else:
       locationMapImage = openpyxl.drawing.image.Image(locationMapPath)
       locationMapImage.width = baseWidth
@@ -410,7 +411,6 @@ def looks(wb,pk):
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
         sheet[cellD+str(infoCell+3)] = '적출년도: ' + str(crack.date)
 
-        print(cellC+str(imgCell))
         sheet[cellB+str(imgCell)].border = top_left_bold_border
         sheet[cellC+str(imgCell)].border = top_bold_border
         sheet[cellD+str(imgCell)].border = top_right_bold_border
