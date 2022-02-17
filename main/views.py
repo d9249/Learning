@@ -20,6 +20,11 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment
 from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
 
+import os
+
+import mimetypes
+from django.http.response import HttpResponse
+
 
 def index(request):
     return render(request, 'index.html')
@@ -275,8 +280,16 @@ def createExcel(request,pk):
     ws3.sheet_view.view = "pageBreakPreview"
     wb = facility(wb,pk)
     wb = looks(wb,pk)
-    wb.save("sample.xlsx")
-    return redirect('/')
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    filePath = BASE_DIR+"/media/exel/" + category.facilityName + '.xlsx'
+    wb.save(filePath)
+    path = open(filePath, 'rb')
+    mime_type, _ = mimetypes.guess_type(filePath)
+    response = HttpResponse(path, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % category.facilityName + '.xlsx'
+    return response
+    
+
 
 
 def deleteCrackObj(request,pk):
