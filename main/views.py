@@ -24,6 +24,7 @@ import os
 
 import mimetypes
 from django.http.response import HttpResponse
+import urllib.parse
 
 
 def index(request):
@@ -281,12 +282,15 @@ def createExcel(request,pk):
     wb = facility(wb,pk)
     wb = looks(wb,pk)
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    filePath = BASE_DIR+"/media/exel/" + category.facilityName + '.xlsx'
+    fileName = category.facilityName + '.xlsx'
+    filePath = BASE_DIR+"/media/excel/" + fileName
     wb.save(filePath)
     path = open(filePath, 'rb')
     mime_type, _ = mimetypes.guess_type(filePath)
     response = HttpResponse(path, content_type=mime_type)
-    response['Content-Disposition'] = "attachment; filename=%s" % category.facilityName + '.xlsx'
+    filename_header = 'filename*=UTF-8\'\'%s' % urllib.parse.quote(fileName.encode('utf-8'))
+    response['Content-Disposition'] = "attachment;" + filename_header
+    
     return response
     
 
