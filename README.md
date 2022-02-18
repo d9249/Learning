@@ -21,3 +21,7 @@ Github icon, Facebook icon, instagram icon, main icon.
 2. CSS 애니메이션 모션
 3. 깔끔한 디자인
 4. 보기쉬운 가독성
+
+## 개발 언어
+
+> Vue.js, JS, HTML, CSS
