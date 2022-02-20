@@ -181,7 +181,7 @@ def createCrack(request, pk):
         crack.floor = request.POST['floor']
         crack.location = request.POST['location']
         crack.crackType = request.POST['crackType']
-        crack.crackWidth = request.POST['crackWidth']
+        crack.crackWidth = 'cw '+request.POST['crackWidth']+'mm'
         crack.place = request.POST['place']
         crack.cause = request.POST['cause']
         crack.note = request.POST['note']
@@ -317,7 +317,7 @@ def handleUpdateCrack(request,pk):
     crack.floor = request.POST['floor']
     crack.location = request.POST['location']
     crack.crackType = request.POST['crackType']
-    crack.crackWidth = request.POST['crackWidth']
+    crack.crackWidth = 'cw '+request.POST['crackWidth']+'mm'
     crack.place = request.POST['place']
     crack.cause = request.POST['cause']
     crack.note = request.POST['note']
