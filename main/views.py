@@ -345,8 +345,8 @@ def handleUpdateCategory(request, pk):
     category.grade = request.POST['grade']
     category.testResults = request.POST['result']
     category.plus = request.POST['plus']
-    category.frontView = request.FILES['fro-view']
-    category.locationMap = request.FILES['loc-map']
+    category.frontView = request.FILES['frontView']
+    category.locationMap = request.FILES['locationMap']
     category.save()
     return redirect('category')
 
@@ -356,6 +356,6 @@ def deleteCategory(request,pk):
     return redirect('category')
 
 def searchResult(request):
-    keyword = request.POST['keyword'];
-    results = Category.objects.filter(facilityName__icontains = keyword);
+    keyword = request.POST['keyword']
+    results = Category.objects.filter(facilityName__icontains = keyword)
     return render(request,'searchResult.html', {'results':results})
