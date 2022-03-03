@@ -130,3 +130,16 @@
     width: 35%;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .button button {
+    font-size: 11px;
+  }
+}

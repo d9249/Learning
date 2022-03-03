@@ -37,10 +37,6 @@
   color: #4472c4;
 }
 
-.item-wrap > a {
-    margin-bottom: 10px;
-  }
-
 @media screen and (max-width: 768px) {
   .item-wrap {
     margin: 0;

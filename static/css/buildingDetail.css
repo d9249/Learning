@@ -42,7 +42,6 @@
   border-radius: 10px;
   overflow: hidden;
 }
-
 .tr {
   font-size: 14px;
 }
@@ -70,7 +69,7 @@ th {
 /* 모바일에 사용될 스타일 */
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 98%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -79,7 +78,7 @@ th {
   }
 
   .table {
-    width: 100%;
+    width: 90%;
     border: 1px solid #444444;
   }
   .tr {
@@ -87,10 +86,5 @@ th {
   }
   .tr .overflow {
     white-space: nowrap;
-  }
-
-  .td {
-    font-size:11px;
-    padding:0;
   }
 }
