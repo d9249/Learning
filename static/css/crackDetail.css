@@ -34,7 +34,7 @@ section {
 
 article {
   display: flex;
-  width: 80%;
+  width: 95%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -118,5 +118,13 @@ table tbody tr td {
 @media screen and (max-width: 768px) {
   section {
     justify-content: center;
+  }
+
+  article {
+    padding: 1rem 0;
+  }
+
+  table {
+    width: 95%;
   }
 }

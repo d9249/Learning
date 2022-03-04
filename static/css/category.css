@@ -140,6 +140,7 @@
     gap: 10px;
   }
   .button button {
+    width: 64px;
     font-size: 11px;
   }
 }
