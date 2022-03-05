@@ -34,7 +34,7 @@ section {
 
 article {
   display: flex;
-  width: 80%;
+  width: 95%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
@@ -125,5 +125,12 @@ table tbody tr td {
   }
   .after-img-height {
     max-height: 150px;
+    
+  article {
+    padding: 1rem 0;
+  }
+
+  table {
+    width: 95%;
   }
 }
