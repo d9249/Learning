@@ -15,24 +15,16 @@
     <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    {% block style %}
-    
-    {% endblock %}
+    {% block style %} {% endblock %}
   </head>
   <body>
     <nav class="navbar">
       <div class="item-wrap">
-       <a href="/"><img class="nav-logo" src="{% static 'image/logo.png' %}" alt="logo" style="height: 50px;" /></a>
-        <!-- <ul class="menu-list"> -->
-          <!-- <li><a href="/">Home</a></li> -->
-          <!-- <li><a href="/category">Database</a></li> -->
-        <!-- </ul> -->
+        <a href="/">
+          <img class="nav-logo" src="{% static 'image/logo.png' %}" alt="logo"
+        /></a>
       </div>
     </nav>
-    {% block content %} 
-    {% endblock %} 
-    
-    {% block script %} 
-    {% endblock %}
+    {% block content %} {% endblock %} {% block script %} {% endblock %}
   </body>
 </html>

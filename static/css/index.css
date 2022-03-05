@@ -1,6 +1,8 @@
 .card-index > .nav-logo {
   width: auto;
-  height: 300px;
+  height: 240px;
+  border-radius: 15px;
+  border-radius: 45px;
 }
 
 .card-index {
@@ -22,6 +24,7 @@
 }
 
 .button-54 {
+  width: 255px;
   display: inline-block;
   font-size: 20px;
   letter-spacing: 3px;
@@ -34,10 +37,10 @@
   padding: 6px 24px;
   position: relative;
   user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 40px;
-  font-weight: 400;
+  font-weight: bold;
+  font-family: "KoPub Dotum";
 }
 
 .button-54:active {

@@ -96,7 +96,7 @@ article p {
 }
 
 .after-img-height {
-  height: 300px;
+  max-height: 200px;
 }
 
 table {
@@ -118,5 +118,12 @@ table tbody tr td {
 @media screen and (max-width: 768px) {
   section {
     justify-content: center;
+  }
+
+  .obj-img {
+    max-height: 250px;
+  }
+  .after-img-height {
+    max-height: 150px;
   }
 }
