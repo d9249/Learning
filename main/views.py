@@ -19,7 +19,7 @@ import cv2
 from openpyxl import Workbook
 from openpyxl.styles import Alignment
 from openpyxl.cell.cell import ILLEGAL_CHARACTERS_RE
-
+from openpyxl.styles.borders import Border,Side
 import os
 
 import mimetypes
@@ -258,6 +258,11 @@ def saveArea(request,pk):
         return render(request, 'error.html')
 
 def createExcel(request,pk):
+    thin_border = Border(left=Side(border_style='thin', color='000000'),
+			right=Side(border_style='thin', color='000000'),
+			top=Side(border_style='thin', color='000000'),
+			bottom=Side(border_style='thin', color='000000'))
+
     category = Category.objects.get(pk=pk)
     crack = Crack.objects.filter(category=category)
     lists = [['구분','위치1','위치2','손상종류','손상규모','폭','개소','적출년도', '발생원인','비고']]
@@ -280,6 +285,18 @@ def createExcel(request,pk):
         num+=1
     for column in range(65,75):
         ws3.column_dimensions[chr(column)].bestFit = True
+    
+    rows = ws3.rows
+    columns = ws3.columns
+
+    for row in rows:
+        for cell in row:
+            cell.border = thin_border
+
+    for column in columns:
+        for cell in column:
+            cell.border = thin_border
+            
     ws3.sheet_view.view = "pageBreakPreview"
     wb = facility(wb,pk)
     wb = looks(wb,pk)
