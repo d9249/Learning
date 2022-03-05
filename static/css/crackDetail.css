@@ -84,15 +84,15 @@ article p {
 }
 
 .obj-img {
-  width: 45%;
+  width: 450px;
 }
 
 .after-img {
-  width: 45%;
+  width: 450px;
 }
 
 .after-img-width {
-  width: 45%;
+  max-width: 350px;
 }
 
 .after-img-height {
@@ -121,11 +121,22 @@ table tbody tr td {
   }
 
   .obj-img {
-    max-height: 250px;
+    width: 180px;
+    height: 160px;
+  }
+
+  .after-img {
+    max-width: 120px;
+    max-height: 90px;
+  }
+
+  .after-img-width {
+    max-width: 105px;
   }
   .after-img-height {
     max-height: 150px;
-    
+  }
+
   article {
     padding: 1rem 0;
   }
