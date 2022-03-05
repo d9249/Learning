@@ -314,7 +314,7 @@ def looks(wb,pk):
         
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + ' ' + str(crack.location)
-        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
+        sheet[cellB+str(infoCell+2)] = '손상종류: ' + str(crack.crackType)
         sheet[cellD+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
         sheet[cellD+str(infoCell+3)] = '적출년도: ' + str(crack.date)
@@ -406,7 +406,7 @@ def looks(wb,pk):
         
         sheet[cellB+str(infoCell)] = '사진번호: ' + str(crackObj.id)
         sheet[cellB+str(infoCell+1)] = '위치: ' + str(crack.floor) + ' ' + str(crack.location)
-        sheet[cellB+str(infoCell+2)] = '결함종류: ' + str(crack.crackType)
+        sheet[cellB+str(infoCell+2)] = '손상종류: ' + str(crack.crackType)
         sheet[cellD+str(infoCell+2)] = '손상규모: ' + str(crack.crackSize)
         sheet[cellB+str(infoCell+3)] = '발생원인: ' + str(crack.cause)
         sheet[cellD+str(infoCell+3)] = '적출년도: ' + str(crack.date)

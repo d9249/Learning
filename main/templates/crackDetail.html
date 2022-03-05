@@ -42,7 +42,7 @@
     <table>
       <tbody>
         <tr>
-          <th>너비</th>
+          <th>폭</th>
           <td>{{crackObj.originWidth|floatformat}} mm</td>
         </tr>
         <tr>
@@ -53,10 +53,10 @@
           {% if crackObj.isFlattened %}
           <!--  -->
           {% if crackObj.crackLength %}
-          <th>균열의 길이</th>
+          <th>손상규모</th>
           <td>{{crackObj.crackLength}} mm</ㅅ>
           {% else %}
-          <th>균열의 넓이</th>
+          <th>손상규모</th>
           <td>{{crackObj.crackArea}} ㎡</td>
           {% endif %} {% else %} {% endif %}
         </tr>

@@ -6,8 +6,8 @@
 .card-index {
   margin: 0 auto;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-weight: 400;
+  font-family: "Arial";
+  font-weight: 500;
 }
 
 .index-title {
@@ -37,7 +37,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin-top: 40px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .button-54:active {
