@@ -23,7 +23,8 @@
 |---|---|---|---|
 | **Education** | 15.03.02 ~ 22.02.25 | [Computer Science and Engineering](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University](http://www.kyonggi.ac.kr/) |
 | **Education** | 22.03.02 ~ Proceeding | [Computer Science](http://cs.kyonggi.ac.kr:8080/Index) | [Kyonggi University Graduate school](http://www.kyonggi.ac.kr/) |
-| **Research activities** | 20.01 ~ Proceeding | Undergraduate Research Students | [Kyonggi Univ. Smart I.O.T laboratory](https://netlab.kyonggi.ac.kr/) |
+| **Research activities** | 20.01 ~ 21.12 | Undergraduate Research Student | [Kyonggi Univ. Smart I.O.T laboratory](https://netlab.kyonggi.ac.kr/) |
+| **Research activities** | 21.12 ~ Proceeding | Master's Research Student | [Kyonggi Univ. Smart I.O.T laboratory](https://netlab.kyonggi.ac.kr/) |
 | **Research activities** | 21.03 ~ 22.03 | DIYA Computer Vision Team 4th | [DIYA. Machine Learning Club.](https://blog.diyaml.com/) |
 | **Research activities** | 22.04 ~ Proceeding | DIYA ML and GNN Team 5th | [DIYA. Machine Learning Club.](https://blog.diyaml.com/) |
   
