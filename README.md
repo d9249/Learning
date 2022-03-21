@@ -64,7 +64,8 @@
 
 | Production period       | Contents                                                     | Link | technique |
 | ---------- | ------------------------------------------------------------ | ------------ | ------------ |
-| 2021.12.28 ~ 2021.04.16 | Smart I.o.T Labratory Homepage | [Link](https://netlab.kyonggi.ac.kr/)    | Vue, JS, Node.js, HTML, CSS |
+| 2021.12.28 ~ 2021.04.16 | Smart I.o.T Labratory Homepage | [Deploy Link](https://netlab.kyonggi.ac.kr/)    |  HTML, CSS, Vue.js, JS, Node.js |
+| 2021.03.02 ~ 2021.06.15 | Fit-sibang | [Repo Link](https://github.com/KGU-Code-15/fit-sibang)    | HTML, CSS, React.js, Node.js MongoDB |
 | 2021.06.29 ~ 2021.07.10 | Image_crop | [Repo Link](https://github.com/d9249/Image_Crop)       | Python |
 | 2021.10.01 ~ 2022.02.28 | IA^2S(Image Analysis Automation System) | [Repo Link](https://github.com/HHFEHH/crack-automation), [Deploy Link](http://ideal96.synology.me:7000/)    | Django, opencv, Python, JS, HTML, CSS |
 
