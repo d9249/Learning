@@ -1,0 +1,63 @@
+{% load static %}
+<style>
+  img {
+    position: absolute;
+  }
+  #canvas {
+    position: absolute;
+  }
+  #result {
+    position: absolute;
+    top: 10%;
+  }
+</style>
+<img src="{{image.flatting_image.url}}" alt="" />
+<canvas
+  id="canvas"
+  width="{{imgWidth}}"
+  height="{{imgHeight}}"
+  onclick="clickEvent"
+></canvas>
+<div id="result"></div>
+<script>
+  function change(sum) {
+    let x = (document.getElementById('result').innerHTML = sum + 'mm');
+  }
+  let point = [];
+  let length = [];
+
+  function clickEvent(event) {
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+    context.strokeSyle = 'red';
+    context.lineWidth = 3;
+    context.fillStyle = 'red';
+
+    context.beginPath();
+    context.arc(event.offsetX, event.offsetY, 1, 0, Math.PI * 2);
+    context.stroke();
+    let x = [event.offsetX, event.offsetY];
+    point.push(x);
+
+    if (point.length >= 2) {
+      let x = point[point.length - 1];
+      let y = point[point.length - 2];
+
+      let subLength = ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5;
+
+      let realLength = parseFloat(('{{height}}' * subLength) / '{{imgHeight}}');
+
+      length.push(realLength);
+
+      let sum = Math.round(length.reduce((a, b) => a + b, 0) * 100) / 100;
+
+      change(sum);
+
+      context.beginPath();
+      context.moveTo(x[0], x[1]);
+      context.lineTo(y[0], y[1]);
+      context.stroke();
+    }
+  }
+  canvas.addEventListener('click', clickEvent);
+</script>

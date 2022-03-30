@@ -1,0 +1,161 @@
+body {
+  width: 100%;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #212121;
+}
+
+.header h1 {
+  color: #eaeaea;
+}
+.header .menu {
+  color: #eaeaea;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+.inside {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.inside h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.container .image {
+  width: 421px;
+  height: 300px;
+}
+
+.container .image img {
+  width: 100%;
+  height: 280px;
+}
+
+.container .desc {
+  background-color: #eeeeee;
+}
+
+.desc {
+  height: 280px;
+}
+.desc .title {
+  text-align: center;
+  background-color: #323232;
+  padding: 15px;
+}
+
+.desc .title span {
+  color: #eaeaea;
+  font-size: 1.871rem;
+}
+
+.desc .box {
+  display: grid;
+  grid-row-gap: 50px;
+  padding: 3rem;
+}
+
+.desc .box p {
+  font-size: 1.58rem;
+}
+
+.box .length {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.passive {
+  display: flex;
+  justify-content: center;
+}
+.desc .passive_length,
+.passive_area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 15px;
+}
+
+.desc .passive p {
+  font-size: 1.5rem;
+}
+
+.auto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 1.5rem;
+}
+
+.line_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.line_info span {
+  font-size: 1.58rem;
+}
+
+.red,
+.green,
+.blue,
+.yellow {
+  width: 100px;
+  height: 7px;
+  margin-right: 5px;
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.green {
+  background-color: rgb(0, 255, 0);
+}
+
+.blue {
+  background-color: rgb(0, 0, 255);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 0);
+}
+
+.circle_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.circle_info p {
+  font-size: 1.5rem;
+}

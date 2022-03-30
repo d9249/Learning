@@ -1,0 +1,84 @@
+{% load static %}
+<style>
+  main {
+    display: flex;
+  }
+  form {
+    margin: 10px 0 0 10px;
+  }
+  input {
+    padding: 5px 5px;
+    margin: 5px 0;
+    border: 1px dotted red;
+  }
+  label {
+    display: inline-block;
+    width: 15px;
+  }
+</style>
+<main>
+  <section id="ab-section">
+    <img src="{{ image.image.url }}" alt="image" style="position: absolute" />
+    <canvas
+      id="canvas"
+      width="{{image.origin_width}}"
+      height="{{image.origin_height}}"
+      onclikc="clickEvent(event)"
+      style="position: absolute"
+    >
+    </canvas>
+  </section>
+  <form action="{% url 'canvas_page' %}" method="POST">
+    {% csrf_token %}
+    <input type="number" name="width" /> <br />
+    <input type="number" name="height" /> <br />
+    <label for="top_left">w</label
+    ><input type="text" id="top_left" name="w" value="0,0" readonly />
+    <br />
+    <label for="top_right">x</label
+    ><input type="text" id="top_right" name="x" value="0,0" readonly />
+    <br />
+    <label for="bottom_right">y</label
+    ><input type="text" id="bottom_right" name="y" value="0,0" readonly />
+    <br />
+    <label for="bottom_left">z</label
+    ><input type="text" id="bottom_left" name="z" value="0,0" readonly />
+    <input type="hidden" name="pk" value="{{image.id}}" />
+    <input type="submit" value="제출" />
+    <br />
+  </form>
+</main>
+
+<script>
+  point = [];
+  function clickEvent(event) {
+    if (point.length < 4) {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.strokeStyle = 'red';
+      context.lineWidth = 3;
+      context.fillStyle = 'red';
+
+      context.beginPath();
+      context.arc(event.offsetX, event.offsetY, 2, 0, Math.PI * 2);
+      context.stroke();
+      let x = [event.offsetX, event.offsetY];
+      point.push(x);
+
+      context.closePath();
+      if (point.length == 4) {
+        document.getElementById('top_left').value = point[0];
+        document.getElementById('top_right').value = point[1];
+        document.getElementById('bottom_right').value = point[2];
+        document.getElementById('bottom_left').value = point[3];
+      }
+    }
+  }
+
+  canvas.addEventListener('click', clickEvent);
+
+  //   img width
+  let width = '{{image.origin_width}}';
+  let target = document.getElementById('ab-section');
+  target.style.width = width;
+</script>

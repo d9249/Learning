@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center flex-column py-4">
+  <canvas id="canvas" onclick="clickEvent(event)">
+  </canvas>
+  <form action="{% url 'lengthCalc' %}" method="POST" class="mt-3">
+    {% csrf_token %}
+    <input type="hidden" id="topLeft" name="x" value="0,0">
+    <input type="hidden" id="topRight" name="y" value="0,0">
+    <input type="hidden" id="bottomRight" name="w" value="0,0">
+    <input type="hidden" id="bottomLeft" name="z" value="0,0">
+    <input type="hidden" name="pk" value="{{img.id}}">
+    <button class="btn btn-primary" type="submit" id="button">submit</button>
+  </form>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+  let points = [];
+  const canvas = document.getElementById("canvas");
+  const button = document.getElementById("button")
+  const ctx = canvas.getContext("2d");
+  const image = new Image();
+  image.src = '{{img.image.url}}'
+  image.addEventListener('load', function () {
+    
+    const width = image.width;
+    const height = image.height;
+    canvas.width = width;
+    canvas.height = height;
+    button.style.width = width + 'px';
+    ctx.drawImage(image, 0, 0, width, height)
+  })
+  function clickEvent(event) {
+    if (points.length < 4) {
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 3;
+
+      ctx.beginPath();
+      ctx.arc(event.offsetX, event.offsetY, 2, 0, Math.PI * 2);
+      ctx.stroke();
+      const x = [event.offsetX, event.offsetY];
+      points.push(x);
+
+      ctx.closePath();
+    }
+    if (points.length === 4) {
+      document.getElementById("topLeft").value = points[0]
+      document.getElementById("topRight").value = points[1]
+      document.getElementById("bottomRight").value = points[2]
+      document.getElementById("bottomLeft").value = points[3]
+    }
+  }
+
+</script>
+{% endblock %}
