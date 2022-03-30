@@ -1,0 +1,55 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+/// <summary>
+/// 카메라가 비추고 있는 화면은 스크린샷으로 남기는 기능을 구현한 스크립트입니다.
+/// 현재(2018.08.16) 하늘이미지(SkyBox)를 서브카메라에서 그려내다보니
+/// 이것까지 담아내지 못해 사진에서 하늘이 검게 보이는 문제점이 있습니다.
+/// </summary>
+public class ScreenShot : MonoBehaviour {
+
+    public Camera camera, skycamera;
+    int resWidth, resHeight;
+
+    public Text UIFilePath;
+
+	// Use this for initialization
+	void Start () {
+        resWidth = Screen.width;
+        resHeight = Screen.height;
+
+        UIFilePath.text = Application.dataPath + "/ScreenShot";
+	}
+
+    public void btnScreenShot()
+    {
+        RenderTexture rt = new RenderTexture(resWidth, resHeight, 24);
+        skycamera.targetTexture = rt;
+        camera.targetTexture = rt;
+        Texture2D screenShot = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
+        skycamera.Render();
+        camera.Render();
+        RenderTexture.active = rt;
+        screenShot.ReadPixels(new Rect(0, 0, resWidth, resHeight), 0, 0);
+        skycamera.targetTexture = null;
+        camera.targetTexture = null;
+        RenderTexture.active = null; // JC: added to avoid errors
+        Destroy(rt);
+
+        // 파일로 저장.
+        byte[] bytes = screenShot.EncodeToPNG();
+
+        float lat = PlayerPrefs.GetFloat("LATITUDE");
+        float lon = PlayerPrefs.GetFloat("LONGITUDE");
+
+        string filePath = string.Format("{0}/ScreenShot/{1}_{2}", Application.dataPath, lat, lon);
+        System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(filePath);
+        if (!di.Exists) di.Create();
+
+        string filename = string.Format("{0}/{1}{2:00}{3:00}_{4:00}{5:00}.png", filePath
+            , UIManager.YEAR, UIManager.MONTH, UIManager.DAY, UIManager.HOUR, UIManager.MINUTE);
+        System.IO.File.WriteAllBytes(filename, bytes);
+    }
+}
