@@ -20,6 +20,7 @@
 [![iDeal's github stats](https://github-readme-stats.vercel.app/api?username=d9249&show_icons=true&count_private=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 </div>
+
 ### :mortar_board: Career
 
 | **Type** | **Date**| **Contents**| **Organization**|
