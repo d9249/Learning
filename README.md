@@ -51,19 +51,19 @@
 
 | Date       | Korean title                                                 | Organization                        |
 | ---------- | ------------------------------------------------------------ | ----------------------------------- |
-| 21.06.04 | [PoseNet을 활용한 헬스 트레이너 웹 서비스]()                     | [한국정보기술학회 2021 대학생논문경진대회](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10569082&language=ko_KR) |
-| 21.10.23 | [겹친 문자 이미지 분류를 위한 합성곱 신경망 모델의 정확도 분석]() | [한국인터넷정보학회 2021 추계학술발표대회](https://www.manuscriptlink.com/society/ksii/conference/fall2021) |
+| 21.06.04 | [PoseNet을 활용한 헬스 트레이너 웹 서비스](https://github.com/d9249/Master/blob/main/논문/PoseNet을%20활용한%20헬스%20트레이너%20웹%20서비스/PoseNet을%20활용한%20헬스%20트레이너%20웹%20서비스.pdf)                     | [한국정보기술학회 2021 대학생논문경진대회](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10569082&language=ko_KR) |
+| 21.10.23 | [겹친 문자 이미지 분류를 위한 합성곱 신경망 모델의 정확도 분석](https://github.com/d9249/Master/blob/main/논문/겹친%20문자%20이미지%20분류를%20위한%20합성곱%20신경망%20모델의%20정확도%20분석/2021%20한국인터넷정보학회%20추계학술발표대회/겹친%20문자%20이미지%20분류를%20위한%20합성곱%20신경망%20모델의%20정확도%20분석.pdf) | [한국인터넷정보학회 2021 추계학술발표대회](https://www.manuscriptlink.com/society/ksii/conference/fall2021) |
 | 22.06.19 | [Classification of degenerative arthritis using Xception model in radiographic images(방사선 영상 이미지에서 Xception 모델을 이용한 퇴행성 관절염 등급 분류)]() | [한국인터넷정보학회 APIC-IST 2022 CFP](http://apicist.org/2022/) |
 
 ### 📁 Certificate of completion
 
 | Date       | Contents                                                     | Organization |
 | ---------- | ------------------------------------------------------------ | ------------ |
-| 21.01.01 | [멋쟁이 사자처럼 8기]() | LIKE LION (Kyonggi Univ)      |
-| 21.07.22 | [대학생 코딩 캠프 7기]() | Codeit       |
-| 21.07.27 | [산업인공지능 단기집중 교육과정(일반공통)]() | KPC, KETI    |
-| 21.07.27 | [2021 대표연구소 미래인재 멘토링 프로그램]() | Kyonggi Univ    |
-| 22.04.12 | [DIYA’s 4th machine-learning project]() | DIYA    |
+| 21.01.01 | [멋쟁이 사자처럼 8기](https://github.com/d9249/Master/blob/main/수료증/멋쟁이%20사자처럼%20수료증.pdf) | LIKE LION (Kyonggi Univ)      |
+| 21.07.22 | [대학생 코딩 캠프 7기](https://github.com/d9249/Master/blob/main/수료증/대코캠_수료증_7기.pdf) | Codeit       |
+| 21.07.27 | [산업인공지능 단기집중 교육과정(일반공통)](https://github.com/d9249/Master/blob/main/수료증/산업인공지능%20단기집중교육/산업인공지능%20단기집중교육(일반)%20수료증.jpg) | KPC, KETI    |
+| 21.07.27 | [2021 대표연구소 미래인재 멘토링 프로그램](https://github.com/d9249/Master/blob/main/수료증/%5B이수증%5D%5B신규%5D%202021%20대표연구소%20미래인재%20멘토링%20프로그램.pdf) | Kyonggi Univ    |
+| 22.04.12 | [DIYA’s 4th machine-learning project](https://github.com/d9249/Master/blob/main/수료증/Sangmin_Lee.pdf) | DIYA    |
 
 ### 📽 Project
 
