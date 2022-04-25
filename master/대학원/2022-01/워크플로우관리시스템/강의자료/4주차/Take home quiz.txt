@@ -1,9 +1,0 @@
-Takehome Quiz: Solving the following exercises
-
-•Exercise 4.1 Optimizing data usage
-•Exercise 4.4 Search for errors
-•Exercise 4.5 Performance analysis I
-
-Due date: March 30th Midnight BEFORE 5 MIN.
-
-P139-P146
