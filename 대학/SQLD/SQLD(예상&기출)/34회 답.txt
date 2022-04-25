@@ -1,0 +1,54 @@
+Q.1	4	　
+Q.2	3	　
+Q.3	4	　
+Q.4	2	　
+Q.5	4	　
+Q.6	4	　
+Q.7	4	　
+Q.8	3	　
+Q.9	2	　
+Q.10	2	　
+　		　
+Q.11	2	　
+Q.12	4	SELECT 절에 없는 컬럼의 자리수를 사용할 수 없음
+Q.13	1	　
+Q.14	3	순방향임
+Q.15	3	　
+Q.16	1	WHERE 절에 별도의 조건절이 없을 경우 NESTED LOOP JOIN 이 반드시 좋다고 할 수 없음
+Q.17	3	(a + b + c + d) 의 경우는 해당 로우에 대해서 계산이 되고 난 컬럼에 대해서 Sum 이 수행됨
+　	　	(a) + (b) .. 의 경우 각각의 sum 을 수행하고 나서 다시 사칙연산이 수행됨
+Q.18	2	 1) 2 / 3) 10  / 4) A
+Q.19	3	B A 2 1 / 나머지 : D B 4 2 
+Q.20	2	　
+Q.21	1	　
+Q.22	1	　
+Q.23	1	　
+Q.24	3	　
+Q.25	4	　
+Q.26	1	　
+Q.27	2	　
+Q.28	4	　
+Q.29	2	　
+Q.30	3	oracle 의 경우 기본 값이 auto commit off 로 ddl 이 일어날 경우 묵시적 commit 이 됨 (설정 불가)
+　	　	sql server 의 경우 기본 값이 auto commit on 으로 false 가 될 경우 ddl 도 묵시적 commit 이 되지 않음
+Q.31	1	　
+Q.32	2	　
+Q.33	2	　
+Q.34	1	　
+Q.35	1	　
+Q.36	1	ORA-00947 에러
+Q.37	1	　
+Q.38	1	　
+Q.39	1	　
+Q.40	3	최상위 관리자가 나올려면 left outer join 이 되어야 함. 최상위 관리자는 manager_id 가 null 이거나 없기 때문.
+Q.41	3	　
+Q.42	2	　
+　		　
+Q.43	LEFT OUTER JOIN	　
+Q.44	C	　
+Q.45	MAX	　
+Q.46	SQLDEVELOPER	　
+Q.47	54800	　
+Q.48	3	　
+Q.49	NTILE	　
+Q.50	2
