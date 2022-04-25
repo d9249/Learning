@@ -1,0 +1,158 @@
+pose_id,pose_type,pose_name,gesture_type,hand_type,view_type
+0,number,숫자 1,my_hand,left,1st
+1,number,숫자 2,my_hand,left,1st
+2,number,숫자 3,my_hand,left,1st
+3,number,숫자 4,my_hand,left,1st
+4,number,숫자 5,my_hand,left,1st
+5,number,숫자 6,my_hand,left,1st
+6,number,숫자 7,my_hand,left,1st
+7,number,숫자 8,my_hand,left,1st
+8,number,숫자 9,my_hand,left,1st
+9,number,숫자 0,my_hand,left,1st
+10,number,숫자 1,my_hand,right,1st
+11,number,숫자 2,my_hand,right,1st
+12,number,숫자 3,my_hand,right,1st
+13,number,숫자 4,my_hand,right,1st
+14,number,숫자 5,my_hand,right,1st
+15,number,숫자 6,my_hand,right,1st
+16,number,숫자 7,my_hand,right,1st
+17,number,숫자 8,my_hand,right,1st
+18,number,숫자 9,my_hand,right,1st
+19,number,숫자 0,my_hand,right,1st
+22,meaning,손가락 오므리기,my_hand,left,1st
+23,meaning,전화모양,my_hand,left,1st
+25,meaning,손 안경,my_hand,left,1st
+26,meaning,손가락 접기,my_hand,left,1st
+27,meaning,손 토끼,my_hand,left,1st
+28,meaning,최고,my_hand,left,1st
+29,meaning,약속,my_hand,left,1st
+31,meaning,"검지,중지 교차",my_hand,left,1st
+32,meaning,"엄지,중지 붙이기",my_hand,left,1st
+34,meaning,"엄지,소지 붙이기",my_hand,left,1st
+35,meaning,파이팅,my_hand,left,1st
+36,meaning,총,my_hand,left,1st
+37,meaning,동그라미,my_hand,left,1st
+39,meaning,OK,my_hand,left,1st
+40,meaning,빅토리,my_hand,left,1st
+41,meaning,부정(엄지손 아래로),my_hand,left,1st
+42,meaning,부정(검지 흔들기),my_hand,left,1st
+43,meaning,손바닥,my_hand,left,1st
+44,meaning,"약지,소지 가위",my_hand,left,1st
+47,meaning,손가락 오므리기,my_hand,right,1st
+48,meaning,전화모양,my_hand,right,1st
+49,meaning,약속,my_hand,right,1st
+50,meaning,손 안경,my_hand,right,1st
+51,meaning,손가락 접기,my_hand,right,1st
+53,meaning,최고,my_hand,right,1st
+54,meaning,약속,my_hand,right,1st
+55,meaning,꼬집기,my_hand,right,1st
+56,meaning,"검지,중지 교차",my_hand,right,1st
+57,meaning,"엄지,중지 붙이기",my_hand,right,1st
+58,meaning,"엄지,약지 붙이기",my_hand,right,1st
+59,meaning,"엄지,소지 붙이기",my_hand,right,1st
+60,meaning,파이팅,my_hand,right,1st
+61,meaning,총,my_hand,right,1st
+62,meaning,동그라미,my_hand,right,1st
+64,meaning,OK,my_hand,right,1st
+65,meaning,빅토리,my_hand,right,1st
+66,meaning,부정(엄지손 아래로),my_hand,right,1st
+67,meaning,부정(검지 흔들기),my_hand,right,1st
+68,meaning,손바닥,my_hand,right,1st
+69,meaning,"약지,소지 가위",my_hand,right,1st
+70,meaning,손하트,my_hand,both,1st
+72,meaning,손가락 오므리기,my_hand,both,1st
+73,meaning,전화모양,my_hand,both,1st
+74,meaning,약속,my_hand,both,1st
+75,meaning,손 안경,my_hand,both,1st
+77,meaning,손 토끼,my_hand,both,1st
+78,meaning,최고,my_hand,both,1st
+79,meaning,약속,my_hand,both,1st
+80,meaning,꼬집기,my_hand,both,1st
+81,meaning,"검지,중지 교차",my_hand,both,1st
+82,meaning,"엄지,중지 붙이기",my_hand,both,1st
+83,meaning,"엄지,약지 붙이기",my_hand,both,1st
+85,meaning,파이팅,my_hand,both,1st
+87,meaning,총,my_hand,both,1st
+88,meaning,네모,my_hand,both,1st
+89,meaning,세모,my_hand,both,1st
+90,meaning,동그라미,my_hand,both,1st
+92,meaning,X,my_hand,both,1st
+93,meaning,OK,my_hand,both,1st
+94,meaning,빅토리,my_hand,both,1st
+95,meaning,부정(엄지손 아래로),my_hand,both,1st
+97,meaning,손바닥,my_hand,both,1st
+98,meaning,"약지,소지 가위",my_hand,both,1st
+100,number,숫자1,your_hand,left,3rd
+101,number,숫자2,your_hand,left,3rd
+105,number,숫자6,your_hand,left,3rd
+106,number,숫자7,your_hand,left,3rd
+107,number,숫자8,your_hand,left,3rd
+109,number,숫자0,your_hand,left,3rd
+110,number,숫자1,your_hand,right,3rd
+111,number,숫자2,your_hand,right,3rd
+112,number,숫자3,your_hand,right,3rd
+113,number,숫자4,your_hand,right,3rd
+114,number,숫자5,your_hand,right,3rd
+115,number,숫자6,your_hand,right,3rd
+116,number,숫자7,your_hand,right,3rd
+117,number,숫자8,your_hand,right,3rd
+118,number,숫자9,your_hand,right,3rd
+119,number,숫자0,your_hand,right,3rd
+122,meaning,손가락 오므리기,your_hand,left,3rd
+123,meaning,전화모양,your_hand,left,3rd
+124,meaning,약속,your_hand,left,3rd
+125,meaning,손 안경,your_hand,left,3rd
+126,meaning,손가락 접기,your_hand,left,3rd
+128,meaning,최고,your_hand,left,3rd
+129,meaning,약속,your_hand,left,3rd
+131,meaning,"검지,중지 교차",your_hand,left,3rd
+132,meaning,"엄지,중지 붙이기",your_hand,left,3rd
+133,meaning,"엄지,약지 붙이기",your_hand,left,3rd
+134,meaning,"엄지,소지 붙이기",your_hand,left,3rd
+135,meaning,파이팅,your_hand,left,3rd
+136,meaning,총,your_hand,left,3rd
+137,meaning,동그라미,your_hand,left,3rd
+138,meaning,경고(주먹 내밀기),your_hand,left,3rd
+139,meaning,OK,your_hand,left,3rd
+140,meaning,빅토리,your_hand,left,3rd
+141,meaning,부정(엄지손 아래로),your_hand,left,3rd
+142,meaning,부정(검지 흔들기),your_hand,left,3rd
+143,meaning,손바닥,your_hand,left,3rd
+144,meaning,"약지,소지 가위",your_hand,left,3rd
+145,meaning,손하트,your_hand,right,3rd
+146,meaning,주먹쥐기,your_hand,right,3rd
+147,meaning,손가락 오므리기,your_hand,right,3rd
+148,meaning,전화모양,your_hand,right,3rd
+149,meaning,약속,your_hand,right,3rd
+150,meaning,손 안경,your_hand,right,3rd
+151,meaning,손가락 접기,your_hand,right,3rd
+153,meaning,최고,your_hand,right,3rd
+154,meaning,약속,your_hand,right,3rd
+155,meaning,꼬집기,your_hand,right,3rd
+156,meaning,"검지,중지 교차",your_hand,right,3rd
+157,meaning,"엄지,중지 붙이기",your_hand,right,3rd
+158,meaning,"엄지,약지 붙이기",your_hand,right,3rd
+159,meaning,"엄지,소지 붙이기",your_hand,right,3rd
+160,meaning,파이팅,your_hand,right,3rd
+161,meaning,총,your_hand,right,3rd
+162,meaning,동그라미,your_hand,right,3rd
+163,meaning,경고(주먹 내밀기),your_hand,right,3rd
+165,meaning,빅토리,your_hand,right,3rd
+167,meaning,부정(검지 흔들기),your_hand,right,3rd
+168,meaning,손바닥,your_hand,right,3rd
+169,meaning,"약지,소지 가위",your_hand,right,3rd
+171,meaning,주먹쥐기,your_hand,both,3rd
+172,meaning,손가락 오므리기,your_hand,both,3rd
+173,meaning,전화모양,your_hand,both,3rd
+174,meaning,약속,your_hand,both,3rd
+175,meaning,손 안경,your_hand,both,3rd
+177,meaning,손 토끼,your_hand,both,3rd
+186,meaning,큰하트,your_hand,both,3rd
+188,meaning,네모,your_hand,both,3rd
+189,meaning,세모,your_hand,both,3rd
+190,meaning,동그라미,your_hand,both,3rd
+191,meaning,경고(주먹 내밀기),your_hand,both,3rd
+192,meaning,X,your_hand,both,3rd
+193,meaning,OK,your_hand,both,3rd
+194,meaning,빅토리,your_hand,both,3rd
+195,meaning,부정(엄지손 아래로),your_hand,both,3rd
