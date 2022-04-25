@@ -1,0 +1,19 @@
+{
+  "fields": [
+    {
+      "mainTitle": "Software-Defined Networking.",
+      "subTitle": "소프트웨어 정의 네트워킹",
+      "body": "SDN(Software-Defined Networking)은 네트워크 리소스를 최적화하고 변화하는 비즈니스 요구 사항, 애플리케이션, 트래픽에 맞춰 네트워크를 신속히 적응시키기 위한 네트워크 가상화 접근 방식입니다. 또한 SDN은 다양한 비즈니스 이점을 가져다 줍니다. 제어와 전송 레이어의 분리는 유연성을 높이고 새로운 애플리케이션의 출시 속도를 높입니다. 문제 및 가동 중단에 보다 신속히 대응할 수 있는 능력은 네트워크 가용성을 높입니다. 본 연구실은 비즈니스 목표에 맞는 라우팅, 접근제어, 트래픽 엔지니어링, QoS 관리, 전력제어 등 모든 형태의 정책 관리를 위한 연구를 진행하고 있다."
+    },
+    {
+      "mainTitle": "Internet of Things.",
+      "subTitle": "사물 인터넷",
+      "body": "사물인터넷(Internet of Things, 약어로 IoT)은 최근의 사물인터넷의 부각으로 인해 IoT(Internet of Things)와 스마트 디바이스와의 연동을 통해 주변의 센서로부터 수집된 정보를 직접 가공·처리하거나 제어하는 개인 중심의 생활밀착형 센서 앱 서비스를 제공하려는 다양한 시도가 이루어지고 있다. 본 연구실에서는 늘어나는 사용자의 요구에 발을 맞춰 스마트폰, 스마트 TV와 같은 다양한 스마트 기기들은 기존에 내장 되어있는 센서를 활용하는 방식 및 응용에서 벗어나 IoT와의 융합을 통해 외부의 센서가 마치 내 손안의 센서처럼 활용되고 제어되어 인간과 교감하는 새로운 패러다임으로의 변화와 함께 이를 실현할 수 있는 다양한 연구를 진행하고 있다."
+    },
+    {
+      "mainTitle": "Deep Learning.",
+      "subTitle": "심층 학습",
+      "body": "심층 학습(深層學習) 또는 딥 러닝(영어: deep structured learning, deep learning 또는 hierarchical learning)은 여러 비선형 변환기법의 조합을 통해 높은 수준의 추상화(abstractions, 다량의 데이터나 복잡한 자료들 속에서 핵심적인 내용 또는 기능을 요약하는 작업)를 시도하는 기계 학습 알고리즘의 집합으로 정의되며, 큰 틀에서 사람의 사고방식을 컴퓨터에게 가르치는 기계학습의 한 분야라고 이야기할 수 있다. 본 연구실에서는 Reinforcement learning, Generative models(GAN), Unsupervised learning, Meta-learning, Adversarial examples, Transfer learning, Interpretability등의 다양한 분야의 연구를 진행하고 있다."
+    }
+  ]
+}

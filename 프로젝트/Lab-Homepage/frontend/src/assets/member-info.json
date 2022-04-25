@@ -1,0 +1,226 @@
+{
+  "members": {
+    "professor": [
+      {
+        "role": "professor",
+        "name": "김남기",
+        "email": "ngkim@kyonggi.ac.kr",
+        "img": "member-img/김남기.jpg",
+        "additional": "Network, AI"
+      }
+    ],
+    "PhD": [],
+    "master": [
+      {
+        "role": "master",
+        "name": "이상윤",
+        "email": "e311333111313@kyonggi.ac.kr",
+        "img": "member-img/이상윤.jpg",
+        "additional": "AI"
+      },
+      {
+        "role": "master",
+        "name": "최락현",
+        "email": "chasura416@naver.com",
+        "img": "member-img/최락현.jpg",
+        "additional": "Network, AI"
+      },
+      {
+        "role": "undergraduate",
+        "name": "이상민",
+        "email": "d9249@kyonggi.ac.kr",
+        "img": "member-img/이상민.jpg",
+        "additional": "Network, Deep Learning"
+      }
+    ],
+    "undergraduate": [
+      
+      {
+        "role": "undergraduate",
+        "name": "김희찬",
+        "email": "train1312@naver.com",
+        "img": "member-img/김희찬.jpg",
+        "additional": "Network"
+      },
+      {
+        "role": "undergraduate",
+        "name": "안나",
+        "email": "dksek3050@naver.com",
+        "img": "",
+        "additional": "I.o.T"
+      },
+      {
+        "role": "undergraduate",
+        "name": "이예진",
+        "email": "sukiouob@kyonggi.ac.kr",
+        "img": "",
+        "additional": "Deep Learning"
+      }
+    ]
+  },
+  "graduates": {
+    "PhD": [
+      {
+        "role": "master degree",
+        "name": "이우식",
+        "img": "member-img/이우식.jpg",
+        "additional": "Reinforcement Learning"
+      }
+    ],
+    "master": [
+      {
+        "role": "master degree",
+        "name": "채지훈",
+        "img": "member-img/채지훈.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "송영민",
+        "img": "member-img/송영민.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "정회정",
+        "img": "member-img/정회정.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "유다은",
+        "img": "member-img/유다은.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "전양구",
+        "img": "member-img/전양구.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "허호진",
+        "img": "member-img/허호진.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "하남봉",
+        "img": "member-img/하남봉.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "홍진아",
+        "img": "member-img/홍진아.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "오현석",
+        "img": "member-img/오현석.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "지한솔",
+        "img": "member-img/지한솔.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "홍석우",
+        "img": "member-img/홍석우.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "채운표",
+        "img": "member-img/채운표.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "류희열",
+        "img": "member-img/류희열.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "박범조",
+        "img": "member-img/박범조.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "김현명",
+        "img": "member-img/김현명.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "백진욱",
+        "img": "member-img/백진욱.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "김선필",
+        "img": "member-img/김선필.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master degree",
+        "name": "김현종",
+        "img": "member-img/김현종.jpg",
+        "additional": "Reinforcement Learning"
+      },
+      {
+        "role": "master",
+        "name": "고준형",
+        "email": "kkt829@gmail.com",
+        "img": "member-img/고준형.jpg",
+        "additional": "SDN, Deep Learning"
+      }
+    ],
+    "bachelor": [
+      {
+        "role": "bachelor",
+        "name": "장민호",
+        "img": "member-img/장민호.jpg",
+        "additional": ""
+      },
+      {
+        "role": "bachelor",
+        "name": "박지우",
+        "img": "member-img/박지우.jpg",
+        "additional": ""
+      },
+      {
+        "role": "bachelor",
+        "name": "이미미",
+        "img": "member-img/이미미.jpg",
+        "additional": ""
+      },
+      {
+        "role": "bachelor",
+        "name": "선민기",
+        "img": "member-img/선민기.jpg",
+        "additional": ""
+      },
+      {
+        "role": "bachelor",
+        "name": "고명진",
+        "img": "",
+        "additional": ""
+      },
+      {
+        "role": "bachelor",
+        "name": "김태형",
+        "img": "",
+        "additional": ""
+      }
+    ]
+  }
+}
