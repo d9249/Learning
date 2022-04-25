@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-6">
+        <img class="card-img-top mb-5 mb-md-0" src="{{img.image.url}}" alt="img" />
+      </div>
+      <div class="col-md-6">
+        <h1 class="display-5 fw-bolder text-center mb-4">세부정보 입력</h1>
+        <div class="d-flex flex-column">
+          <form action="{% url 'infoProcess' img.pk %}" method="post">
+            {% csrf_token %}
+            <div class="d-flex">
+              <input class="form-control me-3 w-50 p-2 mb-2" id="i nputQuantity" type="num" placeholder="가로"
+                name="width" />
+              <input class="form-control w-50 p-2 mb-2" id="inputQuantity" type="num" placeholder="세로" name="height" />
+            </div>
+            <input class="form-control me-3 w-100 p-2 mb-2" id="inputQuantity" type="text" placeholder="현황"
+              name="state" />
+            <input class="form-control me-3 w-100 p-2 mb-2" id="inputQuantity" type="num" placeholder="원인"
+              name="cause" />
+            <input class="form-control me-3 w-100 p-2 mb-2" id="inputQuantity" type="num" placeholder="해결방안"
+              name="solution" />
+            
+            <select class="form-select me-3 w-100 p-2 mb-2" id="inputQuantity" name="category">
+              <option value="noselect">선택안함</option>
+              {% for category in category %}
+              <option value="{{category.name}}">{{category.name}}</option>
+              {% endfor %}
+            </select>
+
+            <button class="btn btn-outline-danger flex-shrink-0 w-100 p-2" type="submit">
+              등록
+            </button>
+          </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+    {% block content %}    
+    <!-- Header-->
+    <header class="bg-danger py-5">
+      <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white ">
+          <h1 class="display-4 fw-bolder">이미지 업로드</h1>
+          <p class="lead fw-normal text-white-50 mb-5 ">
+            이미지를 업로드 해주세요 :)
+          </p>
+          <!-- img upload form -->
+          <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+            <input class="form-control form-control-lg mb-5" id="formFileLg" type="file" name="uploadImg" onchange="fileCheck()">
+            <button type="submit" class="btn btn-outline-light btn-lg mb-5" id="button" disabled>업로드</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    {% endblock %}
+
+    {% block script %}
+    <script type="text/javascript" src="{% static 'js/fileCheck.js' %}"></script>
+    {% endblock %}
+</html>

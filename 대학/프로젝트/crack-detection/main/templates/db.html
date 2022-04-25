@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  a {
+    color: black;
+    text-decoration: none;
+    padding: 0 5px;
+  }
+
+  a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+
+  a.selected {
+    font-weight: 500;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 3px;
+    background-color: rgb(163, 160, 160);
+  }
+
+  .page {
+    margin: 0 0 10px 0;
+  }  
+
+  .card{
+  margin: 5% 0%;
+}
+
+  .card-body{
+    margin: 0% 0% 0% 3%;
+    padding: 6% 0%;
+  }
+
+  @media (max-width: 768px) {
+    .input-group {
+      width: 50% !important;
+    }
+  }
+</style>
+
+<section class="py-5">
+  <div class="d-flex justify-content-end">
+    <div class="input-group rounded w-25 p-3" id="deskInput">
+      <input type="text" class="form-control rounded" id="searchField" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+        <i class="fa fa-search"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="container">  
+    <div class="card-deck row">
+    {% for page_obj in page_obj %}
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card">    
+        <div class="view overlay">
+          <img class="card-img-top" src="{{page_obj.image.url}}" alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">카테고리 : {{page_obj.category.name}}</h4>
+          <p class="card-text"><p>현황 : {{page_obj.state}}</p>
+          <p class="card-text"><p>원인 : {{page_obj.cause}}</p>
+          <p class="card-text"><p>해결방안 : {{page_obj.solution}}</p>
+          <p class="card-text"><p>현황 : {{page_obj.state}}</p>
+          <a href="/db/{{page_obj.id}}" class="btn btn-primary">더보기</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+
+    <div class="card-output row">
+
+    </div>
+  </div>
+</section>
+
+<p class="result lead text-center" style="display: none">결과를 찾을 수 없습니다.</p>
+
+
+<div class="page" style="text-align: center">
+  {% if page_obj.has_previous %}
+  <a class="before" href="?page={{page_obj.previous_page_number}}">이전</a>
+  {% endif %}
+
+  {% for page_number in page_obj.paginator.page_range %}
+    {% if page_number >= page_obj.number|add:-2 and page_number <= page_obj.number|add:2 %} 
+      {% if page_number == page_obj.number %} 
+      <a href="" class="selected">{{page_number}}</a>
+      {% else %}
+    <a href="?page={{page_number}}">{{page_number}}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+    {% if page_obj.has_next %}
+    <a class="after" href="?page={{page_obj.next_page_number}}">다음 </a>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'js/search.js' %}"></script>
+{% endblock %}

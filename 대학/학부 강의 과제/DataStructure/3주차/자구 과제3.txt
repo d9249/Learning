@@ -1,0 +1,16 @@
+Reading assignment 3
+Read chapter 3 in the textbook and solve all the questions of the exercises on page 112 ~ 114.
+
+Just simply upload your answer-sheet after printing to a pdf file named your student ID.
+
+읽기 할당 3
+
+교과서의 3장을 읽고 112~114페이지에 있는 연습문제를 모두 풀어라.
+
+인쇄 후 답안지를 학생 ID라는 pdf 파일로 업로드하기만 하면 된다.
+
+Programming assingment 1
+Do the practices with all the programming examples in the chapter 3 and submit the pdf file containing all the screen shots, each of which is showing the program and its execution result of the corresponding example.
+
+프로그래밍 분석 1
+3장의 모든 프로그래밍 예제를 사용하여 실습하고, 각 예제의 프로그램 및 실행 결과를 보여주는 모든 스크린샷이 포함된 pdf 파일을 제출하십시오.

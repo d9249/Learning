@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/detection.css' %}" />
+    <title>Document</title>
+  </head>
+    <body>
+      <hedaer class="header">
+        <h1 class="logo">crack</h1>
+        <div class="menu">
+          <span>로그인</span>
+          <span>회원가입</span>
+        </div>
+      </hedaer>
+      <section class="inside">
+        <h3>
+          균열 탐지 <br />
+          균열의 길이 측정
+        </h3>
+      </section>
+      <main id="main">
+        <div class="container">
+          <div class="image">
+            <img src="{{image.image.url}}" alt="{{image.image}}" />
+          </div>
+          <div class="image">
+            <img src="{{image.crop_image.url}}" alt="{{image.image}}" />
+          </div>
+          <div class="desc">
+            <div class="title"><span>분석 결과</span></div>
+            <div class="box">
+              {% if crop_image is not None %}
+              <p>왼쪽 : 원본 이미지</p>
+              <p>오른쪽 : 평탄화 이미지</p>
+              {% else %}
+              <p>평탄화 실패</p>
+              {% endif %}
+            </div>
+          </div>
+ 
+          <div class="image">
+            <img
+              src="{{image.length_image.url}}"
+              alt="{{image.length_image}}"
+              
+            />
+          </div>
+          <div class="image">
+            <img
+              src="{{image.area_image.url}}"
+              alt="{{image.area_image.url}}"
+        
+            />
+          </div>
+          <div class="desc">
+            <div class="title"><span>분석 결과</span></div>
+            <div class="auto">
+              <div class="line_info">
+                <div class="red"></div>
+                <span class="line_result">{{red}}cm</span>
+              </div>
+              <div class="line_info">
+                <div class="green"></div>
+                <span class="line_result">{{green}}cm</span>
+              </div>
+              <div class="line_info">
+                <div class="blue"></div>
+                <span class="line_result">{{blue}}cm</span>
+              </div>
+              <div class="line_info">
+                <div class="yellow"></div>
+                <span class="line_result">{{yellow}}cm</span>
+              </div>
+            </div>
+
+            <div class="circle_info">
+              <p class="area">원의 넓이 :</p>
+              <p id="area">{{area}}</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
+  </html>
+
+  <script>
+    let point = [];
+    let length = [];
+    function change(sum) {
+      let x = (document.getElementById('result').innerHTML = sum + 'cm');
+    }
+    function triangleArea() {
+      if (point.length === 5) {
+        let diagonal =
+          ((point[0][0] - point[2][0]) ** 2 +
+            (point[0][1] - point[2][1]) ** 2) **
+          (1 / 2);
+
+        let line1 =
+          ((point[0][0] - point[1][0]) ** 2 +
+            (point[0][1] - point[1][1]) ** 2) **
+          (1 / 2);
+        let line2 =
+          ((point[2][0] - point[1][0]) ** 2 +
+            (point[2][1] - point[1][1]) ** 2) **
+          (1 / 2);
+
+        let line3 =
+          ((point[0][0] - point[3][0]) ** 2 +
+            (point[0][1] - point[3][1]) ** 2) **
+          (1 / 2);
+        let line4 =
+          ((point[3][0] - point[2][0]) ** 2 +
+            (point[3][1] - point[2][1]) ** 2) **
+          (1 / 2);
+
+        line1 = parseFloat(('{{mkr_length}}' * line1) / '{{std_length}}');
+        line2 = parseFloat(('{{mkr_length}}' * line2) / '{{std_length}}');
+        line3 = parseFloat(('{{mkr_length}}' * line3) / '{{std_length}}');
+        line4 = parseFloat(('{{mkr_length}}' * line4) / '{{std_length}}');
+        diagonal = parseFloat(('{{mkr_length}}' * diagonal) / '{{std_length}}');
+        let s1 = (line1 + line2 + diagonal) / 2;
+        let s2 = (line3 + line4 + diagonal) / 2;
+
+        let area =
+          (s1 * (s1 - line1) * (s1 - line2) * (s1 - diagonal)) ** (1 / 2) +
+          (s2 * (s2 - line3) * (s2 - line4) * (s2 - diagonal)) ** (1 / 2);
+        area = area.toFixed(2);
+        document.getElementById('line_area').innerHTML = area + '㎠';
+      } else {
+        document.getElementById('line_area').innerHTML = '0㎠';
+      }
+    }
+    function clickEvent(event) {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.strokeStyle = 'red';
+      context.lineWidth = 3;
+      context.fillStyle = 'red';
+
+      context.beginPath();
+      context.arc(event.offsetX, event.offsetY, 1, 0, Math.PI * 2);
+      context.stroke();
+      let x = [event.offsetX, event.offsetY];
+      point.push(x);
+
+      triangleArea();
+
+      if (point.length >= 2) {
+        let a = point[point.length - 1];
+        let b = point[point.length - 2];
+        let sub_length = ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** (1 / 2);
+        let real_length = parseFloat(
+          ('{{mkr_length}}' * sub_length) / '{{std_length}}' * (500/412)
+        );
+
+        length.push(real_length);
+        let sum = Math.round(length.reduce((a, b) => a + b, 0) * 100) / 100;
+
+        change(sum);
+
+        context.beginPath();
+        context.moveTo(a[0], a[1]);
+        context.lineTo(b[0], b[1]);
+        context.stroke();
+      }
+    }
+
+    canvas.addEventListener('click', clickEvent);
+  </script>
+</html>

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/result.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="{{image.image.url}}" class="result_img" alt="{{image.image}}" />
+    <canvas
+      onclick="clickEvent"
+      id="canvas"
+      width="{{width}}"
+      height="{{height}}"
+    ></canvas>
+    <div id="result">0cm</div>
+    <div id="area"></div>
+  </body>
+  <script>
+    let point = [];
+    let length = [];
+    function change(sum) {
+      let x = (document.getElementById('result').innerHTML = sum + 'cm');
+    }
+    function triangleArea() {
+      if (point.length === 4) {
+        let diagonal =
+          ((point[0][0] - point[2][0]) ** 2 +
+            (point[0][1] - point[2][1]) ** 2) **
+          (1 / 2);
+
+        let line1 =
+          ((point[0][0] - point[1][0]) ** 2 +
+            (point[0][1] - point[1][1]) ** 2) **
+          (1 / 2);
+        let line2 =
+          ((point[2][0] - point[1][0]) ** 2 +
+            (point[2][1] - point[1][1]) ** 2) **
+          (1 / 2);
+
+        let line3 =
+          ((point[0][0] - point[3][0]) ** 2 +
+            (point[0][1] - point[3][1]) ** 2) **
+          (1 / 2);
+        let line4 =
+          ((point[3][0] - point[2][0]) ** 2 +
+            (point[3][1] - point[2][1]) ** 2) **
+          (1 / 2);
+
+        line1 = parseFloat(('{{mkr_length}}' * line1) / '{{std_length}}');
+        line2 = parseFloat(('{{mkr_length}}' * line2) / '{{std_length}}');
+        line3 = parseFloat(('{{mkr_length}}' * line3) / '{{std_length}}');
+        line4 = parseFloat(('{{mkr_length}}' * line4) / '{{std_length}}');
+        diagonal = parseFloat(('{{mkr_length}}' * diagonal) / '{{std_length}}');
+        let s1 = (line1 + line2 + diagonal) / 2;
+        let s2 = (line3 + line4 + diagonal) / 2;
+
+        let area =
+          (s1 * (s1 - line1) * (s1 - line2) * (s1 - diagonal)) ** (1 / 2) +
+          (s2 * (s2 - line3) * (s2 - line4) * (s2 - diagonal)) ** (1 / 2);
+        area = area.toFixed(2);
+        document.getElementById('area').innerHTML = area + '㎠';
+      } else {
+        document.getElementById('area').innerHTML = '';
+      }
+    }
+    function clickEvent(event) {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.strokeStyle = 'red';
+      context.lineWidth = 3;
+      context.fillStyle = 'red';
+
+      context.beginPath();
+      context.arc(event.offsetX, event.offsetY, 1, 0, Math.PI * 2);
+      context.stroke();
+      let x = [event.offsetX, event.offsetY];
+      point.push(x);
+
+      triangleArea();
+
+      if (point.length >= 2) {
+        let a = point[point.length - 1];
+        let b = point[point.length - 2];
+        let sub_length = ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** (1 / 2);
+        let real_length = parseFloat(
+          ('{{mkr_length}}' * sub_length) / '{{std_length}}'
+        );
+
+        length.push(real_length);
+        let sum = Math.round(length.reduce((a, b) => a + b, 0) * 100) / 100;
+
+        change(sum);
+
+        context.beginPath();
+        context.moveTo(a[0], a[1]);
+        context.lineTo(b[0], b[1]);
+        context.stroke();
+      }
+    }
+
+    canvas.addEventListener('click', clickEvent);
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/p5.min.js"
+    integrity="sha512-tGZFF1kxT/c9C+kv77mKkZ9Ww1VyU8TMX6HLUSzbPrDLuptbiRFBfti8A33ip+BBIHYUsybuZD9OKLmIqdLmaQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>

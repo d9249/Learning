@@ -1,0 +1,121 @@
+{% extends 'base.html' %} {% block content %} {{resultMsg}}
+{% load static %}
+
+  
+<!-- Button trigger modal -->
+<div class="overflow-hidden mt-4 pe-4">
+  <button
+    type="button"
+    class="btn btn-outline-secondary float-end"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+  >
+    새 카테고리
+  </button>
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-4 m-3 mt-1 ">
+{% for i in lists %}
+  {% if i|length == 1 %}
+    <div class="col">
+      <div class="card h-100">
+        {% for j in i %}
+        <div class="card-body">
+          <h5 class="card-title text-center">{{j}}</h5>
+        </div>
+        {% endfor %}
+        <img src="{% static 'img/noimage.png' %}" class="card-img-top" />  
+      </div>
+    </div>
+  {% else %}
+  {% for j in i %}
+    {% if forloop.counter == 1 %}
+    <a class="text-decoration-none text-dark" href="{% url 'categoryDetail' j %}">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title text-center">{{j}}</h4>
+        </div>
+    {% elif forloop.counter == 2 %}
+        <img src="{{j.image.url}}" class="card-img-top " />  
+      </div>
+    </div>
+  </a>
+    {% else %}
+    {% endif %}
+  {% endfor %}
+ 
+  {% endif %}
+
+{% endfor %}
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">새로만들기</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+          {% csrf_token %}
+          <label for="newCategory">카테고리명</label>
+          <input id="category-input" class="form-control mb-3" type="text" />
+          <input id="hidden-input" type="hidden" name="newCategory" />
+          <div class="btn-group float-end">
+            <button id ="vali-btn" class="btn btn-outline-secondary " type="button" onclick="nameCheck()">
+              중복검사
+            </button>
+            <button id="submit-btn" class="btn btn-outline-secondary " type="submit" disabled>
+              만들기
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+  function nameCheck() {
+    let x = "{{categories}}"
+    let cateList = x.trim().split(' ')
+    const input = document.getElementById('category-input').value
+    const submitBtn = document.getElementById('submit-btn')
+    let disabled = true;
+    if (input.trim() == ""){
+      alert('카테고리명을 입력해주세요.(공백 불가)')
+    }
+    else{
+      cateList.forEach(element => {
+        if(input == element){
+          alert(input+"은(는) 이미 존재하는 카테고리명 입니다.")
+          disabled = false;
+        }
+      });
+      if(disabled){
+        alert(input+"은(는) 생성 가능한 카테고리명 입니다.")
+        submitBtn.disabled = false;
+        document.getElementById('category-input').disabled=true
+        document.getElementById('vali-btn').disabled=true
+        document.getElementById('hidden-input').value= input
+      }
+    }
+}
+</script>
+{% endblock %}
