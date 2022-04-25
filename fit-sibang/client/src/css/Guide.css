@@ -1,0 +1,84 @@
+.explainWrap {
+  background-color: #000;
+  box-shadow: rgb(0 0 0 / 2%) -1px 1px 1px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explainWrap .explainFlex {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: initial;
+}
+
+.explainWrap .explain {
+  width: 60%;
+  position: relative;
+  padding: 30px;
+}
+
+.explainWrap .explain p {
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 20px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.explainWrap .explain button {
+  width: 200px;
+  height: 60px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 60px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+.exerlistFlex {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.explainWrap .exerList {
+  width: 250px;
+}
+
+.explainWrap .exerList img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+@media screen and (max-width: 700px) {
+  .explainWrap .explainFlex {
+    width: 97.5%;
+  }
+  .explainWrap .explain p {
+    font-size: 16px;
+    margin-left: auto;
+  }
+
+  .explainWrap .explain button {
+    margin-left: auto;
+    margin-top: -8px;
+  }
+}

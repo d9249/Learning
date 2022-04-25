@@ -1,0 +1,17 @@
+.login__flex {
+  width: 414px;
+  height: 215px;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__flex .loginForm {
+  display: "flex";
+  flex-direction: column;
+}
+
+.MuiGrid-grid-xs-true {
+  text-align: left;
+}

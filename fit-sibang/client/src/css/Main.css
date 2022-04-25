@@ -1,0 +1,179 @@
+.image2 {
+  height: 70px;
+}
+
+.exercise {
+  padding-left: 10rem;
+}
+
+.recoFlex {
+  width: 100%;
+  padding: 30px;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.recoExer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recoExer .todayExer {
+  font-size: 32px;
+  font-weight: bold;
+  color: rgb(70, 77, 82);
+}
+
+.exergo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: rgb(0 0 0 / 2%) -1px 1px 1px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-bottom: 50px;
+}
+
+.exerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 510px;
+  background: rgb(255, 255, 255);
+  padding: 0px auto;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .exerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 510px;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    font-weight: bold;
+  }
+}
+
+.eeeeFlex {
+  align-items: center;
+  width: 510px;
+  background: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.eeeeFlex img {
+  width: 100%;
+}
+
+.exer {
+  width: 50%;
+  float: right;
+}
+.text2 span {
+  margin-bottom: 10px;
+}
+
+.exer .sport {
+  font-size: 16px;
+}
+.exer .time {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.exer:nth-child(2n-1) span{
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 4px;
+  color: #eb5374;
+}
+
+.exer:nth-child(2n) span{
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 4px;
+  color: #5673eb;
+}
+
+.exer .compare {
+  font-size: 11.5px;
+  border-radius: 50px;
+  opacity: 0.8;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 0px 6px 0px 8px;
+  font-weight: bold;
+  background: #eff2ff;
+}
+.main {
+  text-align: center;
+}
+.bmiWeight,
+.myState {
+  font-family: bazzi !important;
+  font-size: 14px !important;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+  .main {
+    max-width: 80%;
+    padding-bottom: 0px;
+  }
+  .eeeeFlex {
+    align-items: center;
+    width: 65%;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+  }
+  .exer {
+    width: 50%;
+    float: right;
+  }
+  .exercise {
+    padding-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .main {
+    max-width: 80%;
+    padding-bottom: 0px;
+  }
+  .eeeeFlex {
+    align-items: center;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 0.5rem;
+  }
+
+  .exercise {
+    padding-left: 3rem;
+  }
+}

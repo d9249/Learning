@@ -1,0 +1,422 @@
+.mypage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 510px;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.mypageFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mypageImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 18px;
+}
+
+.mypageImg img {
+  width: 100%;
+  border-radius: 50%;
+}
+.mypageInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart {
+  width: 100%;
+  padding: 30px;
+}
+
+/*
+*/
+
+.userData {
+}
+
+.report {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 570px;
+  height: 250px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px 2px;
+  border-radius: 6px;
+}
+
+.userProfile .userImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 50px;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.userProfile .userImg img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75px;
+  align-items: center;
+  width: 150px;
+}
+
+.userInfo .beforeWeight {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 4px;
+  color: #eb5374;
+  border-radius: 50px;
+  align-items: center;
+  padding: 5px 15px;
+  background: #eff2ff;
+}
+
+.userInfo .afterWeight {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 4px;
+  color: #000;
+  border-radius: 50px;
+  align-items: center;
+  padding: 5px 15px;
+  background: #f7f7f7;
+}
+
+.userInfo .weightFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.userInfo .changeWeight {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.changeWeight .decreasePer {
+  color: #0051c7;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.changeWeight .increasePer {
+  color: #eb5374;
+  letter-spacing: 1px;
+}
+
+.userProfile .userSettingsList {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userProfile .userSettingsList button {
+  width: 150px;
+  height: 50px;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-right: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.userFlex {
+  width: 325px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.userData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 570px;
+  height: 256px;
+}
+
+.exerQuestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 256px;
+  height: 256px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px 2px;
+  margin-right: 15px;
+  border-radius: 6px;
+}
+
+.exerFeedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 580px;
+  height: 250px;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 6px 2px;
+  border-radius: 6px;
+}
+
+.exerFeedback span {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 25px;
+}
+
+.exerFeedback button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.userdataFlex {
+  width: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.userdataFlex .BMI,
+.weight,
+.kcal {
+  width: 47px;
+  height: 18px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  text-align: center;
+  background-color: #e2e7fb;
+  border: 3px solid #5673ea;
+  margin-right: 5px;
+  font-size: 9px;
+}
+
+.userdataFlex .buttonFlex {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(50%, 5px);
+}
+
+.modal {
+  width: 350px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  outline: none;
+  background-color: #fff;
+  text-align: initial;
+}
+
+.centerFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.weightWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.centerFlex input {
+  width: 110px;
+  height: 30px;
+  text-align: center;
+}
+
+.centerFlex .day {
+  display: flex;
+  align-items: center;
+}
+
+.centerFlex .day input {
+  text-align: center;
+}
+.weightValue {
+  width: 100px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.weightUpdate {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.badgeModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  outline: none;
+  background-color: #fff;
+  overflow-y: auto;
+  text-align: initial;
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imgWidth {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.imgWidth img {
+  width: 100%;
+  border-radius: 30%;
+  margin-bottom: 5px;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(74, 74, 74, 0.7) !important;
+}
+
+label + .MuiInput-formControl {
+  width: 180px;
+}
+
+.MuiInputBase-root {
+  justify-content: space-evenly;
+}
+@media all and (max-width: 700px) {
+  .mainheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .report {
+    width: 97.5%;
+  }
+  .userFlex {
+    width: 97.5%;
+    justify-content: center;
+  }
+  .userProfile {
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .userProfile .userImg {
+    margin-left: 0;
+  }
+  .userProfile .userSettingsList {
+    flex-direction: row;
+    width: 75%;
+  }
+  .userProfile .userSettingsList button {
+    margin: 0;
+    margin-left: 10px;
+  }
+  .exerFeedback {
+    width: 80%;
+  }
+  .userdataFlex {
+    width: 100%;
+  }
+  .userdataFlex .buttonFlex {
+    top: inherit;
+    left: inherit;
+    bottom: 10px;
+    transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .exerFeedback span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .userInfo .weightFlex {
+    flex-direction: column;
+    margin-top: 13px;
+  }
+  .userProfile .userSettingsList button {
+    font-size: 10px;
+  }
+
+  .userProfile .userImg {
+    margin: 0;
+    margin-left: 10px;
+  }
+  .badgeModal {
+    width: 300px;
+    height: 300px;
+  }
+  .exerFeedback span {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mainheader {
+    /* padding-left: 8rem; */
+  }
+  .exerFeedback span {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,15 @@
+.register__flex {
+  width: 414px;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register__flex .registerForm {
+  display: "flex";
+  flex-direction: column;
+}
+.selectClass {
+  display: "flex";
+}

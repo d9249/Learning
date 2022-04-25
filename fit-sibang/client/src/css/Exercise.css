@@ -1,0 +1,107 @@
+.exer_wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.rutin_page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 525px;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.rutin_pageFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rutin_pageInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.rutin_pageInfo span {
+  font-size: 26px;
+  font-weight: 400;
+  color: rgb(70, 77, 82);
+  margin-bottom: 20px;
+}
+
+.rutin__img {
+  width: 565px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.rutin__img .rutin__wrap {
+  width: 210px;
+}
+
+.rutin__img .rutin__wrap p {
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rutin__img img {
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 2em !important;
+  cursor: pointer;
+}
+
+.rutin span {
+  font-size: 16px;
+}
+
+p {
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainheader {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .rutin_page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 83%;
+    padding: 30px;
+    margin: 10px auto;
+  }
+
+  .rutin__img img {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .rutin__img {
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .mainLayout {
+    max-width: 510px;
+    margin-bottom: 18px;
+  }
+  .rutin__img {
+    width: 86%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
