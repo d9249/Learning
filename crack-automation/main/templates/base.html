@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Crack</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="apple-touch-icon" href="{% static 'image/favicon.png' %}" />
+    <link rel="icon" href="{% static 'image/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% block style %} {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="item-wrap">
+        <a href="/">
+          <img class="nav-logo" src="{% static 'image/logo.png' %}" alt="logo"
+        /></a>
+      </div>
+    </nav>
+    {% block content %} {% endblock %} {% block script %} {% endblock %}
+  </body>
+</html>

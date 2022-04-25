@@ -1,0 +1,96 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.table {
+    width: 768px;
+    border: 1px solid #444444;
+}
+  
+.button {
+  color: black;
+  text-decoration:none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem;
+}
+
+.button button {
+  background: linear-gradient( rgba(27, 188, 194, 1) 0%, rgba(24, 163, 168, 1) 100% );
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.button button:hover {
+  opacity: 0.9;
+}
+}
+.table {
+  box-shadow: 10px 13px 31px -7px rgba(0, 0, 0, 0.39);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tr {
+  font-size: 14px;
+}
+
+.td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+th {
+  font-weight: bold;
+  background-color: #f8f8f8;
+}
+
+.table img {
+  width: 50%;
+}
+
+.table:nth-child(2) {
+  margin-top: 20px;
+}
+
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #444444;
+  }
+  .tr {
+    font-size:11px;
+  }
+  .tr .overflow {
+    white-space: nowrap;
+  }
+
+  .td {
+    font-size:11px;
+    padding:0;
+  }
+}

@@ -1,0 +1,95 @@
+{% extends 'base.html'%} {% load static %}
+<!--  -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/crackDetail.css' %}" />
+{% endblock %}
+<!--  -->
+{% block content %}
+
+<div class="button">
+  <a href="{% url 'createCrackObj' crackData.pk %}">
+    <button>등록</button>
+  </a>
+</div>
+<section>
+  {% for crackObj in crackObj %}
+  <article>
+    <div class="img-wrap">
+      <img class="obj-img" src="{{crackObj.image.url}}" alt="image" />
+      {% if crackObj.isFlattened %}
+      {% if crackObj.flatting_image.width > crackObj.flatting_image.height %}
+      <img
+        class="after-img-width"
+        src="{{crackObj.flatting_image.url}}"
+        alt="image"
+      />
+      {% else %}
+      <img
+        class="after-img-height"
+        src="{{crackObj.flatting_image.url}}"
+        alt="image"
+      />
+      {% endif %}
+      {% else %}
+      <img
+        class="after-img"
+        src="{% static 'image/noflatten.png' %}"
+        alt="image"
+      />
+      {% endif %}
+    </div>
+    <!--  -->
+    <table>
+      <tbody>
+        <tr>
+          <th>폭</th>
+          <td>{{crackObj.originWidth|floatformat}} mm</td>
+        </tr>
+        <tr>
+          <th>높이</th>
+          <td>{{crackObj.originHeight|floatformat}} mm</td>
+        </tr>
+        <tr>
+          {% if crackObj.isFlattened %}
+          <!--  -->
+          {% if crackObj.crackLength %}
+          <th>손상규모</th>
+          <td>{{crackObj.crackLength}} mm</ㅅ>
+          {% else %}
+          <th>손상규모</th>
+          <td>{{crackObj.crackArea}} ㎡</td>
+          {% endif %} {% else %} {% endif %}
+        </tr>
+        <tr>
+          <th>등록일</th>
+          <td>{{crackObj.date| date:'y.m.d.'}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="wrapper">
+      <div class="button_wrap">
+        {% if crackObj.isFlattened == False%}
+        <button
+          class="button"
+          onclick="location.href='/flatting/{{crackObj.id}}'"
+        >
+          평탄화
+        </button>
+        {% endif %}
+        <button
+          class="delete"
+          type="submit"
+          onclick="location.href='/deleteCrackObj/{{crackObj.id}}'"
+        >
+          삭제
+        </button>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
+<!--  -->
+{% block script %}
+<!--  -->
+{% endblock %}

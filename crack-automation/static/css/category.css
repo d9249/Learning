@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.card-view {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+}
+
+.title {
+  font-weight: 600;
+  width: 250px;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.button button {
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.btn-detail {
+  background: linear-gradient(
+    rgba(27, 188, 194, 1) 0%,
+    rgba(24, 163, 168, 1) 100%
+  );
+}
+
+.btn-detail:hover {
+  background: rgba(27, 188, 194, 1) 0%;
+}
+
+.btn-delete {
+  background-color: red;
+}
+
+.btn-delete:hover {
+  background-color: brown;
+}
+
+.btn-primary {
+  background-color: #4472c4;
+  border-color: #4472c4;
+}
+
+.btn-primary:hover {
+  background-color: #4172aa;
+}
+
+.input-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-bottom: 0.5rem;
+  padding-right: 1.2rem;
+}
+
+.input-group input {
+  width: 20%;
+  padding: 0.375rem 0.7rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.input-group button {
+  width: 75px;
+  border: none;
+  cursor: pointer;
+  background: #0d6efd;
+  color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+  .card-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-view {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin-bottom: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .button {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .button button {
+    width: 64px;
+    font-size: 11px;
+  }
+}

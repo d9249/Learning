@@ -1,0 +1,57 @@
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.area {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 32px;
+}
+
+.rule {
+  position: relative;
+  top: 0;
+  right: 2%;
+}
+
+.rule .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 120px;
+  font-size: 16px;
+  background-color: #e2e2e2;
+  color: #000;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.rule:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .image img {
+    width: 80%;
+  }
+  .area {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,220 @@
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/input.css' %}" />
+
+{% endblock %} {% block content %}
+
+<button onclick="previous()" class="previous round">&#8249;</button>
+<button onclick="next()" class="next round">&#8250;</button>
+<form
+  action="{% url 'handleUpdateCategory' category.id %}"
+  method="post"
+  enctype="multipart/form-data"
+  onchange="onChange()"
+>
+  {% csrf_token %} {{error}}
+  <div class="slide">
+    <ul>
+      <section class="detail-section">
+        <h2>세부 정보를 입력해주세요</h2>
+        <div class="detail">
+          <label for="name">시설물명</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value="{{category.facilityName}}"
+          />
+        </div>
+        <div class="detail">
+          <label for="number">시설물번호</label>
+          <input
+            type="text"
+            name="number"
+            id="number"
+            value="{{category.facilityNo}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="location">시설물위치 (주소)</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            value="{{category.address}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="date">준공일지(연,월,일)</label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            value="{{category.completionDate|date:'Y-m-d' }}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="site-area">대지면적</label>
+          <input
+            type="text"
+            name="site-area"
+            id="site-area"
+            value="{{category.landArea}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="building-area">건축면적</label>
+          <input
+            type="text"
+            name="building-area"
+            id="building-area"
+            value="{{category.buildingArea}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="year-area">건축연면적</label>
+          <input
+            type="text"
+            name="year-area"
+            id="year-area"
+            value="{{category.totalBuildingArea}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="max-height">최고높이</label>
+          <input
+            type="text"
+            name="max-height"
+            id="max-height"
+            value="{{category.highestHeight}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="use">용도</label>
+          <input type="text" name="use" id="use" value="{{category.usage}}" />
+        </div>
+
+        <div class="detail">
+          <label for="structure">시설물구조</label>
+          <input
+            type="text"
+            name="structure"
+            id="structure"
+            value="{{category.facilityStructure}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="format">구조형식</label>
+          <input
+            type="text"
+            name="format"
+            id="format"
+            value="{{category.structuralForm}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="facility">부대시설</label>
+          <input
+            type="text"
+            name="facility"
+            id="facility"
+            value="{{category.amenities}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="floor">층별</label>
+          <input
+            type="text"
+            name="floor"
+            id="floor"
+            value="{{category.floors}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="grade">전차안전등급</label>
+          <input
+            type="text"
+            name="grade"
+            id="grade"
+            value="{{category.grade}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="result">점검결과</label>
+          <input
+            type="text"
+            name="result"
+            id="result"
+            value="{{category.testResults}}"
+          />
+        </div>
+
+        <div class="detail">
+          <label for="plus">규모 및 제원 추가사항</label>
+          <input type="text" name="plus" id="plus" value="{{category.plus}}" />
+        </div>
+      </section>
+
+      <section class="img-section">
+        <div class="first-blank-img" style="display: none"></div>
+        <div class="first-preview">
+          <ol>
+            <li>
+              <img src="{{category.frontView.url}}" alt="frontView" />
+            </li>
+          </ol>
+        </div>
+        <div class="view-upload">
+          <span>전경도</span>
+          <input
+            type="file"
+            class="location-input"
+            accept="image/*"
+            name="frontView"
+            id="frontView"
+          />
+        </div>
+
+        <div class="second-blank-img" style="display: none"></div>
+        <div class="second-preview">
+          <ol>
+            <li>
+              <img src="{{category.frontView.url}}" alt="frontView" />
+            </li>
+          </ol>
+        </div>
+        <div class="location-upload">
+          <span>위치도</span>
+          <input
+            type="file"
+            class="view-input"
+            accept="image/*"
+            name="locationMap"
+            id="locationMap"
+            value="{{category.locationMap.url}}"
+          />
+        </div>
+        <div class="submit">
+          <button type="submit" id="save" disabled>저장하기</button>
+        </div>
+      </section>
+    </ul>
+  </div>
+</form>
+{% endblock %} {% block script %}
+
+<script src="{% static 'js/slide.js' %}"></script>
+<script src="{% static 'js/validation.js' %}"></script>
+<script src="{% static 'js/valid.js' %}"></script>
+{% endblock %}

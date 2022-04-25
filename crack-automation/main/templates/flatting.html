@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/flatting.css' %}" />
+{% endblock %} {% block content %}
+<section class="section">
+  <canvas id="canvas" onclick="clickEvent(event)"> </canvas>
+
+  <form action="{% url 'flattingResult' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" id="topLeft" name="tl" value="0,0" />
+    <input type="hidden" id="topRight" name="tr" value="0,0" />
+    <input type="hidden" id="bottomRight" name="br" value="0,0" />
+    <input type="hidden" id="bottomLeft" name="bl" value="0,0" />
+    <input type="hidden" name="pk" value="{{crack.id}}" />
+    <br />
+    <input type="radio" id="result" name="result" value="area" checked /> 넓이
+    <input type="radio" id="result" name="result" value="length" /> 길이
+    <div class="submit">
+      <button id="button" class="area" type="submit" disabled>제출하기</button>
+    </div>
+  </form>
+</section>
+{% endblock %} {% block script %}
+<script>
+  let points = [];
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  const image = new Image();
+  const submitBtn = document.querySelector("#button");
+  console.log(submitBtn);
+
+  image.src = "{{crack.image.url}}";
+  image.addEventListener("load", function () {
+    const width = image.width;
+    const height = image.height;
+    canvas.width = width;
+    canvas.height = height;
+    ctx.drawImage(image, 0, 0, width, height);
+  });
+
+  function clickEvent(event) {
+    if (points.length < 4) {
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 3;
+
+      ctx.beginPath();
+      ctx.arc(event.offsetX, event.offsetY, 2, 0, Math.PI * 2);
+      ctx.stroke();
+
+      const x = [event.offsetX, event.offsetY];
+      points.push(x);
+
+      ctx.closePath();
+    }
+
+    if (points.length === 4) {
+      document.getElementById("topLeft").value = points[0];
+      document.getElementById("topRight").value = points[1];
+      document.getElementById("bottomRight").value = points[2];
+      document.getElementById("bottomLeft").value = points[3];
+      submitBtn.className = "area activate";
+      submitBtn.disabled = false;
+    }
+  }
+</script>
+{% endblock %}

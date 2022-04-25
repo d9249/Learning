@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/flattingResult.css' %}" />
+{% endblock %} {% block content %}
+<section class="section">
+  <canvas id="canvas" onclick="clickEvent(event)"></canvas>
+
+  <div class="length">
+    <p id="crack-length">길이 : 0㎜</p>
+  </div>
+  <button id="button" class="submit" type="submit" onclick="save()">
+    저장하기
+  </button>
+</section>
+
+{% endblock %}
+<!--  -->
+{% block script %}
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  const button = document.getElementById("button");
+  const image = new Image();
+  image.src = "{{crack.flatting_image.url}}";
+
+  let points = [];
+  let length = [];
+
+  image.addEventListener("load", function () {
+    const width = image.width;
+    const height = image.height;
+    canvas.width = width;
+    canvas.height = height;
+    button.style.width = width + "px";
+    ctx.drawImage(image, 0, 0, width, height);
+  });
+
+  function change(sum) {
+    let x = (document.getElementById("crack-length").innerText = sum + "mm");
+  }
+
+  function clickEvent(event) {
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 3;
+
+    ctx.beginPath();
+    ctx.arc(event.offsetX, event.offsetY, 1, 0, Math.PI * 2);
+    ctx.stroke();
+    let x = [event.offsetX, event.offsetY];
+    points.push(x);
+
+    if (points.length >= 2) {
+      let x = points[points.length - 1];
+      let y = points[points.length - 2];
+      let subLength = ((x[0] - y[0]) ** 2 + (x[1] - y[1]) ** 2) ** 0.5;
+      let realLength = parseFloat(("{{height}}" * subLength) / "{{imgHeight}}");
+
+      length.push(realLength);
+      let sum = Math.round(length.reduce((a, n) => a + n, 0) * 100) / 100;
+      change(sum);
+
+      ctx.beginPath();
+      ctx.moveTo(x[0], x[1]);
+      ctx.lineTo(y[0], y[1]);
+      ctx.stroke();
+    }
+  }
+
+  function save() {
+    const dataURL = canvas.toDataURL("image/png");
+    let crackLength = document.getElementById("crack-length").innerText;
+    crackLength = crackLength.replace(/[a-z]/g, "");
+    fetch("/save/{{crack.id}}", {
+      body: JSON.stringify({ dataURL: dataURL, crackLength: crackLength }),
+      method: "POST",
+      redirect: "follow",
+    }).then((response) => {
+      if (response.redirected) {
+        console.log(response.url);
+        window.location.href = response.url;
+      }
+    });
+  }
+</script>
+{% endblock %}

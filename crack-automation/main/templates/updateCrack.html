@@ -1,0 +1,45 @@
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/createCrack.css' %}" />
+{% endblock %} {% block content %}
+<section class="section">
+  <form action="{% url 'handleUpdateCrack' crack.id %}" method="POST">
+    {% csrf_token %}
+    <div class="detail-input">
+      <div class="detail">
+        <label for="floor">위치1</label>
+        <input type="text" name="floor" value="{{crack.floor}}" />
+      </div>
+
+      <div class="detail">
+        <label for="location">위치2</label>
+        <input type="text" name="location" value="{{crack.location}}" />
+      </div>
+      <!--  -->
+      <div class="detail">
+        <label for="crackType">결함종류</label>
+        <input type="text" name="crackType" value="{{crack.crackType}}" />
+      </div>
+
+      <div class="detail">
+        <label for="crackWidth">폭</label>
+        <input type="text" name="crackWidth" value="{{crack.crackWidth}}" />
+      </div>
+
+      <div class="detail">
+        <label for="place">개소</label>
+        <input type="text" name="place" value="{{crack.place}}" />
+      </div>
+      <div class="detail">
+        <label for="cause">발생원인</label>
+        <input type="text" name="cause" value="{{crack.cause}}" />
+      </div>
+      <div class="detail">
+        <label for="note">비고</label>
+        <input type="text" name="note" value="{{crack.note}}" />
+      </div>
+      <button class="submit-btn" type="submit">수정하기</button>
+    </div>
+  </form>
+</section>
+
+{% endblock %} {% block script %} {% endblock %}

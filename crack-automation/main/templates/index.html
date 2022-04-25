@@ -1,0 +1,23 @@
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css"
+/>
+{% endblock %} {% block content %}
+<section class="section">
+  <article class="card-index">
+    <img class="nav-logo" src="{% static 'image/mainLogo.png' %}" alt="logo" />
+    <div class="index-div">
+      <div class="index-detail">
+        <h3>자동화의 시작, Crack</h3>
+      </div>
+    </div>
+    <a class="button-54" href="{%url 'input' %}">신규 정보 등록하기</a>
+    <br />
+    <a class="button-54" href="{%url 'category' %}">기존 정보 관리하기</a>
+    <br />
+    <a class="button-54" href="{%url 'category' %}">시설물 정보 분석하기</a>
+  </article>
+</section>
+{% endblock %}

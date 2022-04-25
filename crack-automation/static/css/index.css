@@ -1,0 +1,68 @@
+.card-index > .nav-logo {
+  width: auto;
+  height: 240px;
+  border-radius: 15px;
+  border-radius: 45px;
+}
+
+.card-index {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Arial";
+  font-weight: 500;
+}
+
+.index-title {
+  overflow: hidden;
+  display: block;
+}
+
+.index-detail {
+  margin-top: 40px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.button-54 {
+  width: 255px;
+  display: inline-block;
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  cursor: pointer;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 6px 24px;
+  position: relative;
+  user-select: none;
+  touch-action: manipulation;
+  margin-top: 40px;
+  font-weight: bold;
+  font-family: "KoPub Dotum";
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+/* 모바일에 사용될 스타일 */
+@media screen and (max-width: 768px) {
+  .card-index > .nav-logo {
+    width: auto;
+    height: 200px;
+  }
+
+  .index-title {
+    font-size: 18px;
+  }
+
+  .index-detail {
+    margin-top: 30px;
+    font-size: 32px;
+    line-height: 1.38;
+  }
+}

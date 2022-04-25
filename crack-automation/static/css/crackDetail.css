@@ -1,0 +1,147 @@
+.button {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem;
+}
+
+.button button {
+  background: linear-gradient(
+    rgba(27, 188, 194, 1) 0%,
+    rgba(24, 163, 168, 1) 100%
+  );
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 1rem;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1em;
+  gap: 1em;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: all 1s;
+}
+
+article p {
+  font-size: 1.4rem;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button_wrap {
+  display: flex;
+  justify-content: end;
+}
+
+.wrapper button {
+  background-color: #0d6efd;
+  border: 0;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.wrapper .delete {
+  background-color: red;
+}
+
+.img-wrap {
+  text-align: center;
+}
+
+.obj-img {
+  width: 450px;
+}
+
+.after-img {
+  width: 450px;
+}
+
+.after-img-width {
+  max-width: 350px;
+}
+
+.after-img-height {
+  max-height: 200px;
+}
+
+table {
+  width: 50%;
+  border: 0.5px solid #bdbdbd;
+}
+
+table tbody tr th {
+  font-weight: 600;
+  padding: 5px;
+  border: 0.5px solid #bdbdbd;
+}
+
+table tbody tr td {
+  border: 0.5px solid #bdbdbd;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    justify-content: center;
+  }
+
+  .obj-img {
+    width: 180px;
+    height: 160px;
+  }
+
+  .after-img {
+    max-width: 120px;
+    max-height: 90px;
+  }
+
+  .after-img-width {
+    max-width: 105px;
+  }
+  .after-img-height {
+    max-height: 150px;
+  }
+
+  article {
+    padding: 1rem 0;
+  }
+
+  table {
+    width: 95%;
+  }
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html'%} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/createCrack.css' %}" />
+{% endblock %} {% block content %}
+<section class="section">
+  <form action="{% url 'createCrack' objData.pk %}" method="POST">
+    {% csrf_token %}
+    <div class="detail-input">
+      <div class="detail">
+        <label for="floor">위치1</label>
+        <input type="text" name="floor" />
+      </div>
+
+      <div class="detail">
+        <label for="location">위치2</label>
+        <input type="text" name="location" />
+      </div>
+      <!--  -->
+      <div class="detail">
+        <label for="crackType">손상종류</label>
+        <input type="text" name="crackType" />
+      </div>
+
+      <div class="detail">
+        <label for="place">폭</label>
+        <input type="text" name="crackWidth" />
+      </div>
+
+      <div class="detail">
+        <label for="place">개소</label>
+        <input type="text" name="place" />
+      </div>
+
+      <div class="detail">
+        <label for="cause">발생원인</label>
+        <input type="text" name="cause" />
+      </div>
+      <div class="detail">
+        <label for="note">비고</label>
+        <input type="text" name="note" />
+      </div>
+      <button class="submit-btn" type="submit">등록하기</button>
+    </div>
+  </form>
+</section>
+
+{% endblock %} {% block script %} {% endblock %}

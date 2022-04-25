@@ -1,0 +1,36 @@
+{% extends 'base.html'%} 
+
+{% load static %} 
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/fileUpload.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<section class="section">
+  
+  <form action="{% url 'detailCrack' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="first-blank-img"></div>
+    <div class="first-preview"></div>    
+    <div class="location-upload">
+      <span>위치도</span>
+      <input type="file" class="location-input" accept="image/*" />
+    </div>
+
+    <div class="second-blank-img"></div>
+    <div class="second-preview"></div>
+    <div class="view-upload">
+      <span>전경도</span>
+      <input type="file" class="view-input" accept="image/*" />
+    </div>
+    <div class="submit">
+      <button type="submit">등록하기</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
+
+{% block script %} 
+<script src="{% static 'js/inputFile.js' %}"></script>
+{% endblock %}

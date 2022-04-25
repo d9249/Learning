@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+{% endblock %} {% block content %}
+<section class="section">
+  <form method="post" action='{% url "searchResult" %}'>
+    {% csrf_token %}
+    <div class="input-group">
+      <input type="search" placeholder="Search..." name="keyword" />
+      <button>검색</button>
+    </div>
+  </form>
+  <article class="card-view">
+    {% for category in categorys %}
+    <div class="card">
+      <img src="{{category.frontView.url}}" alt="image" />
+      <div class="container">
+        <h4 class="title"><strong>{{category.facilityName}}</strong></h4>
+        <div class="button">
+          <a href="{% url 'buildingDetail' category.id %}">
+            <button type="button" class="btn-detail">시설물정보</button>
+          </a>
+          <a href="{% url 'categoryDetail' category.id %}">
+            <button type="button" class="btn-detail">손상정보</button>
+          </a>
+          <a href="{% url 'createExcel' category.id %}">
+            <button type="button" class="btn-detail">보고서생성</button>
+          </a>
+          <!-- <a href="{% url 'updateCategory' category.id %}">
+            <button type="button" class="btn-detail">수정</button>
+          </a> -->
+          <a href="{% url 'deleteCategory' category.id %}">
+            <button type="button" class="btn-delete">삭제</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </article>
+</section>
+{% endblock %}

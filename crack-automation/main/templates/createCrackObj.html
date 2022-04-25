@@ -1,0 +1,36 @@
+{% extends 'base.html'%} {% load static %}
+<!--  -->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/createCrackObj.css' %}" />
+{% endblock %}
+<!--  -->
+{% block content %}
+<section class="section">
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="detail-input">
+      <div class="detail">
+        <label for="image">이미지</label>
+        <input id="image" type="file" name="image" />
+      </div>
+      <div class="detail">
+        <label for="date">날짜</label>
+        <input id="date" type="date" name="date" />
+      </div>
+      <div class="width">
+        <label for="width">가로길이</label>
+        <input type="number" name="width" />
+      </div>
+      <div class="height">
+        <label for="height">세로길이</label>
+        <input type="number" name="height" />
+      </div>
+      <button class="submit-btn" type="submit">등록하기</button>
+    </div>
+  </form>
+</section>
+{% endblock %}
+<!--  -->
+{% block script %}
+<!--  -->
+{% endblock %}

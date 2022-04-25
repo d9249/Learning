@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/categoryDetail.css' %}" />
+{% endblock %} {% block content %}
+<div class="button">
+  <a href="{% url 'createExcel' obj.pk %}">
+    <button>보고서생성</button>
+  </a>
+  <a href="{% url 'createCrack' obj.pk %}">
+    <button>손상 등록</button>
+  </a>
+</div>
+<section class="section">
+  <div class="wrapper">
+    <table class="table">
+      <tbody>
+        <tr class="tr">
+          <th>위치1</th>
+          <th>위치2</th>
+          <th>손상종류</th>
+          <th>손상규모</th>
+          <th>폭</th>
+          <th>개소</th>
+          <th>적출년도</th>
+          <th>발생원인</th>
+          <th>비고</th>
+          <th>detail</th>
+          <th>U-D</th>
+        </tr>
+        {% for crack in crack %}
+        <tr class="tr">
+          <td class="td">{{crack.floor}}</td>
+          <td class="td">{{crack.location}}</td>
+          <td class="td">{{crack.crackType}}</td>
+          <td class="td">{{crack.crackSize}}</td>
+          {% if crack.crackWidth == '' %}
+          <td class="td">-</td>
+          {% else %}
+          <td class="td">cw {{crack.crackWidth}}mm</td>
+          {% endif %}
+          <td class="td">{{crack.place}}</td>
+          {% if crack.date == Null %}
+          <td class="td">-</td>
+          {% else %}
+          <td class="td">{{crack.date| date:'Y.m.d.' }}</td>
+          {% endif %}
+          <td class="td">{{crack.cause}}</td>
+          <td class="td">{{crack.note}}</td>
+          <td class="td">
+            <a href="{% url 'crackDetail' crack.id %}">세부정보</a>
+          </td>
+          <td class="td">
+            <a href="{% url 'updateCrack' crack.id %}">수정</a> /
+            <a href="{% url 'deleteCrack' crack.id %}">삭제</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
