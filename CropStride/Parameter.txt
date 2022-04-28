@@ -1,0 +1,6 @@
+patch_x_size = 64
+patch_y_size = 48
+stride = 10
+input_dir_image = input/image
+input_dir_mask = input/mask
+output_dir = output
