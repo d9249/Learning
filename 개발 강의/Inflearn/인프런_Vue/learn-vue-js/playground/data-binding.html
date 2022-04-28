@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:id="uuid" v-bind:class="name">{{ num }}</p>
+        <p>{{ doubleNum }}</p>
+        <div v-if="loading">
+            Loading...
+        </div>
+        <div v-else>
+            test user has been logged in
+        </div>
+        <!-- if는 DOM을 날리지만, show는 display: none처리를 한다. -->
+        <div v-show="loading">
+            Loaging...
+        </div>
+        <!-- TODO: 인풋 박스를 만들고 입력된 값을 p 태그에 출력해보세요. -->
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10,
+                //doubleNum: 10*2
+                uuid: 'abc1234',
+                name: 'text-blue',
+                loading: true,
+                message: ''
+            },
+            computed:{
+                doubleNum: function() {
+                    return this.num*2;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

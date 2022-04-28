@@ -1,1 +1,0 @@
-# Inflearn_TypeScript
