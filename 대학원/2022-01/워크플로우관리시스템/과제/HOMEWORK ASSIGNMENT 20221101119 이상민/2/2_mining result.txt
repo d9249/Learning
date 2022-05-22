@@ -1,0 +1,47 @@
+digraph G {
+node [width=0.8, fixedsize=true, fillcolor="#cccccc", style="rounded,filled",shape="circle", color="#999999"];
+"AND_OPEN_1" [width=2.0, fixedsize=true, label="AND_OPEN", fillcolor="#cccccc", style="rounded,filled",shape="box", color="#999999"];
+"OR_OPEN_1" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_1" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_OPEN_2" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_2" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"AND_CLOSE_1" [width=2.0, fixedsize=true, label="AND_CLOSE", fillcolor="#cccccc", style="rounded,filled",shape="box", color="#999999"];
+"OR_OPEN_3" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_3" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"AND_OPEN_2" [width=2.0, fixedsize=true, label="AND_OPEN", fillcolor="#cccccc", style="rounded,filled",shape="box", color="#999999"];
+"OR_OPEN_4" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_4" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_OPEN_5" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_5" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_6" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"A" -> "AND_OPEN_2"[label="100"];
+"B" -> "OR_OPEN_3"[label="100"];
+"C" -> "OR_OPEN_4"[label="100"];
+"D" -> "OR_OPEN_5"[label="90"];
+"E" -> "OR_CLOSE_3"[label="20(p:0.200)"];
+"F" -> "OR_CLOSE_3"[label="80(p:0.800)"];
+"G" -> "END"[label="100"];
+"START" -> "A"[label="100"];
+"AND_OPEN_1" -> "B"[label="100(p:1.000)"];
+"AND_OPEN_1" -> "OR_CLOSE_4"[label="100(p:1.000)"];
+"OR_OPEN_1" -> "OR_CLOSE_1"[label="20(p:0.200)"];
+"OR_OPEN_1" -> "AND_CLOSE_1"[label="90(p:0.900)"];
+"OR_CLOSE_1" -> "OR_CLOSE_5"[label="20(p:1.000)"];
+"OR_OPEN_2" -> "OR_CLOSE_2"[label="80(p:0.889)"];
+"OR_OPEN_2" -> "OR_CLOSE_4"[label="100(p:1.111)"];
+"OR_CLOSE_2" -> "OR_CLOSE_6"[label="80(p:1.000)"];
+"AND_CLOSE_1" -> "D"[label="100"];
+"OR_OPEN_3" -> "OR_CLOSE_5"[label="20(p:0.200)"];
+"OR_OPEN_3" -> "OR_CLOSE_6"[label="80(p:0.800)"];
+"OR_CLOSE_3" -> "G"[label="100"];
+"AND_OPEN_2" -> "AND_OPEN_1"[label="100(p:1.000)"];
+"AND_OPEN_2" -> "AND_CLOSE_1"[label="100(p:1.000)"];
+"OR_OPEN_4" -> "OR_CLOSE_2"[label="100(p:1.250)"];
+"OR_OPEN_4" -> "OR_OPEN_1"[label="100(p:1.000)"];
+"OR_CLOSE_4" -> "C"[label="100"];
+"OR_OPEN_5" -> "OR_CLOSE_1"[label="90(p:4.500)"];
+"OR_OPEN_5" -> "OR_OPEN_2"[label="90(p:1.000)"];
+"OR_CLOSE_5" -> "E"[label="20"];
+"OR_CLOSE_6" -> "F"[label="80"];
+}
+

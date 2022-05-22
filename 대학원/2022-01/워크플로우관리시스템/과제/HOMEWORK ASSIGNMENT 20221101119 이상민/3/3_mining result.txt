@@ -1,0 +1,17 @@
+digraph G {
+node [width=0.8, fixedsize=true, fillcolor="#cccccc", style="rounded,filled",shape="circle", color="#999999"];
+"OR_OPEN_1" [width=1.0, fixedsize=true, label="OR_OPEN", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"OR_CLOSE_1" [width=1.0, fixedsize=true, label="OR_CLOSE", fillcolor="#ff9999", style="rounded,filled",shape="ellipse", color="#999999"];
+"B2" -> "C"[label="70"];
+"C" -> "D2"[label="70"];
+"A" -> "B1"[label="70"];
+"B1" -> "B2"[label="70"];
+"D2" -> "OR_OPEN_1"[label="70"];
+"E" -> "OR_CLOSE_1"[label="20(p:0.286)"];
+"F" -> "OR_CLOSE_1"[label="50(p:0.714)"];
+"START" -> "A"[label="70"];
+"OR_OPEN_1" -> "E"[label="20(p:0.286)"];
+"OR_OPEN_1" -> "F"[label="50(p:0.714)"];
+"OR_CLOSE_1" -> "END"[label="70"];
+}
+
