@@ -28,7 +28,7 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 
 > 5위/290명, Private 5위(0.12653), Public 12위(0.16419), [Code Share Link](https://dacon.io/competitions/official/235805/codeshare/3596)
 
-![2021 Ego-Vision 손동작 인식 AI 경진대회_Result](https://user-images.githubusercontent.com/60354713/170411585-30b68d4c-1263-4714-8ceb-a6b147ac320a.png)
+![Screenshot 2022-05-26 at 12 44 40](https://user-images.githubusercontent.com/60354713/170411882-72d01271-dc5a-4129-855d-962dcfb2447a.jpg)
 
 ------
 
