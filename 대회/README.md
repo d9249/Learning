@@ -7,17 +7,18 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 > 대회 기간 중 기록되었던 scroe 중 private, public score 1위 달성.
 
 **Private Leaderboard**
-![컴퓨터 비전 학습 경진 대회_Leaderboard](Result Leaderboard\컴퓨터 비전 학습 경진 대회_Leaderboard.jpg)
+
+![컴퓨터 비전 학습 경진 대회_Leaderboard](https://user-images.githubusercontent.com/60354713/170411679-35650ad0-3a9f-4280-b086-258ffaf341c7.jpg)
 
 **My score**
 
-![컴퓨터 비전 학습 경진 대회_Result](Result Leaderboard\컴퓨터 비전 학습 경진 대회_Result.jpg)
+![컴퓨터 비전 학습 경진 대회_Result](https://user-images.githubusercontent.com/60354713/170411692-e4826b46-c49c-4225-b072-04f7e7e2de14.jpg)
 
 **Public score**
 
 > 1등 달성
 
-![Screenshot 2022-05-26 at 12.24.29](Result Leaderboard\Screenshot 2022-05-26 at 12.24.29.jpg)
+![Screenshot 2022-05-26 at 12 24 29](https://user-images.githubusercontent.com/60354713/170411515-30787b82-6b37-4434-96b2-6e90081719fe.jpg)
 
 ------
 
@@ -27,7 +28,7 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 
 > 5위/290명, Private 5위(0.12653), Public 12위(0.16419), [Code Share Link](https://dacon.io/competitions/official/235805/codeshare/3596)
 
-![2021 Ego-Vision 손동작 인식 AI 경진대회_Result](Result Leaderboard\2021 Ego-Vision 손동작 인식 AI 경진대회_Result.png)
+![2021 Ego-Vision 손동작 인식 AI 경진대회_Result](https://user-images.githubusercontent.com/60354713/170411585-30b68d4c-1263-4714-8ceb-a6b147ac320a.png)
 
 ------
 
@@ -36,8 +37,8 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 2021.10.13 ~ 2021.10.22 18:00
 
 > 37위/170명
-
-![Screenshot 2022-05-26 at 12.34.14](Result Leaderboard\Screenshot 2022-05-26 at 12.34.14.jpg)
+ 
+![Screenshot 2022-05-26 at 12 34 14](https://user-images.githubusercontent.com/60354713/170411611-741839b3-f00e-4aa7-b09c-58018a2a9539.jpg)
 
 ------
 
@@ -47,7 +48,7 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 
 > 28위/1060명, Private score 0.85507
 
-![Screenshot 2022-05-26 at 12.36.12](Result Leaderboard\Screenshot 2022-05-26 at 12.36.12.jpg)
+![Screenshot 2022-05-26 at 12 36 12](https://user-images.githubusercontent.com/60354713/170411648-c7f2eda0-5cf1-44bf-a2d6-e23d4fe0fca5.jpg)
 
 ------
 
