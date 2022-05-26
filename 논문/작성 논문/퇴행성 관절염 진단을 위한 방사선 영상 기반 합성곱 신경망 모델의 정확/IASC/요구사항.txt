@@ -26,3 +26,23 @@ Reference 양식이 맞지 않는 경우 Reject 사유가 되므로 꼭 여러�
 7. 논문 제출 관련: 논문 제출 후 즉시 논문 제출 ID, 제목, 저자명 (논문에 들어간 전체 저자의 영문명) 및 논문 파일을 제게 카톡으로 전달 부탁 드립니다.
 
 마지막으로, IASC 저널의 경우 친절하게 논문이 출판되었다는 것을 안내해 주지 않습니다. 개별적으로 온라인에서 확인 하셔야 합니다.
+
+Suggested Reviewer No: 1
+Name: Junho Ahn
+Current Designation: Professor, Korea National University of Transportation
+E-mail id: jhahn@ut.ac.kr
+
+Suggested Reviewer No: 2
+Name: Sangmin Lee
+Current Designation: Professor, Cha University
+E-mail id: slee@cha.ac.kr 
+
+Suggested Reviewer No: 3
+Name: Hyun Ahn
+Current Designation: Professor, Hanshin University
+E-mail id: hyunahn@hs.ac.kr 
+
+Suggested Reviewer No: 4
+Name: SooKyun Kim
+Current Designation: Professor, Jeju  National University
+E-mail id: kimsk@jejunu.ac.kr
