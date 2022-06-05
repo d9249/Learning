@@ -1,0 +1,37 @@
+DIYA 논문
+
+
+이재성 (빨)
+- 주제 : Memory and Computation-Efficient Deep Learning
+- 논문 : Learning Structured Sparsity in Deep Neural Networks
+- 논문 링크 : https://arxiv.org/abs/1608.03665
+
+김소정님 (주)
+- 주제 : Continual Learning
+- 논문 : Overcoming Catastrophic Forgetting by Incremental Moment Matching
+- 논문 링크 : https://arxiv.org/abs/1703.08475
+
+김재영님 (노)
+- 주제 : Adversarially-Robust Deep Learning
+- 논문 : Adversarial Machine Learning at Scale
+- 논문 링크 : https://arxiv.org/abs/1611.01236
+
+이상민님 (초)
+- 주제 : Interpretable Deep Learning
+- 논문 : Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization
+- 논문 링크 : https://arxiv.org/abs/1610.02391
+
+이호성님 (파)
+- 주제 : 자유주제
+- 논문 : Prototypical Networks for Few-shot Learning
+- 논문 링크 : https://arxiv.org/abs/1703.05175
+
+한우정님 (보)
+- 주제 : Generative Adversarial Networks
+- 논문 : InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets
+- 논문 링크 : https://arxiv.org/abs/1606.03657
+
+현진님 (흰)
+- 주제 : 자유주제
+- 논문 : Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization
+- 논문 링크 : https://arxiv.org/abs/1703.06868

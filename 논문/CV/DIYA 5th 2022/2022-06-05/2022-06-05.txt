@@ -1,0 +1,42 @@
+DIYA 논문
+
+
+이재성
+- 주제 : Understanding & SOTA
+- 논문 : Train longer, generalize better: closing the generalization gap in large batch training of neural networks
+- 논문 링크 : https://arxiv.org/abs/1705.08741
+
+김소정님 (주)
+- 주제 : VAEs, Autoregressive and Flow-Based Generative Models
+- 논문 : Improving Variational Inference with Inverse Autoregressive Flow
+- 논문 링크 : https://arxiv.org/abs/1606.04934
+
+김재영님 (노)
+- 주제 : 자유주제
+- 논문 : Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)
+- 논문 링크 : https://arxiv.org/abs/1711.11279
+
+이상민님 (초)
+- 주제 : 자유주제
+- 논문 : Shake-Shake regularization
+- 논문 링크 : https://arxiv.org/abs/1705.07485
+
+이호성님 (파)
+- 주제 : Adversarially-Robust Deep Learning
+- 논문 : Robust Physical-World Attacks on Deep Learning Models
+- 논문 링크 : https://arxiv.org/abs/1707.08945
+
+이훈로 (빨)
+- 주제 : Generative Adversarial Networks
+- 논문 : Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks
+- 논문 링크 : https://arxiv.org/abs/1703.10593
+
+한우정님 (보)
+- 주제 : Interpretable Deep Learning
+- 논문 : Network Dissection: Quantifying Interpretability of Deep Visual Representations
+- 논문 링크 : https://arxiv.org/abs/1704.05796
+
+현진님 (흰)
+- 주제 : Reliable Deep Learning
+- 논문 : Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples
+- 논문 링크 : https://arxiv.org/abs/1711.09325
