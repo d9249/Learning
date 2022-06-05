@@ -56,4 +56,6 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 
 2022.05.16 ~ 2022.05.27 23:59
 
-> 9위/390명, Public 0.97196, Private
+> Public 10위/421명 0.97196, Private 8위/421명 0.98148
+
+![image](https://github.com/d9249/Learning/blob/main/대회/Result%20Leaderboard/Screenshot%202022-06-05%20at%2016.31.13.jpg)
