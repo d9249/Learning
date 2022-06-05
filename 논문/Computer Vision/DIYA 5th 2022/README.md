@@ -1,63 +1,85 @@
-# DIYA 2021-01 Computer Vision 4th.
-**Description: Repository for reviewing papers in DIYA.**
+# DIYA Computer Vision 5th (2022)
 
-**Format: Year, Conference, Paper, Link(Korean translation(Notion), Paper Link(Link), Summary(Notion), Reference(Notion), Open Review(Link), Official code(Link))**
+> Format: Topic, Conference, Paper Link, Summary Link 
+## 📕 Paper list
 
-## All Paper Management pages
-
-**[Link to all activities in the fourth generation of DIYA Computer Vision](https://www.notion.so/DIYA-Computer-Vision-d8c032d49287440c8d47507478a0fb3f)**
-
-## 📕 Paper List up.
-
-|Year|Conference|Paper|Link|
-|--|--|---|---|
-|2012|NIPS, Spotlight|imageNet Classification with Deep Convolutional Neural Network|[Korean translation](https://www.notion.so/imageNet-Classification-with-Deep-Convolutional-Neural-Network-74b0fc38e9af4073b421d284b1f25f60), [Paper Link](https://papers.nips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf), [Summary](https://www.notion.so/Complete-78f08c463f714ce8a41f1f3e252d6c92), [Reference](https://www.notion.so/Link-898dc4ba580347fa9044c4fd987c7e40), [Open review](https://openreview.net/forum?id=BJWjTIWOWr), [Official code](https://paperswithcode.com/paper/imagenet-classification-with-deep)|
-|2014|ICLR|Network In Network|[Korean translation](https://www.notion.so/Network-In-Network-1204aa586bdc4e1eb091ccfa2516a959), [Paper Link](https://arxiv.org/abs/1312.4400), [Summary](https://www.notion.so/Ongoing-60dfc2f1a9364610a2d1f8906e2699b5), [Reference](https://www.notion.so/Link-9b28006ee9db4d8794f49edf52458080), [Open Review](https://openreview.net/forum?id=ylE6yojDR5yqX), [Official code]()|
-|2014|ECCV|Visualizing and Understanding Convolutional Networks|[Korean translation](https://www.notion.so/Visualizing-and-Understanding-Convolutional-Networks-00b895b0ca9c49e08cea3689980fbf48), [Paper Link](https://arxiv.org/abs/1311.2901), [Summary](https://www.notion.so/Incomplete-d1aecbc338704340a216b80234412e35), [Reference](https://www.notion.so/Link-0bb39b7b226c4d92aebf1dae13913b6a), [Open Review](https://openreview.net/forum?id=rJWZ3K-OZS), [Official code](https://paperswithcode.com/paper/visualizing-and-understanding-convolutional)|
-|2014|ICLR|OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks|[Korean translation](https://www.notion.so/OverFeat-Integrated-Recognition-Localization-and-Detection-using-Convolutional-Networks-566b4eac9804469c9e36c5395a7383a2), [Paper Link](https://arxiv.org/abs/1312.6229), [Summary](https://www.notion.so/Incomplete-e06e892363f1456db9be7ddeb7b414be), [Reference](https://www.notion.so/Link-f582e44f86534aec94d47cf8b89a4834), [Open Review](https://openreview.net/forum?id=Hq5MgBFOP62-X), [Official code](https://paperswithcode.com/paper/overfeat-integrated-recognition-localization)|
-|2015|TPAMI|Spatial Pyramid Pooling in Deep Convolutional Networks for Visual Recognition|[Korean translation](https://www.notion.so/Spatial-Pyramid-Pooling-in-Deep-Convolutional-Networks-for-Visual-Recognition-4a8895352109462f92ebc1e86f6dba5d), [Paper Link](https://arxiv.org/abs/1406.4729), [Summary](https://www.notion.so/Complete-c25ef3d1ab7540e1aa1ed37a911f742b), [Reference](https://www.notion.so/Link-f6714fed8f1a47239df4b97071b362f0), [Open Review](https://openreview.net/forum?id=HJWKU5-dZr), [Official code](https://paperswithcode.com/method/spp-net)|
-|2015|ICLR, Oral|Very Deep Convolutional Networks for Large-Scale Image Recognition|[Korean translation](https://www.notion.so/Very-Deep-Convolutional-Networks-for-Large-Scale-Image-Recognition-1433b0fdc3ef40b9b2b33a2ee6bea891), [Paper Link](https://arxiv.org/abs/1409.1556), [Summary](https://www.notion.so/Incomplete-910980f6a6764e07a24bd3881d721f74), [Reference](https://www.notion.so/Link-9dbcfd00ee1e495da8f4a43337457a15), [Open Review](), [Official code](https://paperswithcode.com/paper/very-deep-convolutional-networks-for-large)|
-|2015|CVPR, Oral|Going Deeper with Convolutions|[Korean translation](https://www.notion.so/Going-Deeper-with-Convolutions-d6e3064831d340b9a62a6d51c19f2cec), [Paper Link](https://arxiv.org/abs/1409.4842), [Summary](https://www.notion.so/Incomplete-775ee725389242c798e12901e5cd503c), [Reference](https://www.notion.so/Link-d60427511a1e49fca7257300d5f04355), [Open Review](https://openreview.net/forum?id=ryWEopW_WB), [Official code](https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14)|
-|2015|ICCV|Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification|[Korean translation](https://www.notion.so/Delving-Deep-into-Rectifiers-Surpassing-Human-Level-Performance-on-ImageNet-Classification-5dc0462fb81747db949bc724a5b8afd0), [Paper Link](), [Summary](), [Reference](), [Open Review](), [Official code]()|
-|2015|ICML|Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift|[Korean translation](https://www.notion.so/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift-df6613cbe9404f919af107c7d20a9f08), [Paper Link](), [Summary](), [Reference](), [Open Review](), [Official code]()|
-|2015|NIPS|Spatial Transformer Networks|[Korean translation](https://www.notion.so/Spatial-Transformer-Networks-839b6a12e69f4cc0ae5c9829c6f03d47), [Paper Link](), [Summary](), [Reference](), [Open Review](), [Official code]()|
-|2016|CVPR|Rethinking the Inception Architecture for Computer Vision|[Korean translation](https://www.notion.so/Rethinking-the-Inception-Architecture-for-Computer-Vision-d7b2da742e55418e8856a6c29fc29deb), [Paper Link](), [Summary](), [Reference](), [Open Review](), [Official code]()|
-|2016|CVPR, Oral, Best Paper Award|Deep Residual Learning for Image Recognition|[Korean translation](https://www.notion.so/Deep-Residual-Learning-for-Image-Recognition-5ad0b39db4444e739d6f707707067093)
-|2016|CVPR|Learning Deep Features for Discriminative Localization|[Korean translation](https://www.notion.so/Learning-Deep-Features-for-Discriminative-Localization-a5acb9db59f043caabf498b4dc94c691)
-|2016|Arxiv|SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size|[Korean translation](https://www.notion.so/SqueezeNet-AlexNet-level-accuracy-with-50x-fewer-parameters-and-0-5MB-model-size-2aa832275f6b44feac64bd11d3171fd1)
-|2016|ECCV, Spotlight|Identity Mappings in Deep Residual Networks|[Korean translation](https://www.notion.so/Identity-Mappings-in-Deep-Residual-Networks-599310352e994685968cc585f0cabd93)
-|2016|BMVC|Wide Residual Networks|[Korean translation](https://www.notion.so/Wide-Residual-Networks-c2dcbd8dcc2a432cb2613d5cc265428b)
-|2017|AAAI|Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning|[Korean translation](https://www.notion.so/Inception-v4-Inception-ResNet-and-the-Impact-of-Residual-Connections-on-Learning-622c720280cf472592a981f392bd9c03)
-|2017|CVPR, Oral, Best Paper Award|Densely Connected Convolutional Networks|[Korean translation](https://www.notion.so/Densely-Connected-Convolutional-Networks-05e53d2598694bb99fff6d7e5cb4c9da)
-|2017|ICCV|Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization|[Korean translation](https://www.notion.so/Grad-CAM-Visual-Explanations-from-Deep-Networks-via-Gradient-based-Localization-433a6764a8814dc9a49a26bac7c755cc)
-|2017|CVPR|Deep Pyramidal Residual Networks|[Korean translation](https://www.notion.so/Deep-Pyramidal-Residual-Networks-a6001a1851d84292a528f6f18cb95001)
-|2017|CVPR|Xception: Deep Learning with Depthwise Separable Convolutions|[Korean translation](https://www.notion.so/Xception-Deep-Learning-with-Depthwise-Separable-Convolutions-5818af0061c044f3b88bd4f71d9e765c)
-|2017|CVPR|Aggregated Residual Transformations for Deep Neural Networks|[Korean translation](https://www.notion.so/Aggregated-Residual-Transformations-for-Deep-Neural-Networks-dbf9287a5edb440cb4b89944a9f54a66)
-|2017|CVPR|PolyNet: A Pursuit of Structural Diversity in Very Deep Networks|[Korean translation](https://www.notion.so/PolyNet-A-Pursuit-of-Structural-Diversity-in-Very-Deep-Networks-03dbcccd1ab74e51b0dfda93a0a3114a)
-|2017|CoRR|MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications|[Korean translation](https://www.notion.so/MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-3622fa839f474e88ad20a1fd27800e32)
-|2017|NIPS|Dynamic Routing Between Capsules|[Korean translation](https://www.notion.so/Dynamic-Routing-Between-Capsules-02be72ea401c47f390c3eac814fc83a8)
-|2018|CVPR|ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices|[Korean translation](https://www.notion.so/ShuffleNet-An-Extremely-Efficient-Convolutional-Neural-Network-for-Mobile-Devices-64406878d4a04caa8e6eeda56b83c69f)
-|2018|CVPR, Oral|Squeeze-and-Excitation Networks|[Korean translation](https://www.notion.so/Squeeze-and-Excitation-Networks-9a916233a6a945e68396ecdffca6a858)
-|2018|CVPR|Non-local Neural Networks|[Korean translation](https://www.notion.so/Non-local-Neural-Networks-99fa2a9d393646af90246a37c0d03f05)
-|2018|CVPR|MobileNetV2: Inverted Residuals and Linear Bottlenecks|[Korean translation](https://www.notion.so/MobileNetV2-Inverted-Residuals-and-Linear-Bottlenecks-9720a7607f024cb69eabb0ef54907164)
-|2018|ECCV|Exploring the Limits of Weakly Supervised Pretraining|[Korean translation](https://www.notion.so/Exploring-the-Limits-of-Weakly-Supervised-Pretraining-8aa9db8d23024a8c861930b783b27625)
-|2018|NIPS, Oral|How Does Batch Normalization Help Optimization?|[Korean translation](https://www.notion.so/How-Does-Batch-Normalization-Help-Optimization-e5ff18c092d94021832b192f350ab69a)
-|2018|NIPS|Understanding Batch Normalization|[Korean translation](https://www.notion.so/Understanding-Batch-Normalization-38516d2f1a024d4699f8a878b6e3a0a8)
-|2018|ECCV|ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design|[Korean translation](https://www.notion.so/ShuffleNet-V2-Practical-Guidelines-for-Efficient-CNN-Architecture-Design-4bb42454f3314d57ac227b72e631b3bd)
-|2019|CVPR|Bag of Tricks for Image Classification with Convolutional Neural Networks|[Korean translation](https://www.notion.so/Bag-of-Tricks-for-Image-Classification-with-Convolutional-Neural-Networks-e81ae42863d5452a9e8d739c6d7f953b)
-|2019|ICCV, Oral|Searching for MobileNetV3|[Korean translation](https://www.notion.so/Searching-for-MobileNetV3-03b1798e240d44a98da0050305c34387)
-|2019|ICML, Oral|EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks|[Korean translation](https://www.notion.so/EfficientNet-Rethinking-Model-Scaling-for-Convolutional-Neural-Networks-dbad07b6dcc84f3480be869a7b186927)
-|2019|NIPS, Spotlight|When Does Label Smoothing Help?|[Korean translation](https://www.notion.so/When-Does-Label-Smoothing-Help-499c58240fc94fa3813804dcfed3e81a)
-|2019|NIPS|Stand-Alone Self-Attention in Vision Models|[Korean translation](https://www.notion.so/Stand-Alone-Self-Attention-in-Vision-Models-7943de8101644322b3a449bc7b8646ef)
-|2019|NIPS|Fixing the train-test resolution discrepancy|[Korean translation](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-c5361686c90544d7b30fdb79b62ebbcd)
-|2020|CVPR|Self-training with Noisy Student improves ImageNet classification|[Korean translation](https://www.notion.so/Self-training-with-Noisy-Student-improves-ImageNet-classification-8ae35f49144f46469c8ef67118d1db91)
-|2020|CVPR|Adversarial Examples Improve Image Recognition|[Korean translation](https://www.notion.so/Adversarial-Examples-Improve-Image-Recognition-bf802d61fead4686a36d562a680f9655)
-|2020|ECCV, Spotlight|Big Transfer (BiT): General Visual Representation Learning|[Korean translation](https://www.notion.so/Big-Transfer-BiT-General-Visual-Representation-Learning-d81a0b0bade141aa9ae6f06458a0d050)
-|2020|Arxiv|Fixing the train-test resolution discrepancy: FixEfficientNet|[Korean translation](https://www.notion.so/Fixing-the-train-test-resolution-discrepancy-FixEfficientNet-1b752988a8254996a2bd4bc7fd3284fc)
-|2021|ICLR, Spotlight|Sharpness-Aware Minimization for Efficiently Improving Generalization|[Korean translation](https://www.notion.so/Sharpness-Aware-Minimization-for-Efficiently-Improving-Generalization-564eeafb95274c3ca309ee9e10b2d1a6)
-|2021|ICLR, Oral|An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale|[Korean translation](https://www.notion.so/An-Image-is-Worth-16x16-Words-Transformers-for-Image-Recognition-at-Scale-3f65fe916c0b4d52a86adde2a94b48b4)
-|||Training data-efficient image transformers & distillation through attention|[Korean translation](https://www.notion.so/Training-data-efficient-image-transformers-distillation-through-attention-f3311d82d37548d7a651a1ad991ea3d9)
-|||High-Performance Large-Scale Image Recognition Without Normalization|[Korean translation](https://www.notion.so/High-Performance-Large-Scale-Image-Recognition-Without-Normalization-da5ec8784e804ca88da63c077b221193)
+|Topic|Paper|Link|
+|--|---|---|
+|Adversarially-Robust Deep Learning|Intriguing properties of neural networks|[paper](https://arxiv.org/abs/1312.6199), [summary]()|
+|자유주제|Show, Attend and Tell: Neural Image Caption Generation with Visual Attention|[paper](https://arxiv.org/abs/1502.03044), [summary]()|
+|자유주제|Deep Unsupervised Learning using Nonequilibrium Thermodynamics|[paper](https://arxiv.org/abs/1503.03585), [summary]()|
+|Generative Adversarial Networks|Generative Adversarial Networks|[paper](https://arxiv.org/abs/1406.2661), [summary](https://ideal96.notion.site/Generative-Adversarial-Networks-88c9a85074054953b89b3658c27f205f)|
+|VAEs, Autoregressive and Flow-Based Generative Models|MADE: Masked Autoencoder for Distribution Estimation|[paper](), [summary]()|
+|Memory and Computation-Efficient Deep Learning|Learning both Weights and Connections for Efficient Neural Networks|[paper](https://arxiv.org/abs/1506.02626), [summary]()|
+|Continual Learning|Progressive Neural Networks|[paper](https://arxiv.org/abs/1606.04671), [summary]()|
+|Continual Learning|Overcoming catastrophic forgetting in neural networks|[paper](https://arxiv.org/abs/1612.00796), [summary]()|
+|Interpretable Deep Learning|"Why Should I Trust You?": Explaining the Predictions of Any Classifier|[paper](https://arxiv.org/abs/1602.04938), [summary]()|
+|Reliable Deep Learning|Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles|[paper](https://arxiv.org/abs/1612.01474), [summary]()|
+|자유주제|Texture Synthesis Using Convolutional Neural Networks|[paper](https://arxiv.org/abs/1505.07376), [summary](https://ideal96.notion.site/Texture-Synthesis-Using-Convolutional-Neural-Networks-707ca4babc8a42fe8b7804768d0ca2d2)|
+|자유주제|Dynamic Filter Networks|[paper](https://arxiv.org/abs/1605.09673), [summary]()|
+|VAEs, Autoregressive and Flow-Based Generative Models|Variational Inference with Normalizing Flows|[paper](https://arxiv.org/abs/1505.05770), [summary]()|
+|Memory and Computation-Efficient Deep Learning|Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding|[paper](https://arxiv.org/abs/1510.00149), [summary]()|
+|자유주제|On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima|[paper](https://arxiv.org/abs/1609.04836), [summary]()|
+|Adversarially-Robust Deep Learning|Explaining and Harnessing Adversarial Examples|[paper](https://arxiv.org/abs/1412.6572), [summary]()|
+|Interpretable Deep Learning|RETAIN: An Interpretable Predictive Model for Healthcare using Reverse Time Attention Mechanism|[paper](https://arxiv.org/abs/1608.05745), [summary]()|
+|Reliable Deep Learning|Enhancing The Reliability of Out-of-distribution Image Detection in Neural Networks|[paper](https://arxiv.org/abs/1706.02690), [summary]()|
+|Generative Adversarial Networks|Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks|[paper](https://arxiv.org/abs/1511.06434), [summary]()|
+|자유주제|Deep Networks with Stochastic Depth|[paper](https://arxiv.org/abs/1603.09382), [summary]()|
+|VAEs, Autoregressive and Flow-Based Generative Models|Pixel Recurrent Neural Networks|[paper](https://arxiv.org/abs/1601.06759), [summary]()|
+|Memory and Computation-Efficient Deep Learning|Learning Structured Sparsity in Deep Neural Networks|[paper](https://arxiv.org/abs/1608.03665), [summary]()|
+|Continual Learning|Overcoming Catastrophic Forgetting by Incremental Moment Matching|[paper](https://arxiv.org/abs/1703.08475), [summary]()|
+|Adversarially-Robust Deep Learning|Adversarial Machine Learning at Scale|[paper](https://arxiv.org/abs/1611.01236), [summary]()|
+|Interpretable Deep Learning|Grad-CAM: Visual Explanations from Deep Networks via Gradient-based Localization|[paper](https://arxiv.org/abs/1610.02391), [summary](https://ideal96.notion.site/Grad-CAM-Visual-Explanations-from-Deep-Networks-via-Gradient-based-Localization-026f13d8a1164e5dabed23b652816baf)|
+|자유주제|Prototypical Networks for Few-shot Learning|[paper](https://arxiv.org/abs/1703.05175), [summary]()|
+|Generative Adversarial Networks|InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets|[paper](https://arxiv.org/abs/1606.03657), [summary]()|
+|자유주제|Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization|[paper](https://arxiv.org/abs/1703.06868), [summary]()|
+|understanding & sota|Understanding deep learning requires rethinking generalization|[paper](https://arxiv.org/abs/1611.03530), [summary]()|
+|Memory and Computation-Efficient Deep Learning|Variational Dropout Sparsifies Deep Neural Networks|[paper](https://arxiv.org/abs/1701.05369), [summary]()|
+|Continual Learning|Continual Learning with Deep Generative Replay|[paper](https://arxiv.org/abs/1705.08690), [summary]()|
+|Adversarially-Robust Deep Learning|Towards Deep Learning Models Resistant to Adversarial Attacks|[paper](https://arxiv.org/abs/1706.06083), [summary](https://ideal96.notion.site/Towards-Deep-Learning-Models-Resistant-to-Adversarial-Attacks-0b298fb6c6fb48698b98c6f92fe4dfc5)|
+|Reliable Deep Learning|On Calibration of Modern Neural Networks|[paper](https://arxiv.org/abs/1706.04599), [summary]()|
+|VAEs, Autoregressive and Flow-Based Generative Models|Density estimation using Real NVP|[paper](https://arxiv.org/abs/1605.08803), [summary]()|
+|자유주제|Image-to-Image Translation with Conditional Adversarial Networks|[paper](https://arxiv.org/abs/1611.07004), [summary]()|
+|자유주제|Split-Brain Autoencoders: Unsupervised Learning by Cross-Channel Prediction|[paper](https://arxiv.org/abs/1611.09842), [summary]()|
+|Understanding & SOTA|A Closer Look at Memorization in Deep Networks|[paper](https://arxiv.org/abs/1706.05394), [summary]()|
+|자유주제|Large Batch Training of Convolutional Networks|[paper](https://arxiv.org/abs/1708.03888), [summary]()|
+|Memory and Computation-Efficient Deep Learning|MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications|[paper](https://arxiv.org/abs/1704.04861), [summary]()|
+|Continual Learning|Gradient Episodic Memory for Continual Learning|[paper](https://arxiv.org/abs/1706.08840), [summary]()|
+|Interpretable Deep Learning|Understanding Black-box Predictions via Influence Functions|[paper](https://arxiv.org/abs/1703.04730), [summary]()|
+|자유주제|Deep Learning for Case-Based Reasoning through Prototypes: A Neural Network that Explains Its Predictions|[paper](https://arxiv.org/abs/1710.04806), [summary]()|
+|Reliable Deep Learning|Predict Responsibly: Improving Fairness and Accuracy by Learning to Defer|[paper](https://arxiv.org/abs/1711.06664), [summary]()|
+|Generative Adversarial Networks|Wasserstein GAN|[paper](https://arxiv.org/abs/1701.07875), [summary]()|
+|Understanding & SOTA|Train longer, generalize better: closing the generalization gap in large batch training of neural networks|[paper](https://arxiv.org/abs/1705.08741), [summary]()|
+|VAEs, Autoregressive and Flow-Based Generative Models|Improving Variational Inference with Inverse Autoregressive Flow|[paper](https://arxiv.org/abs/1606.04934), [summary]()|
+|자유주제|Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV)|[paper](https://arxiv.org/abs/1711.11279), [summary]()|
+|자유주제|Shake-Shake regularization|[paper](https://arxiv.org/abs/1705.07485), [summary](https://ideal96.notion.site/Shake-Shake-regularization-77d557aae73c4484bc70f93d6e5175b3)|
+|Adversarially-Robust Deep Learning|Robust Physical-World Attacks on Deep Learning Models|[paper](https://arxiv.org/abs/1707.08945), [summary]()|
+|Generative Adversarial Networks|Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks|[paper](https://arxiv.org/abs/1703.10593), [summary]()|
+|Interpretable Deep Learning|Network Dissection: Quantifying Interpretability of Deep Visual Representations|[paper](https://arxiv.org/abs/1704.05796), [summary]()|
+|Reliable Deep Learning|Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples|[paper](https://arxiv.org/abs/1711.09325), [summary]()|
+|Understanding & SOTA|Do Better ImageNet Models Transfer Better?|[paper](https://arxiv.org/abs/1805.08974), [summary]()|
+|Generative Adversarial Networks|Adversarial Feature Matching for Text Generation|[paper](https://arxiv.org/abs/1706.03850), [summary]()|
+|VAEs, Autoregressive and Flow-Based Generative Models|PixelCNN++: Improving the PixelCNN with Discretized Logistic Mixture Likelihood and Other Modifications|[paper](https://arxiv.org/abs/1701.05517), [summary]()|
+|Memory and Computation-Efficient Deep Learning|Bayesian Compression for Deep Learning|[paper](https://arxiv.org/abs/1705.08665), [summary]()|
+|Continual Learning|Lifelong Learning with Dynamically Expandable Networks|[paper](https://arxiv.org/abs/1708.01547), [summary]()|
+|자유주제|Decoupled Weight Decay Regularization|[paper](https://arxiv.org/abs/1711.05101), [summary]()|
+|Adversarially-Robust Deep Learning|Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples|[paper](https://arxiv.org/abs/1802.00420), [summary]()|
+|자유주제|Deep Image Prior|[paper](https://arxiv.org/abs/1711.10925), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
+|||[paper](), [summary]()|
 
 <div align="center">
   Copyright 2021. d9249(Lee sangmin) all rights reserved.
