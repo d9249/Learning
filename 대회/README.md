@@ -59,3 +59,14 @@ DACON의 대회에 참여한 결과들을 남기기 위한 기록입니다.
 > Public 10위/421명 0.97196, Private 8위/421명 0.98148
 
 ![image](https://github.com/d9249/Learning/blob/main/대회/Result%20Leaderboard/Screenshot%202022-06-05%20at%2016.31.13.jpg)
+
+------
+
+# 6. 음성 분류 경진대회
+
+2022.06.13 ~ 2022.06.24 18:00
+
+> Public 8위/113명, 0.99, Private 명,
+
+![image](https://github.com/d9249/Learning/blob/main/대회/Result%20Leaderboard/음성%20분류%20경진대회.JPG)
+
